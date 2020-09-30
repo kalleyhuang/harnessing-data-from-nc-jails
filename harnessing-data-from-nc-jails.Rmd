@@ -3,6 +3,10 @@ title: "Harnessing Data from North Carolina's Jails to Inform Effective Policies
 output: html_notebook
 ---
 
+```{r}
+library(tidyverse)
+```
+
 ```{r data}
 county_m <- read.csv("california_jail_county_monthly_1995_2020.csv")
 county_q <- read.csv("california_jail_county_quarterly_1995_2020.csv")
