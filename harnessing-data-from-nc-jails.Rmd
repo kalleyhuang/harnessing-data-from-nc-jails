@@ -1,9 +1,11 @@
 ---
 title: "Harnessing Data from North Carolina's Jails to Inform Effective Policies"
-output:
-  html_document:
-    df_print: paged
+output: html_document
 ---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
 
 ```{r}
 library(tidyverse)
@@ -15,14 +17,73 @@ county_q <- read.csv("california_jail_county_quarterly_1995_2020.csv")
 facility <- read.csv("california_jail_facility_monthly_1995_2020.csv")
 ```
 
+# County-Level Data Monthly
+
 ```{r county_monthly}
-county_m
+# proportion of missingness for each variable
+colMeans(is.na(county_m))
+
+# class for each variable, transform as needed
+sapply(county_m, class)
+county_m$date <- as.Date(county_m$date, format = "%Y-%m-%d")
+county_m$day_of_highest_count <- as.Date(county_m$day_of_highest_count, format = "%Y-%m-%d")
+
+# randomness & concentration of missingness for each variable
+enframe(colMeans(is.na(county_m))) %>% 
+  filter(value > 0.1)
 ```
+
+# County-Level Data Quarterly
 
 ```{r county_quarterly}
-county_q
+# proportion of missingness for each variable
+colMeans(is.na(county_q))
+
+# class for each variable, transform as needed
+sapply(county_q, class)
+county_q$quarter <- as.factor(county_q$quarter)
+
+# randomness & concentration of missingness for each variable
+enframe(colMeans(is.na(county_q))) %>% 
+  filter(value > 0.1)
 ```
 
+# Facility/Jail-Level Data Monthly
+
 ```{r facility_monthly}
-facility
+# proportion of missingness for each variable
+colMeans(is.na(facility))
+
+# class for each variable, transform as needed
+sapply(facility, class)
+facility$date <- as.Date(facility$date, format = "%Y-%m-%d")
+
+# randomness & concentration of missingness for each variable
+sort(colMeans(is.na(facility)), decreasing = TRUE)
+table(facility$year, is.na(facility$avg_daily_pop_total_facility)) # na concentrated in 2018: 6/1408
+table(facility$year, is.na(facility$avg_daily_pop_sentenced_male)) # na pre 2000, then in 2018: 8/1408
+table(facility$year, is.na(facility$avg_daily_pop_unsentenced_male)) # na pre 2000, then in 2018: 8/1408
+table(facility$year, is.na(facility$avg_daily_pop_sentenced_female)) # na pre 2000, then in 2018: 8/1408
+table(facility$year, is.na(facility$avg_daily_pop_unsentenced_female)) # na pre 2000, then in 2018: 8/1408
+
+facility %>% 
+  filter(year == 2018 & (is.na(avg_daily_pop_total_facility) | 
+           is.na(avg_daily_pop_sentenced_male) | is.na(avg_daily_pop_unsentenced_male) |
+           is.na(avg_daily_pop_sentenced_female) | is.na(avg_daily_pop_unsentenced_female)))
+
+facility %>% 
+  filter(year < 2001 & is.na(avg_daily_pop_sentenced_male)) %>% 
+  count(jurisdiction)
+
+facility %>% 
+  filter(year < 2001 & is.na(avg_daily_pop_unsentenced_male)) %>% 
+  count(jurisdiction)
+
+facility %>% 
+  filter(year < 2001 & is.na(avg_daily_pop_sentenced_female)) %>% 
+  count(jurisdiction)
+
+facility %>% 
+  filter(year < 2001 & is.na(avg_daily_pop_unsentenced_female)) %>% 
+  count(jurisdiction)
 ```
