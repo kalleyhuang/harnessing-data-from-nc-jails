@@ -30,7 +30,43 @@ county_m$day_of_highest_count <- as.Date(county_m$day_of_highest_count, format =
 
 # randomness & concentration of missingness for each variable
 enframe(colMeans(is.na(county_m))) %>% 
-  filter(value > 0.1)
+  filter(value > 0.1) %>% 
+  arrange(desc(value))
+
+# number & proportion of missingness per county if missing more than 0.1
+county_m %>% 
+  group_by(census_county_name) %>% 
+  count(is.na(avg_felony_inmate_unsentenced)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(avg_felony_inmate_unsentenced)` & proportion > 0.1)
+
+county_m %>% 
+  group_by(census_county_name) %>% 
+  count(is.na(avg_misdemean_inmate_unsentenced)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(avg_misdemean_inmate_unsentenced)` & proportion > 0.1)
+
+table(county_m$census_county_name, is.na(county_m$mental_heath_case_open_end_month))
+table(county_m$census_county_name, is.na(county_m$num_new_mental_health_cases))
+
+num_inmate_get_psych_meds
+num_inmate_get_mental_heath_bed
+num_inmates_seen_sick_call
+num_doctor_occurrences
+num_offsite_medical_appointment
+num_dental_encounters
+avg_inmate_get_sick_bed
+avg_own_inmate_housed_elsewhere
+avg_fed_inmate_housed_contract
+avg_state_inmate_housed_contract
+avg_local_inmate_housed_contract
+adp_of_maximum_security_inmates
+adp_of_medium_security_inmates
+adp_of_minimum_security_inmates
+avg_inmates_get_medical_bed
+avg_inmates_get_mental_heath_bed
+avg_inmate_need_reg_med_attent
+avg_inmates_need_reg_ment_health
 ```
 
 # County-Level Data Quarterly
@@ -45,8 +81,105 @@ county_q$quarter <- as.factor(county_q$quarter)
 
 # randomness & concentration of missingness for each variable
 enframe(colMeans(is.na(county_q))) %>% 
-  filter(value > 0.1)
+  filter(value > 0.1) %>% 
+  arrange(desc(value))
+
+table(county_q$year, is.na(county_q$num_inmate_are_2nd_striker))
+table(county_q$year, is.na(county_q$num_inmate_are_3rd_striker))
+table(county_q$year, is.na(county_q$num_unserved_misdemean_warrants))
+table(county_q$year, is.na(county_q$num_unserved_felony_warrants))
+table(county_q$year, is.na(county_q$percent_inmates_illegal_alien))
+
+table(county_q$year, is.na(county_q$avg_length_stay_pretrial_release))
+table(county_q$year, is.na(county_q$avg_length_stay_sentnced_release))
+table(county_q$year, is.na(county_q$avg_length_stay_all_releases))
+table(county_q$year, is.na(county_q$money_spent_psych_med_last_qtr))
+table(county_q$year, is.na(county_q$money_spent_medication_last_qtr))
+
+# before 2001 missingness
+county_q %>% 
+  filter(year < 2002) %>% 
+  group_by(census_county_name) %>% 
+  count(is.na(num_inmate_are_2nd_striker)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(num_inmate_are_2nd_striker)` & proportion > 0.1)
+
+county_q %>% 
+  filter(year < 2002) %>% 
+  group_by(census_county_name) %>% 
+  count(is.na(num_inmate_are_3rd_striker)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(num_inmate_are_3rd_striker)` & proportion > 0.1)
+
+county_q %>% 
+  filter(year < 2002) %>% 
+  group_by(census_county_name) %>% 
+  count(is.na(num_unserved_misdemean_warrants)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(num_unserved_misdemean_warrants)` & proportion > 0.1)
+
+county_q %>% 
+  filter(year < 2002) %>% 
+  group_by(census_county_name) %>% 
+  count(is.na(num_unserved_felony_warrants)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(num_unserved_felony_warrants)` & proportion > 0.1)
+
+county_q %>% 
+  filter(year < 2002) %>% 
+  group_by(census_county_name) %>% 
+  count(is.na(percent_inmates_illegal_alien)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(percent_inmates_illegal_alien)` & proportion > 0.1)
+
+# after 2001 missingness
+county_q %>% 
+  filter(year > 2001) %>% 
+  group_by(census_county_name) %>%  
+  count(is.na(avg_length_stay_pretrial_release)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(avg_length_stay_pretrial_release)` & proportion > 0.1) %>% 
+  arrange(desc(proportion))
+
+county_q %>% 
+  filter(year > 2001) %>% 
+  group_by(census_county_name) %>% 
+  count(is.na(avg_length_stay_sentnced_release)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(avg_length_stay_sentnced_release)` & proportion > 0.1) %>% 
+  arrange(desc(proportion))
+
+county_q %>% 
+  filter(year > 2001) %>% 
+  group_by(census_county_name) %>% 
+  count(is.na(avg_length_stay_all_releases)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(avg_length_stay_all_releases)` & proportion > 0.1) %>% 
+  arrange(desc(proportion))
+
+county_q %>% 
+  filter(year > 2001) %>% 
+  group_by(census_county_name, year) %>% 
+  count(year, is.na(money_spent_psych_med_last_qtr)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(money_spent_psych_med_last_qtr)` & proportion > 0.1) %>% 
+  arrange(desc(proportion))
+
+county_q %>% 
+  filter(year > 2001) %>% 
+  group_by(census_county_name) %>% 
+  count(is.na(money_spent_medication_last_qtr)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(money_spent_medication_last_qtr)` & proportion > 0.1) %>% 
+  arrange(desc(proportion))
 ```
+The following variables were not counted after 2001: number of inmates who are 2nd strikers, number of inmates who are 3rd strikers, number of unserved misdemeanor warrants, number of unserved felony warrants, and percent of inmates who are undocumented immigrants. I subset the data, filtering for observations before 2001 and grouping by county. 
+
+The following variables were not counted before 2001: average length of stay for pre-trial release, average length of stay for sentenced release, average length of stay for all releases, money spent on psychiatric medicine last quarter, and money spent on medication last quarter. I subset the data, filtering for observations after 2001 and grouping by county. In general, I try to identify randomness or concentration of missingness greater than 0.1.
+
+For average length of stay for all releases, the following counties are missing data for every year: Contra Costa, Lake, San Luis Obispo, Santa Cruz, Sutter, Tuolumme, Yolo, and Yuba. For average length of stay for sentenced release, the same preceding counties, as well as Calaveras and Nevada, are missing data for every year. For average length of stay for pre-trial release, the same preceding counties, as well as Ventura, are missing data for every year.
+
+For money spent on psychiatric medicine last quarter, 
 
 # Facility/Jail-Level Data Monthly
 
@@ -60,11 +193,11 @@ facility$date <- as.Date(facility$date, format = "%Y-%m-%d")
 
 # randomness & concentration of missingness for each variable
 sort(colMeans(is.na(facility)), decreasing = TRUE)
-table(facility$year, is.na(facility$avg_daily_pop_total_facility)) # na concentrated in 2018: 6/1408
-table(facility$year, is.na(facility$avg_daily_pop_sentenced_male)) # na pre 2000, then in 2018: 8/1408
-table(facility$year, is.na(facility$avg_daily_pop_unsentenced_male)) # na pre 2000, then in 2018: 8/1408
-table(facility$year, is.na(facility$avg_daily_pop_sentenced_female)) # na pre 2000, then in 2018: 8/1408
-table(facility$year, is.na(facility$avg_daily_pop_unsentenced_female)) # na pre 2000, then in 2018: 8/1408
+table(facility$year, is.na(facility$avg_daily_pop_total_facility))
+table(facility$year, is.na(facility$avg_daily_pop_sentenced_male))
+table(facility$year, is.na(facility$avg_daily_pop_unsentenced_male))
+table(facility$year, is.na(facility$avg_daily_pop_sentenced_female))
+table(facility$year, is.na(facility$avg_daily_pop_unsentenced_female))
 
 facility %>% 
   filter(year == 2018 & (is.na(avg_daily_pop_total_facility) | 
@@ -73,17 +206,21 @@ facility %>%
 
 facility %>% 
   filter(year < 2001 & is.na(avg_daily_pop_sentenced_male)) %>% 
-  count(jurisdiction)
+  count(census_county_name, facility)
 
 facility %>% 
   filter(year < 2001 & is.na(avg_daily_pop_unsentenced_male)) %>% 
-  count(jurisdiction)
+  count(census_county_name, facility)
 
 facility %>% 
   filter(year < 2001 & is.na(avg_daily_pop_sentenced_female)) %>% 
-  count(jurisdiction)
+  count(census_county_name, facility)
 
 facility %>% 
   filter(year < 2001 & is.na(avg_daily_pop_unsentenced_female)) %>% 
-  count(jurisdiction)
+  count(census_county_name, facility)
 ```
+
+The following counties are missing data for average daily populations from 2018: Trinity (February through June), Tehama (July), Siskiyou (September), and Sutter (September). All of the counties are in northern California, and their jail data collection efforts may have been affected by the 2018 California wildfires. 
+
+Additional counties are missing data for average daily populations from 2000 or before, but some missingness is not random. For example, Santa Barbara County's Female Honor Farm is missing over 20 counts for sentenced and unsentence males, which is due to it being a facility for women.
