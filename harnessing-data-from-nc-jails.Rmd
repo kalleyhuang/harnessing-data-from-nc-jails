@@ -34,32 +34,41 @@ enframe(colMeans(is.na(county_m))) %>%
   arrange(desc(value))
 
 # number & proportion of missingness per county if missing more than 0.1
+table(county_m$year, is.na(county_m$avg_felony_inmate_unsentenced))
+table(county_m$census_county_name, is.na(county_m$avg_felony_inmate_unsentenced))
+
+table(county_m$year, is.na(county_m$avg_misdemean_inmate_unsentenced))
+table(county_m$census_county_name, is.na(county_m$avg_misdemean_inmate_unsentenced))
+
 county_m %>% 
   group_by(census_county_name) %>% 
   count(is.na(avg_felony_inmate_unsentenced)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(avg_felony_inmate_unsentenced)` & proportion > 0.1)
+  filter(`is.na(avg_felony_inmate_unsentenced)` & proportion > 0.1) %>% 
+  arrange(desc(proportion))
 
 county_m %>% 
   group_by(census_county_name) %>% 
   count(is.na(avg_misdemean_inmate_unsentenced)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(avg_misdemean_inmate_unsentenced)` & proportion > 0.1)
+  filter(`is.na(avg_misdemean_inmate_unsentenced)` & proportion > 0.1) %>% 
+  arrange(desc(proportion))
 
-table(county_m$census_county_name, is.na(county_m$mental_heath_case_open_end_month))
-table(county_m$census_county_name, is.na(county_m$num_new_mental_health_cases))
+table(county_m$year, is.na(county_m$num_inmate_get_psych_meds))
 
-num_inmate_get_psych_meds
+#columns 24 to 30
 num_inmate_get_mental_heath_bed
 num_inmates_seen_sick_call
 num_doctor_occurrences
 num_offsite_medical_appointment
 num_dental_encounters
 avg_inmate_get_sick_bed
+# columns 32 to 35
 avg_own_inmate_housed_elsewhere
 avg_fed_inmate_housed_contract
 avg_state_inmate_housed_contract
 avg_local_inmate_housed_contract
+#columns 42 to 48
 adp_of_maximum_security_inmates
 adp_of_medium_security_inmates
 adp_of_minimum_security_inmates
@@ -68,6 +77,9 @@ avg_inmates_get_mental_heath_bed
 avg_inmate_need_reg_med_attent
 avg_inmates_need_reg_ment_health
 ```
+The following counties are missing at least 10% of data for average number of unsentenced misdemeanor and felony inmates: Del Norte, Imperial, Inyo, Lassen, Monterey, Napa, San Benito, San Diego, Santa Barbara, Santa Clara, Santa Cruz, Shasta, Tehama, Trinity, Tulare, Tuolumne, and Ventura. Tehama and Santa Barbara are missing, respectively, at least 96% and 42% of data for those variables. Although missingness statewide is slightly concentrated before 2001, it is more concentrated by county.
+
+started recording  2002 onwards
 
 # County-Level Data Quarterly
 
@@ -163,23 +175,25 @@ county_q %>%
   count(year, is.na(money_spent_psych_med_last_qtr)) %>% 
   mutate(proportion = n / sum(n)) %>% 
   filter(`is.na(money_spent_psych_med_last_qtr)` & proportion > 0.1) %>% 
-  arrange(desc(proportion))
+  arrange(desc(proportion)) %>% 
+  group_by(census_county_name) %>% 
+  count(census_county_name)
 
 county_q %>% 
   filter(year > 2001) %>% 
-  group_by(census_county_name) %>% 
+  group_by(census_county_name, year) %>% 
   count(is.na(money_spent_medication_last_qtr)) %>% 
   mutate(proportion = n / sum(n)) %>% 
   filter(`is.na(money_spent_medication_last_qtr)` & proportion > 0.1) %>% 
-  arrange(desc(proportion))
+  arrange(desc(proportion)) %>% 
+  group_by(census_county_name) %>% 
+  count(census_county_name)
 ```
 The following variables were not counted after 2001: number of inmates who are 2nd strikers, number of inmates who are 3rd strikers, number of unserved misdemeanor warrants, number of unserved felony warrants, and percent of inmates who are undocumented immigrants. I subset the data, filtering for observations before 2001 and grouping by county. 
 
 The following variables were not counted before 2001: average length of stay for pre-trial release, average length of stay for sentenced release, average length of stay for all releases, money spent on psychiatric medicine last quarter, and money spent on medication last quarter. I subset the data, filtering for observations after 2001 and grouping by county. In general, I try to identify randomness or concentration of missingness greater than 0.1.
 
 For average length of stay for all releases, the following counties are missing data for every year: Contra Costa, Lake, San Luis Obispo, Santa Cruz, Sutter, Tuolumme, Yolo, and Yuba. For average length of stay for sentenced release, the same preceding counties, as well as Calaveras and Nevada, are missing data for every year. For average length of stay for pre-trial release, the same preceding counties, as well as Ventura, are missing data for every year.
-
-For money spent on psychiatric medicine last quarter, 
 
 # Facility/Jail-Level Data Monthly
 
