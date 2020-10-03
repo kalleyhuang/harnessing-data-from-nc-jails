@@ -29,11 +29,12 @@ county_m$date <- as.Date(county_m$date, format = "%Y-%m-%d")
 county_m$day_of_highest_count <- as.Date(county_m$day_of_highest_count, format = "%Y-%m-%d")
 
 # randomness & concentration of missingness for each variable
+# variables in order of highest proportion of missingness
 enframe(colMeans(is.na(county_m))) %>% 
   filter(value > 0.1) %>% 
   arrange(desc(value))
 
-# number & proportion of missingness per county if missing more than 0.1
+# variables with missingness concentrated by county
 table(county_m$census_county_name, is.na(county_m$avg_felony_inmate_unsentenced))
 table(county_m$census_county_name, is.na(county_m$avg_misdemean_inmate_unsentenced))
 table(county_m$census_county_name, is.na(county_m$avg_own_inmate_housed_elsewhere))
@@ -41,6 +42,7 @@ table(county_m$census_county_name, is.na(county_m$avg_fed_inmate_housed_contract
 table(county_m$census_county_name, is.na(county_m$avg_state_inmate_housed_contract))
 table(county_m$census_county_name, is.na(county_m$avg_local_inmate_housed_contract))
 
+# number & proportion of missingness per county if missing more than 0.1
 county_m %>% 
   group_by(census_county_name) %>% 
   count(is.na(avg_felony_inmate_unsentenced)) %>% 
@@ -83,6 +85,7 @@ county_m %>%
   filter(`is.na(avg_local_inmate_housed_contract)` & proportion > 0.1) %>% 
   arrange(desc(proportion))
 
+# before 2002 missingness
 table(county_m$year, is.na(county_m$adp_of_maximum_security_inmates))
 table(county_m$year, is.na(county_m$adp_of_medium_security_inmates))
 table(county_m$year, is.na(county_m$adp_of_minimum_security_inmates))
@@ -91,6 +94,7 @@ table(county_m$year, is.na(county_m$avg_inmates_get_mental_heath_bed))
 table(county_m$year, is.na(county_m$avg_inmate_need_reg_med_attent))
 table(county_m$year, is.na(county_m$avg_inmates_need_reg_ment_health))
 
+# after 2002 missingness
 table(county_m$year, is.na(county_m$num_inmate_get_psych_meds))
 table(county_m$year, is.na(county_m$num_inmate_get_mental_heath_bed))
 table(county_m$year, is.na(county_m$avg_inmate_get_sick_bed))
@@ -116,6 +120,7 @@ sapply(county_q, class)
 county_q$quarter <- as.factor(county_q$quarter)
 
 # randomness & concentration of missingness for each variable
+# variables in order of highest proportion of missingness
 enframe(colMeans(is.na(county_q))) %>% 
   filter(value > 0.1) %>% 
   arrange(desc(value))
