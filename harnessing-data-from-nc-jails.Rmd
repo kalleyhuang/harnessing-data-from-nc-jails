@@ -1,6 +1,8 @@
 ---
-title: "Harnessing Data from North Carolina's Jails to Inform Effective Policies"
-output: html_document
+title: "Harnessing Data from North Carolina's Jails to Inform Effective Policies — California Jail Profile Survey"
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include = FALSE}
@@ -17,23 +19,38 @@ county_q <- read.csv("california_jail_county_quarterly_1995_2020.csv")
 facility <- read.csv("california_jail_facility_monthly_1995_2020.csv")
 ```
 
-# County-Level Data Monthly
+These datasets are scraped from the California Board of State and Community Corrections' Jail Profile Survey by Jacob Kaplan from the University of Pennsylvania. Kaplan made the following changes to the data: adding variables for FIPS county and state codes and United States census county names, changing column names, and changing values from "Does Not Apply" and "Unavailable" to NA. 
 
-```{r county_monthly}
-# proportion of missingness for each variable
-colMeans(is.na(county_m))
+# County-Level Monthly Data
 
-# class for each variable, transform as needed
-sapply(county_m, class)
+The county-level monthly data contains 17801 observations of 48 variables, with data collected from 58 counties from October 1995 to March 2020. Here is the first observation.
+
+```{r county_monthly_dataset}
+head(county_m, n = 1)
+```
+
+## Proportion of Missingness
+
+22 of the 48 variables are missing in at least 10% of the observations. Here are the 10 most missing variables.
+
+```{r county_monthly_proportion_missingness}
+enframe(colMeans(is.na(county_m))) %>% 
+  arrange(desc(value)) %>% 
+  top_n(10)
+```
+
+## Class of Variables
+
+All variables seem to have the correct data type, except date and day_of_highest_count, which represents the day of the month when the county had the highest count of inmates. We change those variables to Date variables.
+
+```{r county_monthly_class}
+enframe(sapply(county_m, class))
 county_m$date <- as.Date(county_m$date, format = "%Y-%m-%d")
 county_m$day_of_highest_count <- as.Date(county_m$day_of_highest_count, format = "%Y-%m-%d")
+```
 
-# randomness & concentration of missingness for each variable
-# variables in order of highest proportion of missingness
-enframe(colMeans(is.na(county_m))) %>% 
-  filter(value > 0.1) %>% 
-  arrange(desc(value))
-
+## Analysis of Missingness
+```{r county_monthly_missingness_analysis, results = FALSE}
 # variables with missingness concentrated by county
 table(county_m$census_county_name, is.na(county_m$avg_felony_inmate_unsentenced))
 table(county_m$census_county_name, is.na(county_m$avg_misdemean_inmate_unsentenced))
@@ -159,28 +176,42 @@ county_m %>%
   filter(`is.na(num_offsite_medical_appointment)` & proportion > 0.1) %>% 
   arrange(desc(proportion))
 ```
+
 The following counties are missing at least 10% of data for average number of misdemeanor and felony inmates unsentenced: Del Norte, Imperial, Inyo, Lassen, Monterey, Napa, San Benito, San Diego, Santa Barbara, Santa Clara, Santa Cruz, Shasta, Tehama, Trinity, Tulare, Tuolumne, and Ventura. Tehama and Santa Barbara are missing, respectively, at least 96% and 42% of data for those variables. Although missingness statewide is slightly concentrated before 2001, it is more concentrated by county.
 
 The following variables were not counted after 2002: average daily population of maximum, medium, and minimum security inmates, average number of inmates assigned to medical and mental health beds, and average number of inmates needing regular medical and mental health attention.
 
 The following variables were not counted before 2002: number of inmates receiving psychiatric mediation on the last day of the month, number of inmates assigned to medical and mental health beds on the last day of the month, number of inmates seen at sick call, number of doctor occurences, number of dental encounters, number of offsite medical appointments.
 
-# County-Level Data Quarterly
+# County-Level Quarterly Data
 
-```{r county_quarterly}
-# proportion of missingness for each variable
-colMeans(is.na(county_q))
+The county-level quarterly data contains 5905 observations of 18 variables, with data collected from 58 counties from October 1995 to March 2020. Here is the first observation.
 
-# class for each variable, transform as needed
+```{r county_quarterly_dataset}
+head(county_q, n = 1)
+```
+
+## Proportion of Missingness
+
+10 of the 18 variables are missing in at least 10% of the observations. Here are the 10 most missing variables.
+
+```{r county_quarterly_proportion_missingness}
+enframe(colMeans(is.na(county_q))) %>% 
+  arrange(desc(value)) %>% 
+  top_n(10)
+```
+
+## Class of Variables
+
+All variables seem to have the correct data type, except quarter, which we change to a Factor variable.
+
+```{r county_quarterly_class}
 sapply(county_q, class)
 county_q$quarter <- as.factor(county_q$quarter)
+```
 
-# randomness & concentration of missingness for each variable
-# variables in order of highest proportion of missingness
-enframe(colMeans(is.na(county_q))) %>% 
-  filter(value > 0.1) %>% 
-  arrange(desc(value))
-
+## Analysis of Missingness
+```{r county_quarterly_missingness_analysis, results = FALSE}
 table(county_q$year, is.na(county_q$num_inmate_are_2nd_striker))
 table(county_q$year, is.na(county_q$num_inmate_are_3rd_striker))
 table(county_q$year, is.na(county_q$num_unserved_misdemean_warrants))
@@ -274,24 +305,44 @@ county_q %>%
   group_by(census_county_name) %>% 
   count(census_county_name)
 ```
+
 The following variables were not counted after 2001: number of inmates who are 2nd strikers, number of inmates who are 3rd strikers, number of unserved misdemeanor warrants in county, number of unserved felony warrants in county, and percent of inmates who are undocumented immigrants. I subset the data, filtering for observations before 2001 and grouping by county. 
 
 The following variables were not counted before 2001: average length of stay for pre-trial release, average length of stay for sentenced release, average length of stay for all releases, money spent on psychiatric medicine during the previous quarter, and money spent on medication during the previous quarter. I subset the data, filtering for observations after 2001 and grouping by county. In general, I try to identify randomness or concentration of missingness greater than 0.1.
 
 For average length of stay for all releases, the following counties are missing data for every year: Contra Costa, Lake, San Luis Obispo, Santa Cruz, Sutter, Tuolumme, Yolo, and Yuba. For average length of stay for sentenced release, the same preceding counties, as well as Calaveras and Nevada, are missing data for every year. For average length of stay for pre-trial release, the same preceding counties, as well as Ventura, are missing data for every year.
 
-# Facility/Jail-Level Data Monthly
+# Facility/Jail-Level Monthly Data
 
-```{r facility_monthly}
-# proportion of missingness for each variable
-colMeans(is.na(facility))
+The facility/jail-level monthly data contains 36774 observations of 14 variables, with data collected from 58 counties from October 1995 to March 2020. Here is the first observation.
 
-# class for each variable, transform as needed
+```{r facility_dataset}
+head(facility, n = 1)
+```
+
+## Proportion of Missingness
+
+No variables are missing in at least 10% of the observations. Here are the 10 most missing variables.
+
+```{r facility_proportion_missingness}
+enframe(colMeans(is.na(facility))) %>% 
+  arrange(desc(value)) %>% 
+  top_n(10)
+```
+
+## Class of Variables
+
+All variables seem to have the correct data type, except date, which we change to a Date variable.
+
+```{r facility_class}
 sapply(facility, class)
 facility$date <- as.Date(facility$date, format = "%Y-%m-%d")
+```
 
+## Analysis of Missingness
+
+```{r facility_missingness_analysis, results = FALSE}
 # randomness & concentration of missingness for each variable
-sort(colMeans(is.na(facility)), decreasing = TRUE)
 table(facility$year, is.na(facility$avg_daily_pop_total_facility))
 table(facility$year, is.na(facility$avg_daily_pop_sentenced_male))
 table(facility$year, is.na(facility$avg_daily_pop_unsentenced_male))
