@@ -125,7 +125,7 @@ county_m %>%
   group_by(census_county_name) %>%  
   count(is.na(num_inmate_get_psych_meds)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(num_inmate_get_psych_meds)` & proportion > 0.1) %>% 
+  filter(`is.na(num_inmate_get_psych_meds)`) %>% 
   arrange(desc(proportion))
 
 county_m %>% 
@@ -133,7 +133,7 @@ county_m %>%
   group_by(census_county_name) %>%  
   count(is.na(num_inmate_get_mental_heath_bed)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(num_inmate_get_mental_heath_bed)` & proportion > 0.1) %>% 
+  filter(`is.na(num_inmate_get_mental_heath_bed)`) %>% 
   arrange(desc(proportion))
 
 county_m %>% 
@@ -141,7 +141,7 @@ county_m %>%
   group_by(census_county_name) %>%  
   count(is.na(avg_inmate_get_sick_bed)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(avg_inmate_get_sick_bed)` & proportion > 0.1) %>% 
+  filter(`is.na(avg_inmate_get_sick_bed)`) %>% 
   arrange(desc(proportion))
 
 county_m %>% 
@@ -149,7 +149,7 @@ county_m %>%
   group_by(census_county_name) %>%  
   count(is.na(num_inmates_seen_sick_call)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(num_inmates_seen_sick_call)` & proportion > 0.1) %>% 
+  filter(`is.na(num_inmates_seen_sick_call)`) %>% 
   arrange(desc(proportion))
 
 county_m %>% 
@@ -157,7 +157,7 @@ county_m %>%
   group_by(census_county_name) %>%  
   count(is.na(num_doctor_occurrences)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(num_doctor_occurrences)` & proportion > 0.1) %>% 
+  filter(`is.na(num_doctor_occurrences)`) %>% 
   arrange(desc(proportion))
 
 county_m %>% 
@@ -165,7 +165,7 @@ county_m %>%
   group_by(census_county_name) %>%  
   count(is.na(num_dental_encounters)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(num_dental_encounters)` & proportion > 0.1) %>% 
+  filter(`is.na(num_dental_encounters)`) %>% 
   arrange(desc(proportion))
 
 county_m %>% 
@@ -173,7 +173,7 @@ county_m %>%
   group_by(census_county_name) %>%  
   count(is.na(num_offsite_medical_appointment)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(num_offsite_medical_appointment)` & proportion > 0.1) %>% 
+  filter(`is.na(num_offsite_medical_appointment)`) %>% 
   arrange(desc(proportion))
 ```
 
@@ -266,7 +266,7 @@ county_q %>%
   group_by(census_county_name) %>%  
   count(is.na(avg_length_stay_pretrial_release)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(avg_length_stay_pretrial_release)` & proportion > 0.1) %>% 
+  filter(`is.na(avg_length_stay_pretrial_release)`) %>% 
   arrange(desc(proportion))
 
 county_q %>% 
@@ -274,7 +274,7 @@ county_q %>%
   group_by(census_county_name) %>% 
   count(is.na(avg_length_stay_sentnced_release)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(avg_length_stay_sentnced_release)` & proportion > 0.1) %>% 
+  filter(`is.na(avg_length_stay_sentnced_release)`) %>% 
   arrange(desc(proportion))
 
 county_q %>% 
@@ -282,28 +282,24 @@ county_q %>%
   group_by(census_county_name) %>% 
   count(is.na(avg_length_stay_all_releases)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(avg_length_stay_all_releases)` & proportion > 0.1) %>% 
+  filter(`is.na(avg_length_stay_all_releases)`) %>% 
   arrange(desc(proportion))
 
 county_q %>% 
   filter(year > 2001) %>% 
-  group_by(census_county_name, year) %>% 
-  count(year, is.na(money_spent_psych_med_last_qtr)) %>% 
-  mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(money_spent_psych_med_last_qtr)` & proportion > 0.1) %>% 
-  arrange(desc(proportion)) %>% 
   group_by(census_county_name) %>% 
-  count(census_county_name)
+  count(is.na(money_spent_psych_med_last_qtr)) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(`is.na(money_spent_psych_med_last_qtr)`) %>% 
+  arrange(desc(proportion))
 
 county_q %>% 
   filter(year > 2001) %>% 
-  group_by(census_county_name, year) %>% 
+  group_by(census_county_name) %>% 
   count(is.na(money_spent_medication_last_qtr)) %>% 
   mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(money_spent_medication_last_qtr)` & proportion > 0.1) %>% 
-  arrange(desc(proportion)) %>% 
-  group_by(census_county_name) %>% 
-  count(census_county_name)
+  filter(`is.na(money_spent_medication_last_qtr)`) %>% 
+  arrange(desc(proportion))
 ```
 
 The following variables were not counted after 2001: number of inmates who are 2nd strikers, number of inmates who are 3rd strikers, number of unserved misdemeanor warrants in county, number of unserved felony warrants in county, and percent of inmates who are undocumented immigrants. I subset the data, filtering for observations before 2001 and grouping by county. 
