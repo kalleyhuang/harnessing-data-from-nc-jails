@@ -14,9 +14,9 @@ library(tidyverse)
 ```
 
 ```{r data}
-county_m <- read.csv("california_jail_county_monthly_1995_2020.csv")
-county_q <- read.csv("california_jail_county_quarterly_1995_2020.csv")
-facility <- read.csv("california_jail_facility_monthly_1995_2020.csv")
+county_m <- read.csv(here("data", "california_jail_county_monthly_1995_2020.csv"))
+county_q <- read.csv(here("data", "california_jail_county_quarterly_1995_2020.csv"))
+facility <- read.csv(here("data", "california_jail_facility_monthly_1995_2020.csv"))
 ```
 
 These datasets are scraped from the California Board of State and Community Corrections' Jail Profile Survey by Jacob Kaplan from the University of Pennsylvania. Kaplan made the following changes to the data: adding variables for FIPS county and state codes and United States census county names, changing column names, and changing values from "Does Not Apply" and "Unavailable" to NA. 
