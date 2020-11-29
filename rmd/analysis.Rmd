@@ -27,27 +27,41 @@ county_q$quarter <- as.factor(county_q$quarter)
 facility <- read.csv(here("data", "california_jail_facility_monthly_1995_2020.csv"))
 facility$date <- as.Date(facility$date, format = "%Y-%m-%d")
 facility <- facility %>% 
-  rename(unsentenced_male = avg_daily_pop_unsentenced_male, 
-         unsentenced_female = avg_daily_pop_unsentenced_female, 
-         sentenced_male = avg_daily_pop_sentenced_male, 
-         sentenced_female = avg_daily_pop_sentenced_female)
+  rename(unsen_male = avg_daily_pop_unsentenced_male, unsen_female = avg_daily_pop_unsentenced_female, 
+         sen_male = avg_daily_pop_sentenced_male, sen_female = avg_daily_pop_sentenced_female,
+         county = census_county_name)
 ```
 
 # Population
 
 ```{r population}
-facility %>% 
-  select(jurisdiction, year, unsentenced_male, unsentenced_female, sentenced_male, sentenced_female) %>% 
-  group_by(jurisdiction, year) %>% 
-  mutate(unsentenced_male = sum(unsentenced_male), unsentenced_female = sum(unsentenced_female),
-         sentenced_male = sum(sentenced_male), sentenced_female = sum(sentenced_female)) %>% 
+facility_pct_change <- facility %>% 
+  select(county, year, unsen_male, unsen_female, sen_male, sen_female) %>% 
+  group_by(county, year) %>% 
+  mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
+         sen_male = sum(sen_male), sen_female = sum(sen_female)) %>% 
   unique() %>% 
-  group_by(jurisdiction) %>% 
+  group_by(county) %>% 
   arrange(year, .by_group = TRUE) %>% 
-  mutate(pct_change_unsentenced_male = (unsentenced_male / lag(unsentenced_male) - 1) * 100,
-         pct_change_unsentenced_female = (unsentenced_female / lag(unsentenced_female) - 1) * 100,
-         pct_change_sentenced_male = (sentenced_male / lag(sentenced_male) - 1) * 100,
-         pct_change_sentenced_female = (sentenced_female / lag(sentenced_female) - 1) * 100)
+  mutate(pct_change_unsen_male = (unsen_male / lag(unsen_male) - 1) * 100,
+         pct_change_unsen_female = (unsen_female / lag(unsen_female) - 1) * 100,
+         pct_change_sen_male = (sen_male / lag(sen_male) - 1) * 100,
+         pct_change_sen_female = (sen_female / lag(sen_female) - 1) * 100) %>% 
+  filter(year != 1995 & year != 1996 & year != 2020 & 
+           is.finite(pct_change_unsen_male) & is.finite(pct_change_unsen_female) &
+           is.finite(pct_change_sen_male) & is.finite(pct_change_sen_female))
+  # mutate(pct_change_unsen_male = case_when(year == 1996 ~ NA_real_, 
+  #                                          year != 1996 ~ as.double(pct_change_unsen_male)),
+  #        pct_change_unsen_female = case_when(year == 1996 ~ NA_real_, 
+  #                                            year != 1996 ~ as.double(pct_change_unsen_female)),
+  #        pct_change_sen_male = case_when(year == 1996 ~ NA_real_, 
+  #                                        year != 1996 ~ as.double(pct_change_sen_male)),
+  #        pct_change_sen_female = case_when(year == 1996 ~ NA_real_, 
+  #                                          year != 1996 ~ as.double(pct_change_sen_female)))
+
+facility_pct_change_model <- lm(pct_change_unsen_male~factor(county) + year, 
+                                data = facility_pct_change)
+summary(facility_pct_change_model)
 
 facility %>% 
   select(date, unsentenced_male, unsentenced_female, sentenced_male, sentenced_female) %>% 
