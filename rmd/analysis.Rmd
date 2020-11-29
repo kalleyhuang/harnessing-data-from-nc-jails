@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 ```{r}
 library(tidyverse)
+library(here)
 ```
 
 ```{r data}
@@ -23,18 +24,33 @@ county_q$quarter <- as.factor(county_q$quarter)
 
 facility <- read.csv(here("data", "california_jail_facility_monthly_1995_2020.csv"))
 facility$date <- as.Date(facility$date, format = "%Y-%m-%d")
+facility <- facility %>% 
+  rename(unsentenced_male = avg_daily_pop_unsentenced_male, 
+         unsentenced_female = avg_daily_pop_unsentenced_female, 
+         sentenced_male = avg_daily_pop_sentenced_male, 
+         sentenced_female = avg_daily_pop_sentenced_female)
 ```
 
 # Population
 
 ```{r population}
 facility %>% 
-  group_by(date) %>% 
-  mutate(unsentenced_male = sum(avg_daily_pop_unsentenced_male),
-         unsentenced_female = sum(avg_daily_pop_unsentenced_female),
-         sentenced_male = sum(avg_daily_pop_sentenced_male),
-         sentenced_female = sum(avg_daily_pop_sentenced_female)) %>% 
+  select(jurisdiction, date, unsentenced_male, unsentenced_female, sentenced_male, sentenced_female) %>% 
+  group_by(jurisdiction, date) %>% 
+  mutate(unsentenced_male = sum(unsentenced_male), unsentenced_female = sum(unsentenced_female),
+         sentenced_male = sum(sentenced_male), sentenced_female = sum(sentenced_female)) %>% 
+  unique() %>% 
+  arrange(jurisdiction, date) %>% 
+  mutate(pct_change_unsentenced_male = (unsentenced_male - lag(unsentenced_male)) / lag(unsentenced_male) * 100,
+         pct_change_unsentenced_female = (unsentenced_female / lag(unsentenced_female) - 1) * 100,
+         pct_change_sentenced_male = (sentenced_male / lag(sentenced_male) - 1) * 100,
+         pct_change_sentenced_female = (sentenced_female / lag(sentenced_female) - 1) * 100)
+
+facility %>% 
   select(date, unsentenced_male, unsentenced_female, sentenced_male, sentenced_female) %>% 
+  group_by(date) %>% 
+  mutate(unsentenced_male = sum(unsentenced_male), unsentenced_female = sum(unsentenced_female),
+         sentenced_male = sum(sentenced_male), sentenced_female = sum(sentenced_female)) %>% 
   unique() %>% 
   arrange(date) %>% 
   ggplot(data = ., mapping = aes(x = date, group = 1)) +
