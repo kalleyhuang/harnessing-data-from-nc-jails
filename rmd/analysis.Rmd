@@ -59,9 +59,9 @@ facility_pct_change <- facility %>%
   #        pct_change_sen_female = case_when(year == 1996 ~ NA_real_, 
   #                                          year != 1996 ~ as.double(pct_change_sen_female)))
 
-facility_pct_change_model <- lm(pct_change_unsen_male~factor(county) + year, 
-                                data = facility_pct_change)
+facility_pct_change_model <- lm(pct_change_unsen_male~factor(county) + year, data = facility_pct_change)
 summary(facility_pct_change_model)
+anova(facility_pct_change_model)
 
 facility %>% 
   select(date, unsentenced_male, unsentenced_female, sentenced_male, sentenced_female) %>% 
