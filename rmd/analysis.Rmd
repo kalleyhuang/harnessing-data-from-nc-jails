@@ -139,4 +139,28 @@ county_q %>%
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
         axis.text.y = element_text(color = "#000000", size = 10))
+
+county_q %>% 
+  filter(year > 2001, county == "Los Angeles County" | county == "San Francisco County") %>% 
+  select(county, date, pretrial_release, sentenced_release) %>% 
+  mutate(county = case_when(county == "Los Angeles County" ~ "la", county == "San Francisco County" ~ "sf"),
+         row = row_number()) %>% 
+  pivot_wider(names_from = county, values_from = c(pretrial_release, sentenced_release)) %>% 
+  select(-row) %>% 
+  group_by(date) %>% 
+  fill(everything(), .direction = "down") %>%
+  fill(everything(), .direction = "up") %>% 
+  unique() %>% 
+  ggplot(data = ., mapping = aes(x = date, group = 1)) +
+  geom_line(mapping = aes(y = pretrial_release_la, color = "la", linetype = "solid")) +
+  geom_line(mapping = aes(y = pretrial_release_sf, color = "sf", linetype = "solid")) +
+  geom_line(mapping = aes(y = sentenced_release_la, color = "la", linetype = "dotted")) +
+  geom_line(mapping = aes(y = sentenced_release_sf, color = "sf", linetype = "dotted")) +
+  labs(x = "Year", y = "Average Lengths of Stay") +
+  scale_color_discrete(name = "County", breaks = c("la", "sf"), labels = c("Los Angeles", "San Francisco")) +
+  scale_linetype_manual(name = "Sentence Type",
+                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
 ```
