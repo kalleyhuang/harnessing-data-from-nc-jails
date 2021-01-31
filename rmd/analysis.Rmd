@@ -69,9 +69,17 @@ population <- county_m %>%
 
 ```{r population_analysis}
 # what is a significant percentage change in population?
-population %>% 
-  filter(pct_change_unsen_male > 25 | pct_change_unsen_female > 25 | pct_change_sen_male > 25 |
-           pct_change_sen_female > 25 | pct_change_total > 25)
+county_m %>% 
+  mutate(year = year(date)) %>% 
+  select(year, county, total) %>% 
+  group_by(county, year) %>% 
+  mutate(total = sum(total)) %>% 
+  unique() %>% 
+  group_by(county) %>% 
+  arrange(year, .by_group = TRUE) %>% 
+  mutate(percent_change = (total / lag(total) - 1) * 100) %>% 
+  filter(year > 2010 & year != 2020 & is.finite(total) & percent_change > 25) %>% 
+  arrange(year)
 
 # should an analysis sum across years instead months to account for natural fluctuation?
 county_m %>% 
