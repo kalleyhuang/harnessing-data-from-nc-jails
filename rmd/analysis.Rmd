@@ -21,6 +21,14 @@ options(scipen = 999)
 county_m <- read.csv(here("data", "california_jail_county_monthly_1995_2020.csv"))
 county_m$date <- as.Date(county_m$date, format = "%Y-%m-%d")
 county_m$day_of_highest_count <- as.Date(county_m$day_of_highest_count, format = "%Y-%m-%d")
+county_m <- county_m %>% 
+  rename(unsen_male = avg_daily_pop_unsentenced_male, unsen_female = avg_daily_pop_unsentenced_female,
+         sen_male = avg_daily_pop_sentenced_male, sen_female = avg_daily_pop_sentenced_female,
+         total = avg_daily_pop_total_jurisdiction, felony_unsen = avg_felony_inmate_unsentenced,
+         felony_sen = avg_felony_inmate_sentenced, felony_total = avg_felony_inmate_total,
+         misd_unsen = avg_misdemean_inmate_unsentenced, misd_sen = avg_misdemean_inmate_sentenced,
+         misd_total = avg_misdemean_inmate_total, county = census_county_name) %>% 
+  select(4, 5, 9:19, 22:41)
 
 county_q <- read.csv(here("data", "california_jail_county_quarterly_1995_2020.csv"))
 county_q$quarter <- as.factor(county_q$quarter)
@@ -40,8 +48,8 @@ facility <- facility %>%
 
 # Population
 
-```{r population}
-population <- facility %>% 
+```{r population_data}
+population <- county_m %>% 
   select(county, date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
   group_by(county, date) %>% 
   mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
@@ -57,7 +65,26 @@ population <- facility %>%
   filter(year(date) != 1995 & year(date) != 1996 & year(date) != 2020 & 
            is.finite(pct_change_unsen_male) & is.finite(pct_change_unsen_female) &
            is.finite(pct_change_sen_male) & is.finite(pct_change_sen_female) & is.finite(total))
+```
 
+```{r population_analysis}
+# what is a significant percentage change in population?
+population %>% 
+  filter(pct_change_unsen_male > 25 | pct_change_unsen_female > 25 | pct_change_sen_male > 25 |
+           pct_change_sen_female > 25 | pct_change_total > 25)
+
+# should an analysis sum across years instead months to account for natural fluctuation?
+county_m %>% 
+  mutate(year = year(date)) %>% 
+  select(year, county, unsen_male, unsen_female, sen_male, sen_female, total) %>%
+  group_by(year, county) %>% 
+  mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female), sen_male = sum(sen_male), 
+         sen_female = sum(sen_female), total = sum(total)) %>% 
+  unique() %>% 
+  arrange(year)
+```
+
+```{r population_modeling}
 total_model <- lm(total~factor(county) + date, data = population)
 summary(total_model)
 unsen_male_model <- lm(unsen_male~factor(county) + date, data = population)
@@ -68,8 +95,10 @@ sen_male_model <- lm(sen_male~factor(county) + date, data = population)
 summary(sen_male_model)
 sen_female_model <- lm(sen_female~factor(county) + date, data = population)
 summary(sen_female_model)
+```
 
-facility %>% 
+```{r population_viz}
+county_m %>% 
   select(date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
   group_by(date) %>% 
   mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
@@ -81,8 +110,43 @@ facility %>%
   geom_line(mapping = aes(y = sen_female, color = "female", linetype = "solid")) +
   geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "dotted")) +
   geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "dotted")) +
+  geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
   labs(x = "Year", y = "Average Daily Populations") +
   scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
+  scale_linetype_manual(name = "Sentence Type",
+                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
+
+county_m %>% 
+  select(date, unsen_male, sen_male) %>% 
+  group_by(date) %>% 
+  mutate(unsen_male = sum(unsen_male), sen_male = sum(sen_male)) %>% 
+  unique() %>% 
+  arrange(date) %>% 
+  ggplot(data = ., mapping = aes(x = date, group = 1)) +
+  geom_line(mapping = aes(y = sen_male, linetype = "solid")) +
+  geom_line(mapping = aes(y = unsen_male, linetype = "dotted")) +
+  geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
+  labs(x = "Year", y = "Average Daily Populations") +
+  scale_linetype_manual(name = "Sentence Type",
+                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
+
+county_m %>% 
+  select(date, unsen_female, sen_female) %>% 
+  group_by(date) %>% 
+  mutate(unsen_female = sum(unsen_female), sen_female = sum(sen_female)) %>% 
+  unique() %>% 
+  arrange(date) %>% 
+  ggplot(data = ., mapping = aes(x = date, group = 1)) +
+  geom_line(mapping = aes(y = sen_female, linetype = "solid")) +
+  geom_line(mapping = aes(y = unsen_female, linetype = "dotted")) +
+  geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
+  labs(x = "Year", y = "Average Daily Populations") +
   scale_linetype_manual(name = "Sentence Type",
                         values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
   theme_classic() +
@@ -92,7 +156,7 @@ facility %>%
 
 # Length of Stay
 
-```{r length_of_stay}
+```{r length_of_stay_data}
 length_of_stay <- county_q %>% 
   filter(year > 2001) %>% 
   select(county, date, pretrial_release, sentenced_release) %>% 
@@ -101,7 +165,9 @@ length_of_stay <- county_q %>%
   mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
   unique() %>% 
   arrange(date)
+```
 
+```{r length_of_stay_analysis}
 county_q %>% 
   filter(year > 2001) %>% 
   group_by(county) %>%  
@@ -119,7 +185,13 @@ county_q %>%
   filter(`is.na(sentenced_release)`) %>% 
   arrange(county) %>% 
   filter(proportion < 0.1)
+```
 
+```{r length_of_stay_modeling}
+
+```
+
+```{r length_of_stay_viz}
 county_q %>% 
   filter(year > 2001, county == "Colusa County" | county == "Del Norte County" | county == "Fresno County" |
            county == "Madera County" | county == "Mariposa County" | county == "Plumas County" |
