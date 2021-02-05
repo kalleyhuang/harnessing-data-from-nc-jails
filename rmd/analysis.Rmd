@@ -68,7 +68,18 @@ population <- county_m %>%
 ```
 
 ```{r population_analysis}
-# what is a significant percentage change in population?
+county_m %>% 
+  filter(year(date) == 2011 | year(date) == 2012 | year(date) == 2014 | year(date) == 2016) %>% 
+  filter(month(date) == 1) %>% # to control for seasonal effects
+  arrange(date) %>% 
+  select(date, county, total) %>% 
+  group_by(county) %>% 
+  unique() %>% 
+  mutate(one_yr_pct_change = (total / lag(total) - 1) * 100,
+         three_yr_pct_change = (total / lag(total) - 3) * 100, # THIS DOES NOT WORK
+         five_yr_pct_change = (total / lag(total) - 5) * 100) # THIS DOES NOT WORK
+# find mean percent change, look at percentiles (75% to 100%)
+
 county_m %>% 
   mutate(year = year(date)) %>% 
   select(year, county, total) %>% 
@@ -78,10 +89,9 @@ county_m %>%
   group_by(county) %>% 
   arrange(year, .by_group = TRUE) %>% 
   mutate(percent_change = (total / lag(total) - 1) * 100) %>% 
-  filter(year > 2010 & year != 2020 & is.finite(total) & percent_change > 25) %>% 
+  filter(year > 2010 & year != 2020 & is.finite(total) & percent_change > 20) %>% 
   arrange(year)
 
-# should an analysis sum across years instead months to account for natural fluctuation?
 county_m %>% 
   mutate(year = year(date)) %>% 
   select(year, county, unsen_male, unsen_female, sen_male, sen_female, total) %>%
@@ -119,6 +129,7 @@ county_m %>%
   geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "dotted")) +
   geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "dotted")) +
   geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
+  geom_vline(xintercept = as.Date("2012-01-01"), linetype = "dotted") +
   labs(x = "Year", y = "Average Daily Populations") +
   scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
   scale_linetype_manual(name = "Sentence Type",
