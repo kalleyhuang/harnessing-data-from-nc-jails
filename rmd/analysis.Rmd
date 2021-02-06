@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 library(tidyverse)
 library(lubridate)
 library(here)
+library(shiny)
 ```
 
 ```{r data}
@@ -68,9 +69,8 @@ population <- county_m %>%
 ```
 
 ```{r population_analysis}
-county_m_one_yr <- county_m %>% 
-  filter(year(date) == 2011 | year(date) == 2012) %>% 
-  filter(month(date) == 1) %>%
+population_one_yr <- county_m %>% 
+  filter(year(date) == 2011 | year(date) == 2012, month(date) == 1) %>%
   select(date, county, total) %>% 
   arrange(date) %>% 
   group_by(county, date) %>%
@@ -80,9 +80,8 @@ county_m_one_yr <- county_m %>%
   mutate(change = (total / lag(total) - 1) * 100) %>% 
   filter(year(date) == 2012)
 
-county_m_three_yr <- county_m %>% 
-  filter(year(date) == 2011 | year(date) == 2014) %>% 
-  filter(month(date) == 1) %>%
+population_three_yr <- county_m %>% 
+  filter(year(date) == 2011 | year(date) == 2014, month(date) == 1) %>%
   select(date, county, total) %>% 
   arrange(date) %>% 
   group_by(county, date) %>%
@@ -92,9 +91,8 @@ county_m_three_yr <- county_m %>%
   mutate(change = (total / lag(total) - 1) * 100) %>% 
   filter(year(date) == 2014)
 
-county_m_five_yr <- county_m %>% 
-  filter(year(date) == 2011 | year(date) == 2016) %>% 
-  filter(month(date) == 1) %>%
+population_five_yr <- county_m %>% 
+  filter(year(date) == 2011 | year(date) == 2016, month(date) == 1) %>%
   select(date, county, total) %>% 
   arrange(date) %>% 
   group_by(county, date) %>%
@@ -104,12 +102,12 @@ county_m_five_yr <- county_m %>%
   mutate(change = (total / lag(total) - 1) * 100) %>% 
   filter(year(date) == 2016)
 
-county_m_five_yr[nrow(county_m_five_yr) + 1,] = list(as.Date("2016-01-01"), "Sierra County", 0, 0)
+population_five_yr[nrow(population_five_yr) + 1,] = list(as.Date("2016-01-01"), "Sierra County", 0, 0)
 
-county_m_five_yr <- county_m_five_yr %>% 
+population_five_yr <- population_five_yr %>% 
   arrange(county)
 
-county_m_temp <- county_m %>% 
+realignment_population <- county_m %>% 
   filter(year(date) == 2011 & month(date) == 1) %>% 
   select(county, total) %>% 
   group_by(county) %>% 
@@ -117,24 +115,25 @@ county_m_temp <- county_m %>%
   unique() %>% 
   rename(`2011_total` = total)
 
-county_m_temp$`2012_total` = county_m_one_yr$total
-county_m_temp$`2012_change` = county_m_one_yr$change
-county_m_temp$`2014_total` = county_m_three_yr$total
-county_m_temp$`2014_change` = county_m_three_yr$change
-county_m_temp$`2016_total` = county_m_five_yr$total
-county_m_temp$`2016_change` = county_m_five_yr$change
+realignment_population$`2012_total` = population_one_yr$total
+realignment_population$`2012_change` = population_one_yr$change
+realignment_population$`2014_total` = population_three_yr$total
+realignment_population$`2014_change` = population_three_yr$change
+realignment_population$`2016_total` = population_five_yr$total
+realignment_population$`2016_change` = population_five_yr$change
 
-median(county_m_temp$`2012_change`)
-quantile(county_m_temp$`2012_change`, c(0.25, 0.5, 0.75))
-median(county_m_temp$`2014_change`)
-quantile(county_m_temp$`2014_change`, c(0.25, 0.5, 0.75))
-median(county_m_temp$`2016_change`)
-quantile(county_m_temp$`2016_change`, c(0.25, 0.5, 0.75))
+quantile(realignment_population$`2012_change`, c(0.25, 0.5, 0.75))
+quantile(realignment_population$`2014_change`, c(0.25, 0.5, 0.75))
+quantile(realignment_population$`2016_change`, c(0.25, 0.5, 0.75))
 
-county_m_temp %>% 
+realignment_population %>% 
+  filter(`2012_change` < -4.368030 | `2014_change` <  4.295704 | `2014_change` < -6.459330)
+realignment_population %>% 
+  filter(`2012_change` < -4.368030 & `2014_change` <  4.295704 & `2014_change` < -6.459330)
+
+realignment_population %>% 
   filter(`2012_change` > 8.823529 | `2014_change` > 24.584718 | `2016_change` > 19.323671)
-
-county_m_temp %>% 
+realignment_population %>% 
   filter(`2012_change` > 8.823529 & `2014_change` > 24.584718 & `2016_change` > 19.323671)
 
 # county_m %>% 
@@ -174,7 +173,7 @@ summary(sen_female_model)
 
 ```{r population_viz}
 county_m %>% 
-# filter(county == "Fresno County") %>% 
+  # filter(county == "Alameda County") %>% 
   select(date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
   group_by(date) %>% 
   mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
@@ -201,10 +200,9 @@ county_m %>%
 length_of_stay <- county_q %>% 
   filter(year > 2001) %>% 
   select(county, date, pretrial_release, sentenced_release) %>% 
-  group_by(county, date) %>%
+  # group_by(county, date) %>%
   na.omit() %>% 
-  mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
-  unique() %>% 
+  # mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
   arrange(date)
 ```
 
@@ -226,6 +224,80 @@ county_q %>%
   filter(`is.na(sentenced_release)`) %>% 
   arrange(county) %>% 
   filter(proportion < 0.1)
+
+length_of_stay_no_filter <- length_of_stay %>% 
+  group_by(date) %>% 
+  mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
+  select(-county) %>% 
+  unique()
+
+length_of_stay_filter <- length_of_stay %>% 
+  filter(county == "Colusa County" | county == "Del Norte County" | county == "Fresno County" |
+           county == "Madera County" | county == "Mariposa County" | county == "Plumas County" |
+           county == "Santa Barbara County" | county == "Siskiyou County") %>%
+  group_by(date) %>% 
+  mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
+  select(-county) %>% 
+  unique()
+
+median(length_of_stay_no_filter$pretrial_release - length_of_stay_filter$pretrial_release) # 4 day diff
+median(length_of_stay_no_filter$sentenced_release - length_of_stay_filter$sentenced_release) # 15 day diff
+
+length_of_stay_one_yr <- length_of_stay %>% 
+  filter(county == "Colusa County" | county == "Fresno County" | county == "Mariposa County",
+         year(date) == 2011 | year(date) == 2012, month(date) == 1) %>% 
+  arrange(date) %>% 
+  group_by(county) %>% 
+  mutate(pretrial_change = (pretrial_release / lag(pretrial_release) - 1) * 100,
+         sentenced_change = (sentenced_release / lag(sentenced_release) - 1) * 100) %>% 
+  filter(year(date) == 2012)
+
+length_of_stay_three_yr <- length_of_stay %>% 
+  filter(county == "Colusa County" | county == "Fresno County" | county == "Mariposa County",
+         year(date) == 2011 | year(date) == 2014, month(date) == 1) %>% 
+  arrange(date) %>% 
+  group_by(county) %>% 
+  mutate(pretrial_change = (pretrial_release / lag(pretrial_release) - 1) * 100,
+         sentenced_change = (sentenced_release / lag(sentenced_release) - 1) * 100) %>% 
+  filter(year(date) == 2014)
+
+length_of_stay_five_yr <- length_of_stay %>% 
+  filter(county == "Colusa County" | county == "Fresno County" | county == "Mariposa County",
+         year(date) == 2011 | year(date) == 2016, month(date) == 1) %>% 
+  arrange(date) %>% 
+  group_by(county) %>% 
+  mutate(pretrial_change = (pretrial_release / lag(pretrial_release) - 1) * 100,
+         sentenced_change = (sentenced_release / lag(sentenced_release) - 1) * 100) %>% 
+  filter(year(date) == 2016)
+
+realignment_length_of_stay <- length_of_stay %>% 
+  filter(county == "Colusa County" | county == "Fresno County" | county == "Mariposa County",
+         year(date) == 2011 & month(date) == 1) %>% 
+  select(county, pretrial_release, sentenced_release) %>% 
+  group_by(county) %>% 
+  rename(`2011_pretrial` = pretrial_release, `2011_sentenced` = sentenced_release)
+
+realignment_length_of_stay$`2012_pretrial` = length_of_stay_one_yr$pretrial_release
+realignment_length_of_stay$`2012_pre_change` = length_of_stay_one_yr$pretrial_change
+realignment_length_of_stay$`2012_sentenced` = length_of_stay_one_yr$sentenced_release
+realignment_length_of_stay$`2012_sen_change` = length_of_stay_one_yr$sentenced_change
+
+realignment_length_of_stay$`2014_pretrial` = length_of_stay_three_yr$pretrial_release
+realignment_length_of_stay$`2014_pre_change` = length_of_stay_three_yr$pretrial_change
+realignment_length_of_stay$`2014_sentenced` = length_of_stay_three_yr$sentenced_release
+realignment_length_of_stay$`2014_sen_change` = length_of_stay_three_yr$sentenced_change
+
+realignment_length_of_stay$`2016_pretrial` = length_of_stay_five_yr$pretrial_release
+realignment_length_of_stay$`2016_pre_change` = length_of_stay_five_yr$pretrial_change
+realignment_length_of_stay$`2016_sentenced` = length_of_stay_five_yr$sentenced_release
+realignment_length_of_stay$`2016_sen_change` = length_of_stay_five_yr$sentenced_change
+
+quantile(realignment_length_of_stay$`2012_pre_change`, c(0.25, 0.5, 0.75))
+quantile(realignment_length_of_stay$`2012_sen_change`, c(0.25, 0.5, 0.75))
+quantile(realignment_length_of_stay$`2014_pre_change`, c(0.25, 0.5, 0.75))
+quantile(realignment_length_of_stay$`2014_sen_change`, c(0.25, 0.5, 0.75))
+quantile(realignment_length_of_stay$`2016_pre_change`, c(0.25, 0.5, 0.75))
+quantile(realignment_length_of_stay$`2016_sen_change`, c(0.25, 0.5, 0.75))
 ```
 
 ```{r length_of_stay_modeling}
@@ -233,16 +305,13 @@ county_q %>%
 ```
 
 ```{r length_of_stay_viz}
-county_q %>% 
-  filter(year > 2001, county == "Colusa County" | county == "Del Norte County" | county == "Fresno County" |
-           county == "Madera County" | county == "Mariposa County" | county == "Plumas County" |
-           county == "Santa Barbara County" | county == "Siskiyou County") %>% 
-  select(date, pretrial_release, sentenced_release) %>% 
+length_of_stay %>% 
+  # filter(county == "Colusa County" | county == "Del Norte County" | county == "Fresno County" |
+  #          county == "Madera County" | county == "Mariposa County" | county == "Plumas County" |
+  #          county == "Santa Barbara County" | county == "Siskiyou County") %>% 
   group_by(date) %>% 
-  na.omit() %>% 
   mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
   unique() %>% 
-  arrange(date) %>% 
   ggplot(data = ., mapping = aes(x = date, group = 1)) +
   geom_line(mapping = aes(y = pretrial_release, linetype = "solid")) +
   geom_line(mapping = aes(y = sentenced_release, linetype = "dotted")) +
