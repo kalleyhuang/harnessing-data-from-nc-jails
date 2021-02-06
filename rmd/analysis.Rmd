@@ -173,7 +173,6 @@ summary(sen_female_model)
 
 ```{r population_viz}
 county_m %>% 
-  # filter(county == "Alameda County") %>% 
   select(date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
   group_by(date) %>% 
   mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
@@ -306,9 +305,6 @@ quantile(realignment_length_of_stay$`2016_sen_change`, c(0.25, 0.5, 0.75))
 
 ```{r length_of_stay_viz}
 length_of_stay %>% 
-  # filter(county == "Colusa County" | county == "Del Norte County" | county == "Fresno County" |
-  #          county == "Madera County" | county == "Mariposa County" | county == "Plumas County" |
-  #          county == "Santa Barbara County" | county == "Siskiyou County") %>% 
   group_by(date) %>% 
   mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
   unique() %>% 
@@ -342,6 +338,43 @@ county_q %>%
   scale_color_discrete(name = "County", breaks = c("la", "sf"), labels = c("Los Angeles", "San Francisco")) +
   scale_linetype_manual(name = "Sentence Type",
                         values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
+```
+
+# Realignment
+
+```{r realignment_viz}
+county_m %>% 
+  filter(county == "Fresno County") %>% 
+  select(date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
+  group_by(date) %>% 
+  mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
+         sen_male = sum(sen_male), sen_female = sum(sen_female), total = sum(total)) %>% 
+  unique() %>% 
+  arrange(date) %>% 
+  ggplot(data = ., mapping = aes(x = date, group = 1)) +
+  geom_line(mapping = aes(y = sen_male, color = "male", linetype = "solid")) +
+  geom_line(mapping = aes(y = sen_female, color = "female", linetype = "solid")) +
+  geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "dotted")) +
+  geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "dotted")) +
+  labs(x = "Year", y = "Average Daily Populations") +
+  scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
+  scale_linetype_manual(name = "Sentence Type",
+                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
+
+length_of_stay %>% 
+  filter(county == "Fresno County") %>% 
+  ggplot(data = ., mapping = aes(x = date, group = 1)) +
+  geom_line(mapping = aes(y = pretrial_release, linetype = "solid")) +
+  geom_line(mapping = aes(y = sentenced_release, linetype = "dotted")) +
+  labs(x = "Year", y = "Average Lengths of Stay") +
+  scale_linetype_manual(name = "Sentence Type",
+                        values = c("solid", "dotted"), labels = c("Sentenced", "Pretrial")) +
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
         axis.text.y = element_text(color = "#000000", size = 10))
