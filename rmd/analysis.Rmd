@@ -134,6 +134,9 @@ quantile(county_m_temp$`2016_change`, c(0.25, 0.5, 0.75))
 county_m_temp %>% 
   filter(`2012_change` > 8.823529 | `2014_change` > 24.584718 | `2016_change` > 19.323671)
 
+county_m_temp %>% 
+  filter(`2012_change` > 8.823529 & `2014_change` > 24.584718 & `2016_change` > 19.323671)
+
 # county_m %>% 
 #   mutate(year = year(date)) %>% 
 #   select(year, county, total) %>% 
@@ -171,6 +174,7 @@ summary(sen_female_model)
 
 ```{r population_viz}
 county_m %>% 
+# filter(county == "Fresno County") %>% 
   select(date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
   group_by(date) %>% 
   mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
@@ -182,44 +186,8 @@ county_m %>%
   geom_line(mapping = aes(y = sen_female, color = "female", linetype = "solid")) +
   geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "dotted")) +
   geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "dotted")) +
-  geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
-  geom_vline(xintercept = as.Date("2012-01-01"), linetype = "dotted") +
   labs(x = "Year", y = "Average Daily Populations") +
   scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
-  scale_linetype_manual(name = "Sentence Type",
-                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
-  theme_classic() +
-  theme(axis.text.x = element_text(color = "#000000", size = 10),
-        axis.text.y = element_text(color = "#000000", size = 10))
-
-county_m %>% 
-  select(date, unsen_male, sen_male) %>% 
-  group_by(date) %>% 
-  mutate(unsen_male = sum(unsen_male), sen_male = sum(sen_male)) %>% 
-  unique() %>% 
-  arrange(date) %>% 
-  ggplot(data = ., mapping = aes(x = date, group = 1)) +
-  geom_line(mapping = aes(y = sen_male, linetype = "solid")) +
-  geom_line(mapping = aes(y = unsen_male, linetype = "dotted")) +
-  geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
-  labs(x = "Year", y = "Average Daily Populations") +
-  scale_linetype_manual(name = "Sentence Type",
-                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
-  theme_classic() +
-  theme(axis.text.x = element_text(color = "#000000", size = 10),
-        axis.text.y = element_text(color = "#000000", size = 10))
-
-county_m %>% 
-  select(date, unsen_female, sen_female) %>% 
-  group_by(date) %>% 
-  mutate(unsen_female = sum(unsen_female), sen_female = sum(sen_female)) %>% 
-  unique() %>% 
-  arrange(date) %>% 
-  ggplot(data = ., mapping = aes(x = date, group = 1)) +
-  geom_line(mapping = aes(y = sen_female, linetype = "solid")) +
-  geom_line(mapping = aes(y = unsen_female, linetype = "dotted")) +
-  geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
-  labs(x = "Year", y = "Average Daily Populations") +
   scale_linetype_manual(name = "Sentence Type",
                         values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
   theme_classic() +
