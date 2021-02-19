@@ -47,9 +47,14 @@ facility <- facility %>%
          total = avg_daily_pop_total_facility, county = census_county_name)
 ```
 
+# To Do
+* total / capacity of facility
+* did jails expand to accomodate population increases? correlation w/ urban/rural?
+
 # Population
 
 ```{r population_data}
+# sum populations by county & date
 population <- county_m %>% 
   select(county, date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
   group_by(county, date) %>% 
@@ -57,18 +62,11 @@ population <- county_m %>%
          sen_male = sum(sen_male), sen_female = sum(sen_female), total = sum(total)) %>% 
   unique() %>% 
   group_by(county) %>% 
-  arrange(date, .by_group = TRUE) %>% 
-  mutate(pct_change_unsen_male = (unsen_male / lag(unsen_male) - 1) * 100,
-         pct_change_unsen_female = (unsen_female / lag(unsen_female) - 1) * 100,
-         pct_change_sen_male = (sen_male / lag(sen_male) - 1) * 100,
-         pct_change_sen_female = (sen_female / lag(sen_female) - 1) * 100,
-         pct_change_total = (total / lag(total) - 1) * 100) %>% 
-  filter(year(date) != 1995 & year(date) != 1996 & year(date) != 2020 & 
-           is.finite(pct_change_unsen_male) & is.finite(pct_change_unsen_female) &
-           is.finite(pct_change_sen_male) & is.finite(pct_change_sen_female) & is.finite(total))
+  arrange(date, .by_group = TRUE)
 ```
 
 ```{r population_analysis}
+# calculate changes in population 1, 3, and 5 years after realignment
 population_one_yr <- county_m %>% 
   filter(year(date) == 2011 | year(date) == 2012, month(date) == 1) %>%
   select(date, county, total) %>% 
@@ -136,26 +134,10 @@ realignment_population %>%
 realignment_population %>% 
   filter(`2012_change` > 8.823529 & `2014_change` > 24.584718 & `2016_change` > 19.323671)
 
-# county_m %>% 
-#   mutate(year = year(date)) %>% 
-#   select(year, county, total) %>% 
-#   group_by(county, year) %>% 
-#   mutate(total = sum(total)) %>% 
-#   unique() %>% 
-#   group_by(county) %>% 
-#   arrange(year, .by_group = TRUE) %>% 
-#   mutate(percent_change = (total / lag(total) - 1) * 100) %>% 
-#   filter(year > 2010 & year != 2020 & is.finite(total) & percent_change > 20) %>% 
-#   arrange(year)
-
-county_m %>% 
-  mutate(year = year(date)) %>% 
-  select(year, county, unsen_male, unsen_female, sen_male, sen_female, total) %>%
-  group_by(year, county) %>% 
-  mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female), sen_male = sum(sen_male), 
-         sen_female = sum(sen_female), total = sum(total)) %>% 
-  unique() %>% 
-  arrange(year)
+# calculate ratio of unsentenced:sentenced
+population %>% 
+  mutate(unsen = unsen_male + unsen_female, sen = sen_male + sen_female, ratio = unsen / sen) %>% 
+  select(county, date, unsen, sen, ratio)
 ```
 
 ```{r population_modeling}
@@ -191,6 +173,21 @@ county_m %>%
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
         axis.text.y = element_text(color = "#000000", size = 10))
+
+county_m %>% 
+  group_by(date) %>% 
+  mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
+         sen_male = sum(sen_male), sen_female = sum(sen_female), total = sum(total)) %>% 
+  mutate(unsen = unsen_male + unsen_female, sen = sen_male + sen_female, ratio = unsen / sen) %>%
+  select(date, unsen, sen, ratio) %>% 
+  unique() %>% 
+  arrange(date) %>% 
+  ggplot(data = ., mapping = aes(x = date, y = ratio)) +
+  geom_line() +
+  labs(x = "Year", y = "Ratio of Unsentenced to Sentenced") +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
 ```
 
 # Length of Stay
@@ -199,13 +196,13 @@ county_m %>%
 length_of_stay <- county_q %>% 
   filter(year > 2001) %>% 
   select(county, date, pretrial_release, sentenced_release) %>% 
-  # group_by(county, date) %>%
   na.omit() %>% 
-  # mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
   arrange(date)
 ```
 
 ```{r length_of_stay_analysis}
+# identify counties with length of stay missingness
+# ~10 counties have less than 10% missingness
 county_q %>% 
   filter(year > 2001) %>% 
   group_by(county) %>%  
@@ -224,6 +221,7 @@ county_q %>%
   arrange(county) %>% 
   filter(proportion < 0.1)
 
+# identify differences in length of stay filtering by counties without missingness
 length_of_stay_no_filter <- length_of_stay %>% 
   group_by(date) %>% 
   mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
@@ -242,6 +240,7 @@ length_of_stay_filter <- length_of_stay %>%
 median(length_of_stay_no_filter$pretrial_release - length_of_stay_filter$pretrial_release) # 4 day diff
 median(length_of_stay_no_filter$sentenced_release - length_of_stay_filter$sentenced_release) # 15 day diff
 
+# calculate changes in length of stay 1, 3, and 5 years after realignment
 length_of_stay_one_yr <- length_of_stay %>% 
   filter(county == "Colusa County" | county == "Fresno County" | county == "Mariposa County",
          year(date) == 2011 | year(date) == 2012, month(date) == 1) %>% 
@@ -344,6 +343,15 @@ county_q %>%
 ```
 
 # Realignment
+
+```{r realignment_data}
+realignment_population
+realignment_length_of_stay
+```
+
+```{r realignment_modeling}
+
+```
 
 ```{r realignment_viz}
 county_m %>% 
