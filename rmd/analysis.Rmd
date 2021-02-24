@@ -224,7 +224,7 @@ county_q %>%
 # identify differences in length of stay filtering by counties without missingness
 length_of_stay_no_filter <- length_of_stay %>% 
   group_by(date) %>% 
-  mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
+  mutate(pretrial_release = median(pretrial_release), sentenced_release = median(sentenced_release)) %>% 
   select(-county) %>% 
   unique()
 
@@ -233,12 +233,12 @@ length_of_stay_filter <- length_of_stay %>%
            county == "Madera County" | county == "Mariposa County" | county == "Plumas County" |
            county == "Santa Barbara County" | county == "Siskiyou County") %>%
   group_by(date) %>% 
-  mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
+  mutate(pretrial_release = median(pretrial_release), sentenced_release = median(sentenced_release)) %>% 
   select(-county) %>% 
   unique()
 
-median(length_of_stay_no_filter$pretrial_release - length_of_stay_filter$pretrial_release) # 4 day diff
-median(length_of_stay_no_filter$sentenced_release - length_of_stay_filter$sentenced_release) # 15 day diff
+median(length_of_stay_no_filter$pretrial_release - length_of_stay_filter$pretrial_release) # 1 day diff
+median(length_of_stay_no_filter$sentenced_release - length_of_stay_filter$sentenced_release) # 20 day diff
 
 # calculate changes in length of stay 1, 3, and 5 years after realignment
 length_of_stay_one_yr <- length_of_stay %>% 
@@ -305,12 +305,12 @@ quantile(realignment_length_of_stay$`2016_sen_change`, c(0.25, 0.5, 0.75))
 ```{r length_of_stay_viz}
 length_of_stay %>% 
   group_by(date) %>% 
-  mutate(pretrial_release = mean(pretrial_release), sentenced_release = mean(sentenced_release)) %>% 
+  mutate(pretrial_release = median(pretrial_release), sentenced_release = median(sentenced_release)) %>% 
   unique() %>% 
   ggplot(data = ., mapping = aes(x = date, group = 1)) +
   geom_line(mapping = aes(y = pretrial_release, linetype = "solid")) +
   geom_line(mapping = aes(y = sentenced_release, linetype = "dotted")) +
-  labs(x = "Year", y = "Average Lengths of Stay") +
+  labs(x = "Year", y = "Median Lengths of Stay") +
   scale_linetype_manual(name = "Sentence Type",
                         values = c("solid", "dotted"), labels = c("Sentenced", "Pretrial")) +
   theme_classic() +
@@ -355,7 +355,7 @@ realignment_length_of_stay
 
 ```{r realignment_viz}
 county_m %>% 
-  filter(county == "Fresno County") %>% 
+  filter(county == "San Diego County") %>% 
   select(date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
   group_by(date) %>% 
   mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
@@ -373,10 +373,10 @@ county_m %>%
                         values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
-        axis.text.y = element_text(color = "#000000", size = 10))
+        axis.text.y = element_text(color = "#000000", size = 10), legend.position = "none")
 
 length_of_stay %>% 
-  filter(county == "Fresno County") %>% 
+  filter(county == "San Diego County") %>% 
   ggplot(data = ., mapping = aes(x = date, group = 1)) +
   geom_line(mapping = aes(y = pretrial_release, linetype = "solid")) +
   geom_line(mapping = aes(y = sentenced_release, linetype = "dotted")) +
@@ -385,5 +385,5 @@ length_of_stay %>%
                         values = c("solid", "dotted"), labels = c("Sentenced", "Pretrial")) +
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
-        axis.text.y = element_text(color = "#000000", size = 10))
+        axis.text.y = element_text(color = "#000000", size = 10), legend.position = "none")
 ```
