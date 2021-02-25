@@ -137,7 +137,10 @@ realignment_population %>%
 # calculate ratio of unsentenced:sentenced
 population %>% 
   mutate(unsen = unsen_male + unsen_female, sen = sen_male + sen_female, ratio = unsen / sen) %>% 
-  select(county, date, unsen, sen, ratio)
+  select(county, date, unsen, sen, ratio) %>% 
+  group_by(date) %>% 
+  summarize(q25 = quantile(ratio, 0.25, na.rm = TRUE), q75 = quantile(ratio, 0.75, na.rm = TRUE),
+            median = median(ratio))
 ```
 
 ```{r population_modeling}
@@ -183,6 +186,10 @@ county_m %>%
   unique() %>% 
   arrange(date) %>% 
   ggplot(data = ., mapping = aes(x = date, y = ratio)) +
+  geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
+  geom_vline(xintercept = as.Date("2012-01-01"), linetype = "dotted") +
+  geom_vline(xintercept = as.Date("2014-01-01"), linetype = "dotted") +
+  geom_vline(xintercept = as.Date("2016-01-01"), linetype = "dotted") +
   geom_line() +
   labs(x = "Year", y = "Ratio of Unsentenced to Sentenced") +
   theme_classic() +
