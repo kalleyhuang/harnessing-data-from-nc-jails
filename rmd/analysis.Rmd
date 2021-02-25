@@ -138,9 +138,9 @@ realignment_population %>%
 population %>% 
   mutate(unsen = unsen_male + unsen_female, sen = sen_male + sen_female, ratio = unsen / sen) %>% 
   select(county, date, unsen, sen, ratio) %>% 
-  group_by(date) %>% 
-  summarize(q25 = quantile(ratio, 0.25, na.rm = TRUE), q75 = quantile(ratio, 0.75, na.rm = TRUE),
-            median = median(ratio))
+  group_by(year(date)) %>% 
+  summarize(q25 = quantile(ratio, 0.25, na.rm = TRUE), median = median(ratio, na.rm = TRUE),
+            q75 = quantile(ratio, 0.75, na.rm = TRUE))
 ```
 
 ```{r population_modeling}
