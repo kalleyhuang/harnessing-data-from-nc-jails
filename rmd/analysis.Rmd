@@ -1,22 +1,37 @@
 ---
-title: "Harnessing Data from North Carolina's Jails to Inform Effective Policies — California Jail Profile Survey"
-output:
-  pdf_document: default
-  html_document: default
+title: "Harnessing Data from North Carolina's Jails to Inform Effective Policies —
+  California Jail Profile Survey"
+author: Kalley Huang
+output: html_document
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 5, fig.height = 3)
 ```
 
-```{r}
+```{r, include = FALSE}
 library(tidyverse)
 library(lubridate)
 library(here)
-library(shiny)
 ```
 
-```{r data}
+## Background
+In the late twentieth century, “tough on crime” rhetoric manifested in national, state, and local policies that drove up incarceration rates. These policies included “truth in sentencing,” “three strikes and you’re out,” and mandatory minimums, all of which led to ballooning state budgets and ever-increasing allocations for penal systems.
+
+California, despite its supposedly progressive politics, embraced these policies. In 1994, its voters overwhelmingly passed the sweeping Proposition 184, enacting a life sentence for any individual convicted of three serious or violent felonies. (Couzens & Bigelow, 2017) The law was challenged in two separate Supreme Court cases: Ewing v. California (2003) and Lockyer v. Andrade (2003). In both cases, the defendants were sentenced to 25 years to life after stealing three golf clubs and nine children’s videotapes, respectively. The law was amended in 2012, when voters passed Proposition 36, freeing or reducing the sentences of an estimated 6,000 individuals. A 2020 attempt to pull back Proposition 36 failed. (Cramer 2020)
+
+Although the Supreme Court upheld the “three strikes” law in 2003, in Brown v. Plata (2011), the Court found that California prison conditions violated the Constitution. It ordered that the state release enough prisoners to reduce the population from near 200% of capacity to 137.5%. In response, in 2011, the California legislature passed Assembly Bills 109 and 117, also known as “realignment.” (Green, 2012) The legislation shifted responsibility for those who had committed “non-serious, non-violent, non-sex” crimes from the state to individual counties, incarcerating them in jails instead of prisons. Law enforcement criticized the legislation for increasing crime, but a study by the Public Policy Institute of California and the University of California, Berkeley, found that it did not, with the exception of a slight increase in auto thefts. (Kubrin & Seron, 2016)
+
+Incarceration rates in California remain high at 581 per 100,000 people. (“California profile”) An estimated 241,000 residents are incarcerated in the state, with 82,000 in jails and at least 368,000 unique jail admissions annually. (Betram & Jones, 2019)
+
+## Data
+```{r data, echo = TRUE}
+county_m <- read.csv(here("data", "california_jail_county_monthly_1995_2020.csv"))
+county_q <- read.csv(here("data", "california_jail_county_quarterly_1995_2020.csv"))
+facility <- read.csv(here("data", "california_jail_facility_monthly_1995_2020.csv"))
+```
+
+```{r data_preparation, include = FALSE}
 options(scipen = 999)
 
 county_m <- read.csv(here("data", "california_jail_county_monthly_1995_2020.csv"))
@@ -47,13 +62,36 @@ facility <- facility %>%
          total = avg_daily_pop_total_facility, county = census_county_name)
 ```
 
-# To Do
-* total / capacity of facility
-* did jails expand to accomodate population increases? correlation w/ urban/rural?
+These datasets are scraped from the California Board of State and Community Corrections' Jail Profile Survey by Jacob Kaplan from the University of Pennsylvania. Kaplan made the following changes to the data: adding variables for FIPS county and state codes and United States census county names, changing column names, and changing values from "Does Not Apply" and "Unavailable" to NA.
 
-# Population
+These data were collected from 57 counties from October 1995 to March 2020. Note that California has 58 counties, but its least populous county, Alpine County, does not have a jail and contracts with Calaveras County and El Dorado County.
 
-```{r population_data}
+The county-level monthly data contains 17801 observations of 48 variables.
+
+```{r county_monthly}
+names(county_m)
+```
+
+The county-level quarterly data contains 5905 observations of 18 variables.
+
+```{r county_quarterly}
+names(county_q)
+```
+
+The facility/jail-level monthly data contains 36774 observations of 14 variables.
+
+```{r facility}
+names(facility)
+```
+
+We prepare these datasets for analysis by assigning months to quarters, checking variable types, and renaming variables for convenience.
+
+## Population
+First, we analyze average daily jail populations statewide over time. 
+
+We visualize change in population, noting when realignment happened in 2011, as well as one, three, and five years afterwards.
+
+```{r population_data, include = FALSE}
 # sum populations by county & date
 population <- county_m %>% 
   select(county, date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
@@ -65,8 +103,48 @@ population <- county_m %>%
   arrange(date, .by_group = TRUE)
 ```
 
-```{r population_analysis}
-# calculate changes in population 1, 3, and 5 years after realignment
+```{r population_modeling, include = FALSE}
+total_model <- lm(total~factor(county) + date, data = population)
+summary(total_model)
+unsen_male_model <- lm(unsen_male~factor(county) + date, data = population)
+summary(unsen_male_model)
+unsen_female_model <- lm(unsen_female~factor(county) + date, data = population)
+summary(unsen_female_model)
+sen_male_model <- lm(sen_male~factor(county) + date, data = population)
+summary(sen_male_model)
+sen_female_model <- lm(sen_female~factor(county) + date, data = population)
+summary(sen_female_model)
+```
+
+```{r population_viz, fig.width = 6}
+county_m %>% 
+  select(date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
+  group_by(date) %>% 
+  mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
+         sen_male = sum(sen_male), sen_female = sum(sen_female), total = sum(total)) %>% 
+  unique() %>% 
+  arrange(date) %>% 
+  ggplot(data = ., mapping = aes(x = date, group = 1)) +
+  geom_line(mapping = aes(y = sen_male, color = "male", linetype = "solid")) +
+  geom_line(mapping = aes(y = sen_female, color = "female", linetype = "solid")) +
+  geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "dotted")) +
+  geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "dotted")) +
+  geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
+  geom_vline(xintercept = as.Date("2012-01-01"), linetype = "dotted") +
+  geom_vline(xintercept = as.Date("2014-01-01"), linetype = "dotted") +
+  geom_vline(xintercept = as.Date("2016-01-01"), linetype = "dotted") +
+  labs(x = "Year", y = "Population Count") +
+  scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
+  scale_linetype_manual(name = "Sentence Type",
+                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
+```
+
+Now, we analyze whether realignment had a lasting impact on average daily jail populations.
+
+```{r population_realignment_data}
 population_one_yr <- county_m %>% 
   filter(year(date) == 2011 | year(date) == 2012, month(date) == 1) %>%
   select(date, county, total) %>% 
@@ -105,78 +183,114 @@ population_five_yr[nrow(population_five_yr) + 1,] = list(as.Date("2016-01-01"), 
 population_five_yr <- population_five_yr %>% 
   arrange(county)
 
-realignment_population <- county_m %>% 
-  filter(year(date) == 2011 & month(date) == 1) %>% 
-  select(county, total) %>% 
-  group_by(county) %>% 
-  mutate(total = sum(total)) %>% 
-  unique() %>% 
-  rename(`2011_total` = total)
-
-realignment_population$`2012_total` = population_one_yr$total
-realignment_population$`2012_change` = population_one_yr$change
-realignment_population$`2014_total` = population_three_yr$total
-realignment_population$`2014_change` = population_three_yr$change
-realignment_population$`2016_total` = population_five_yr$total
-realignment_population$`2016_change` = population_five_yr$change
-
-quantile(realignment_population$`2012_change`, c(0.25, 0.5, 0.75))
-quantile(realignment_population$`2014_change`, c(0.25, 0.5, 0.75))
-quantile(realignment_population$`2016_change`, c(0.25, 0.5, 0.75))
+realignment_population <- bind_rows(population_one_yr, population_three_yr, population_five_yr)
 
 realignment_population %>% 
-  filter(`2012_change` < -4.368030 | `2014_change` <  4.295704 | `2014_change` < -6.459330)
-realignment_population %>% 
-  filter(`2012_change` < -4.368030 & `2014_change` <  4.295704 & `2014_change` < -6.459330)
-
-realignment_population %>% 
-  filter(`2012_change` > 8.823529 | `2014_change` > 24.584718 | `2016_change` > 19.323671)
-realignment_population %>% 
-  filter(`2012_change` > 8.823529 & `2014_change` > 24.584718 & `2016_change` > 19.323671)
-
-# calculate ratio of unsentenced:sentenced
-population %>% 
-  mutate(unsen = unsen_male + unsen_female, sen = sen_male + sen_female, ratio = unsen / sen) %>% 
-  select(county, date, unsen, sen, ratio) %>% 
   group_by(year(date)) %>% 
-  summarize(q25 = quantile(ratio, 0.25, na.rm = TRUE), median = median(ratio, na.rm = TRUE),
-            q75 = quantile(ratio, 0.75, na.rm = TRUE))
+  summarize(q25 = quantile(change, 0.25, na.rm = TRUE), median = median(change, na.rm = TRUE), 
+            q75 = quantile(change, 0.75, na.rm = TRUE)) %>% 
+  rename(year = `year(date)`)
 ```
 
-```{r population_modeling}
-total_model <- lm(total~factor(county) + date, data = population)
-summary(total_model)
-unsen_male_model <- lm(unsen_male~factor(county) + date, data = population)
-summary(unsen_male_model)
-unsen_female_model <- lm(unsen_female~factor(county) + date, data = population)
-summary(unsen_female_model)
-sen_male_model <- lm(sen_male~factor(county) + date, data = population)
-summary(sen_male_model)
-sen_female_model <- lm(sen_female~factor(county) + date, data = population)
-summary(sen_female_model)
-```
+We visualize the percent change in populations after realignment.
 
-```{r population_viz}
-county_m %>% 
-  select(date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
-  group_by(date) %>% 
-  mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
-         sen_male = sum(sen_male), sen_female = sum(sen_female), total = sum(total)) %>% 
-  unique() %>% 
-  arrange(date) %>% 
-  ggplot(data = ., mapping = aes(x = date, group = 1)) +
-  geom_line(mapping = aes(y = sen_male, color = "male", linetype = "solid")) +
-  geom_line(mapping = aes(y = sen_female, color = "female", linetype = "solid")) +
-  geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "dotted")) +
-  geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "dotted")) +
-  labs(x = "Year", y = "Average Daily Populations") +
-  scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
-  scale_linetype_manual(name = "Sentence Type",
-                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+```{r population_realignment_viz}
+ggplot(data = realignment_population, mapping = aes(x = date, y = change)) +
+  geom_boxplot(mapping = aes(group = cut_width(year(date), 1)), outlier.alpha = 0.1) +
+  labs(x = "Date", y = "Percent Change") +
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
         axis.text.y = element_text(color = "#000000", size = 10))
+```
 
+Six counties were below the 25th percentile of percent change in population for all analyzed years after realignment.
+
+```{r population_realignment_quartiles_below}
+population_below <- realignment_population %>% 
+  filter((year(date) == 2012 & change < -4.368030) | (year(date) == 2014 & change < 4.295704) |
+           (year(date) == 2016 & change < -6.459330)) %>% 
+  count(county) %>% 
+  filter(n == 3) %>% 
+  select(county)
+
+population_below$`2011_population` <- population %>% 
+  filter(county %in% population_below$county, year(date) == 2011, month(date) == 1) %>% 
+  pull(total)
+
+population_below$`2012_population` <- population_one_yr %>% 
+  filter(county %in% population_below$county) %>% 
+  pull(total)
+
+population_below$`2014_population` <- population_three_yr %>% 
+  filter(county %in% population_below$county) %>% 
+  pull(total)
+
+population_below$`2014_population` <- population_five_yr %>% 
+  filter(county %in% population_below$county) %>% 
+  pull(total)
+
+population_below
+```
+
+```{r population_realignment_quartiles_below_characteristics}
+population_below_characteristics <- population_below %>% select(county)
+
+# 2019 ACS estimates
+population_below_characteristics$population <- c(1671329, 1153526, 27812, 18039, 881549, 273213)
+# 2010 census findings
+population_below_characteristics$percent_urban <- c(99.6, 99.2, 59.8, 48.7, 100, 86.2)
+# using Google maps
+population_below_characteristics$proximity_to_prison <- c(35.8, 40.1, 0, 248, 18, 61.4)
+
+population_below_characteristics
+```
+
+Seven counties were above the 75th percentile of percent change in population for all analyzed years after realignment.
+
+```{r population_realignment_quartiles_above}
+population_above <- realignment_population %>% 
+  filter((year(date) == 2012 & change > 8.823529) | (year(date) == 2014 & change > 24.584718) |
+           (year(date) == 2016 & change > 19.323671)) %>% 
+  count(county) %>% 
+  filter(n == 3) %>% 
+  select(county)
+
+population_above$`2011_population` <- population %>% 
+  filter(county %in% population_above$county, year(date) == 2011, month(date) == 1) %>% 
+  pull(total)
+
+population_above$`2012_population` <- population_one_yr %>% 
+  filter(county %in% population_above$county) %>% 
+  pull(total)
+
+population_above$`2014_population` <- population_three_yr %>% 
+  filter(county %in% population_above$county) %>% 
+  pull(total)
+
+population_above$`2014_population` <- population_five_yr %>% 
+  filter(county %in% population_above$county) %>% 
+  pull(total)
+
+population_above
+```
+
+```{r population_realignment_quartiles_above_characteristics}
+population_above_characteristics <- population_above %>% select(county)
+
+# 2019 ACS estimates
+population_above_characteristics$population <- c(21547, 999101, 152940, 64386, 17203, 398329, 466195)
+# 2010 census findings
+population_above_characteristics$percent_urban <- c(62.7, 88.5, 87.3, 65.6, 0, 80.3, 82.2)
+# using Google maps
+population_above_characteristics$miles_from_prison <- c(88.8, 0, 0, 99.3, 42.3, 47.8, 46.6)
+
+population_above_characteristics
+```
+
+## Ratio of Unsentenced to Sentenced
+Next, we visualize change in ratio of unsentenced to sentenced jail populations.
+
+```{r ratio_viz}
 county_m %>% 
   group_by(date) %>% 
   mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
@@ -191,15 +305,161 @@ county_m %>%
   geom_vline(xintercept = as.Date("2014-01-01"), linetype = "dotted") +
   geom_vline(xintercept = as.Date("2016-01-01"), linetype = "dotted") +
   geom_line() +
-  labs(x = "Year", y = "Ratio of Unsentenced to Sentenced") +
+  labs(x = "Year", y = "Ratio") +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
+
+county_m %>% 
+  select(county, date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
+  group_by(county, date) %>% 
+  mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
+         sen_male = sum(sen_male), sen_female = sum(sen_female), total = sum(total)) %>% 
+  unique() %>% 
+  group_by(county) %>% 
+  arrange(date, .by_group = TRUE) %>% 
+  mutate(unsen = unsen_male + unsen_female, sen = sen_male + sen_female, ratio = unsen / sen) %>% 
+  group_by(date) %>% 
+  select(date, unsen, sen, ratio) %>% 
+  ggplot(data = ., mapping = aes(x = date, y = ratio)) +
+  geom_boxplot(mapping = aes(group = cut_width(year(date), 1)), outlier.alpha = 0.1) +
+  labs(x = "Date", y = "Ratio") +
+  scale_y_log10() +
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
         axis.text.y = element_text(color = "#000000", size = 10))
 ```
 
-# Length of Stay
+We analyze whether realignment had a lasting impact on the ratio of unsentenced to sentenced jail populations.
 
-```{r length_of_stay_data}
+```{r ratio_realignment_data}
+ratio <- county_m %>% 
+  select(county, date, unsen_male, unsen_female, sen_male, sen_female) %>% 
+  group_by(county, date) %>% 
+  mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
+         sen_male = sum(sen_male), sen_female = sum(sen_female),
+         unsen = unsen_male + unsen_female, sen = sen_male + sen_female, ratio = unsen / sen) %>% 
+  unique() %>% 
+  select(date, county, ratio) %>% 
+  arrange(date)
+
+ratio_one_yr <- ratio %>% 
+  filter(year(date) == 2011 | year(date) == 2012, month(date) == 1) %>%
+  group_by(county) %>% 
+  mutate(change = ratio - lag(ratio)) %>% 
+  filter(year(date) == 2012)
+
+ratio_three_yr <- ratio %>% 
+  filter(year(date) == 2011 | year(date) == 2014, month(date) == 1) %>%
+  group_by(county) %>% 
+  mutate(change = ratio - lag(ratio)) %>% 
+  filter(year(date) == 2014)
+
+ratio_five_yr <- ratio %>% 
+  filter(year(date) == 2011 | year(date) == 2016, month(date) == 1) %>%
+  group_by(county) %>% 
+  mutate(change = ratio - lag(ratio)) %>% 
+  filter(year(date) == 2016)
+
+realignment_ratio <- bind_rows(ratio_one_yr, ratio_three_yr, ratio_five_yr)
+
+realignment_ratio %>% 
+  group_by(year(date)) %>% 
+  summarize(q25 = quantile(change, 0.25, na.rm = TRUE), median = median(change, na.rm = TRUE), 
+            q75 = quantile(change, 0.75, na.rm = TRUE)) %>% 
+  rename(year = `year(date)`)
+```
+
+Eight counties were below the 25th quartile of percent change in population for all analyzed years after realignment. Note that Contra Costa County experienced a decrease in both population and ratio after realignment, while Fresno County experienced an increase in population and a decrease in ratio after realignment. Also, note that half of these counties have a prison in the county, which may have driven such a decrease in the ratio of unsentenced to sentenced jail populations.
+
+```{r ratio_realignment_quartiles_below}
+ratio_below <- realignment_ratio %>% 
+  filter((year(date) == 2012 & change < -1.048889) | (year(date) == 2014 & change < -1.152339) |
+           (year(date) == 2016 & change < -1.002664)) %>% 
+  count(county) %>% 
+  filter(n == 3) %>% 
+  select(county)
+
+ratio_below$`2011_ratio` <- ratio %>% 
+  filter(county %in% ratio_below$county, year(date) == 2011, month(date) == 1) %>% 
+  pull(ratio)
+
+ratio_below$`2012_ratio` <- ratio_one_yr %>% 
+  filter(county %in% ratio_below$county) %>% 
+  pull(ratio)
+
+ratio_below$`2014_ratio` <- ratio_three_yr %>% 
+  filter(county %in% ratio_below$county) %>% 
+  pull(ratio)
+
+ratio_below$`2016_ratio` <- ratio_five_yr %>% 
+  filter(county %in% ratio_below$county) %>% 
+  pull(ratio)
+
+ratio_below
+```
+
+```{r ratio_realignment_quartiles_below_characteristics}
+ratio_below_characteristics <- ratio_below %>% select(county)
+
+# 2019 ACS estimates
+ratio_below_characteristics$population <- c(1153526, 999101, 900202, 258826, 2470546, 180080, 96971, 78668)
+# 2010 census findings
+ratio_below_characteristics$percent_urban <- c(99.2, 88.5, 87.5, 91.5, 94.3, 69, 84.1, 69.3)
+# using Google maps
+ratio_below_characteristics$proximity_to_prison <- c(40.1, 0, 0, 0, 0, 116, 49.7, 60.8)
+
+ratio_below_characteristics
+```
+
+Seven counties were above the 75th quartile of percent change in population for all analyzed years after realignment. Note that Placer County experienced an increase in both population ratio after realignment, while San Francisco County and Santa Cruz County experienced a decrease in population and an increase in ratio.
+
+```{r ratio_realignment_quartiles_above}
+ratio_above <- realignment_ratio %>% 
+  filter((year(date) == 2012 & change > 0.09882353) | (year(date) == 2014 & change > 0.14205345) |
+           (year(date) == 2016 & change > 0.40530165)) %>% 
+  count(county) %>% 
+  filter(n == 3) %>% 
+  select(county)
+
+ratio_above$`2011_ratio` <- ratio %>% 
+  filter(county %in% ratio_above$county, year(date) == 2011, month(date) == 1) %>% 
+  pull(ratio)
+
+ratio_above$`2012_ratio` <- ratio_one_yr %>% 
+  filter(county %in% ratio_above$county) %>% 
+  pull(ratio)
+
+ratio_above$`2014_ratio` <- ratio_three_yr %>% 
+  filter(county %in% ratio_above$county) %>% 
+  pull(ratio)
+
+ratio_above$`2016_ratio` <- ratio_five_yr %>% 
+  filter(county %in% ratio_above$county) %>% 
+  pull(ratio)
+
+ratio_above
+```
+
+```{r ratio_realignment_quartiles_above_characteristics}
+ratio_above_characteristics <- ratio_above %>% select(county)
+
+# 2019 ACS estimates
+ratio_above_characteristics$population <- c(157327, 277680, 137744, 99755, 398329, 881549, 273213)
+# 2010 census findings
+ratio_above_characteristics$percent_urban <- c(60.7, 84.8, 82.5, 53.6, 80.3, 100, 86.2)
+# using Google Maps
+ratio_above_characteristics$proximity_to_prison <- c(0, 35, 33.6, 43.8, 47.8, 18, 61.4)
+
+ratio_above_characteristics
+```
+
+## Length of Stay
+Next, we analyze average length of stay statewide over time. California started collecting length of stay data after 2001. The county-level quarterly data contains this variable, but there is a lot of missingness. This unreliable reporting shows a need for standards in jail data collection. Otherwise, data that would be useful to stakeholders, as well as hold those who operate jails accountable, will not be publicly available.
+
+24 counties have less than 25% missingness for length of stay data.
+
+```{r length_of_stay_data, include = FALSE}
 length_of_stay <- county_q %>% 
   filter(year > 2001) %>% 
   select(county, date, pretrial_release, sentenced_release) %>% 
@@ -207,29 +467,97 @@ length_of_stay <- county_q %>%
   arrange(date)
 ```
 
-```{r length_of_stay_missingness}
-# identify counties with length of stay missingness
+```{r missingness_data, include = FALSE}
 pretrial_missingness <- county_q %>% 
   filter(year > 2001) %>% 
   group_by(county) %>%  
   count(is.na(pretrial_release)) %>% 
-  mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(pretrial_release)`) %>% 
+  ungroup() %>% 
+  rename(na = `is.na(pretrial_release)`) %>% 
+  add_row(county = "Amador County", na = T, n = 0) %>% 
+  add_row(county = "Calaveras County", na = F, n = 0) %>% 
+  add_row(county = "Contra Costa County", na = F, n = 0) %>% 
+  add_row(county = "El Dorado County", na = T, n = 0) %>% 
+  add_row(county = "Humboldt County", na = T, n = 0) %>% 
+  add_row(county = "Lake County", na = F, n = 0) %>% 
+  add_row(county = "Nevada County", na = F, n = 0) %>% 
+  add_row(county = "San Luis Obispo County", na = F, n = 0) %>% 
+  add_row(county = "Santa Cruz County", na = F, n = 0) %>% 
+  add_row(county = "Sonoma County", na = T, n = 0) %>% 
+  add_row(county = "Stanislaus County", na = T, n = 0) %>% 
+  add_row(county = "Sutter County", na = F, n = 0) %>% 
+  add_row(county = "Tulare County", na = T, n = 0) %>% 
+  add_row(county = "Tuolumne County", na = F, n = 0) %>% 
+  add_row(county = "Ventura County", na = F, n = 0) %>% 
+  add_row(county = "Yolo County", na = F, n = 0) %>% 
+  add_row(county = "Yuba County", na = F, n = 0) %>% 
   arrange(county) %>% 
-  filter(proportion < 0.25)
+  group_by(county) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(na == T)
 
 sentenced_missingness <- county_q %>% 
   filter(year > 2001) %>% 
-  group_by(county) %>% 
+  group_by(county) %>%  
   count(is.na(sentenced_release)) %>% 
-  mutate(proportion = n / sum(n)) %>% 
-  filter(`is.na(sentenced_release)`) %>% 
+  ungroup() %>% 
+  rename(na = `is.na(sentenced_release)`) %>% 
+  add_row(county = "Calaveras County", na = F, n = 0) %>% 
+  add_row(county = "Contra Costa County", na = F, n = 0) %>% 
+  add_row(county = "El Dorado County", na = T, n = 0) %>% 
+  add_row(county = "Humboldt County", na = T, n = 0) %>% 
+  add_row(county = "Lake County", na = F, n = 0) %>% 
+  add_row(county = "Los Angeles County", na = T, n = 0) %>% 
+  add_row(county = "Nevada County", na = F, n = 0) %>% 
+  add_row(county = "San Luis Obispo County", na = F, n = 0) %>% 
+  add_row(county = "Santa Cruz County", na = F, n = 0) %>% 
+  add_row(county = "Sonoma County", na = T, n = 0) %>% 
+  add_row(county = "Stanislaus County", na = T, n = 0) %>% 
+  add_row(county = "Sutter County", na = F, n = 0) %>% 
+  add_row(county = "Tulare County", na = T, n = 0) %>% 
+  add_row(county = "Tuolumne County", na = F, n = 0) %>% 
+  add_row(county = "Yolo County", na = F, n = 0) %>% 
+  add_row(county = "Yuba County", na = F, n = 0) %>% 
   arrange(county) %>% 
-  filter(proportion < 0.25)
+  group_by(county) %>% 
+  mutate(proportion = n / sum(n)) %>% 
+  filter(na == T)
+
+pretrial_missingness %>% 
+  filter(proportion >= 0 & proportion <= 0.25) %>% 
+  nrow()
+
+pretrial_missingness %>% 
+  filter(proportion >= 0.25 & proportion <= 0.5) %>% 
+  nrow()
+
+pretrial_missingness %>% 
+  filter(proportion >= 0.5 & proportion <= 0.75) %>% 
+  nrow()
+
+pretrial_missingness %>% 
+  filter(proportion >= 0.75 & proportion <= 1) %>% 
+  nrow()
+```
+
+```{r missingness_counties}
+data.frame(percent_missing = c("0% to 25%", "25% to 50%", "50% to 75%", "75% to 100%"), 
+           number_of_counties = c(24, 5, 10, 8))
+```
+
+```{r length_of_stay_missingness_counties}
+pretrial_missingness <- pretrial_missingness %>% filter(proportion < 0.25)
+
+sentenced_missingness <- sentenced_missingness %>% filter(proportion < 0.25)
 
 missingness <- intersect(pretrial_missingness$county, sentenced_missingness$county)
 
-# identify differences in length of stay filtering by counties without missingness
+missingness
+```
+
+Now, we identify differences between filtered and unfiltered lengths of stay.
+
+```{r length_of_stay_missingness_viz}
 length_of_stay_no_filter <- length_of_stay %>% 
   group_by(date) %>% 
   mutate(pretrial_no_filter = median(pretrial_release), sentenced_no_filter = median(sentenced_release)) %>% 
@@ -248,95 +576,25 @@ missingness_comparison <- bind_cols(length_of_stay_no_filter, length_of_stay_fil
 missingness_comparison <- missingness_comparison %>% 
   mutate(pretrial_diff = pretrial_no_filter - pretrial_filter,
          sentenced_diff = sentenced_no_filter - sentenced_filter)
-  # group_by(year) %>% 
-  # mutate(pretrial_diff = mean(pretrial_diff), sentenced_diff = mean(sentenced_diff)) %>% 
-  # select(year, pretrial_diff, sentenced_diff) %>% 
-  # unique()
-
-# missingness_comparison$year <- as.factor(missingness_comparison$year)
 
 ggplot(data = missingness_comparison, mapping = aes(x = date, y = pretrial_diff)) +
-  geom_boxplot(mapping = aes(group = cut_width(year(date), 1))) +
-  labs(x = "Date", y = "Difference") +
+  geom_boxplot(mapping = aes(group = cut_width(year(date), 1)), outlier.alpha = 0.1) +
+  labs(x = "Date", y = "Pretrial Difference (in days)") +
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
         axis.text.y = element_text(color = "#000000", size = 10))
 
 ggplot(data = missingness_comparison, mapping = aes(x = date, y = sentenced_diff)) +
-  geom_boxplot(mapping = aes(group = cut_width(year(date), 1))) +
-  labs(x = "Date", y = "Difference") +
+  geom_boxplot(mapping = aes(group = cut_width(year(date), 1)), outlier.alpha = 0.1) +
+  labs(x = "Date", y = "Sentenced Difference (in days)") +
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
         axis.text.y = element_text(color = "#000000", size = 10))
-
-# median(length_of_stay_no_filter$pretrial_release - length_of_stay_filter$pretrial_release)
-# median(length_of_stay_no_filter$sentenced_release - length_of_stay_filter$sentenced_release)
 ```
 
-```{r length_of_stay_analysis}
-# calculate changes in length of stay 1, 3, and 5 years after realignment
-length_of_stay_one_yr <- length_of_stay %>% 
-  filter(county == "Colusa County" | county == "Fresno County" | county == "Mariposa County",
-         year(date) == 2011 | year(date) == 2012, month(date) == 1) %>% 
-  arrange(date) %>% 
-  group_by(county) %>% 
-  mutate(pretrial_change = (pretrial_release / lag(pretrial_release) - 1) * 100,
-         sentenced_change = (sentenced_release / lag(sentenced_release) - 1) * 100) %>% 
-  filter(year(date) == 2012)
+Now, we visualize median average quarterly lengths of stay.
 
-length_of_stay_three_yr <- length_of_stay %>% 
-  filter(county == "Colusa County" | county == "Fresno County" | county == "Mariposa County",
-         year(date) == 2011 | year(date) == 2014, month(date) == 1) %>% 
-  arrange(date) %>% 
-  group_by(county) %>% 
-  mutate(pretrial_change = (pretrial_release / lag(pretrial_release) - 1) * 100,
-         sentenced_change = (sentenced_release / lag(sentenced_release) - 1) * 100) %>% 
-  filter(year(date) == 2014)
-
-length_of_stay_five_yr <- length_of_stay %>% 
-  filter(county == "Colusa County" | county == "Fresno County" | county == "Mariposa County",
-         year(date) == 2011 | year(date) == 2016, month(date) == 1) %>% 
-  arrange(date) %>% 
-  group_by(county) %>% 
-  mutate(pretrial_change = (pretrial_release / lag(pretrial_release) - 1) * 100,
-         sentenced_change = (sentenced_release / lag(sentenced_release) - 1) * 100) %>% 
-  filter(year(date) == 2016)
-
-realignment_length_of_stay <- length_of_stay %>% 
-  filter(county == "Colusa County" | county == "Fresno County" | county == "Mariposa County",
-         year(date) == 2011 & month(date) == 1) %>% 
-  select(county, pretrial_release, sentenced_release) %>% 
-  group_by(county) %>% 
-  rename(`2011_pretrial` = pretrial_release, `2011_sentenced` = sentenced_release)
-
-realignment_length_of_stay$`2012_pretrial` = length_of_stay_one_yr$pretrial_release
-realignment_length_of_stay$`2012_pre_change` = length_of_stay_one_yr$pretrial_change
-realignment_length_of_stay$`2012_sentenced` = length_of_stay_one_yr$sentenced_release
-realignment_length_of_stay$`2012_sen_change` = length_of_stay_one_yr$sentenced_change
-
-realignment_length_of_stay$`2014_pretrial` = length_of_stay_three_yr$pretrial_release
-realignment_length_of_stay$`2014_pre_change` = length_of_stay_three_yr$pretrial_change
-realignment_length_of_stay$`2014_sentenced` = length_of_stay_three_yr$sentenced_release
-realignment_length_of_stay$`2014_sen_change` = length_of_stay_three_yr$sentenced_change
-
-realignment_length_of_stay$`2016_pretrial` = length_of_stay_five_yr$pretrial_release
-realignment_length_of_stay$`2016_pre_change` = length_of_stay_five_yr$pretrial_change
-realignment_length_of_stay$`2016_sentenced` = length_of_stay_five_yr$sentenced_release
-realignment_length_of_stay$`2016_sen_change` = length_of_stay_five_yr$sentenced_change
-
-quantile(realignment_length_of_stay$`2012_pre_change`, c(0.25, 0.5, 0.75))
-quantile(realignment_length_of_stay$`2012_sen_change`, c(0.25, 0.5, 0.75))
-quantile(realignment_length_of_stay$`2014_pre_change`, c(0.25, 0.5, 0.75))
-quantile(realignment_length_of_stay$`2014_sen_change`, c(0.25, 0.5, 0.75))
-quantile(realignment_length_of_stay$`2016_pre_change`, c(0.25, 0.5, 0.75))
-quantile(realignment_length_of_stay$`2016_sen_change`, c(0.25, 0.5, 0.75))
-```
-
-```{r length_of_stay_modeling}
-
-```
-
-```{r length_of_stay_viz}
+```{r length_of_stay_viz, fig.width = 6}
 length_of_stay %>% 
   group_by(date) %>% 
   mutate(pretrial_release = median(pretrial_release), sentenced_release = median(sentenced_release)) %>% 
@@ -344,80 +602,280 @@ length_of_stay %>%
   ggplot(data = ., mapping = aes(x = date, group = 1)) +
   geom_line(mapping = aes(y = pretrial_release, linetype = "solid")) +
   geom_line(mapping = aes(y = sentenced_release, linetype = "dotted")) +
-  labs(x = "Year", y = "Median Lengths of Stay") +
+  geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
+  geom_vline(xintercept = as.Date("2012-01-01"), linetype = "dotted") +
+  geom_vline(xintercept = as.Date("2014-01-01"), linetype = "dotted") +
+  geom_vline(xintercept = as.Date("2016-01-01"), linetype = "dotted") +
+  labs(x = "Year", y = "Length of Stay (in days)") +
   scale_linetype_manual(name = "Sentence Type",
                         values = c("solid", "dotted"), labels = c("Sentenced", "Pretrial")) +
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
         axis.text.y = element_text(color = "#000000", size = 10))
+```
 
-county_q %>% 
-  filter(year > 2001, county == "Los Angeles County" | county == "San Francisco County") %>% 
-  select(county, date, pretrial_release, sentenced_release) %>% 
-  mutate(county = case_when(county == "Los Angeles County" ~ "la", county == "San Francisco County" ~ "sf"),
-         row = row_number()) %>% 
-  pivot_wider(names_from = county, values_from = c(pretrial_release, sentenced_release)) %>% 
-  select(-row) %>% 
-  group_by(date) %>% 
-  fill(everything(), .direction = "down") %>%
-  fill(everything(), .direction = "up") %>% 
-  unique() %>% 
-  ggplot(data = ., mapping = aes(x = date, group = 1)) +
-  geom_line(mapping = aes(y = pretrial_release_la, color = "la", linetype = "solid")) +
-  geom_line(mapping = aes(y = pretrial_release_sf, color = "sf", linetype = "solid")) +
-  geom_line(mapping = aes(y = sentenced_release_la, color = "la", linetype = "dotted")) +
-  geom_line(mapping = aes(y = sentenced_release_sf, color = "sf", linetype = "dotted")) +
-  labs(x = "Year", y = "Average Lengths of Stay") +
-  scale_color_discrete(name = "County", breaks = c("la", "sf"), labels = c("Los Angeles", "San Francisco")) +
-  scale_linetype_manual(name = "Sentence Type",
-                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+Now, for the 20 counties which have observations for all analyzed years after realignment, we analyze whether the policy had a lasting impact on lengths of stay in jails.
+
+```{r length_of_stay_realignment_counties}
+realignment_length_of_stay_counties <- length_of_stay %>% 
+  filter(county %in% missingness) %>% 
+  filter(year(date) == 2011 | year(date) == 2012 | year(date) == 2014 | year(date) == 2016, 
+         month(date) == 1) %>% 
+  count(county) %>% 
+  filter(n == 4)
+
+realignment_length_of_stay_counties$county
+```
+
+```{r length_of_stay_realignment_data}
+length_of_stay_one_yr <- length_of_stay %>% 
+  filter(county %in% realignment_length_of_stay_counties$county,
+         year(date) == 2011 | year(date) == 2012, month(date) == 1) %>%
+  group_by(county) %>%
+  mutate(pretrial_change = pretrial_release - lag(pretrial_release),
+         sentenced_change = sentenced_release - lag(sentenced_release)) %>% 
+  filter(year(date) == 2012)
+
+length_of_stay_three_yr <- length_of_stay %>% 
+  filter(county %in% realignment_length_of_stay_counties$county,
+         year(date) == 2011 | year(date) == 2014, month(date) == 1) %>%
+  group_by(county) %>%
+  mutate(pretrial_change = pretrial_release - lag(pretrial_release),
+         sentenced_change = sentenced_release - lag(sentenced_release)) %>% 
+  filter(year(date) == 2014)
+
+length_of_stay_five_yr <- length_of_stay %>% 
+  filter(county %in% realignment_length_of_stay_counties$county,
+         year(date) == 2011 | year(date) == 2016, month(date) == 1) %>%
+  group_by(county) %>%
+  mutate(pretrial_change = pretrial_release - lag(pretrial_release),
+         sentenced_change = sentenced_release - lag(sentenced_release)) %>% 
+  filter(year(date) == 2016)
+
+realignment_length_of_stay <- bind_rows(length_of_stay_one_yr, length_of_stay_three_yr, length_of_stay_five_yr)
+
+realignment_length_of_stay %>% 
+  group_by(year(date)) %>% 
+  summarize(pretrial_q25 = quantile(pretrial_change, 0.25, na.rm = TRUE), 
+            pretrial_median = median(pretrial_change, na.rm = TRUE),
+            pretrial_q75 = quantile(pretrial_change, 0.75, na.rm = TRUE),
+            sentenced_q25 = quantile(sentenced_change, 0.25, na.rm = TRUE), 
+            sentenced_median = median(sentenced_change, na.rm = TRUE),
+            sentenced_q75 = quantile(sentenced_change, 0.75, na.rm = TRUE)) %>% 
+  rename(year = `year(date)`)
+```
+
+We visualize the difference between lengths of stay after realignment.
+
+```{r length_of_stay_realignment_viz}
+ggplot(data = realignment_length_of_stay, mapping = aes(x = date, y = pretrial_change)) +
+  geom_boxplot(mapping = aes(group = cut_width(year(date), 1)), outlier.alpha = 0.1) +
+  labs(x = "Date", y = "Pretrial Difference (in days)") +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
+
+ggplot(data = realignment_length_of_stay, mapping = aes(x = date, y = sentenced_change)) +
+  geom_boxplot(mapping = aes(group = cut_width(year(date), 1)), outlier.alpha = 0.1) +
+  labs(x = "Date", y = "Sentenced Difference (in days)") +
   theme_classic() +
   theme(axis.text.x = element_text(color = "#000000", size = 10),
         axis.text.y = element_text(color = "#000000", size = 10))
 ```
 
-# Realignment
+Two counties were below the 25th percentile of pretrial length of stay for all analyzed years after realignment. 
 
-```{r realignment_data}
-realignment_population
-realignment_length_of_stay
+```{r pretrial_quartiles_below}
+pretrial_below <- realignment_length_of_stay %>% 
+  filter((year(date) == 2012 & pretrial_change < -1.25) | (year(date) == 2014 & pretrial_change < -1.00) |
+           (year(date) == 2016 & pretrial_change < -0.25)) %>% 
+  count(county) %>% 
+  filter(n == 3) %>% 
+  select(county)
+
+pretrial_below$`2011_length` <- length_of_stay %>% 
+  filter(county %in% pretrial_below$county, year(date) == 2011, month(date) == 1) %>% 
+  pull(pretrial_release)
+
+pretrial_below$`2012_length` <- length_of_stay_one_yr %>% 
+  filter(county %in% pretrial_below$county) %>% 
+  pull(pretrial_release)
+
+pretrial_below$`2014_length` <- length_of_stay_three_yr %>% 
+  filter(county %in% pretrial_below$county) %>% 
+  pull(pretrial_release)
+
+pretrial_below$`2016_length` <- length_of_stay_five_yr %>% 
+  filter(county %in% pretrial_below$county) %>% 
+  pull(pretrial_release)
+
+pretrial_below
 ```
 
-```{r realignment_modeling}
+```{r pretrial_quartiles_below_characteristics}
+pretrial_below_characteristics <- pretrial_below %>% select(county)
 
+# 2019 ACS estimates
+pretrial_below_characteristics$population <- c(10039107, 762148)
+# 2010 census findings
+pretrial_below_characteristics$percent_urban <- c(99.3, 91.4)
+# using Google maps
+pretrial_below_characteristics$proximity_to_prison <- c(0, 0)
+
+pretrial_below_characteristics
 ```
 
-```{r realignment_viz}
-county_m %>% 
-  filter(county == "San Diego County") %>% 
-  select(date, unsen_male, unsen_female, sen_male, sen_female, total) %>% 
-  group_by(date) %>% 
-  mutate(unsen_male = sum(unsen_male), unsen_female = sum(unsen_female),
-         sen_male = sum(sen_male), sen_female = sum(sen_female), total = sum(total)) %>% 
-  unique() %>% 
-  arrange(date) %>% 
-  ggplot(data = ., mapping = aes(x = date, group = 1)) +
-  geom_line(mapping = aes(y = sen_male, color = "male", linetype = "solid")) +
-  geom_line(mapping = aes(y = sen_female, color = "female", linetype = "solid")) +
-  geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "dotted")) +
-  geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "dotted")) +
-  labs(x = "Year", y = "Average Daily Populations") +
-  scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
-  scale_linetype_manual(name = "Sentence Type",
-                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
-  theme_classic() +
-  theme(axis.text.x = element_text(color = "#000000", size = 10),
-        axis.text.y = element_text(color = "#000000", size = 10), legend.position = "none")
+No counties were above the 75th percentile of pretrial length of stay for all analyzed years after realignment.
 
-length_of_stay %>% 
-  filter(county == "San Diego County") %>% 
-  ggplot(data = ., mapping = aes(x = date, group = 1)) +
-  geom_line(mapping = aes(y = pretrial_release, linetype = "solid")) +
-  geom_line(mapping = aes(y = sentenced_release, linetype = "dotted")) +
-  labs(x = "Year", y = "Average Lengths of Stay") +
-  scale_linetype_manual(name = "Sentence Type",
-                        values = c("solid", "dotted"), labels = c("Sentenced", "Pretrial")) +
-  theme_classic() +
-  theme(axis.text.x = element_text(color = "#000000", size = 10),
-        axis.text.y = element_text(color = "#000000", size = 10), legend.position = "none")
+Two counties were below the 25th percentile of sentenced length of stay for all analyzed years after realignment.
+
+```{r sentenced_quartiles_below}
+sentenced_below <- realignment_length_of_stay %>% 
+  filter((year(date) == 2012 & sentenced_change < -0.5) | (year(date) == 2014 & sentenced_change < 2.15825) |
+           (year(date) == 2016 & sentenced_change < 2.7)) %>% 
+  count(county) %>% 
+  filter(n == 3) %>% 
+  select(county)
+
+sentenced_below$`2011_length` <- length_of_stay %>% 
+  filter(county %in% sentenced_below$county, year(date) == 2011, month(date) == 1) %>% 
+  pull(sentenced_release)
+
+sentenced_below$`2012_length` <- length_of_stay_one_yr %>% 
+  filter(county %in% sentenced_below$county) %>% 
+  pull(sentenced_release)
+
+sentenced_below$`2014_length` <- length_of_stay_three_yr %>% 
+  filter(county %in% sentenced_below$county) %>% 
+  pull(sentenced_release)
+
+sentenced_below$`2016_length` <- length_of_stay_five_yr %>% 
+  filter(county %in% sentenced_below$county) %>% 
+  pull(sentenced_release)
+
+sentenced_below
 ```
+
+```{r sentenced_quartiles_below_characteristics}
+sentenced_below_characteristics <- sentenced_below %>% select(county)
+
+# 2019 ACS estimates
+sentenced_below_characteristics$population <- c(135558, 43539)
+# 2010 census findings
+sentenced_below_characteristics$percent_urban <- c(67, 31.6)
+# using Google maps
+sentenced_below_characteristics$proximity_to_prison <- c(105, 160)
+
+sentenced_below_characteristics
+```
+
+Three counties were above the 75th percentile of pretrial length of stay for all analyzed years after realignment. Note that Madera County experienced an increase in ratio of unsentenced to sentenced and sentenced length of stay after realignment, which means that although its pretrial population increasingly outnumbered its sentenced population, its sentenced population was incarcerated for longer periods of time. Also note that San Joaquin County experienced an increase in both pretrial and sentenced length of stay after realignment.
+
+```{r sentenced_quartiles_above}
+sentenced_above <- realignment_length_of_stay %>% 
+  filter((year(date) == 2012 & sentenced_change > 10.75) | (year(date) == 2014 & sentenced_change > 23.7225) |
+           (year(date) == 2016 & sentenced_change > 26.0025)) %>% 
+  count(county) %>% 
+  filter(n == 3) %>% 
+  select(county)
+
+sentenced_above$`2011_length` <- length_of_stay %>% 
+  filter(county %in% sentenced_above$county, year(date) == 2011, month(date) == 1) %>% 
+  pull(sentenced_release)
+
+sentenced_above$`2012_length` <- length_of_stay_one_yr %>% 
+  filter(county %in% sentenced_above$county) %>% 
+  pull(sentenced_release)
+
+sentenced_above$`2014_length` <- length_of_stay_three_yr %>% 
+  filter(county %in% sentenced_above$county) %>% 
+  pull(sentenced_release)
+
+sentenced_above$`2016_length` <- length_of_stay_five_yr %>% 
+  filter(county %in% sentenced_above$county) %>% 
+  pull(sentenced_release)
+
+sentenced_above
+```
+
+```{r sentenced_quartiles_above_characteristics}
+sentenced_above_characteristics <- sentenced_above %>% select(county)
+
+# 2019 ACS estimates
+sentenced_above_characteristics$population <- c(39752, 157327, 762148)
+# 2010 census findings
+sentenced_above_characteristics$percent_urban <- c(29.3, 60.7, 91.4)
+# using Google maps
+sentenced_above_characteristics$proximity_to_prison <- c(0, 0, 0)
+
+sentenced_above_characteristics
+```
+
+```{r county_level_viz, include = FALSE}
+# population %>%
+#   filter(county == "") %>%
+#   ggplot(data = ., mapping = aes(x = date, group = 1)) +
+#   geom_line(mapping = aes(y = sen_male, color = "male", linetype = "solid")) +
+#   geom_line(mapping = aes(y = sen_female, color = "female", linetype = "solid")) +
+#   geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "dotted")) +
+#   geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "dotted")) +
+#   geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
+#   geom_vline(xintercept = as.Date("2012-01-01"), linetype = "dotted") +
+#   geom_vline(xintercept = as.Date("2014-01-01"), linetype = "dotted") +
+#   geom_vline(xintercept = as.Date("2016-01-01"), linetype = "dotted") +
+#   labs(x = "Year", y = "Average Daily Populations") +
+#   scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
+#   scale_linetype_manual(name = "Sentence Type",
+#                         values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+#   theme_classic() +
+#   theme(axis.text.x = element_text(color = "#000000", size = 10),
+#         axis.text.y = element_text(color = "#000000", size = 10), legend.position = "none")
+
+# length_of_stay %>%
+#   filter(county == "San Joaquin County") %>%
+#   ggplot(data = ., mapping = aes(x = date, group = 1)) +
+#   geom_line(mapping = aes(y = pretrial_release, linetype = "solid")) +
+#   geom_line(mapping = aes(y = sentenced_release, linetype = "dotted")) +
+#   geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
+#   geom_vline(xintercept = as.Date("2012-01-01"), linetype = "dotted") +
+#   geom_vline(xintercept = as.Date("2014-01-01"), linetype = "dotted") +
+#   geom_vline(xintercept = as.Date("2016-01-01"), linetype = "dotted") +
+#   labs(x = "Year", y = "Average Lengths of Stay") +
+#   scale_linetype_manual(name = "Sentence Type",
+#                         values = c("solid", "dotted"), labels = c("Sentenced", "Pretrial")) +
+#   theme_classic() +
+#   theme(axis.text.x = element_text(color = "#000000", size = 10),
+#         axis.text.y = element_text(color = "#000000", size = 10), legend.position = "none")
+
+# ratio %>%
+#   filter(county == "") %>%
+#   ggplot(data = ., mapping = aes(x = date, y = ratio)) +
+#   geom_line() +
+#   geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
+#   geom_vline(xintercept = as.Date("2012-01-01"), linetype = "dotted") +
+#   geom_vline(xintercept = as.Date("2014-01-01"), linetype = "dotted") +
+#   geom_vline(xintercept = as.Date("2016-01-01"), linetype = "dotted") +
+#   labs(x = "Year", y = "Ratio") +
+#   theme_classic() +
+#   theme(axis.text.x = element_text(color = "#000000", size = 10),
+#         axis.text.y = element_text(color = "#000000", size = 10))
+```
+
+## Bibliography
+Bill Lockyer, Attorney General of California, v. Leandro Andrade, 538 U.S. 63 (2003).
+
+Betram, W. & Jones, A. (2019). How many people in your state go to local jails every year? Prison Policy Initiative. https://www.prisonpolicy.org/blog/2019/09/18/state-jail-bookings.
+
+California profile. Prison Policy Initiative. https://www.prisonpolicy.org/profiles/CA.html.
+
+Couzens, J. R. & Bigelow, T. A. (2017). The Amendment of the Three Strikes Sentencing Law. California Courts. https://www.courts.ca.gov/documents/Three-Strikes-Amendment-Couzens-Bigelow.pdf.
+
+Cramer, M. (2020). Sentenced for Three Strikes, Then Freed. Now Comes a Pushback. The New York Times. https://www.nytimes.com/2020/05/12/us/california-prison-three-strikes-law.html.
+
+Edmund G. Brown, Jr., Governor of California, et al., Appellants v. Marciano Plata, et al., 563 U.S. 493 (2011).
+
+Gary Ewing v. State of California, 538 U.S. 11 (2003).
+
+Green, M. (2012). California’s Prison Realignment Explained. KQED. https://www.kqed.org/lowdown/80/califrornias-prison-realignment-explained.
+
+Kubrin, C. & Seron, C. (2016). The Great Experiment: Realigning Criminal Justice in California and Beyond. The Annals of the American Academy of Political & Social Science, 664, 1-308.
