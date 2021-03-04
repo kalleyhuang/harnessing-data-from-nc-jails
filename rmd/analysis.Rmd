@@ -207,46 +207,73 @@ length_of_stay <- county_q %>%
   arrange(date)
 ```
 
-```{r length_of_stay_analysis}
+```{r length_of_stay_missingness}
 # identify counties with length of stay missingness
-# ~10 counties have less than 10% missingness
-county_q %>% 
+pretrial_missingness <- county_q %>% 
   filter(year > 2001) %>% 
   group_by(county) %>%  
   count(is.na(pretrial_release)) %>% 
   mutate(proportion = n / sum(n)) %>% 
   filter(`is.na(pretrial_release)`) %>% 
   arrange(county) %>% 
-  filter(proportion < 0.1)
+  filter(proportion < 0.25)
 
-county_q %>% 
+sentenced_missingness <- county_q %>% 
   filter(year > 2001) %>% 
   group_by(county) %>% 
   count(is.na(sentenced_release)) %>% 
   mutate(proportion = n / sum(n)) %>% 
   filter(`is.na(sentenced_release)`) %>% 
   arrange(county) %>% 
-  filter(proportion < 0.1)
+  filter(proportion < 0.25)
+
+missingness <- intersect(pretrial_missingness$county, sentenced_missingness$county)
 
 # identify differences in length of stay filtering by counties without missingness
 length_of_stay_no_filter <- length_of_stay %>% 
   group_by(date) %>% 
-  mutate(pretrial_release = median(pretrial_release), sentenced_release = median(sentenced_release)) %>% 
-  select(-county) %>% 
+  mutate(pretrial_no_filter = median(pretrial_release), sentenced_no_filter = median(sentenced_release)) %>% 
+  select(date, pretrial_no_filter, sentenced_no_filter) %>% 
   unique()
 
 length_of_stay_filter <- length_of_stay %>% 
-  filter(county == "Colusa County" | county == "Del Norte County" | county == "Fresno County" |
-           county == "Madera County" | county == "Mariposa County" | county == "Plumas County" |
-           county == "Santa Barbara County" | county == "Siskiyou County") %>%
+  filter(county %in% missingness) %>%
   group_by(date) %>% 
-  mutate(pretrial_release = median(pretrial_release), sentenced_release = median(sentenced_release)) %>% 
-  select(-county) %>% 
+  mutate(pretrial_filter = median(pretrial_release), sentenced_filter = median(sentenced_release)) %>% 
+  select(date, pretrial_filter, sentenced_filter) %>% 
   unique()
 
-median(length_of_stay_no_filter$pretrial_release - length_of_stay_filter$pretrial_release) # 1 day diff
-median(length_of_stay_no_filter$sentenced_release - length_of_stay_filter$sentenced_release) # 20 day diff
+missingness_comparison <- bind_cols(length_of_stay_no_filter, length_of_stay_filter[,2:3]) 
 
+missingness_comparison <- missingness_comparison %>% 
+  mutate(pretrial_diff = pretrial_no_filter - pretrial_filter,
+         sentenced_diff = sentenced_no_filter - sentenced_filter)
+  # group_by(year) %>% 
+  # mutate(pretrial_diff = mean(pretrial_diff), sentenced_diff = mean(sentenced_diff)) %>% 
+  # select(year, pretrial_diff, sentenced_diff) %>% 
+  # unique()
+
+# missingness_comparison$year <- as.factor(missingness_comparison$year)
+
+ggplot(data = missingness_comparison, mapping = aes(x = date, y = pretrial_diff)) +
+  geom_boxplot(mapping = aes(group = cut_width(year(date), 1))) +
+  labs(x = "Date", y = "Difference") +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
+
+ggplot(data = missingness_comparison, mapping = aes(x = date, y = sentenced_diff)) +
+  geom_boxplot(mapping = aes(group = cut_width(year(date), 1))) +
+  labs(x = "Date", y = "Difference") +
+  theme_classic() +
+  theme(axis.text.x = element_text(color = "#000000", size = 10),
+        axis.text.y = element_text(color = "#000000", size = 10))
+
+# median(length_of_stay_no_filter$pretrial_release - length_of_stay_filter$pretrial_release)
+# median(length_of_stay_no_filter$sentenced_release - length_of_stay_filter$sentenced_release)
+```
+
+```{r length_of_stay_analysis}
 # calculate changes in length of stay 1, 3, and 5 years after realignment
 length_of_stay_one_yr <- length_of_stay %>% 
   filter(county == "Colusa County" | county == "Fresno County" | county == "Mariposa County",
