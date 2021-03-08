@@ -2,11 +2,15 @@
 library(shiny)
 library(rsconnect)
 library(tidyverse)
+library(lubridate)
 
 # load data
 population <- read.csv("https://raw.githubusercontent.com/kalleyhuang/harnessing-data-from-nc-jails/master/app/population.csv")
+population$date <- as.Date(population$date, "%Y-%m-%d")
 length_of_stay <- read.csv("https://raw.githubusercontent.com/kalleyhuang/harnessing-data-from-nc-jails/master/app/length_of_stay.csv")
+length_of_stay$date <- as.Date(length_of_stay$date, "%Y-%m-%d")
 ratio <- read.csv("https://raw.githubusercontent.com/kalleyhuang/harnessing-data-from-nc-jails/master/app/ratio.csv")
+ratio$date <- as.Date(ratio$date, "%Y-%m-%d")
 county_list <- population$county
 
 # define UI for application
@@ -14,7 +18,7 @@ ui <- fluidPage(
     titlePanel("California Jails"), # application title
     sidebarLayout(
         sidebarPanel( # dropdown to select county of interest
-            selectInput("county_chosen", "County:", county_list)
+            selectInput("county_chosen", "County:", county_list, selected = "Alameda County")
         ),
         mainPanel(
            plotOutput("popPlot"),
@@ -38,7 +42,7 @@ server <- function(input, output) {
             labs(title = "Average Daily Populations Over Time", 
                  x = "Year", y = "Population") +
             scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
-            scale_y_continuous(breaks = c(1995, 2000, 2005, 2010, 2005, 2020)) +
+            scale_x_date(date_breaks = "5 years", date_labels = "%Y") +
             scale_linetype_manual(name = "Sentence Type",
                                   values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
             theme_classic()
