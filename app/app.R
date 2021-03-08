@@ -11,7 +11,8 @@ length_of_stay <- read.csv("https://raw.githubusercontent.com/kalleyhuang/harnes
 length_of_stay$date <- as.Date(length_of_stay$date, "%Y-%m-%d")
 ratio <- read.csv("https://raw.githubusercontent.com/kalleyhuang/harnessing-data-from-nc-jails/master/app/ratio.csv")
 ratio$date <- as.Date(ratio$date, "%Y-%m-%d")
-county_list <- population$county
+county_list <- population$county %>% 
+    unique()
 
 #define UI for application
 ui <- fluidPage(
