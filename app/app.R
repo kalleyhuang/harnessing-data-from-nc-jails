@@ -30,9 +30,12 @@ ui <- fluidPage(
                         value = c(as.Date("1995-01-01", "%Y-%m-%d"), as.Date("2020-03-01")))
         ),
         mainPanel(
-           plotOutput("popPlot"),
-           plotOutput("lengthPlot"),
-           plotOutput("ratioPlot"),
+           plotOutput("popPlot", hover = hoverOpts(id = "pop_hover")),
+           verbatimTextOutput("pop_info"),
+           plotOutput("lengthPlot", hover = hoverOpts(id = "length_hover")),
+           verbatimTextOutput("length_info"),
+           plotOutput("ratioPlot", hover = hoverOpts(id = "ratio_hover")),
+           verbatimTextOutput("ratio_info")
         )
     )
 )
@@ -58,6 +61,11 @@ server <- function(input, output) {
             theme_classic()
     })
     
+    output$pop_info <- renderText({
+        paste0("Date: ", as.Date(input$pop_hover$x, origin = origin), 
+               "\nPopulation: ", input$pop_hover$y)
+    })
+    
     output$lengthPlot <- renderPlot({
         length_of_stay %>%
             filter(county == input$county_chosen) %>%
@@ -73,6 +81,11 @@ server <- function(input, output) {
             theme_classic()
     })
     
+    output$length_info <- renderText({
+        paste0("Date: ", as.Date(input$length_hover$x, origin = origin), 
+               "\nLength of Stay: ", input$length_hover$y)
+    })
+    
     output$ratioPlot <- renderPlot({
         ratio %>%
             filter(county == input$county_chosen) %>%
@@ -82,6 +95,11 @@ server <- function(input, output) {
             labs(title = "Unsentenced to Sentenced Ratio Over Time", x = "Year", y = "Ratio") +
             scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
             theme_classic()
+    })
+    
+    output$ratio_info <- renderText({
+        paste0("Date: ", as.Date(input$ratio_hover$x, origin = origin), 
+               "\nRatio: ", input$ratio_hover$y)
     })
     
 }
