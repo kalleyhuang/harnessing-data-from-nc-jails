@@ -18,7 +18,12 @@ ui <- fluidPage(
     titlePanel("California Jails"), # application title
     sidebarLayout(
         sidebarPanel( # dropdown to select county of interest
-            selectInput("county_chosen", "County:", county_list, selected = "Alameda County")
+            p("These datasets are scraped from the California Board of State and Community Corrections'
+              Jail Profile Survey by Jacob Kaplan from the University of Pennsylvania."),
+            p("These data were collected from 57 counties from October 1995 to March 2020. Note that 
+              California has 58 counties, but its least populous county, Alpine County, does not have 
+              a jail and contracts with Calaveras County and El Dorado County."),
+            selectInput("county_chosen", "County:", county_list)
         ),
         mainPanel(
            plotOutput("popPlot"),
@@ -67,6 +72,7 @@ server <- function(input, output) {
             ggplot(data = ., mapping = aes(x = date, y = ratio)) +
             geom_line() +
             labs(title = "Unsentenced to Sentenced Ratio Over Time", x = "Year", y = "Ratio") +
+            scale_x_date(date_breaks = "5 years", date_labels = "%Y") +
             theme_classic()
     })
     
