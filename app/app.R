@@ -1,10 +1,10 @@
-# load libraries
+#load libraries
 library(shiny)
 library(rsconnect)
 library(tidyverse)
 library(lubridate)
 
-# load data
+#load data
 population <- read.csv("https://raw.githubusercontent.com/kalleyhuang/harnessing-data-from-nc-jails/master/app/population.csv")
 population$date <- as.Date(population$date, "%Y-%m-%d")
 length_of_stay <- read.csv("https://raw.githubusercontent.com/kalleyhuang/harnessing-data-from-nc-jails/master/app/length_of_stay.csv")
@@ -13,29 +13,29 @@ ratio <- read.csv("https://raw.githubusercontent.com/kalleyhuang/harnessing-data
 ratio$date <- as.Date(ratio$date, "%Y-%m-%d")
 county_list <- population$county
 
-# define UI for application
+#define UI for application
 ui <- fluidPage(
     titlePanel("California Jails"), # application title
     sidebarLayout(
-        sidebarPanel( # dropdown to select county of interest
+        sidebarPanel(
             p("These datasets are scraped from the California Board of State and Community Corrections'
               Jail Profile Survey by Jacob Kaplan from the University of Pennsylvania."),
             p("These data were collected from 57 counties from October 1995 to March 2020. Note that 
               California has 58 counties, but its least populous county, Alpine County, does not have 
-              a jail and contracts with Calaveras County and El Dorado County."),
+              a jail and contracts with Calaveras County and El Dorado County."), #background
             selectInput(inputId = "county_chosen", label = "County:", choices = county_list,
-                        selected = ),
+                        selected = county_list[0]), #select county
             sliderInput(inputId = "range", label = "Range:", 
                         min = as.Date("1995-01-01", "%Y-%m-%d"), max = as.Date("2020-03-01"), 
-                        value = c(as.Date("1995-01-01", "%Y-%m-%d"), as.Date("2020-03-01")))
+                        value = c(as.Date("1995-01-01", "%Y-%m-%d"), as.Date("2020-03-01"))), #select years
+            verbatimTextOutput("pop_info"), #hover for population at time
+            verbatimTextOutput("length_info"), #hover for length of stay at time
+            verbatimTextOutput("ratio_info") #hover for ratio at time
         ),
         mainPanel(
            plotOutput("popPlot", hover = hoverOpts(id = "pop_hover")),
-           verbatimTextOutput("pop_info"),
            plotOutput("lengthPlot", hover = hoverOpts(id = "length_hover")),
-           verbatimTextOutput("length_info"),
            plotOutput("ratioPlot", hover = hoverOpts(id = "ratio_hover")),
-           verbatimTextOutput("ratio_info")
         )
     )
 )
