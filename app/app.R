@@ -34,9 +34,9 @@ ui <- fluidPage(
             verbatimTextOutput("ratio_info") #hover for ratio at time
         ),
         mainPanel(
-           plotOutput("popPlot", hover = hoverOpts(id = "pop_hover")),
-           plotOutput("lengthPlot", hover = hoverOpts(id = "length_hover")),
-           plotOutput("ratioPlot", hover = hoverOpts(id = "ratio_hover")),
+           plotOutput("popPlot", hover = hoverOpts(id = "pop_hover", nullOutside = F)),
+           plotOutput("lengthPlot", hover = hoverOpts(id = "length_hover", nullOutside = F)),
+           plotOutput("ratioPlot", hover = hoverOpts(id = "ratio_hover", nullOutside = F)),
         )
     )
 )
