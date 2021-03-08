@@ -23,7 +23,11 @@ ui <- fluidPage(
             p("These data were collected from 57 counties from October 1995 to March 2020. Note that 
               California has 58 counties, but its least populous county, Alpine County, does not have 
               a jail and contracts with Calaveras County and El Dorado County."),
-            selectInput("county_chosen", "County:", county_list)
+            selectInput(inputId = "county_chosen", label = "County:", choices = county_list,
+                        selected = ),
+            sliderInput(inputId = "range", label = "Range:", 
+                        min = as.Date("1995-01-01", "%Y-%m-%d"), max = as.Date("2020-03-01"), 
+                        value = c(as.Date("1995-01-01", "%Y-%m-%d"), as.Date("2020-03-01")))
         ),
         mainPanel(
            plotOutput("popPlot"),
@@ -39,6 +43,7 @@ server <- function(input, output) {
     output$popPlot <- renderPlot({
         population %>%
             filter(county == input$county_chosen) %>%
+            filter(date >= min(input$range) & date <= max(input$range)) %>% 
             ggplot(data = ., mapping = aes(x = date, group = 1)) +
             geom_line(mapping = aes(y = sen_male, color = "male", linetype = "solid")) +
             geom_line(mapping = aes(y = sen_female, color = "female", linetype = "solid")) +
@@ -47,7 +52,7 @@ server <- function(input, output) {
             labs(title = "Average Daily Populations Over Time", 
                  x = "Year", y = "Population") +
             scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
-            scale_x_date(date_breaks = "5 years", date_labels = "%Y") +
+            scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
             scale_linetype_manual(name = "Sentence Type",
                                   values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
             theme_classic()
@@ -56,11 +61,13 @@ server <- function(input, output) {
     output$lengthPlot <- renderPlot({
         length_of_stay %>%
             filter(county == input$county_chosen) %>%
+            filter(date >= min(input$range) & date <= max(input$range)) %>% 
             ggplot(data = ., mapping = aes(x = date, group = 1)) +
             geom_line(mapping = aes(y = pretrial_release, linetype = "solid")) +
             geom_line(mapping = aes(y = sentenced_release, linetype = "dotted")) +
             labs(title = "Average Quarterly Lengths of Stay Over Time", 
                  x = "Year", y = "Length of Stay (in days)") +
+            scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
             scale_linetype_manual(name = "Sentence Type",
                                   values = c("solid", "dotted"), labels = c("Sentenced", "Pretrial")) +
             theme_classic()
@@ -69,10 +76,11 @@ server <- function(input, output) {
     output$ratioPlot <- renderPlot({
         ratio %>%
             filter(county == input$county_chosen) %>%
+            filter(date >= min(input$range) & date <= max(input$range)) %>% 
             ggplot(data = ., mapping = aes(x = date, y = ratio)) +
             geom_line() +
             labs(title = "Unsentenced to Sentenced Ratio Over Time", x = "Year", y = "Ratio") +
-            scale_x_date(date_breaks = "5 years", date_labels = "%Y") +
+            scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
             theme_classic()
     })
     
