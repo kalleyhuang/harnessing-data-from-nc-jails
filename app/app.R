@@ -13,6 +13,7 @@ ratio <- read.csv("https://raw.githubusercontent.com/kalleyhuang/harnessing-data
 ratio$date <- as.Date(ratio$date, "%Y-%m-%d")
 county_list <- population$county %>% 
     unique()
+county_list <- county_list[c(length(county_list), 1:length(county_list)-1)]
 
 #define UI for application
 ui <- fluidPage(
@@ -25,7 +26,7 @@ ui <- fluidPage(
               California has 58 counties, but its least populous county, Alpine County, does not have 
               a jail and contracts with Calaveras County and El Dorado County."), #background
             selectInput(inputId = "county_chosen", label = "County:", choices = county_list,
-                        selected = county_list[length(county_list)]), #select county
+                        selected = county_list[0]), #select county
             sliderInput(inputId = "range", label = "Range:", 
                         min = as.Date("1995-01-01", "%Y-%m-%d"), max = as.Date("2020-03-01"), 
                         value = c(as.Date("1995-01-01", "%Y-%m-%d"), as.Date("2020-03-01"))), #select years
