@@ -1,2209 +1,2282 @@
 "","county","date","pretrial_release","sentenced_release"
-"1","Amador County",2002-01-01,8.38,37.85
-"2","Colusa County",2002-01-01,4,34
-"3","Del Norte County",2002-01-01,2.8,31.5
-"4","El Dorado County",2002-01-01,4,43
-"5","Fresno County",2002-01-01,21,67
-"6","Glenn County",2002-01-01,13,36
-"7","Humboldt County",2002-01-01,8,66
-"8","Los Angeles County",2002-01-01,41.7,56.7
-"9","Marin County",2002-01-01,9.2,46
-"10","Mariposa County",2002-01-01,8.8,17.7
-"11","Mendocino County",2002-01-01,13,32
-"12","Napa County",2002-01-01,13,68
-"13","Orange County",2002-01-01,5.65,13
-"14","Plumas County",2002-01-01,3.54,12.54
-"15","San Benito County",2002-01-01,17,57
-"16","San Bernardino County",2002-01-01,25,81
-"17","San Diego County",2002-01-01,14,84
-"18","San Joaquin County",2002-01-01,39,13
-"19","Santa Barbara County",2002-01-01,7,43
-"20","Santa Clara County",2002-01-01,117,65
-"21","Sierra County",2002-01-01,2,1
-"22","Sonoma County",2002-01-01,7.4,76.2
-"23","Stanislaus County",2002-01-01,6,46
-"24","Tulare County",2002-01-01,11,60.44
-"25","Amador County",2002-04-01,4,30
-"26","Colusa County",2002-04-01,5,38
-"27","Del Norte County",2002-04-01,4.7,29.6
-"28","El Dorado County",2002-04-01,3,41
-"29","Fresno County",2002-04-01,20,71
-"30","Glenn County",2002-04-01,11.73,46
-"31","Humboldt County",2002-04-01,13.69,59.58
-"32","Los Angeles County",2002-04-01,44.7,57.3
-"33","Marin County",2002-04-01,7.3,46.2
-"34","Mariposa County",2002-04-01,13,16.7
-"35","Mendocino County",2002-04-01,13,37
-"36","Modoc County",2002-04-01,2.3,12.2
-"37","Napa County",2002-04-01,12,65
-"38","Orange County",2002-04-01,1.2,34.3
-"39","Orange County",2002-04-01,5.57,13
-"40","Plumas County",2002-04-01,3.69,18.61
-"41","San Benito County",2002-04-01,11,48
-"42","San Diego County",2002-04-01,14,84
-"43","San Joaquin County",2002-04-01,39,13
-"44","Santa Barbara County",2002-04-01,9,40
-"45","Santa Clara County",2002-04-01,118,67
-"46","Shasta County",2002-04-01,56,35
-"47","Siskiyou County",2002-04-01,15,37
-"48","Sonoma County",2002-04-01,6.5,67.3
-"49","Stanislaus County",2002-04-01,6,51
-"50","Tulare County",2002-04-01,12.3,59.36
-"51","Alameda County",2002-07-01,24.74,54.46
-"52","Amador County",2002-07-01,4,30
-"53","Colusa County",2002-07-01,4.5,34
-"54","Del Norte County",2002-07-01,3.4,24.4
-"55","El Dorado County",2002-07-01,2.2,41.5
-"56","Fresno County",2002-07-01,15.86,75.94
-"57","Glenn County",2002-07-01,6.99,17.61
-"58","Humboldt County",2002-07-01,12.94,38.78
-"59","Los Angeles County",2002-07-01,59.1,56.6
-"60","Madera County",2002-07-01,6,42
-"61","Marin County",2002-07-01,6.8,44.5
-"62","Mariposa County",2002-07-01,12,18
-"63","Mendocino County",2002-07-01,12,32
-"64","Napa County",2002-07-01,12,66
-"65","Orange County",2002-07-01,1.3,33.9
-"66","Orange County",2002-07-01,5.59,13
-"67","Placer County",2002-07-01,16.8,44.8
-"68","Plumas County",2002-07-01,3.39,15.01
-"69","San Benito County",2002-07-01,8,50
-"70","San Diego County",2002-07-01,14,84
-"71","Santa Barbara County",2002-07-01,7,47
-"72","Santa Clara County",2002-07-01,123,69
-"73","Shasta County",2002-07-01,3.3,42.1
-"74","Sierra County",2002-07-01,1,4
-"75","Siskiyou County",2002-07-01,12,21
-"76","Sonoma County",2002-07-01,10.8,49
-"77","Stanislaus County",2002-07-01,7,52
-"78","Tulare County",2002-07-01,11.97,66.87
-"79","Alameda County",2002-10-01,24.56,59.12
-"80","Amador County",2002-10-01,3.5,45.5
-"81","Colusa County",2002-10-01,4.5,34.5
-"82","Del Norte County",2002-10-01,7.3,24.1
-"83","El Dorado County",2002-10-01,2,42
-"84","Fresno County",2002-10-01,17.24,73.32
-"85","Glenn County",2002-10-01,7.56,24.6
-"86","Humboldt County",2002-10-01,12.22,53.14
-"87","Los Angeles County",2002-10-01,49.74,41.9
-"88","Madera County",2002-10-01,8,46
-"89","Marin County",2002-10-01,7.8,53.1
-"90","Mariposa County",2002-10-01,11,17
-"91","Mendocino County",2002-10-01,12,49
-"92","Napa County",2002-10-01,12,67
-"93","Orange County",2002-10-01,3.1,34.7
-"94","Orange County",2002-10-01,5.9,16
-"95","Placer County",2002-10-01,13.3,54.7
-"96","Plumas County",2002-10-01,4,13
-"97","San Benito County",2002-10-01,20,48
-"98","San Diego County",2002-10-01,14,84
-"99","San Mateo County",2002-10-01,5.55,9.94
-"100","Santa Barbara County",2002-10-01,8,52
-"101","Santa Clara County",2002-10-01,128,71
-"102","Shasta County",2002-10-01,6.1,45.7
-"103","Sierra County",2002-10-01,1,2
-"104","Siskiyou County",2002-10-01,15,19
-"105","Sonoma County",2002-10-01,16.4,46.5
-"106","Stanislaus County",2002-10-01,6,53
-"107","Tulare County",2002-10-01,15.12,70.64
-"108","Alameda County",2003-01-01,24.69,58.83
-"109","Amador County",2003-01-01,3,79
-"110","Colusa County",2003-01-01,4,30
-"111","Del Norte County",2003-01-01,7.95,3.93
-"112","El Dorado County",2003-01-01,2,50
-"113","Fresno County",2003-01-01,24.3,70.27
-"114","Glenn County",2003-01-01,9.23,21.84
-"115","Humboldt County",2003-01-01,15.15,40.7
-"116","Los Angeles County",2003-01-01,10.01,57.15
-"117","Madera County",2003-01-01,8.5,45.5
-"118","Marin County",2003-01-01,8.4,37.6
-"119","Mariposa County",2003-01-01,16,13
-"120","Mendocino County",2003-01-01,13,25
-"121","Napa County",2003-01-01,13,70
-"122","Orange County",2003-01-01,2.3,34.7
-"123","Orange County",2003-01-01,10.1,20
-"124","Placer County",2003-01-01,24.7,59.1
-"125","Plumas County",2003-01-01,4.17,26.27
-"126","San Benito County",2003-01-01,5,63
-"127","San Diego County",2003-01-01,14,84
-"128","San Mateo County",2003-01-01,9.9,34.5
-"129","Santa Barbara County",2003-01-01,8,52
-"130","Santa Clara County",2003-01-01,132,70
-"131","Shasta County",2003-01-01,11.7,51.8
-"132","Sierra County",2003-01-01,2,2
-"133","Siskiyou County",2003-01-01,14,17
-"134","Sonoma County",2003-01-01,14.1,47.9
-"135","Stanislaus County",2003-01-01,10,52
-"136","Tulare County",2003-01-01,19.06,65.35
-"137","Alameda County",2003-04-01,25.33,56
-"138","Amador County",2003-04-01,5,86
-"139","Colusa County",2003-04-01,6,27
-"140","Del Norte County",2003-04-01,9.3,4.3
-"141","El Dorado County",2003-04-01,2,52
-"142","Fresno County",2003-04-01,26.54,69.72
-"143","Glenn County",2003-04-01,11.7,19.9
-"144","Humboldt County",2003-04-01,13.74,36.47
-"145","Los Angeles County",2003-04-01,7.62,40.14
-"146","Madera County",2003-04-01,9,45
-"147","Marin County",2003-04-01,10.5,40.9
-"148","Mariposa County",2003-04-01,11,16
-"149","Mendocino County",2003-04-01,11,33
-"150","Napa County",2003-04-01,15,67
-"151","Orange County",2003-04-01,1.3,36.9
-"152","Orange County",2003-04-01,10.2,20
-"153","Placer County",2003-04-01,11.4,63.5
-"154","Plumas County",2003-04-01,3.78,27.24
-"155","San Diego County",2003-04-01,6.3,80.1
-"156","San Mateo County",2003-04-01,11.06,18.25
-"157","Santa Barbara County",2003-04-01,8,48
-"158","Santa Clara County",2003-04-01,129,71
-"159","Shasta County",2003-04-01,12,86
-"160","Sierra County",2003-04-01,1,1
-"161","Siskiyou County",2003-04-01,21,15
-"162","Sonoma County",2003-04-01,7,72.8
-"163","Stanislaus County",2003-04-01,10,52
-"164","Tulare County",2003-04-01,25.79,59.43
-"165","Alameda County",2003-07-01,22.95,61.02
-"166","Amador County",2003-07-01,2,72
-"167","Colusa County",2003-07-01,5,26
-"168","Del Norte County",2003-07-01,3,6
-"169","El Dorado County",2003-07-01,2,55
-"170","Fresno County",2003-07-01,23.59,75.44
-"171","Glenn County",2003-07-01,9.85,22.03
-"172","Humboldt County",2003-07-01,13.74,36.47
-"173","Los Angeles County",2003-07-01,7.12,45.36
-"174","Madera County",2003-07-01,11,46
-"175","Marin County",2003-07-01,8.2,42.3
-"176","Mariposa County",2003-07-01,8,16
-"177","Mendocino County",2003-07-01,10,28
-"178","Modoc County",2003-07-01,5.3,12.8
-"179","Napa County",2003-07-01,14,68
-"180","Orange County",2003-07-01,1.2,35.7
-"181","Orange County",2003-07-01,12.2,21
-"182","Plumas County",2003-07-01,3.2,29.32
-"183","San Diego County",2003-07-01,5.9,77.7
-"184","San Mateo County",2003-07-01,13,20
-"185","Santa Barbara County",2003-07-01,8,49
-"186","Santa Clara County",2003-07-01,123,70
-"187","Shasta County",2003-07-01,19.6,21.9
-"188","Sierra County",2003-07-01,3,5
-"189","Siskiyou County",2003-07-01,27,16
-"190","Sonoma County",2003-07-01,7,72.8
-"191","Stanislaus County",2003-07-01,10,52
-"192","Tulare County",2003-07-01,24.92,55.65
-"193","Alameda County",2003-10-01,22.95,61.02
-"194","Amador County",2003-10-01,4,76
-"195","Colusa County",2003-10-01,6,25
-"196","Del Norte County",2003-10-01,5,9
-"197","El Dorado County",2003-10-01,2,45
-"198","Fresno County",2003-10-01,26.05,75.01
-"199","Glenn County",2003-10-01,9.83,25.65
-"200","Humboldt County",2003-10-01,13.86,40.25
-"201","Los Angeles County",2003-10-01,9.3,38.64
-"202","Madera County",2003-10-01,8,46
-"203","Marin County",2003-10-01,7.9,44.7
-"204","Mariposa County",2003-10-01,11,16
-"205","Mendocino County",2003-10-01,8,53
-"206","Modoc County",2003-10-01,3.8,12.8
-"207","Napa County",2003-10-01,13,69
-"208","Orange County",2003-10-01,1.2,33.9
-"209","Orange County",2003-10-01,10.1,23.3
-"210","Plumas County",2003-10-01,4.86,17.71
-"211","San Diego County",2003-10-01,6.1,81
-"212","San Mateo County",2003-10-01,12,19
-"213","Santa Barbara County",2003-10-01,8,46
-"214","Santa Clara County",2003-10-01,131,69
-"215","Shasta County",2003-10-01,1,101
-"216","Sierra County",2003-10-01,6,7
-"217","Siskiyou County",2003-10-01,26,13
-"218","Sonoma County",2003-10-01,8.7,70.6
-"219","Stanislaus County",2003-10-01,10,52
-"220","Tulare County",2003-10-01,27.11,56.28
-"221","Alameda County",2004-01-01,21.05,60.4
-"222","Amador County",2004-01-01,6,79
-"223","Colusa County",2004-01-01,3,34
+"1","Alameda County",2002-07-01,24.74,54.46
+"2","Alameda County",2002-10-01,24.56,59.12
+"3","Alameda County",2003-01-01,24.69,58.83
+"4","Alameda County",2003-04-01,25.33,56
+"5","Alameda County",2003-07-01,22.95,61.02
+"6","Alameda County",2003-10-01,22.95,61.02
+"7","Alameda County",2004-01-01,21.05,60.4
+"8","Alameda County",2004-04-01,22.08,61.5
+"9","Alameda County",2004-07-01,22.01,61.2
+"10","Alameda County",2004-10-01,21.17,62.3
+"11","Alameda County",2005-01-01,21.17,62.3
+"12","Alameda County",2005-04-01,22.68,63.05
+"13","Alameda County",2005-07-01,24.05,63.01
+"14","Alameda County",2005-10-01,23.78,63.02
+"15","Alameda County",2006-01-01,22.03,61.02
+"16","Alameda County",2006-04-01,20,60
+"17","Alameda County",2006-07-01,20,63
+"18","Alameda County",2006-10-01,21,62
+"19","Alameda County",2007-01-01,20.15,59.6
+"20","Alameda County",2007-04-01,22.03,61.04
+"21","Alameda County",2007-07-01,19.06,57.23
+"22","Alameda County",2007-10-01,20.06,58.7
+"23","Alameda County",2008-01-01,27,61
+"24","Alameda County",2008-04-01,21,58
+"25","Alameda County",2008-07-01,64,24
+"26","Alameda County",2008-10-01,20,69
+"27","Alameda County",2009-01-01,23,71
+"28","Alameda County",2009-04-01,23,61
+"29","Alameda County",2009-07-01,20,72
+"30","Alameda County",2009-10-01,23,51
+"31","Alameda County",2010-01-01,21,47
+"32","Alameda County",2010-04-01,22,49
+"33","Alameda County",2010-07-01,26,52
+"34","Alameda County",2010-10-01,25,57
+"35","Alameda County",2011-01-01,26,51
+"36","Alameda County",2011-04-01,26,58
+"37","Alameda County",2011-07-01,26,56
+"38","Alameda County",2011-10-01,27,58
+"39","Alameda County",2012-01-01,27,52
+"40","Alameda County",2017-04-01,18,54
+"41","Alameda County",2017-07-01,20,56
+"42","Alameda County",2017-10-01,18,55
+"43","Alameda County",2018-01-01,27,60
+"44","Alameda County",2018-04-01,36,67
+"45","Alameda County",2018-07-01,17,61
+"46","Alameda County",2018-10-01,20,58
+"47","Alameda County",2019-01-01,23,60
+"48","Alameda County",2019-04-01,21,62
+"49","Alameda County",2019-07-01,19,62
+"50","Alameda County",2019-10-01,21,67
+"51","Alameda County",2020-01-01,20,55
+"52","Amador County",2002-01-01,8.38,37.85
+"53","Amador County",2002-04-01,4,30
+"54","Amador County",2002-07-01,4,30
+"55","Amador County",2002-10-01,3.5,45.5
+"56","Amador County",2003-01-01,3,79
+"57","Amador County",2003-04-01,5,86
+"58","Amador County",2003-07-01,2,72
+"59","Amador County",2003-10-01,4,76
+"60","Amador County",2004-01-01,6,79
+"61","Amador County",2004-04-01,4,74
+"62","Amador County",2004-07-01,5,31
+"63","Amador County",2004-10-01,6,79
+"64","Amador County",2005-01-01,8,82
+"65","Amador County",2005-04-01,12,86
+"66","Amador County",2005-07-01,13,72
+"67","Amador County",2005-10-01,14,87
+"68","Amador County",2006-01-01,16,82
+"69","Amador County",2006-04-01,17,83
+"70","Amador County",2006-07-01,24,96
+"71","Amador County",2006-10-01,26,92
+"72","Amador County",2007-01-01,16,52
+"73","Amador County",2007-04-01,4.28,10.61
+"74","Amador County",2007-07-01,2.54,8.84
+"75","Amador County",2007-10-01,3.92,5.96
+"76","Amador County",2008-01-01,3.69,11.55
+"77","Amador County",2008-04-01,5.5,12.91
+"78","Amador County",2008-07-01,9,17.67
+"79","Amador County",2008-10-01,4.43,17.04
+"80","Amador County",2009-01-01,6.9,18
+"81","Amador County",2009-04-01,1.77,56.5
+"82","Amador County",2009-10-01,5.67,11.51
+"83","Amador County",2010-01-01,36.93,46.18
+"84","Amador County",2010-04-01,11.42,26.95
+"85","Amador County",2010-07-01,6.04,23.81
+"86","Amador County",2010-10-01,14.76,43.39
+"87","Amador County",2011-01-01,4.56,12.58
+"88","Amador County",2011-04-01,5.84,25.14
+"89","Amador County",2011-07-01,38.87,50.8
+"90","Amador County",2011-10-01,7.28,5.41
+"91","Amador County",2012-01-01,9.02,69.36
+"92","Amador County",2012-04-01,7.47,58.05
+"93","Amador County",2012-07-01,7.21,49.26
+"94","Amador County",2012-10-01,14.33,69.73
+"95","Amador County",2013-01-01,6.39,51.58
+"96","Amador County",2013-04-01,7.28,60.36
+"97","Amador County",2013-07-01,6.32,55.84
+"98","Amador County",2013-10-01,5.86,64.06
+"99","Amador County",2014-01-01,6.45,55.67
+"100","Amador County",2014-04-01,5.79,36.71
+"101","Amador County",2014-07-01,8.01,52.26
+"102","Amador County",2014-10-01,3.18,64.54
+"103","Amador County",2015-01-01,6.27,57.75
+"104","Amador County",2015-04-01,7.08,55.41
+"105","Amador County",2015-07-01,4.39,46.76
+"106","Amador County",2015-10-01,4.66,60.52
+"107","Amador County",2016-01-01,6.27,57.54
+"108","Amador County",2016-04-01,8.2,43.12
+"109","Amador County",2016-07-01,6,49.85
+"110","Amador County",2016-10-01,8.87,46.67
+"111","Amador County",2017-01-01,6.4,61.4
+"112","Amador County",2017-04-01,5.21,47
+"113","Amador County",2017-07-01,3.9,61.5
+"114","Amador County",2017-10-01,3.2,64
+"115","Amador County",2018-01-01,2.9,49.3
+"116","Amador County",2018-04-01,3.2,64
+"117","Amador County",2018-07-01,2.7,60.6
+"118","Amador County",2018-10-01,3.2,71.8
+"119","Amador County",2019-01-01,2.99,51.88
+"120","Amador County",2019-04-01,4.75,70.22
+"121","Amador County",2019-07-01,3.58,53.84
+"122","Amador County",2019-10-01,4.85,46.02
+"123","Amador County",2020-01-01,2.93,64.95
+"124","Butte County",2015-04-01,4,25
+"125","Butte County",2015-07-01,5,29
+"126","Butte County",2015-10-01,11,43
+"127","Butte County",2016-01-01,10,42
+"128","Butte County",2016-04-01,5,30
+"129","Butte County",2016-07-01,5,34
+"130","Butte County",2016-10-01,5,32
+"131","Butte County",2017-01-01,9,54
+"132","Butte County",2017-04-01,9,20
+"133","Butte County",2017-07-01,4,28
+"134","Butte County",2017-10-01,4,28
+"135","Butte County",2018-01-01,4,27
+"136","Butte County",2018-04-01,4,34
+"137","Butte County",2018-07-01,5,29
+"138","Butte County",2018-10-01,5,30
+"139","Butte County",2019-01-01,4,29
+"140","Butte County",2019-04-01,4,27
+"141","Butte County",2019-07-01,5,28
+"142","Butte County",2019-10-01,5,30
+"143","Butte County",2020-01-01,5,30
+"144","Colusa County",2002-01-01,4,34
+"145","Colusa County",2002-04-01,5,38
+"146","Colusa County",2002-07-01,4.5,34
+"147","Colusa County",2002-10-01,4.5,34.5
+"148","Colusa County",2003-01-01,4,30
+"149","Colusa County",2003-04-01,6,27
+"150","Colusa County",2003-07-01,5,26
+"151","Colusa County",2003-10-01,6,25
+"152","Colusa County",2004-01-01,3,34
+"153","Colusa County",2004-04-01,4,37
+"154","Colusa County",2004-07-01,3,27
+"155","Colusa County",2004-10-01,6,39
+"156","Colusa County",2005-01-01,4,43
+"157","Colusa County",2005-04-01,3,43
+"158","Colusa County",2005-07-01,3,35
+"159","Colusa County",2005-10-01,5,25.5
+"160","Colusa County",2006-01-01,6.81,16.17
+"161","Colusa County",2006-04-01,6.54,19.29
+"162","Colusa County",2006-07-01,5.58,16.69
+"163","Colusa County",2006-10-01,7.3,17.1
+"164","Colusa County",2007-01-01,6.14,23.18
+"165","Colusa County",2007-04-01,6.2,22.46
+"166","Colusa County",2007-07-01,6.82,20.89
+"167","Colusa County",2007-10-01,7.78,18.02
+"168","Colusa County",2008-01-01,6.65,17.82
+"169","Colusa County",2008-04-01,5.25,19.66
+"170","Colusa County",2008-07-01,6.13,17.61
+"171","Colusa County",2008-10-01,6.44,19.81
+"172","Colusa County",2009-01-01,6.5,17.47
+"173","Colusa County",2009-04-01,5.28,18.76
+"174","Colusa County",2009-07-01,6.03,20.13
+"175","Colusa County",2009-10-01,6.6,23.7
+"176","Colusa County",2010-01-01,5.9,16.64
+"177","Colusa County",2010-04-01,5.89,16.99
+"178","Colusa County",2010-07-01,6.49,18.23
+"179","Colusa County",2010-10-01,5.94,22.27
+"180","Colusa County",2011-01-01,5.85,20.46
+"181","Colusa County",2011-04-01,4.92,18.23
+"182","Colusa County",2011-07-01,6.44,21.24
+"183","Colusa County",2011-10-01,6.65,25.78
+"184","Colusa County",2012-01-01,6.597,26.123
+"185","Colusa County",2012-04-01,5.56,22.67
+"186","Colusa County",2012-07-01,7.618,25.974
+"187","Colusa County",2012-10-01,6.12,25.186
+"188","Colusa County",2013-01-01,8.214,20.844
+"189","Colusa County",2013-04-01,6.959,26.798
+"190","Colusa County",2013-07-01,7.877,22.38
+"191","Colusa County",2013-10-01,6.703,22.671
+"192","Colusa County",2014-01-01,8.665,22.671
+"193","Colusa County",2014-04-01,8.901,26.337
+"194","Colusa County",2014-07-01,6.805,22.224
+"195","Colusa County",2014-10-01,8.813,25.231
+"196","Colusa County",2015-01-01,7.407,29.088
+"197","Colusa County",2015-04-01,6.43,25.397
+"198","Colusa County",2015-10-01,7.69,36.66
+"199","Colusa County",2016-01-01,9.83,55.09
+"200","Colusa County",2016-04-01,6.81,53.94
+"201","Colusa County",2016-07-01,15.27,66.06
+"202","Colusa County",2016-10-01,9.84,62.07
+"203","Colusa County",2017-01-01,9.55,57.51
+"204","Colusa County",2017-04-01,9.81,54.33
+"205","Colusa County",2017-07-01,12.65,65.65
+"206","Colusa County",2017-10-01,8.06,51.49
+"207","Colusa County",2018-01-01,11.25,45.32
+"208","Colusa County",2018-04-01,5.46,71.71
+"209","Colusa County",2018-07-01,12.29,56.14
+"210","Colusa County",2018-10-01,8.28,61.8
+"211","Colusa County",2019-01-01,10.21,45.7
+"212","Colusa County",2019-04-01,8.03,45.98
+"213","Colusa County",2019-07-01,4.51,47.86
+"214","Colusa County",2019-10-01,13.54,54.41
+"215","Colusa County",2020-01-01,6.25,49.91
+"216","Del Norte County",2002-01-01,2.8,31.5
+"217","Del Norte County",2002-04-01,4.7,29.6
+"218","Del Norte County",2002-07-01,3.4,24.4
+"219","Del Norte County",2002-10-01,7.3,24.1
+"220","Del Norte County",2003-01-01,7.95,3.93
+"221","Del Norte County",2003-04-01,9.3,4.3
+"222","Del Norte County",2003-07-01,3,6
+"223","Del Norte County",2003-10-01,5,9
 "224","Del Norte County",2004-01-01,7,11
-"225","El Dorado County",2004-01-01,3,48
-"226","Fresno County",2004-01-01,26.53,81.68
-"227","Glenn County",2004-01-01,6,20
-"228","Humboldt County",2004-01-01,17.17,32.71
-"229","Los Angeles County",2004-01-01,8.02,37.01
-"230","Madera County",2004-01-01,8,41
-"231","Marin County",2004-01-01,7.3,42.1
-"232","Mariposa County",2004-01-01,13,17
-"233","Mendocino County",2004-01-01,13,26
-"234","Modoc County",2004-01-01,3.8,12.8
-"235","Napa County",2004-01-01,13,69
-"236","Orange County",2004-01-01,1.2,36.5
-"237","Orange County",2004-01-01,11.1,20.5
-"238","Plumas County",2004-01-01,5.16,19.42
-"239","San Benito County",2004-01-01,5,56
-"240","San Diego County",2004-01-01,7.7,76.9
-"241","San Mateo County",2004-01-01,10,28
-"242","Santa Barbara County",2004-01-01,8,41
-"243","Santa Clara County",2004-01-01,127,95
-"244","Shasta County",2004-01-01,1.7,17.7
-"245","Sierra County",2004-01-01,6,90
-"246","Siskiyou County",2004-01-01,31,17
-"247","Sonoma County",2004-01-01,6.5,63.3
-"248","Stanislaus County",2004-01-01,14,51
-"249","Tulare County",2004-01-01,29.33,64.6
-"250","Alameda County",2004-04-01,22.08,61.5
-"251","Amador County",2004-04-01,4,74
-"252","Colusa County",2004-04-01,4,37
-"253","Del Norte County",2004-04-01,8,9
-"254","El Dorado County",2004-04-01,2,51
-"255","Fresno County",2004-04-01,21.88,77.75
-"256","Glenn County",2004-04-01,8,21
-"257","Humboldt County",2004-04-01,14,35
-"258","Los Angeles County",2004-04-01,9.37,36.88
-"259","Madera County",2004-04-01,9,39
-"260","Marin County",2004-04-01,8.2,42.5
-"261","Mariposa County",2004-04-01,12,16
-"262","Mendocino County",2004-04-01,13,24
-"263","Modoc County",2004-04-01,2.3,13.4
-"264","Napa County",2004-04-01,16,72
-"265","Orange County",2004-04-01,3.3,34.4
-"266","Orange County",2004-04-01,12,22
-"267","Plumas County",2004-04-01,3.09,25.37
-"268","San Diego County",2004-04-01,11.4,68.2
-"269","San Mateo County",2004-04-01,18,24
-"270","Santa Barbara County",2004-04-01,6,40
-"271","Santa Clara County",2004-04-01,130,83
-"272","Shasta County",2004-04-01,1.6,12.9
-"273","Siskiyou County",2004-04-01,29,21
-"274","Sonoma County",2004-04-01,5.3,56.4
-"275","Stanislaus County",2004-04-01,14,51
-"276","Trinity County",2004-04-01,8,28
-"277","Tulare County",2004-04-01,30.72,58.41
-"278","Alameda County",2004-07-01,22.01,61.2
-"279","Amador County",2004-07-01,5,31
-"280","Colusa County",2004-07-01,3,27
-"281","Del Norte County",2004-07-01,5.3,25.4
-"282","El Dorado County",2004-07-01,4,47
-"283","Fresno County",2004-07-01,22.87,88.73
-"284","Glenn County",2004-07-01,9,28
-"285","Humboldt County",2004-07-01,11.85,39.51
-"286","Los Angeles County",2004-07-01,14.37,36.15
-"287","Madera County",2004-07-01,7,41
-"288","Marin County",2004-07-01,7.4,46.7
-"289","Mariposa County",2004-07-01,13,15
-"290","Mendocino County",2004-07-01,13,28
-"291","Modoc County",2004-07-01,3.5,26.1
-"292","Napa County",2004-07-01,11,69
-"293","Orange County",2004-07-01,1.2,38.9
-"294","Orange County",2004-07-01,12.5,25
-"295","Plumas County",2004-07-01,2.6,18.4
-"296","San Diego County",2004-07-01,12.6,73.9
-"297","San Mateo County",2004-07-01,19,24
-"298","Santa Barbara County",2004-07-01,6,44
-"299","Santa Clara County",2004-07-01,130,83
-"300","Shasta County",2004-07-01,3.2,40.8
-"301","Siskiyou County",2004-07-01,31,18
-"302","Sonoma County",2004-07-01,5.7,56.7
-"303","Stanislaus County",2004-07-01,14,51
-"304","Trinity County",2004-07-01,4,45
-"305","Tulare County",2004-07-01,27.33,70.01
-"306","Alameda County",2004-10-01,21.17,62.3
-"307","Amador County",2004-10-01,6,79
-"308","Colusa County",2004-10-01,6,39
-"309","Del Norte County",2004-10-01,6.1,27
-"310","El Dorado County",2004-10-01,3.7,36.1
-"311","Fresno County",2004-10-01,22.09,93.16
-"312","Glenn County",2004-10-01,8,23
-"313","Humboldt County",2004-10-01,11,35
-"314","Los Angeles County",2004-10-01,9.92,38.39
-"315","Madera County",2004-10-01,11,47
-"316","Marin County",2004-10-01,7.1,43.2
-"317","Mariposa County",2004-10-01,15,13
-"318","Mendocino County",2004-10-01,11,47
-"319","Modoc County",2004-10-01,3.1,22.5
-"320","Napa County",2004-10-01,11,67
-"321","Orange County",2004-10-01,1.3,39.8
-"322","Orange County",2004-10-01,13,28
-"323","Plumas County",2004-10-01,4.08,40.88
-"324","San Diego County",2004-10-01,6.4,77.1
-"325","San Mateo County",2004-10-01,17,22
-"326","Santa Barbara County",2004-10-01,7,46
-"327","Santa Clara County",2004-10-01,133,71
-"328","Shasta County",2004-10-01,2,27
-"329","Siskiyou County",2004-10-01,34,17
-"330","Sonoma County",2004-10-01,7.5,63.1
-"331","Stanislaus County",2004-10-01,14,52
-"332","Trinity County",2004-10-01,3,25
-"333","Tulare County",2004-10-01,27.81,77.88
-"334","Alameda County",2005-01-01,21.17,62.3
-"335","Amador County",2005-01-01,8,82
-"336","Colusa County",2005-01-01,4,43
-"337","Del Norte County",2005-01-01,5.8,30
-"338","El Dorado County",2005-01-01,3,50
-"339","Fresno County",2005-01-01,22.39,87.63
-"340","Glenn County",2005-01-01,9,20
-"341","Humboldt County",2005-01-01,12,39.85
-"342","Los Angeles County",2005-01-01,39.37,42.85
-"343","Madera County",2005-01-01,10.5,48
-"344","Marin County",2005-01-01,8,38
-"345","Mariposa County",2005-01-01,14,13
-"346","Mendocino County",2005-01-01,13,29
-"347","Modoc County",2005-01-01,5.5,24
-"348","Napa County",2005-01-01,19,92
-"349","Orange County",2005-01-01,1.35,38.85
-"350","Orange County",2005-01-01,14.5,30
-"351","Plumas County",2005-01-01,5,22
-"352","San Diego County",2005-01-01,8.1,70.9
-"353","San Mateo County",2005-01-01,14,20
-"354","Santa Barbara County",2005-01-01,9,41
-"355","Santa Clara County",2005-01-01,127,95
-"356","Shasta County",2005-01-01,8.4,54.7
-"357","Siskiyou County",2005-01-01,31,19
-"358","Sonoma County",2005-01-01,7.1,57.5
-"359","Stanislaus County",2005-01-01,9,48
-"360","Trinity County",2005-01-01,3,61
-"361","Tulare County",2005-01-01,32.64,69.7
-"362","Alameda County",2005-04-01,22.68,63.05
-"363","Amador County",2005-04-01,12,86
-"364","Colusa County",2005-04-01,3,43
-"365","Del Norte County",2005-04-01,6.5,32
-"366","El Dorado County",2005-04-01,2,52
-"367","Fresno County",2005-04-01,22.77,95.85
-"368","Glenn County",2005-04-01,10,24
-"369","Humboldt County",2005-04-01,13,44.7
-"370","Inyo County",2005-04-01,15.2,69.3
-"371","Los Angeles County",2005-04-01,30.84,41.82
-"372","Madera County",2005-04-01,10,49
-"373","Marin County",2005-04-01,8,42.9
-"374","Mariposa County",2005-04-01,13,15
-"375","Mendocino County",2005-04-01,8,31
-"376","Modoc County",2005-04-01,7.1,32
-"377","Napa County",2005-04-01,7,88
-"378","Orange County",2005-04-01,1.4,37.9
-"379","Orange County",2005-04-01,16,32
-"380","Plumas County",2005-04-01,4.35,22
-"381","San Benito County",2005-04-01,18,93
-"382","San Diego County",2005-04-01,11.3,67.7
-"383","San Mateo County",2005-04-01,14,20
-"384","Santa Barbara County",2005-04-01,8,53
-"385","Santa Clara County",2005-04-01,122,120
-"386","Shasta County",2005-04-01,13.6,102.2
-"387","Siskiyou County",2005-04-01,29,21
-"388","Sonoma County",2005-04-01,7.2,58.5
-"389","Stanislaus County",2005-04-01,4,44
-"390","Trinity County",2005-04-01,4,63
-"391","Tulare County",2005-04-01,23.62,60.43
-"392","Alameda County",2005-07-01,24.05,63.01
-"393","Amador County",2005-07-01,13,72
-"394","Colusa County",2005-07-01,3,35
-"395","Del Norte County",2005-07-01,9,21
-"396","El Dorado County",2005-07-01,3,54
-"397","Fresno County",2005-07-01,20.17,81.24
-"398","Glenn County",2005-07-01,8,25
-"399","Humboldt County",2005-07-01,12.74,44.01
-"400","Inyo County",2005-07-01,21,45
-"401","Los Angeles County",2005-07-01,38.78,44.72
-"402","Madera County",2005-07-01,7,55
-"403","Marin County",2005-07-01,8,44.3
-"404","Mariposa County",2005-07-01,14,14
-"405","Mendocino County",2005-07-01,12,34
-"406","Modoc County",2005-07-01,6.5,35
-"407","Napa County",2005-07-01,26,41
-"408","Orange County",2005-07-01,1.2,40.9
-"409","Orange County",2005-07-01,10,30
-"410","Plumas County",2005-07-01,2.39,20.21
-"411","San Benito County",2005-07-01,23,85
-"412","San Diego County",2005-07-01,11,69.3
-"413","San Joaquin County",2005-07-01,113,62
-"414","San Mateo County",2005-07-01,13,22
-"415","Santa Barbara County",2005-07-01,11,60
-"416","Santa Clara County",2005-07-01,125,122
-"417","Shasta County",2005-07-01,13.5,217.8
-"418","Siskiyou County",2005-07-01,19,22
-"419","Sonoma County",2005-07-01,5.8,55.3
-"420","Stanislaus County",2005-07-01,4,45
-"421","Trinity County",2005-07-01,3,50
-"422","Tulare County",2005-07-01,24.1,63.88
-"423","Alameda County",2005-10-01,23.78,63.02
-"424","Amador County",2005-10-01,14,87
-"425","Colusa County",2005-10-01,5,25.5
-"426","Del Norte County",2005-10-01,6.5,33
-"427","El Dorado County",2005-10-01,3.4,46.3
-"428","Fresno County",2005-10-01,20.2,81.27
-"429","Glenn County",2005-10-01,9,25
-"430","Humboldt County",2005-10-01,12.92,41.54
-"431","Inyo County",2005-10-01,31,45
-"432","Los Angeles County",2005-10-01,52.36,45.42
-"433","Madera County",2005-10-01,6,54
-"434","Marin County",2005-10-01,11.75,45.6
-"435","Mariposa County",2005-10-01,14,18
-"436","Mendocino County",2005-10-01,10,51
-"437","Modoc County",2005-10-01,1.6,8.2
-"438","Napa County",2005-10-01,6.87,13
-"439","Orange County",2005-10-01,1.3,36.1
-"440","Orange County",2005-10-01,17,31
-"441","Plumas County",2005-10-01,3.39,19.44
-"442","San Benito County",2005-10-01,26,90
-"443","San Diego County",2005-10-01,6,76
-"444","San Joaquin County",2005-10-01,60,16
-"445","San Mateo County",2005-10-01,8,21
-"446","Santa Barbara County",2005-10-01,11,53
-"447","Santa Clara County",2005-10-01,135,123
-"448","Shasta County",2005-10-01,24.8,244.9
-"449","Siskiyou County",2005-10-01,11,19
-"450","Sonoma County",2005-10-01,7.7,53.5
-"451","Stanislaus County",2005-10-01,6,80
-"452","Trinity County",2005-10-01,3,46
-"453","Tulare County",2005-10-01,25.01,52.28
-"454","Alameda County",2006-01-01,22.03,61.02
-"455","Amador County",2006-01-01,16,82
-"456","Colusa County",2006-01-01,6.81,16.17
-"457","Del Norte County",2006-01-01,9.1,24.4
-"458","El Dorado County",2006-01-01,3.2,60.1
-"459","Fresno County",2006-01-01,23.34,75.21
-"460","Glenn County",2006-01-01,9,25
-"461","Humboldt County",2006-01-01,12,43
-"462","Inyo County",2006-01-01,20,59
-"463","Los Angeles County",2006-01-01,43.82,46.04
-"464","Madera County",2006-01-01,6,50
-"465","Marin County",2006-01-01,15.5,46.9
-"466","Mariposa County",2006-01-01,16,16
-"467","Mendocino County",2006-01-01,17.3,14
-"468","Modoc County",2006-01-01,2,16.9
-"469","Napa County",2006-01-01,3.5,11.5
-"470","Orange County",2006-01-01,1.2,39.7
-"471","Orange County",2006-01-01,15,32
-"472","Plumas County",2006-01-01,4,24
-"473","San Benito County",2006-01-01,6,51
-"474","San Diego County",2006-01-01,5.5,73.4
-"475","San Joaquin County",2006-01-01,60,16
-"476","San Mateo County",2006-01-01,11,21
-"477","Santa Barbara County",2006-01-01,9,54
-"478","Santa Clara County",2006-01-01,135,124
-"479","Shasta County",2006-01-01,5.6,82.3
-"480","Siskiyou County",2006-01-01,13,21
-"481","Sonoma County",2006-01-01,4.9,56.8
-"482","Stanislaus County",2006-01-01,7,73
-"483","Trinity County",2006-01-01,7,43
-"484","Tulare County",2006-01-01,26.03,51.79
-"485","Alameda County",2006-04-01,20,60
-"486","Amador County",2006-04-01,17,83
-"487","Colusa County",2006-04-01,6.54,19.29
-"488","Del Norte County",2006-04-01,9.2,24.4
-"489","El Dorado County",2006-04-01,2.7,62.2
-"490","Fresno County",2006-04-01,21.41,76.42
-"491","Glenn County",2006-04-01,9,25
-"492","Humboldt County",2006-04-01,12.46,44.79
-"493","Inyo County",2006-04-01,18,50
-"494","Los Angeles County",2006-04-01,27.66,53.97
-"495","Madera County",2006-04-01,5,54
-"496","Marin County",2006-04-01,13.2,47.4
-"497","Mariposa County",2006-04-01,12,16
-"498","Modoc County",2006-04-01,1.97,25.55
-"499","Orange County",2006-04-01,1.3,40.2
-"500","Orange County",2006-04-01,15,32
-"501","Plumas County",2006-04-01,3.16,28.06
-"502","Riverside County",2006-04-01,7.73,44.19
-"503","San Benito County",2006-04-01,20,99
-"504","San Diego County",2006-04-01,5.6,73.4
-"505","San Joaquin County",2006-04-01,55,15
-"506","San Mateo County",2006-04-01,14,21
-"507","Santa Barbara County",2006-04-01,8,50
-"508","Santa Clara County",2006-04-01,140,114
-"509","Shasta County",2006-04-01,10.1,47.3
-"510","Siskiyou County",2006-04-01,17,29
-"511","Sonoma County",2006-04-01,5.7,62.3
-"512","Stanislaus County",2006-04-01,6,80
-"513","Trinity County",2006-04-01,7,90
-"514","Tulare County",2006-04-01,29.39,54.84
-"515","Alameda County",2006-07-01,20,63
-"516","Amador County",2006-07-01,24,96
-"517","Colusa County",2006-07-01,5.58,16.69
-"518","Del Norte County",2006-07-01,11.8,15.8
-"519","El Dorado County",2006-07-01,6.9,63.9
-"520","Fresno County",2006-07-01,23.11,73.09
-"521","Glenn County",2006-07-01,8,24
-"522","Humboldt County",2006-07-01,11.7,45.06
-"523","Inyo County",2006-07-01,13,46
-"524","Los Angeles County",2006-07-01,39.6,44.71
-"525","Madera County",2006-07-01,6,45
-"526","Marin County",2006-07-01,12.6,50.2
-"527","Mariposa County",2006-07-01,12,16
-"528","Modoc County",2006-07-01,2.5,29.3
-"529","Napa County",2006-07-01,12,45
-"530","Orange County",2006-07-01,1.2,35.2
-"531","Orange County",2006-07-01,2,96
-"532","Plumas County",2006-07-01,3.66,21
-"533","Riverside County",2006-07-01,6.05,54.66
-"534","San Benito County",2006-07-01,20.9,33.6
-"535","San Diego County",2006-07-01,4.7,71.7
-"536","San Joaquin County",2006-07-01,50,16
-"537","San Mateo County",2006-07-01,12,22
-"538","Santa Barbara County",2006-07-01,7,51
-"539","Santa Clara County",2006-07-01,134,117
-"540","Shasta County",2006-07-01,14.6,12.4
-"541","Siskiyou County",2006-07-01,12,24
-"542","Sonoma County",2006-07-01,5.8,50.6
-"543","Stanislaus County",2006-07-01,7,64
-"544","Trinity County",2006-07-01,5,47
-"545","Tulare County",2006-07-01,35.55,73.38
-"546","Alameda County",2006-10-01,21,62
-"547","Amador County",2006-10-01,26,92
-"548","Colusa County",2006-10-01,7.3,17.1
-"549","Del Norte County",2006-10-01,14,17
-"550","El Dorado County",2006-10-01,3.5,75
-"551","Fresno County",2006-10-01,23.8,82.65
-"552","Glenn County",2006-10-01,24,13
-"553","Humboldt County",2006-10-01,14,51
-"554","Inyo County",2006-10-01,14,52
-"555","Los Angeles County",2006-10-01,47.3,47.53
-"556","Madera County",2006-10-01,6,56
-"557","Marin County",2006-10-01,12.6,45.5
-"558","Mariposa County",2006-10-01,14,14
-"559","Modoc County",2006-10-01,3.88,24.42
-"560","Orange County",2006-10-01,1.2,36
-"561","Orange County",2006-10-01,2,92
-"562","Plumas County",2006-10-01,2.97,29.27
-"563","Riverside County",2006-10-01,9.29,58.1
-"564","San Benito County",2006-10-01,33,95
-"565","San Diego County",2006-10-01,5.6,75.1
-"566","San Joaquin County",2006-10-01,51,17
-"567","San Mateo County",2006-10-01,12,20.5
-"568","Santa Barbara County",2006-10-01,8,48
-"569","Santa Clara County",2006-10-01,132,121
-"570","Shasta County",2006-10-01,18.4,189.5
-"571","Siskiyou County",2006-10-01,9,17
-"572","Sonoma County",2006-10-01,5.1,58.9
-"573","Stanislaus County",2006-10-01,8,64
-"574","Trinity County",2006-10-01,12,60
-"575","Tulare County",2006-10-01,16.39,64.23
-"576","Alameda County",2007-01-01,20.15,59.6
-"577","Amador County",2007-01-01,16,52
-"578","Colusa County",2007-01-01,6.14,23.18
-"579","Del Norte County",2007-01-01,4.7,18.5
-"580","El Dorado County",2007-01-01,2.54,53.22
-"581","Fresno County",2007-01-01,25.08,83.27
-"582","Glenn County",2007-01-01,9,20
-"583","Humboldt County",2007-01-01,9,46
-"584","Inyo County",2007-01-01,7,61
-"585","Los Angeles County",2007-01-01,39.78,57.25
-"586","Madera County",2007-01-01,5,53
-"587","Marin County",2007-01-01,14,53.3
-"588","Mariposa County",2007-01-01,14,12
-"589","Modoc County",2007-01-01,2.5,29.3
-"590","Orange County",2007-01-01,1.2,35.1
-"591","Orange County",2007-01-01,2,94
-"592","Plumas County",2007-01-01,7.7,14.1
-"593","Riverside County",2007-01-01,13.32,45.45
-"594","San Benito County",2007-01-01,23,86
-"595","San Diego County",2007-01-01,5.8,73.5
-"596","San Joaquin County",2007-01-01,38,18
-"597","San Mateo County",2007-01-01,15,22
-"598","Santa Barbara County",2007-01-01,9,55
-"599","Santa Clara County",2007-01-01,133,119
-"600","Shasta County",2007-01-01,28,19.7
-"601","Siskiyou County",2007-01-01,10,19
-"602","Sonoma County",2007-01-01,4.8,56.1
-"603","Stanislaus County",2007-01-01,6,80
-"604","Trinity County",2007-01-01,3,73
-"605","Tulare County",2007-01-01,15.83,59.88
-"606","Alameda County",2007-04-01,22.03,61.04
-"607","Amador County",2007-04-01,4.28,10.61
-"608","Colusa County",2007-04-01,6.2,22.46
-"609","Del Norte County",2007-04-01,18,21
-"610","El Dorado County",2007-04-01,3.3,61.42
-"611","Glenn County",2007-04-01,7,25
-"612","Humboldt County",2007-04-01,9,43
-"613","Inyo County",2007-04-01,4,41
-"614","Los Angeles County",2007-04-01,26.43,51.55
-"615","Madera County",2007-04-01,7,50
-"616","Marin County",2007-04-01,14.5,55.5
-"617","Mariposa County",2007-04-01,15,13
-"618","Modoc County",2007-04-01,10,30.5
-"619","Napa County",2007-04-01,14.5,22.7
-"620","Orange County",2007-04-01,1.2,41.5
-"621","Orange County",2007-04-01,2,91
-"622","Plumas County",2007-04-01,5.6,9.8
-"623","Riverside County",2007-04-01,10.67,57.8
-"624","San Diego County",2007-04-01,5.7,73.4
-"625","San Joaquin County",2007-04-01,46,19
-"626","San Mateo County",2007-04-01,16,23
-"627","Santa Barbara County",2007-04-01,9,50
-"628","Santa Clara County",2007-04-01,135,117
-"629","Shasta County",2007-04-01,27.3,18.3
-"630","Siskiyou County",2007-04-01,15,21
-"631","Sonoma County",2007-04-01,4.8,52.8
-"632","Stanislaus County",2007-04-01,7,70
-"633","Trinity County",2007-04-01,5,51
-"634","Tulare County",2007-04-01,7.82,59.52
-"635","Alameda County",2007-07-01,19.06,57.23
-"636","Amador County",2007-07-01,2.54,8.84
-"637","Colusa County",2007-07-01,6.82,20.89
-"638","Del Norte County",2007-07-01,19,21
-"639","El Dorado County",2007-07-01,2.35,49
-"640","Fresno County",2007-07-01,29.9,17.3
-"641","Glenn County",2007-07-01,9.5,22.66
-"642","Humboldt County",2007-07-01,8,49
-"643","Inyo County",2007-07-01,8,55
-"644","Los Angeles County",2007-07-01,23.91,48.9
-"645","Madera County",2007-07-01,7,56
-"646","Marin County",2007-07-01,14.1,46.6
-"647","Mariposa County",2007-07-01,17,15
-"648","Napa County",2007-07-01,10.5,59.3
-"649","Orange County",2007-07-01,1.2,36
-"650","Orange County",2007-07-01,2,88
-"651","Plumas County",2007-07-01,5.1,10.6
-"652","San Diego County",2007-07-01,5.3,71.2
-"653","San Joaquin County",2007-07-01,38,19
-"654","San Mateo County",2007-07-01,16,23
-"655","Santa Barbara County",2007-07-01,8,52
-"656","Santa Clara County",2007-07-01,132,123
-"657","Shasta County",2007-07-01,29,22.8
-"658","Siskiyou County",2007-07-01,10,19
-"659","Sonoma County",2007-07-01,5.4,55.7
-"660","Stanislaus County",2007-07-01,8,73
-"661","Trinity County",2007-07-01,4,40
-"662","Tulare County",2007-07-01,24.35,39.79
-"663","Alameda County",2007-10-01,20.06,58.7
-"664","Amador County",2007-10-01,3.92,5.96
-"665","Colusa County",2007-10-01,7.78,18.02
-"666","Del Norte County",2007-10-01,18,22
-"667","El Dorado County",2007-10-01,3.15,56.74
-"668","Fresno County",2007-10-01,29.9,17.3
-"669","Glenn County",2007-10-01,9.5,21.5
-"670","Humboldt County",2007-10-01,7,42
-"671","Inyo County",2007-10-01,13,49
-"672","Los Angeles County",2007-10-01,23.49,58.01
-"673","Madera County",2007-10-01,7,56
-"674","Marin County",2007-10-01,12,44.3
-"675","Mariposa County",2007-10-01,17,19
-"676","Napa County",2007-10-01,9,40
-"677","Orange County",2007-10-01,1.2,36.3
-"678","Orange County",2007-10-01,2,90
-"679","Plumas County",2007-10-01,5.6,15.7
-"680","San Benito County",2007-10-01,5,48
-"681","San Diego County",2007-10-01,5.9,80.7
-"682","San Joaquin County",2007-10-01,45,20
-"683","San Mateo County",2007-10-01,14,23
-"684","Santa Barbara County",2007-10-01,8,51
-"685","Santa Clara County",2007-10-01,138,126
-"686","Shasta County",2007-10-01,31.9,21.5
-"687","Sierra County",2007-10-01,4,2
-"688","Siskiyou County",2007-10-01,13,18
-"689","Sonoma County",2007-10-01,4.1,58.7
-"690","Stanislaus County",2007-10-01,9,67
-"691","Trinity County",2007-10-01,6,44
-"692","Tulare County",2007-10-01,28.75,57.84
-"693","Alameda County",2008-01-01,27,61
-"694","Amador County",2008-01-01,3.69,11.55
-"695","Colusa County",2008-01-01,6.65,17.82
-"696","Del Norte County",2008-01-01,18,21
-"697","El Dorado County",2008-01-01,1.96,56
-"698","Fresno County",2008-01-01,25.08,83.27
-"699","Glenn County",2008-01-01,7.4,24.77
-"700","Humboldt County",2008-01-01,8,52
-"701","Inyo County",2008-01-01,11.7,57.5
-"702","Los Angeles County",2008-01-01,27.79,56
-"703","Marin County",2008-01-01,13.8,36.8
-"704","Mariposa County",2008-01-01,15,15
-"705","Napa County",2008-01-01,17,11
-"706","Orange County",2008-01-01,1.7,42
-"707","Orange County",2008-01-01,2,92
-"708","Plumas County",2008-01-01,8.8,13.4
-"709","Riverside County",2008-01-01,1.8,83.99
-"710","San Benito County",2008-01-01,4,52
-"711","San Diego County",2008-01-01,5.5,81.5
-"712","San Joaquin County",2008-01-01,52,20
-"713","San Mateo County",2008-01-01,16,23
-"714","Santa Barbara County",2008-01-01,9,62
-"715","Santa Clara County",2008-01-01,134,132
-"716","Sierra County",2008-01-01,3,4
-"717","Siskiyou County",2008-01-01,11,21
-"718","Sonoma County",2008-01-01,4,53.7
-"719","Stanislaus County",2008-01-01,7,68
-"720","Trinity County",2008-01-01,5,55
-"721","Tulare County",2008-01-01,24.78,66.35
-"722","Alameda County",2008-04-01,21,58
-"723","Amador County",2008-04-01,5.5,12.91
-"724","Colusa County",2008-04-01,5.25,19.66
-"725","Del Norte County",2008-04-01,12,29
-"726","El Dorado County",2008-04-01,3.8,62.6
-"727","Fresno County",2008-04-01,25,28
-"728","Glenn County",2008-04-01,4.25,14.62
-"729","Humboldt County",2008-04-01,8,43
-"730","Inyo County",2008-04-01,6.44,80.14
-"731","Los Angeles County",2008-04-01,25.04,56.31
-"732","Madera County",2008-04-01,8,46
-"733","Marin County",2008-04-01,13.5,40.3
-"734","Mariposa County",2008-04-01,17,16
-"735","Napa County",2008-04-01,14,17
-"736","Orange County",2008-04-01,1.2,41.5
-"737","Orange County",2008-04-01,17,90
-"738","Plumas County",2008-04-01,3.5,12.8
-"739","Riverside County",2008-04-01,5.72,73.54
-"740","San Benito County",2008-04-01,4,44
-"741","San Diego County",2008-04-01,5.4,79.1
-"742","San Joaquin County",2008-04-01,48,18
-"743","San Mateo County",2008-04-01,15,23
-"744","Santa Barbara County",2008-04-01,9,54
-"745","Santa Clara County",2008-04-01,132,129
-"746","Sierra County",2008-04-01,1,1
-"747","Siskiyou County",2008-04-01,9,20
-"748","Sonoma County",2008-04-01,4.3,52
-"749","Stanislaus County",2008-04-01,8,72
-"750","Trinity County",2008-04-01,4,56
-"751","Tulare County",2008-04-01,21.9,67.79
-"752","Alameda County",2008-07-01,64,24
-"753","Amador County",2008-07-01,9,17.67
-"754","Colusa County",2008-07-01,6.13,17.61
-"755","Del Norte County",2008-07-01,7,4
-"756","El Dorado County",2008-07-01,3.2,46.1
-"757","Fresno County",2008-07-01,23.1,25.7
-"758","Glenn County",2008-07-01,5.7,32.7
-"759","Humboldt County",2008-07-01,8,40
-"760","Inyo County",2008-07-01,14.12,74.46
-"761","Los Angeles County",2008-07-01,23.8,54
-"762","Marin County",2008-07-01,17.5,44.7
-"763","Mariposa County",2008-07-01,13,14
-"764","Napa County",2008-07-01,15,20
-"765","Orange County",2008-07-01,1.2,39.6
-"766","Orange County",2008-07-01,19.6,90
-"767","Plumas County",2008-07-01,3,10.3
-"768","Riverside County",2008-07-01,9.64,63.09
-"769","San Benito County",2008-07-01,6,47
-"770","San Diego County",2008-07-01,5.2,75.3
-"771","San Joaquin County",2008-07-01,46,19
-"772","San Mateo County",2008-07-01,11.6,45.2
-"773","Santa Barbara County",2008-07-01,12,20
-"774","Santa Clara County",2008-07-01,132,124
-"775","Sierra County",2008-07-01,2,3
-"776","Siskiyou County",2008-07-01,9,23
-"777","Sonoma County",2008-07-01,4.2,50.9
-"778","Stanislaus County",2008-07-01,7,67
-"779","Trinity County",2008-07-01,4,59
-"780","Tulare County",2008-07-01,27.65,69.89
-"781","Alameda County",2008-10-01,20,69
-"782","Amador County",2008-10-01,4.43,17.04
-"783","Colusa County",2008-10-01,6.44,19.81
-"784","Del Norte County",2008-10-01,16,21
-"785","El Dorado County",2008-10-01,3.7,62.6
-"786","Fresno County",2008-10-01,19.5,26.1
-"787","Glenn County",2008-10-01,6,11
-"788","Humboldt County",2008-10-01,7.81,40.77
-"789","Inyo County",2008-10-01,13,57
-"790","Los Angeles County",2008-10-01,28.8,56.6
-"791","Madera County",2008-10-01,8,59
-"792","Marin County",2008-10-01,14.4,39.5
-"793","Mariposa County",2008-10-01,13,15
-"794","Orange County",2008-10-01,1.2,41.7
-"795","Plumas County",2008-10-01,4.1,12.8
-"796","Riverside County",2008-10-01,14.99,74.05
-"797","San Benito County",2008-10-01,4,45
-"798","San Diego County",2008-10-01,5.9,74.9
-"799","San Joaquin County",2008-10-01,19,34
-"800","San Mateo County",2008-10-01,14.2,30.4
-"801","Santa Barbara County",2008-10-01,12,22
-"802","Santa Clara County",2008-10-01,137,131
-"803","Sierra County",2008-10-01,2,1
-"804","Siskiyou County",2008-10-01,7,25
-"805","Sonoma County",2008-10-01,3.5,53.9
-"806","Stanislaus County",2008-10-01,7,71
-"807","Trinity County",2008-10-01,6,39
-"808","Tulare County",2008-10-01,35.34,66.03
-"809","Alameda County",2009-01-01,23,71
-"810","Amador County",2009-01-01,6.9,18
-"811","Colusa County",2009-01-01,6.5,17.47
-"812","Del Norte County",2009-01-01,15,21
-"813","El Dorado County",2009-01-01,2.72,45.81
-"814","Fresno County",2009-01-01,22.3,16.1
-"815","Humboldt County",2009-01-01,7,43
-"816","Inyo County",2009-01-01,20,41
-"817","Los Angeles County",2009-01-01,22.7,54.9
-"818","Madera County",2009-01-01,7,52
-"819","Marin County",2009-01-01,10.2,35.6
-"820","Mariposa County",2009-01-01,15,15
-"821","Orange County",2009-01-01,1.2,41.7
-"822","Plumas County",2009-01-01,2.4,18.7
-"823","Riverside County",2009-01-01,17.38,73.26
-"824","San Benito County",2009-01-01,5,51
-"825","San Diego County",2009-01-01,5.2,77
-"826","San Joaquin County",2009-01-01,5,19
-"827","Santa Barbara County",2009-01-01,12,20
-"828","Santa Clara County",2009-01-01,147,135
-"829","Sierra County",2009-01-01,2,3
-"830","Siskiyou County",2009-01-01,8,27
-"831","Sonoma County",2009-01-01,4.4,52.4
-"832","Stanislaus County",2009-01-01,7,65
-"833","Trinity County",2009-01-01,6,51
-"834","Tulare County",2009-01-01,14.79,53.98
-"835","Alameda County",2009-04-01,23,61
-"836","Amador County",2009-04-01,1.77,56.5
-"837","Colusa County",2009-04-01,5.28,18.76
-"838","Del Norte County",2009-04-01,4,25
-"839","El Dorado County",2009-04-01,2.41,48.42
-"840","Fresno County",2009-04-01,19.9,17.1
-"841","Humboldt County",2009-04-01,7,41
-"842","Inyo County",2009-04-01,7,53
-"843","Los Angeles County",2009-04-01,30.3,54.3
-"844","Madera County",2009-04-01,7,65
-"845","Marin County",2009-04-01,12.7,31.7
-"846","Mariposa County",2009-04-01,18,16
-"847","Orange County",2009-04-01,1.2,42.1
-"848","Plumas County",2009-04-01,4.1,17.3
-"849","Riverside County",2009-04-01,17,97
-"850","San Benito County",2009-04-01,5,52
-"851","San Diego County",2009-04-01,5.2,69.1
-"852","San Joaquin County",2009-04-01,22,18
-"853","Santa Barbara County",2009-04-01,12,20
-"854","Santa Clara County",2009-04-01,151,129
-"855","Sierra County",2009-04-01,1,1
-"856","Siskiyou County",2009-04-01,6,23
-"857","Sonoma County",2009-04-01,4.4,22.9
-"858","Stanislaus County",2009-04-01,7,77
-"859","Trinity County",2009-04-01,6,62
-"860","Tulare County",2009-04-01,23.11,67.25
-"861","Alameda County",2009-07-01,20,72
-"862","Colusa County",2009-07-01,6.03,20.13
-"863","Del Norte County",2009-07-01,2,14
-"864","El Dorado County",2009-07-01,2.38,49.25
-"865","Fresno County",2009-07-01,16.9,13.6
-"866","Humboldt County",2009-07-01,7,48
-"867","Inyo County",2009-07-01,3,47
-"868","Los Angeles County",2009-07-01,31.2,58.1
-"869","Madera County",2009-07-01,6,57
-"870","Marin County",2009-07-01,11.2,37.8
-"871","Mariposa County",2009-07-01,7.1,26.1
-"872","Orange County",2009-07-01,1.2,43.6
-"873","Plumas County",2009-07-01,5.6,14.5
-"874","Riverside County",2009-07-01,17.18,84.01
-"875","San Benito County",2009-07-01,6,45
-"876","San Diego County",2009-07-01,5.5,72.9
-"877","San Joaquin County",2009-07-01,36,18
-"878","Santa Barbara County",2009-07-01,12,21
-"879","Santa Clara County",2009-07-01,159,128
-"880","Sierra County",2009-07-01,1,2
-"881","Siskiyou County",2009-07-01,7,20
-"882","Sonoma County",2009-07-01,5.9,57.6
-"883","Stanislaus County",2009-07-01,8,77
-"884","Trinity County",2009-07-01,4,47
-"885","Tulare County",2009-07-01,21.24,58.59
-"886","Alameda County",2009-10-01,23,51
-"887","Amador County",2009-10-01,5.67,11.51
-"888","Colusa County",2009-10-01,6.6,23.7
-"889","Del Norte County",2009-10-01,2,18
-"890","El Dorado County",2009-10-01,2.93,49.08
-"891","Fresno County",2009-10-01,23.4,7.2
-"892","Humboldt County",2009-10-01,7,70
-"893","Inyo County",2009-10-01,23,54
-"894","Los Angeles County",2009-10-01,36.7,59.5
-"895","Madera County",2009-10-01,6,57
-"896","Marin County",2009-10-01,14.6,38.3
-"897","Mariposa County",2009-10-01,8.6,45.7
-"898","Orange County",2009-10-01,1.2,36.7
-"899","Plumas County",2009-10-01,4.9,18.4
-"900","Riverside County",2009-10-01,13.14,95.55
-"901","San Benito County",2009-10-01,8,63
-"902","San Diego County",2009-10-01,5.3,74.9
-"903","San Joaquin County",2009-10-01,20,15
-"904","Santa Barbara County",2009-10-01,12,23
-"905","Santa Clara County",2009-10-01,159,130
-"906","Sierra County",2009-10-01,3,4
-"907","Siskiyou County",2009-10-01,6,24
-"908","Sonoma County",2009-10-01,4.1,55.7
-"909","Stanislaus County",2009-10-01,9,73
-"910","Trinity County",2009-10-01,7,36
-"911","Tulare County",2009-10-01,22.77,66.88
-"912","Alameda County",2010-01-01,21,47
-"913","Amador County",2010-01-01,36.93,46.18
-"914","Colusa County",2010-01-01,5.9,16.64
-"915","Del Norte County",2010-01-01,4,19
-"916","El Dorado County",2010-01-01,2.2,54.1
-"917","Fresno County",2010-01-01,25.9,15.3
-"918","Humboldt County",2010-01-01,9,47
-"919","Los Angeles County",2010-01-01,36.9,53.9
-"920","Madera County",2010-01-01,4,53
-"921","Marin County",2010-01-01,13.6,35.6
-"922","Mariposa County",2010-01-01,9,45
-"923","Orange County",2010-01-01,1.2,35.9
-"924","Plumas County",2010-01-01,4.3,20.1
-"925","Riverside County",2010-01-01,7.24,104.25
-"926","San Benito County",2010-01-01,8,70
-"927","San Diego County",2010-01-01,5.4,71.4
-"928","San Joaquin County",2010-01-01,70,19
-"929","Santa Barbara County",2010-01-01,13,19
-"930","Santa Clara County",2010-01-01,35,104
-"931","Sierra County",2010-01-01,2,3
-"932","Siskiyou County",2010-01-01,4,29
-"933","Sonoma County",2010-01-01,5.8,52.5
-"934","Stanislaus County",2010-01-01,9,76
-"935","Trinity County",2010-01-01,4,49
-"936","Tulare County",2010-01-01,29.29,71.16
-"937","Alameda County",2010-04-01,22,49
-"938","Amador County",2010-04-01,11.42,26.95
-"939","Colusa County",2010-04-01,5.89,16.99
-"940","Del Norte County",2010-04-01,8,15
-"941","El Dorado County",2010-04-01,5.2,53.8
-"942","Fresno County",2010-04-01,16.1,15.3
-"943","Humboldt County",2010-04-01,8,45
-"944","Los Angeles County",2010-04-01,20.5,53.8
-"945","Madera County",2010-04-01,6,43
-"946","Marin County",2010-04-01,10.6,26.6
-"947","Mariposa County",2010-04-01,7,49
-"948","Orange County",2010-04-01,1.2,36.3
-"949","Plumas County",2010-04-01,5,16.3
-"950","Riverside County",2010-04-01,13.44,73.49
-"951","San Benito County",2010-04-01,5,50
-"952","San Diego County",2010-04-01,5.1,63.6
-"953","San Joaquin County",2010-04-01,49,20
-"954","Santa Barbara County",2010-04-01,13,18
-"955","Santa Clara County",2010-04-01,36,99
-"956","Sierra County",2010-04-01,8,3
-"957","Siskiyou County",2010-04-01,3,22
-"958","Sonoma County",2010-04-01,4.7,53.2
-"959","Stanislaus County",2010-04-01,8,67
-"960","Trinity County",2010-04-01,6,38
-"961","Tulare County",2010-04-01,22.48,60.12
-"962","Alameda County",2010-07-01,26,52
-"963","Amador County",2010-07-01,6.04,23.81
-"964","Colusa County",2010-07-01,6.49,18.23
-"965","Del Norte County",2010-07-01,10,15
-"966","El Dorado County",2010-07-01,4.1,45.9
-"967","Fresno County",2010-07-01,10.4,16
-"968","Humboldt County",2010-07-01,8,47
-"969","Inyo County",2010-07-01,2.8,33.7
-"970","Los Angeles County",2010-07-01,38.5,50.7
-"971","Madera County",2010-07-01,4,56
-"972","Marin County",2010-07-01,21.7,31.7
-"973","Mariposa County",2010-07-01,10,47
-"974","Orange County",2010-07-01,1.2,30.9
-"975","Plumas County",2010-07-01,3,17.5
-"976","Riverside County",2010-07-01,11.6,48.71
-"977","San Benito County",2010-07-01,11,57
-"978","San Diego County",2010-07-01,4.9,65.2
-"979","San Joaquin County",2010-07-01,4,18
-"980","Santa Barbara County",2010-07-01,12,18
-"981","Santa Clara County",2010-07-01,34,92
-"982","Sierra County",2010-07-01,33,4
-"983","Siskiyou County",2010-07-01,5,19
-"984","Sonoma County",2010-07-01,4.6,49.3
-"985","Stanislaus County",2010-07-01,9,75
-"986","Trinity County",2010-07-01,6,45
-"987","Tulare County",2010-07-01,22.8,58.73
-"988","Alameda County",2010-10-01,25,57
-"989","Amador County",2010-10-01,14.76,43.39
-"990","Colusa County",2010-10-01,5.94,22.27
-"991","Del Norte County",2010-10-01,13,17
-"992","El Dorado County",2010-10-01,3.07,40.58
-"993","Fresno County",2010-10-01,10,13.8
-"994","Humboldt County",2010-10-01,9.8,41.1
-"995","Inyo County",2010-10-01,4.2,46.7
-"996","Los Angeles County",2010-10-01,33,48.9
-"997","Madera County",2010-10-01,7,50
-"998","Marin County",2010-10-01,15.4,30.8
-"999","Mariposa County",2010-10-01,9,36
-"1000","Orange County",2010-10-01,1.2,35.3
-"1001","Plumas County",2010-10-01,5,11.9
-"1002","Riverside County",2010-10-01,10.23,34.74
-"1003","San Benito County",2010-10-01,11,60
-"1004","San Diego County",2010-10-01,5.6,74.1
-"1005","San Joaquin County",2010-10-01,11,19
-"1006","Santa Barbara County",2010-10-01,12,18
-"1007","Santa Clara County",2010-10-01,36,98
-"1008","Sierra County",2010-10-01,4,2
-"1009","Siskiyou County",2010-10-01,6,18
-"1010","Sonoma County",2010-10-01,5,49.4
-"1011","Stanislaus County",2010-10-01,8,64
-"1012","Trinity County",2010-10-01,5,41
-"1013","Tulare County",2010-10-01,23.3,57.92
-"1014","Alameda County",2011-01-01,26,51
-"1015","Amador County",2011-01-01,4.56,12.58
-"1016","Colusa County",2011-01-01,5.85,20.46
-"1017","Del Norte County",2011-01-01,9,16
-"1018","El Dorado County",2011-01-01,5.2,45.7
-"1019","Fresno County",2011-01-01,11.4,19.7
-"1020","Humboldt County",2011-01-01,8,48.2
-"1021","Inyo County",2011-01-01,3.3,42.1
-"1022","Los Angeles County",2011-01-01,46.4,45.8
-"1023","Madera County",2011-01-01,4,57
-"1024","Marin County",2011-01-01,12.6,16.9
-"1025","Mariposa County",2011-01-01,8,41
-"1026","Orange County",2011-01-01,1.3,39
-"1027","Plumas County",2011-01-01,7.6,14
-"1028","Riverside County",2011-01-01,16.83,49.85
-"1029","San Benito County",2011-01-01,8,78
-"1030","San Diego County",2011-01-01,5.6,72.4
-"1031","San Joaquin County",2011-01-01,59,19
-"1032","Santa Barbara County",2011-01-01,10,15
-"1033","Santa Clara County",2011-01-01,39,101
-"1034","Sierra County",2011-01-01,8,3
-"1035","Siskiyou County",2011-01-01,5,24
-"1036","Sonoma County",2011-01-01,5.3,49.9
-"1037","Stanislaus County",2011-01-01,9,63
-"1038","Trinity County",2011-01-01,8,19
-"1039","Tulare County",2011-01-01,22.57,56.86
-"1040","Alameda County",2011-04-01,26,58
-"1041","Amador County",2011-04-01,5.84,25.14
-"1042","Colusa County",2011-04-01,4.92,18.23
-"1043","Del Norte County",2011-04-01,8,16
-"1044","El Dorado County",2011-04-01,3.75,48.85
-"1045","Fresno County",2011-04-01,14.9,7.7
-"1046","Humboldt County",2011-04-01,8,49
-"1047","Inyo County",2011-04-01,9,42
-"1048","Los Angeles County",2011-04-01,20,45.5
-"1049","Madera County",2011-04-01,4,59
-"1050","Marin County",2011-04-01,13,35
-"1051","Mariposa County",2011-04-01,7.7,38.2
-"1052","Orange County",2011-04-01,1.2,40.4
-"1053","Plumas County",2011-04-01,4.2,10.1
-"1054","Riverside County",2011-04-01,16.94,67.61
-"1055","San Benito County",2011-04-01,9,60
-"1056","San Diego County",2011-04-01,5.5,72.6
-"1057","San Joaquin County",2011-04-01,4,27
-"1058","Santa Barbara County",2011-04-01,13,23
-"1059","Santa Clara County",2011-04-01,38,92
-"1060","Sierra County",2011-04-01,6,2
-"1061","Siskiyou County",2011-04-01,4,21
-"1062","Sonoma County",2011-04-01,5.7,54.8
-"1063","Stanislaus County",2011-04-01,7,72
-"1064","Trinity County",2011-04-01,4,62
-"1065","Tulare County",2011-04-01,19.31,44.36
-"1066","Alameda County",2011-07-01,26,56
-"1067","Amador County",2011-07-01,38.87,50.8
-"1068","Colusa County",2011-07-01,6.44,21.24
-"1069","Del Norte County",2011-07-01,9,14
-"1070","El Dorado County",2011-07-01,2.88,36.04
-"1071","Fresno County",2011-07-01,10.5,14.3
-"1072","Humboldt County",2011-07-01,9,52
-"1073","Inyo County",2011-07-01,3,40
-"1074","Los Angeles County",2011-07-01,23.9,42.7
-"1075","Madera County",2011-07-01,4,55
-"1076","Marin County",2011-07-01,13,36
-"1077","Mariposa County",2011-07-01,9,30.2
-"1078","Orange County",2011-07-01,1.3,36.8
-"1079","Plumas County",2011-07-01,3.7,13.1
-"1080","Riverside County",2011-07-01,21.34,100.65
-"1081","San Benito County",2011-07-01,9,49
-"1082","San Diego County",2011-07-01,5.2,77.6
-"1083","San Mateo County",2011-07-01,15,56.9
-"1084","Santa Barbara County",2011-07-01,13,21
-"1085","Santa Clara County",2011-07-01,42,109
-"1086","Sierra County",2011-07-01,7,3
-"1087","Siskiyou County",2011-07-01,6,22
-"1088","Sonoma County",2011-07-01,3.8,49
-"1089","Stanislaus County",2011-07-01,9,60
-"1090","Trinity County",2011-07-01,5,67
-"1091","Tulare County",2011-07-01,20.69,55.87
-"1092","Alameda County",2011-10-01,27,58
-"1093","Amador County",2011-10-01,7.28,5.41
-"1094","Colusa County",2011-10-01,6.65,25.78
-"1095","Del Norte County",2011-10-01,11,17
-"1096","El Dorado County",2011-10-01,3.43,53.6
-"1097","Fresno County",2011-10-01,13.9,14.3
-"1098","Glenn County",2011-10-01,37.2,61.8
-"1099","Humboldt County",2011-10-01,8,54
-"1100","Inyo County",2011-10-01,5,53
-"1101","Los Angeles County",2011-10-01,37.4,45.2
-"1102","Madera County",2011-10-01,6,68
-"1103","Marin County",2011-10-01,12.2,40.8
-"1104","Mariposa County",2011-10-01,4.8,50
-"1105","Orange County",2011-10-01,1.3,42
-"1106","Plumas County",2011-10-01,4.1,15.2
-"1107","Riverside County",2011-10-01,16.27,84.9
-"1108","San Benito County",2011-10-01,15,58
-"1109","San Diego County",2011-10-01,5.7,73.7
-"1110","San Joaquin County",2011-10-01,4,10
-"1111","San Mateo County",2011-10-01,20.7,61.9
-"1112","Santa Barbara County",2011-10-01,13,22
-"1113","Santa Clara County",2011-10-01,39,116
-"1114","Sierra County",2011-10-01,3,12
-"1115","Siskiyou County",2011-10-01,5,28
-"1116","Sonoma County",2011-10-01,5,53.1
-"1117","Stanislaus County",2011-10-01,10,67
-"1118","Trinity County",2011-10-01,4,54
-"1119","Tulare County",2011-10-01,28.44,64.48
-"1120","Alameda County",2012-01-01,27,52
-"1121","Amador County",2012-01-01,9.02,69.36
-"1122","Colusa County",2012-01-01,6.597,26.123
-"1123","Del Norte County",2012-01-01,9,14
-"1124","El Dorado County",2012-01-01,2.46,53.29
-"1125","Fresno County",2012-01-01,18,18
-"1126","Glenn County",2012-01-01,34.1,98.3
-"1127","Humboldt County",2012-01-01,8,42
-"1128","Imperial County",2012-01-01,9,44
-"1129","Inyo County",2012-01-01,4,42
-"1130","Los Angeles County",2012-01-01,36.9,45.7
-"1131","Madera County",2012-01-01,4,73
-"1132","Marin County",2012-01-01,12.8,36
-"1133","Mariposa County",2012-01-01,7.8,35.1
-"1134","Orange County",2012-01-01,1.3,41.7
-"1135","Plumas County",2012-01-01,3.4,18
-"1136","Riverside County",2012-01-01,16.93,63.29
-"1137","San Benito County",2012-01-01,11,87
-"1138","San Diego County",2012-01-01,5.8,69.7
-"1139","San Joaquin County",2012-01-01,8,64
-"1140","Santa Barbara County",2012-01-01,14,24
-"1141","Santa Clara County",2012-01-01,37,90
-"1142","Sierra County",2012-01-01,2,31
-"1143","Siskiyou County",2012-01-01,4,17
-"1144","Sonoma County",2012-01-01,6.1,56.2
-"1145","Stanislaus County",2012-01-01,9,65
-"1146","Trinity County",2012-01-01,9,58
-"1147","Tulare County",2012-01-01,25.67,63.52
-"1148","Amador County",2012-04-01,7.47,58.05
-"1149","Colusa County",2012-04-01,5.56,22.67
-"1150","Del Norte County",2012-04-01,6,14
-"1151","El Dorado County",2012-04-01,5.3,60.4
-"1152","Fresno County",2012-04-01,11.7,14.2
-"1153","Glenn County",2012-04-01,18.1,72
-"1154","Humboldt County",2012-04-01,7,44
-"1155","Imperial County",2012-04-01,10,58
-"1156","Inyo County",2012-04-01,7.3,46
-"1157","Los Angeles County",2012-04-01,28.2,48.9
-"1158","Madera County",2012-04-01,3,29
-"1159","Marin County",2012-04-01,10.9,29.1
-"1160","Mariposa County",2012-04-01,4.8,40
-"1161","Orange County",2012-04-01,1.3,37.3
-"1162","Plumas County",2012-04-01,3.3,17.6
-"1163","Riverside County",2012-04-01,12.34,53.77
-"1164","San Benito County",2012-04-01,6,76
-"1165","San Diego County",2012-04-01,6.8,64.6
-"1166","San Joaquin County",2012-04-01,7,36
-"1167","Santa Barbara County",2012-04-01,13,24
-"1168","Santa Clara County",2012-04-01,38,80
-"1169","Sierra County",2012-04-01,6,2
-"1170","Siskiyou County",2012-04-01,6,19
-"1171","Sonoma County",2012-04-01,5.3,48
-"1172","Stanislaus County",2012-04-01,9,57
-"1173","Trinity County",2012-04-01,7,58
-"1174","Tulare County",2012-04-01,20.22,73.84
-"1175","Amador County",2012-07-01,7.21,49.26
-"1176","Colusa County",2012-07-01,7.618,25.974
-"1177","Del Norte County",2012-07-01,9,31
-"1178","El Dorado County",2012-07-01,8.8,57.3
-"1179","Fresno County",2012-07-01,14.2,11.6
-"1180","Glenn County",2012-07-01,18.5,64.9
-"1181","Humboldt County",2012-07-01,7.18,47.74
-"1182","Imperial County",2012-07-01,7,40
-"1183","Inyo County",2012-07-01,4,42
-"1184","Los Angeles County",2012-07-01,17.59,48.5
-"1185","Madera County",2012-07-01,3,30
-"1186","Marin County",2012-07-01,12,34
-"1187","Mariposa County",2012-07-01,5.8,39.3
-"1188","Orange County",2012-07-01,1.3,38.2
-"1189","Plumas County",2012-07-01,3,14.7
-"1190","Riverside County",2012-07-01,12.5,64.26
-"1191","San Benito County",2012-07-01,7,76
-"1192","San Diego County",2012-07-01,7,59.6
-"1193","San Joaquin County",2012-07-01,17,40
-"1194","Santa Barbara County",2012-07-01,13,23
-"1195","Santa Clara County",2012-07-01,36,85
-"1196","Sierra County",2012-07-01,5,3
-"1197","Siskiyou County",2012-07-01,8,17
-"1198","Sonoma County",2012-07-01,6.9,54.2
-"1199","Stanislaus County",2012-07-01,8,59
-"1200","Trinity County",2012-07-01,7,57
-"1201","Tulare County",2012-07-01,17.51,74.81
-"1202","Amador County",2012-10-01,14.33,69.73
-"1203","Colusa County",2012-10-01,6.12,25.186
-"1204","Del Norte County",2012-10-01,12,16
-"1205","El Dorado County",2012-10-01,9.2,65.4
-"1206","Fresno County",2012-10-01,12,29
-"1207","Glenn County",2012-10-01,19.4,69.5
-"1208","Humboldt County",2012-10-01,5.89,47.45
-"1209","Imperial County",2012-10-01,10,59
-"1210","Inyo County",2012-10-01,10,41
-"1211","Los Angeles County",2012-10-01,11.671,54.899
-"1212","Madera County",2012-10-01,4,63
-"1213","Marin County",2012-10-01,15,37
-"1214","Mariposa County",2012-10-01,7.4,39.8
-"1215","Merced County",2012-10-01,32,30
-"1216","Orange County",2012-10-01,1.3,47.7
-"1217","Plumas County",2012-10-01,2.8,36.4
-"1218","Riverside County",2012-10-01,16.72,37.4
-"1219","San Benito County",2012-10-01,11,51
-"1220","San Diego County",2012-10-01,8.3,61.8
-"1221","San Joaquin County",2012-10-01,4,35
-"1222","Santa Barbara County",2012-10-01,13,24
-"1223","Santa Clara County",2012-10-01,39,95
-"1224","Sierra County",2012-10-01,7,2
-"1225","Siskiyou County",2012-10-01,7,23
-"1226","Sonoma County",2012-10-01,4.8,52.9
-"1227","Stanislaus County",2012-10-01,8,47
-"1228","Trinity County",2012-10-01,15,108
-"1229","Tulare County",2012-10-01,25.32,85.69
-"1230","Amador County",2013-01-01,6.39,51.58
-"1231","Colusa County",2013-01-01,8.214,20.844
-"1232","Del Norte County",2013-01-01,12,16
-"1233","El Dorado County",2013-01-01,9.2,72.8
-"1234","Fresno County",2013-01-01,21,30
-"1235","Glenn County",2013-01-01,27.4,50.1
-"1236","Humboldt County",2013-01-01,6.2,45.9
-"1237","Imperial County",2013-01-01,6,26
-"1238","Inyo County",2013-01-01,6,61
-"1239","Los Angeles County",2013-01-01,11.671,54.899
-"1240","Madera County",2013-01-01,4,65
-"1241","Marin County",2013-01-01,11.3,38.3
-"1242","Mariposa County",2013-01-01,7,50
-"1243","Merced County",2013-01-01,41,34
-"1244","Orange County",2013-01-01,1.3,47.1
-"1245","Plumas County",2013-01-01,6.3,13.8
-"1246","Riverside County",2013-01-01,23.95,35.52
-"1247","San Benito County",2013-01-01,11,64
-"1248","San Diego County",2013-01-01,9.1,63.7
-"1249","San Joaquin County",2013-01-01,6,49
-"1250","San Mateo County",2013-01-01,12,60
-"1251","Santa Barbara County",2013-01-01,13,23
-"1252","Santa Clara County",2013-01-01,40,93
-"1253","Sierra County",2013-01-01,3,6
-"1254","Siskiyou County",2013-01-01,6,29
-"1255","Sonoma County",2013-01-01,5.2,53.3
-"1256","Stanislaus County",2013-01-01,9,58
-"1257","Trinity County",2013-01-01,7,29
-"1258","Tulare County",2013-01-01,28.33,81.6
-"1259","Amador County",2013-04-01,7.28,60.36
-"1260","Colusa County",2013-04-01,6.959,26.798
-"1261","Del Norte County",2013-04-01,18,22
-"1262","El Dorado County",2013-04-01,9.9,66.4
-"1263","Fresno County",2013-04-01,14,18
-"1264","Glenn County",2013-04-01,12.7,55.3
-"1265","Humboldt County",2013-04-01,5.48,46.03
-"1266","Imperial County",2013-04-01,10,42
-"1267","Inyo County",2013-04-01,5,46
-"1268","Los Angeles County",2013-04-01,11.28,56.02
-"1269","Madera County",2013-04-01,4,96
-"1270","Mariposa County",2013-04-01,7.2,46.9
-"1271","Merced County",2013-04-01,22,38
-"1272","Orange County",2013-04-01,1.3,47.7
-"1273","Plumas County",2013-04-01,6.1,13.9
-"1274","Riverside County",2013-04-01,23.32,90.89
-"1275","San Benito County",2013-04-01,8,59
-"1276","San Diego County",2013-04-01,8.9,66.3
-"1277","San Francisco County",2013-04-01,36,56
-"1278","San Joaquin County",2013-04-01,4,63
-"1279","San Mateo County",2013-04-01,12,57
-"1280","Santa Barbara County",2013-04-01,13,21
-"1281","Santa Clara County",2013-04-01,34,96
-"1282","Sierra County",2013-04-01,11,6
-"1283","Siskiyou County",2013-04-01,8,25
-"1284","Sonoma County",2013-04-01,5.7,54.6
-"1285","Stanislaus County",2013-04-01,9,45
-"1286","Trinity County",2013-04-01,7,55
-"1287","Tulare County",2013-04-01,25.91,85.16
-"1288","Amador County",2013-07-01,6.32,55.84
-"1289","Colusa County",2013-07-01,7.877,22.38
-"1290","Del Norte County",2013-07-01,10,14
-"1291","El Dorado County",2013-07-01,8.4,68.1
-"1292","Fresno County",2013-07-01,13,14
-"1293","Glenn County",2013-07-01,24.7,67.3
-"1294","Humboldt County",2013-07-01,11,52
-"1295","Imperial County",2013-07-01,10,47
-"1296","Inyo County",2013-07-01,4,34
-"1297","Los Angeles County",2013-07-01,8.78,54.4
-"1298","Madera County",2013-07-01,5,96
-"1299","Marin County",2013-07-01,16.9,38.3
-"1300","Mariposa County",2013-07-01,5.9,46.8
-"1301","Merced County",2013-07-01,18,37
-"1302","Orange County",2013-07-01,1.3,44.7
-"1303","Plumas County",2013-07-01,2.4,26.2
-"1304","Riverside County",2013-07-01,21.92,57.06
-"1305","San Benito County",2013-07-01,11,57
-"1306","San Diego County",2013-07-01,10,68.1
-"1307","San Joaquin County",2013-07-01,5,60
-"1308","San Mateo County",2013-07-01,9,66
-"1309","Santa Barbara County",2013-07-01,14,22
-"1310","Santa Clara County",2013-07-01,37,96
-"1311","Sierra County",2013-07-01,9,3
-"1312","Siskiyou County",2013-07-01,6,31
-"1313","Sonoma County",2013-07-01,4.9,55.8
-"1314","Stanislaus County",2013-07-01,7,56
-"1315","Trinity County",2013-07-01,8,82
-"1316","Tulare County",2013-07-01,20.12,86.5
-"1317","Amador County",2013-10-01,5.86,64.06
-"1318","Colusa County",2013-10-01,6.703,22.671
-"1319","El Dorado County",2013-10-01,8.4,77.5
-"1320","Fresno County",2013-10-01,8,11
-"1321","Glenn County",2013-10-01,18.6,68.5
-"1322","Humboldt County",2013-10-01,6.9,52.7
-"1323","Imperial County",2013-10-01,7,32
-"1324","Inyo County",2013-10-01,5,63
-"1325","Los Angeles County",2013-10-01,9.16,61.06
-"1326","Madera County",2013-10-01,4,79
-"1327","Marin County",2013-10-01,10,40
-"1328","Mariposa County",2013-10-01,14.1,47.5
-"1329","Merced County",2013-10-01,42,35
-"1330","Orange County",2013-10-01,1.3,48.6
-"1331","Plumas County",2013-10-01,8,35
-"1332","Riverside County",2013-10-01,22.1,56.8
-"1333","Sacramento County",2013-10-01,54,34
-"1334","San Benito County",2013-10-01,8,64
-"1335","San Diego County",2013-10-01,10.3,64.3
-"1336","San Francisco County",2013-10-01,13,61
-"1337","San Joaquin County",2013-10-01,6,66
-"1338","San Mateo County",2013-10-01,9,71
-"1339","Santa Barbara County",2013-10-01,14,23
-"1340","Santa Clara County",2013-10-01,42,99
-"1341","Sierra County",2013-10-01,4,1
-"1342","Siskiyou County",2013-10-01,9,23
-"1343","Sonoma County",2013-10-01,4.9,62
-"1344","Stanislaus County",2013-10-01,8,45
-"1345","Trinity County",2013-10-01,4,101
-"1346","Tulare County",2013-10-01,33.33,95.95
-"1347","Amador County",2014-01-01,6.45,55.67
-"1348","Colusa County",2014-01-01,8.665,22.671
-"1349","El Dorado County",2014-01-01,8.8,64.8
-"1350","Fresno County",2014-01-01,16.4,22.8
-"1351","Glenn County",2014-01-01,13.5,70.9
-"1352","Humboldt County",2014-01-01,7,42.7
-"1353","Imperial County",2014-01-01,10,31
-"1354","Inyo County",2014-01-01,11,62
-"1355","Kern County",2014-01-01,14,50
-"1356","Los Angeles County",2014-01-01,7.24,59.88
-"1357","Madera County",2014-01-01,9,139
-"1358","Marin County",2014-01-01,13,37
-"1359","Mariposa County",2014-01-01,14,52.3
-"1360","Merced County",2014-01-01,45,37
-"1361","Orange County",2014-01-01,1.3,49.4
-"1362","Plumas County",2014-01-01,7.3,21.9
-"1363","Riverside County",2014-01-01,20.67,67.61
-"1364","Sacramento County",2014-01-01,27,61
-"1365","San Benito County",2014-01-01,7,71
-"1366","San Diego County",2014-01-01,11.4,67
-"1367","San Francisco County",2014-01-01,10.21,70.75
-"1368","San Joaquin County",2014-01-01,7,68
-"1369","San Mateo County",2014-01-01,15,74
-"1370","Santa Barbara County",2014-01-01,15,22
-"1371","Santa Clara County",2014-01-01,44,99
-"1372","Sierra County",2014-01-01,1,1
-"1373","Siskiyou County",2014-01-01,11,26
-"1374","Sonoma County",2014-01-01,4.3,68
-"1375","Stanislaus County",2014-01-01,8,61
-"1376","Trinity County",2014-01-01,17,76
-"1377","Tulare County",2014-01-01,26.63,91.45
-"1378","Amador County",2014-04-01,5.79,36.71
-"1379","Colusa County",2014-04-01,8.901,26.337
-"1380","Del Norte County",2014-04-01,3.1,37.8
-"1381","El Dorado County",2014-04-01,9.4,65.5
-"1382","Fresno County",2014-04-01,14.6,19.7
-"1383","Glenn County",2014-04-01,15,45
-"1384","Humboldt County",2014-04-01,5.8,48.9
-"1385","Imperial County",2014-04-01,10,30
-"1386","Inyo County",2014-04-01,5,57
-"1387","Kern County",2014-04-01,16,52
-"1388","Los Angeles County",2014-04-01,9.68,62.55
-"1389","Madera County",2014-04-01,4,42
-"1390","Marin County",2014-04-01,11,40
-"1391","Mariposa County",2014-04-01,9.1,55.3
-"1392","Merced County",2014-04-01,21,50
-"1393","Orange County",2014-04-01,1.3,52.3
-"1394","Plumas County",2014-04-01,13.8,38.3
-"1395","Riverside County",2014-04-01,21.24,64.27
-"1396","Sacramento County",2014-04-01,54,34
-"1397","San Benito County",2014-04-01,7,62
-"1398","San Diego County",2014-04-01,11.7,67.9
-"1399","San Francisco County",2014-04-01,14,61
-"1400","San Joaquin County",2014-04-01,5,71
-"1401","San Mateo County",2014-04-01,8,68
-"1402","Santa Barbara County",2014-04-01,14,22
-"1403","Santa Clara County",2014-04-01,39,106
-"1404","Sierra County",2014-04-01,4,1
-"1405","Siskiyou County",2014-04-01,6,31
-"1406","Sonoma County",2014-04-01,5.9,58.5
-"1407","Stanislaus County",2014-04-01,10,47
-"1408","Trinity County",2014-04-01,6,72
-"1409","Tulare County",2014-04-01,38.88,95.83
-"1410","Amador County",2014-07-01,8.01,52.26
-"1411","Colusa County",2014-07-01,6.805,22.224
-"1412","Del Norte County",2014-07-01,3.5,39.7
-"1413","El Dorado County",2014-07-01,9.2,70.6
-"1414","Fresno County",2014-07-01,19.6,20.1
-"1415","Glenn County",2014-07-01,17,41
-"1416","Humboldt County",2014-07-01,4.4,53.7
-"1417","Imperial County",2014-07-01,12,35
-"1418","Inyo County",2014-07-01,4,61
-"1419","Kern County",2014-07-01,16,53
-"1420","Los Angeles County",2014-07-01,5.67,62.81
-"1421","Madera County",2014-07-01,7,88
-"1422","Marin County",2014-07-01,14,39
-"1423","Mariposa County",2014-07-01,9.8,43.8
-"1424","Merced County",2014-07-01,19,43.9
-"1425","Napa County",2014-07-01,11,37
-"1426","Orange County",2014-07-01,1.2,51.3
-"1427","Plumas County",2014-07-01,9.5,19.9
-"1428","Riverside County",2014-07-01,23.42,62.58
-"1429","Sacramento County",2014-07-01,60,34
-"1430","San Benito County",2014-07-01,7,49
-"1431","San Diego County",2014-07-01,12.2,68.1
-"1432","San Francisco County",2014-07-01,12,54
-"1433","San Joaquin County",2014-07-01,7,45
-"1434","San Mateo County",2014-07-01,15,71
-"1435","Santa Barbara County",2014-07-01,13,22
-"1436","Santa Clara County",2014-07-01,36,103
-"1437","Sierra County",2014-07-01,10,8
-"1438","Siskiyou County",2014-07-01,5,25
-"1439","Sonoma County",2014-07-01,7,54.9
-"1440","Stanislaus County",2014-07-01,9,49
-"1441","Trinity County",2014-07-01,30,37
-"1442","Tulare County",2014-07-01,32.8,100.03
-"1443","Amador County",2014-10-01,3.18,64.54
-"1444","Colusa County",2014-10-01,8.813,25.231
-"1445","Del Norte County",2014-10-01,4.1,41.4
-"1446","El Dorado County",2014-10-01,10.1,76.7
-"1447","Fresno County",2014-10-01,19.5,18
-"1448","Glenn County",2014-10-01,15,48
-"1449","Humboldt County",2014-10-01,6.9,50.1
-"1450","Imperial County",2014-10-01,13,43
-"1451","Inyo County",2014-10-01,3,53
-"1452","Kern County",2014-10-01,18,59
-"1453","Los Angeles County",2014-10-01,8.6,68.08
-"1454","Madera County",2014-10-01,5,83
-"1455","Marin County",2014-10-01,11,41
-"1456","Mariposa County",2014-10-01,9,58.9
-"1457","Merced County",2014-10-01,22.4,54.4
-"1458","Napa County",2014-10-01,12,36
-"1459","Orange County",2014-10-01,1.2,53
-"1460","Riverside County",2014-10-01,25.6,58.6
-"1461","Sacramento County",2014-10-01,27,59
-"1462","San Benito County",2014-10-01,12,74
-"1463","San Diego County",2014-10-01,13.6,71.2
-"1464","San Francisco County",2014-10-01,11.4,76
-"1465","San Joaquin County",2014-10-01,6,65
-"1466","San Mateo County",2014-10-01,19,81
-"1467","Santa Barbara County",2014-10-01,13,21
-"1468","Santa Clara County",2014-10-01,41,112
-"1469","Sierra County",2014-10-01,2,6
-"1470","Siskiyou County",2014-10-01,4,33
-"1471","Sonoma County",2014-10-01,5.3,58.2
-"1472","Stanislaus County",2014-10-01,13,46
-"1473","Trinity County",2014-10-01,11,90
-"1474","Tulare County",2014-10-01,37.63,81.94
-"1475","Amador County",2015-01-01,6.27,57.75
-"1476","Colusa County",2015-01-01,7.407,29.088
-"1477","Del Norte County",2015-01-01,3.9,33.7
-"1478","El Dorado County",2015-01-01,12.8,77.7
-"1479","Fresno County",2015-01-01,28,32.8
-"1480","Glenn County",2015-01-01,19,43
-"1481","Humboldt County",2015-01-01,6.2,37.5
-"1482","Imperial County",2015-01-01,12,34
-"1483","Inyo County",2015-01-01,3,61
-"1484","Kern County",2015-01-01,17,63
-"1485","Los Angeles County",2015-01-01,6.3,70.4
-"1486","Madera County",2015-01-01,7,96
-"1487","Marin County",2015-01-01,12.9,33.3
-"1488","Mariposa County",2015-01-01,12.1,36
-"1489","Merced County",2015-01-01,18.6,48.9
-"1490","Napa County",2015-01-01,10,33
-"1491","Orange County",2015-01-01,1.3,50
-"1492","Plumas County",2015-01-01,14.9,12.4
-"1493","Riverside County",2015-01-01,25.02,77.93
-"1494","Sacramento County",2015-01-01,19.1,72.2
-"1495","San Benito County",2015-01-01,6,76
-"1496","San Diego County",2015-01-01,11,76.5
-"1497","San Francisco County",2015-01-01,12,101.2
-"1498","San Joaquin County",2015-01-01,5,63
-"1499","San Mateo County",2015-01-01,22,72
-"1500","Santa Barbara County",2015-01-01,13,20
-"1501","Santa Clara County",2015-01-01,46,121
-"1502","Sierra County",2015-01-01,1,1
-"1503","Siskiyou County",2015-01-01,6,24
-"1504","Sonoma County",2015-01-01,4.6,57.4
-"1505","Stanislaus County",2015-01-01,11,84
-"1506","Trinity County",2015-01-01,14,21
-"1507","Tulare County",2015-01-01,42.69,95.49
-"1508","Amador County",2015-04-01,7.08,55.41
-"1509","Butte County",2015-04-01,4,25
-"1510","Colusa County",2015-04-01,6.43,25.397
-"1511","Del Norte County",2015-04-01,3.51,28.25
-"1512","El Dorado County",2015-04-01,10.6,59.5
-"1513","Fresno County",2015-04-01,23.2,25.7
-"1514","Glenn County",2015-04-01,23,26
-"1515","Humboldt County",2015-04-01,7.1,37.1
-"1516","Imperial County",2015-04-01,10,22
-"1517","Inyo County",2015-04-01,4,92
-"1518","Kern County",2015-04-01,19,66
-"1519","Los Angeles County",2015-04-01,8.7,66.9
-"1520","Madera County",2015-04-01,8,104
-"1521","Marin County",2015-04-01,11,30
-"1522","Mariposa County",2015-04-01,10.1,28.5
-"1523","Merced County",2015-04-01,12.9,51.1
-"1524","Napa County",2015-04-01,13,27
-"1525","Orange County",2015-04-01,1.3,45.3
-"1526","Plumas County",2015-04-01,12.8,23.7
-"1527","Riverside County",2015-04-01,29.08,76.64
-"1528","Sacramento County",2015-04-01,30,60
-"1529","San Benito County",2015-04-01,7,77
-"1530","San Diego County",2015-04-01,10.3,72.9
-"1531","San Francisco County",2015-04-01,11.3,79.1
-"1532","San Joaquin County",2015-04-01,5,60
-"1533","San Mateo County",2015-04-01,25,65
-"1534","Santa Barbara County",2015-04-01,13,21
-"1535","Santa Clara County",2015-04-01,47,101
-"1536","Siskiyou County",2015-04-01,4,24
-"1537","Sonoma County",2015-04-01,9.2,49.2
-"1538","Stanislaus County",2015-04-01,11,72
-"1539","Trinity County",2015-04-01,9,19
-"1540","Tulare County",2015-04-01,33.1,77.97
-"1541","Amador County",2015-07-01,4.39,46.76
-"1542","Butte County",2015-07-01,5,29
-"1543","Del Norte County",2015-07-01,6.4,36.6
-"1544","El Dorado County",2015-07-01,10.3,72.6
-"1545","Fresno County",2015-07-01,10.25,50.5
-"1546","Humboldt County",2015-07-01,6,38.1
-"1547","Imperial County",2015-07-01,10,19
-"1548","Inyo County",2015-07-01,7,79
-"1549","Kern County",2015-07-01,15,53
-"1550","Los Angeles County",2015-07-01,6.72,64.25
-"1551","Madera County",2015-07-01,7,71
-"1552","Marin County",2015-07-01,12,35
-"1553","Mariposa County",2015-07-01,5.8,32.7
-"1554","Merced County",2015-07-01,14.8,38
-"1555","Monterey County",2015-07-01,12.1,28.5
-"1556","Napa County",2015-07-01,19,38
-"1557","Orange County",2015-07-01,1.4,46.7
-"1558","Plumas County",2015-07-01,8.9,14.1
-"1559","Riverside County",2015-07-01,29.83,66.76
-"1560","Sacramento County",2015-07-01,26,59
-"1561","San Benito County",2015-07-01,6,60
-"1562","San Diego County",2015-07-01,10,71.1
-"1563","San Francisco County",2015-07-01,12,80
-"1564","San Joaquin County",2015-07-01,5,59
-"1565","San Mateo County",2015-07-01,6,68
-"1566","Santa Barbara County",2015-07-01,12,21
-"1567","Santa Clara County",2015-07-01,44,110
-"1568","Siskiyou County",2015-07-01,5,23
-"1569","Sonoma County",2015-07-01,8.6,55.9
-"1570","Stanislaus County",2015-07-01,8,71
-"1571","Trinity County",2015-07-01,7,78
-"1572","Tulare County",2015-07-01,30.99,74.72
-"1573","Amador County",2015-10-01,4.66,60.52
-"1574","Butte County",2015-10-01,11,43
-"1575","Colusa County",2015-10-01,7.69,36.66
-"1576","Del Norte County",2015-10-01,5.5,45
-"1577","El Dorado County",2015-10-01,11.8,64.2
-"1578","Fresno County",2015-10-01,26.9,42.3
-"1579","Humboldt County",2015-10-01,6.3,42.5
-"1580","Imperial County",2015-10-01,7,36
-"1581","Inyo County",2015-10-01,4,54
-"1582","Kern County",2015-10-01,15,55
-"1583","Los Angeles County",2015-10-01,22.11,64.11
-"1584","Madera County",2015-10-01,6,87
-"1585","Marin County",2015-10-01,12,39
-"1586","Mariposa County",2015-10-01,11.3,24.5
-"1587","Merced County",2015-10-01,27.3,45.1
-"1588","Monterey County",2015-10-01,15.3,30.1
-"1589","Napa County",2015-10-01,13,37
-"1590","Orange County",2015-10-01,1.3,42.6
-"1591","Plumas County",2015-10-01,14.8,9.9
-"1592","Riverside County",2015-10-01,28.9,63.3
-"1593","Sacramento County",2015-10-01,29,63
-"1594","San Benito County",2015-10-01,9,58
-"1595","San Diego County",2015-10-01,10.5,72.2
-"1596","San Francisco County",2015-10-01,12.47,67.98
-"1597","San Joaquin County",2015-10-01,6,47
-"1598","San Mateo County",2015-10-01,6,67
-"1599","Santa Barbara County",2015-10-01,14,21
-"1600","Santa Clara County",2015-10-01,47,118
-"1601","Siskiyou County",2015-10-01,5,30
-"1602","Sonoma County",2015-10-01,7.7,51.6
-"1603","Stanislaus County",2015-10-01,8,74
-"1604","Trinity County",2015-10-01,12,191
-"1605","Tulare County",2015-10-01,36.04,76.84
-"1606","Amador County",2016-01-01,6.27,57.54
-"1607","Butte County",2016-01-01,10,42
-"1608","Colusa County",2016-01-01,9.83,55.09
-"1609","Del Norte County",2016-01-01,5.5,48.9
-"1610","El Dorado County",2016-01-01,9.3,65.1
-"1611","Fresno County",2016-01-01,26.3,39
-"1612","Glenn County",2016-01-01,13,46
-"1613","Humboldt County",2016-01-01,6.9,38
-"1614","Imperial County",2016-01-01,8,11
-"1615","Inyo County",2016-01-01,10,68
-"1616","Kern County",2016-01-01,17,69
-"1617","Los Angeles County",2016-01-01,5.04,62.34
-"1618","Madera County",2016-01-01,7,96
-"1619","Marin County",2016-01-01,15,42
-"1620","Mariposa County",2016-01-01,8.1,34.5
-"1621","Merced County",2016-01-01,39.8,44.9
-"1622","Monterey County",2016-01-01,18.4,30.6
-"1623","Napa County",2016-01-01,15,43
-"1624","Orange County",2016-01-01,1.3,48
-"1625","Plumas County",2016-01-01,15.2,21.9
-"1626","Riverside County",2016-01-01,33.6,55.2
-"1627","Sacramento County",2016-01-01,36,62
-"1628","San Benito County",2016-01-01,9,56
-"1629","San Diego County",2016-01-01,11,74.8
-"1630","San Diego County",2016-01-01,2.74,72.1
-"1631","San Francisco County",2016-01-01,12.26,71.62
-"1632","San Joaquin County",2016-01-01,7,56
-"1633","San Mateo County",2016-01-01,6,71
-"1634","Santa Barbara County",2016-01-01,14,21
-"1635","Santa Clara County",2016-01-01,45,112
-"1636","Siskiyou County",2016-01-01,5,21
-"1637","Sonoma County",2016-01-01,15.9,48.7
-"1638","Stanislaus County",2016-01-01,8,73
-"1639","Trinity County",2016-01-01,7,23
-"1640","Tulare County",2016-01-01,29,85.57
-"1641","Amador County",2016-04-01,8.2,43.12
-"1642","Butte County",2016-04-01,5,30
-"1643","Colusa County",2016-04-01,6.81,53.94
-"1644","Del Norte County",2016-04-01,6.23,40.14
-"1645","El Dorado County",2016-04-01,12.7,57
-"1646","Fresno County",2016-04-01,27.7,46.8
-"1647","Glenn County",2016-04-01,15,42
-"1648","Humboldt County",2016-04-01,7,39.9
-"1649","Imperial County",2016-04-01,9,12
-"1650","Inyo County",2016-04-01,3,57
-"1651","Kern County",2016-04-01,14.3,66
-"1652","Los Angeles County",2016-04-01,5.39,62.33
-"1653","Madera County",2016-04-01,7,82
-"1654","Marin County",2016-04-01,14,42
-"1655","Mariposa County",2016-04-01,16.5,23.9
-"1656","Merced County",2016-04-01,19.8,47.9
-"1657","Monterey County",2016-04-01,15,31.5
-"1658","Napa County",2016-04-01,13,35
-"1659","Orange County",2016-04-01,1.4,44.9
-"1660","Plumas County",2016-04-01,20.3,25.7
-"1661","Riverside County",2016-04-01,28,54.5
-"1662","Sacramento County",2016-04-01,29,60
-"1663","San Benito County",2016-04-01,9,60
-"1664","San Diego County",2016-04-01,11.5,68.2
-"1665","San Diego County",2016-04-01,2.85,76.11
-"1666","San Francisco County",2016-04-01,10.1,88.1
-"1667","San Joaquin County",2016-04-01,7,57
-"1668","San Mateo County",2016-04-01,5,64
-"1669","Santa Barbara County",2016-04-01,14,22
-"1670","Santa Clara County",2016-04-01,45,112
-"1671","Siskiyou County",2016-04-01,4,26
-"1672","Sonoma County",2016-04-01,25,47
-"1673","Stanislaus County",2016-04-01,7,77
-"1674","Trinity County",2016-04-01,10,59
-"1675","Tulare County",2016-04-01,30.35,72.6
-"1676","Amador County",2016-07-01,6,49.85
-"1677","Butte County",2016-07-01,5,34
-"1678","Colusa County",2016-07-01,15.27,66.06
-"1679","Del Norte County",2016-07-01,6.1,47.9
-"1680","El Dorado County",2016-07-01,11,56.3
-"1681","Fresno County",2016-07-01,20.1,32.8
-"1682","Glenn County",2016-07-01,16,44
-"1683","Humboldt County",2016-07-01,7.6,40.8
-"1684","Imperial County",2016-07-01,9,10
-"1685","Inyo County",2016-07-01,4,63
-"1686","Kern County",2016-07-01,15.3,60.6
-"1687","Los Angeles County",2016-07-01,5.31,58.52
-"1688","Madera County",2016-07-01,7,58
-"1689","Marin County",2016-07-01,13,44
-"1690","Mariposa County",2016-07-01,17.3,45.1
-"1691","Merced County",2016-07-01,16.9,42.4
-"1692","Monterey County",2016-07-01,14,33
-"1693","Napa County",2016-07-01,11,55
-"1694","Orange County",2016-07-01,1.3,47.5
-"1695","Plumas County",2016-07-01,17.2,5
-"1696","Riverside County",2016-07-01,25.7,45.1
-"1697","Sacramento County",2016-07-01,26,57
-"1698","San Benito County",2016-07-01,6,49
-"1699","San Diego County",2016-07-01,11.6,67.9
-"1700","San Diego County",2016-07-01,76.71,68.25
-"1701","San Francisco County",2016-07-01,12,78
-"1702","San Joaquin County",2016-07-01,6.5,42.8
-"1703","San Mateo County",2016-07-01,5,69
-"1704","Santa Barbara County",2016-07-01,14,20
-"1705","Santa Clara County",2016-07-01,45,112
-"1706","Siskiyou County",2016-07-01,7,32
-"1707","Sonoma County",2016-07-01,32.5,47.6
-"1708","Stanislaus County",2016-07-01,8,78
-"1709","Trinity County",2016-07-01,10,56
-"1710","Tulare County",2016-07-01,35.69,67.01
-"1711","Amador County",2016-10-01,8.87,46.67
-"1712","Butte County",2016-10-01,5,32
-"1713","Colusa County",2016-10-01,9.84,62.07
-"1714","Del Norte County",2016-10-01,7.02,40.06
-"1715","El Dorado County",2016-10-01,15.6,59.3
-"1716","Fresno County",2016-10-01,28.8,28.1
-"1717","Glenn County",2016-10-01,19,36
-"1718","Humboldt County",2016-10-01,7.2,43.2
-"1719","Imperial County",2016-10-01,8,9
-"1720","Inyo County",2016-10-01,4,41
-"1721","Kern County",2016-10-01,18,55
-"1722","Los Angeles County",2016-10-01,6.69,64.14
-"1723","Madera County",2016-10-01,14,49
-"1724","Marin County",2016-10-01,17,48
-"1725","Mariposa County",2016-10-01,9.9,48.4
-"1726","Merced County",2016-10-01,22.2,48.2
-"1727","Monterey County",2016-10-01,17.5,37
-"1728","Napa County",2016-10-01,23,23
-"1729","Orange County",2016-10-01,1.3,49.2
-"1730","Plumas County",2016-10-01,12.6,6.7
-"1731","Sacramento County",2016-10-01,28,61
-"1732","San Benito County",2016-10-01,7,58
-"1733","San Diego County",2016-10-01,11.8,72.9
-"1734","San Diego County",2016-10-01,67.5,84.26
-"1735","San Francisco County",2016-10-01,11,75
-"1736","San Joaquin County",2016-10-01,6,40
-"1737","San Mateo County",2016-10-01,7,76
-"1738","Santa Barbara County",2016-10-01,15,21
-"1739","Santa Clara County",2016-10-01,50,99
-"1740","Siskiyou County",2016-10-01,5,33
-"1741","Sonoma County",2016-10-01,15,56
-"1742","Stanislaus County",2016-10-01,9,64
-"1743","Trinity County",2016-10-01,11,41
-"1744","Tulare County",2016-10-01,30.35,72.6
-"1745","Amador County",2017-01-01,6.4,61.4
-"1746","Butte County",2017-01-01,9,54
-"1747","Colusa County",2017-01-01,9.55,57.51
-"1748","Del Norte County",2017-01-01,6.92,41.05
-"1749","El Dorado County",2017-01-01,11.1,54.4
-"1750","Fresno County",2017-01-01,26.7,27.2
-"1751","Glenn County",2017-01-01,31,36
-"1752","Humboldt County",2017-01-01,8.34,42.9
-"1753","Inyo County",2017-01-01,4,43
-"1754","Kern County",2017-01-01,16,60
-"1755","Los Angeles County",2017-01-01,4.95,63
-"1756","Madera County",2017-01-01,7,44
-"1757","Marin County",2017-01-01,16,50
-"1758","Mariposa County",2017-01-01,9.7,35.6
-"1759","Merced County",2017-01-01,28.6,38.4
-"1760","Monterey County",2017-01-01,22.5,34
-"1761","Napa County",2017-01-01,24,21
-"1762","Orange County",2017-01-01,1.3,50
-"1763","Plumas County",2017-01-01,17.9,8.3
-"1764","Riverside County",2017-01-01,4,66
-"1765","Sacramento County",2017-01-01,27,60
-"1766","San Benito County",2017-01-01,5,22
-"1767","San Diego County",2017-01-01,12.2,74.2
-"1768","San Diego County",2017-01-01,60.71,79.11
-"1769","San Francisco County",2017-01-01,13,82
-"1770","San Joaquin County",2017-01-01,7,53
-"1771","San Mateo County",2017-01-01,6,71
-"1772","Santa Barbara County",2017-01-01,14,20
-"1773","Santa Clara County",2017-01-01,59,97
-"1774","Siskiyou County",2017-01-01,5,33
-"1775","Sonoma County",2017-01-01,46,56
-"1776","Stanislaus County",2017-01-01,9,75
-"1777","Trinity County",2017-01-01,7,20
-"1778","Tulare County",2017-01-01,28.48,83.28
-"1779","Alameda County",2017-04-01,18,54
-"1780","Amador County",2017-04-01,5.21,47
-"1781","Butte County",2017-04-01,9,20
-"1782","Colusa County",2017-04-01,9.81,54.33
-"1783","Del Norte County",2017-04-01,8.23,35.32
-"1784","El Dorado County",2017-04-01,7.3,67.8
-"1785","Fresno County",2017-04-01,26.6,33.8
-"1786","Glenn County",2017-04-01,45,41
-"1787","Humboldt County",2017-04-01,8.19,43.97
-"1788","Imperial County",2017-04-01,9,9
-"1789","Kern County",2017-04-01,17,60
-"1790","Los Angeles County",2017-04-01,5.28,63.45
-"1791","Madera County",2017-04-01,10,47
-"1792","Marin County",2017-04-01,18,53
-"1793","Merced County",2017-04-01,28.6,41.3
-"1794","Monterey County",2017-04-01,20.9,31.6
-"1795","Napa County",2017-04-01,19,18
-"1796","Orange County",2017-04-01,1.4,46.6
-"1797","Plumas County",2017-04-01,7.4,32.8
-"1798","Sacramento County",2017-04-01,25,66
-"1799","San Benito County",2017-04-01,8,35
-"1800","San Diego County",2017-04-01,12,79
-"1801","San Francisco County",2017-04-01,14.41,81.62
-"1802","San Joaquin County",2017-04-01,6,49
-"1803","San Mateo County",2017-04-01,6,76
-"1804","Santa Barbara County",2017-04-01,15,20
-"1805","Siskiyou County",2017-04-01,4,33
-"1806","Sonoma County",2017-04-01,13.7,56.9
-"1807","Stanislaus County",2017-04-01,6,81
-"1808","Trinity County",2017-04-01,9,33
-"1809","Tulare County",2017-04-01,26.34,74.02
-"1810","Alameda County",2017-07-01,20,56
-"1811","Amador County",2017-07-01,3.9,61.5
-"1812","Butte County",2017-07-01,4,28
-"1813","Colusa County",2017-07-01,12.65,65.65
-"1814","Del Norte County",2017-07-01,6.27,43.5
-"1815","El Dorado County",2017-07-01,13.7,71.9
-"1816","Fresno County",2017-07-01,46.7,35.9
-"1817","Glenn County",2017-07-01,50,47
-"1818","Humboldt County",2017-07-01,7.28,44.39
-"1819","Imperial County",2017-07-01,9,9
-"1820","Kern County",2017-07-01,16.5,54.6
-"1821","Los Angeles County",2017-07-01,5.18,60.58
-"1822","Madera County",2017-07-01,7,44
-"1823","Marin County",2017-07-01,14,47
-"1824","Merced County",2017-07-01,31.8,41.9
-"1825","Monterey County",2017-07-01,17.6,35.4
-"1826","Napa County",2017-07-01,21,19
-"1827","Orange County",2017-07-01,1.3,46.6
-"1828","Plumas County",2017-07-01,12.3,15.4
-"1829","Sacramento County",2017-07-01,25,64
-"1830","San Benito County",2017-07-01,7,40.9
-"1831","San Diego County",2017-07-01,11.9,77.6
-"1832","San Francisco County",2017-07-01,11.43,75.88
-"1833","San Joaquin County",2017-07-01,8,52
-"1834","San Mateo County",2017-07-01,7,69
-"1835","Santa Barbara County",2017-07-01,15,20
-"1836","Santa Clara County",2017-07-01,48,105
-"1837","Siskiyou County",2017-07-01,5,22
-"1838","Sonoma County",2017-07-01,11,52
-"1839","Stanislaus County",2017-07-01,7,76
-"1840","Trinity County",2017-07-01,5,45
-"1841","Tulare County",2017-07-01,13,85
-"1842","Alameda County",2017-10-01,18,55
-"1843","Amador County",2017-10-01,3.2,64
-"1844","Butte County",2017-10-01,4,28
-"1845","Colusa County",2017-10-01,8.06,51.49
-"1846","Del Norte County",2017-10-01,4.47,41.8
-"1847","El Dorado County",2017-10-01,12.7,64
-"1848","Fresno County",2017-10-01,28,37
-"1849","Glenn County",2017-10-01,42,48
-"1850","Humboldt County",2017-10-01,8.93,45.84
-"1851","Imperial County",2017-10-01,10,12
-"1852","Kern County",2017-10-01,17.5,59.1
-"1853","Los Angeles County",2017-10-01,5,61
-"1854","Madera County",2017-10-01,10,52
-"1855","Marin County",2017-10-01,12,47
-"1856","Merced County",2017-10-01,23.6,38.8
-"1857","Monterey County",2017-10-01,24.3,39.9
-"1858","Napa County",2017-10-01,20,21
-"1859","Orange County",2017-10-01,1.4,42.7
-"1860","Plumas County",2017-10-01,15.3,23.3
-"1861","Sacramento County",2017-10-01,25,64
-"1862","San Benito County",2017-10-01,10,49
-"1863","San Diego County",2017-10-01,12.1,78.5
-"1864","San Francisco County",2017-10-01,12,89
-"1865","San Joaquin County",2017-10-01,6,56
-"1866","San Mateo County",2017-10-01,7,69
-"1867","Santa Barbara County",2017-10-01,16,21
-"1868","Santa Clara County",2017-10-01,46,108
-"1869","Siskiyou County",2017-10-01,4,28
-"1870","Sonoma County",2017-10-01,12,57
-"1871","Stanislaus County",2017-10-01,7,88
-"1872","Tulare County",2017-10-01,32,76
-"1873","Alameda County",2018-01-01,27,60
-"1874","Amador County",2018-01-01,2.9,49.3
-"1875","Butte County",2018-01-01,4,27
-"1876","Colusa County",2018-01-01,11.25,45.32
-"1877","Del Norte County",2018-01-01,8,46.5
-"1878","El Dorado County",2018-01-01,13,73
-"1879","Fresno County",2018-01-01,23.2,30.5
-"1880","Glenn County",2018-01-01,46,42
-"1881","Humboldt County",2018-01-01,8.35,46.76
-"1882","Imperial County",2018-01-01,10,10
-"1883","Kern County",2018-01-01,19.5,61.02
-"1884","Lassen County",2018-01-01,3.3,76.07
-"1885","Los Angeles County",2018-01-01,5.36,63.04
-"1886","Madera County",2018-01-01,4,55
-"1887","Marin County",2018-01-01,15,51
-"1888","Merced County",2018-01-01,36.9,40.3
-"1889","Monterey County",2018-01-01,23.3,36.6
-"1890","Napa County",2018-01-01,21,19
-"1891","Orange County",2018-01-01,1.4,47.7
-"1892","Plumas County",2018-01-01,10.3,21.6
-"1893","Sacramento County",2018-01-01,26,62
-"1894","San Benito County",2018-01-01,14,53
-"1895","San Diego County",2018-01-01,11.8,78.6
-"1896","San Diego County",2018-01-01,40.78,75.92
-"1897","San Francisco County",2018-01-01,14.1,107.3
-"1898","San Joaquin County",2018-01-01,6,66
-"1899","San Mateo County",2018-01-01,7,68
-"1900","Santa Barbara County",2018-01-01,17,48
-"1901","Santa Clara County",2018-01-01,51,114
-"1902","Siskiyou County",2018-01-01,5,28
-"1903","Sonoma County",2018-01-01,9,57
-"1904","Stanislaus County",2018-01-01,9,81
-"1905","Tulare County",2018-01-01,15.9,76.3
-"1906","Alameda County",2018-04-01,36,67
-"1907","Amador County",2018-04-01,3.2,64
-"1908","Butte County",2018-04-01,4,34
-"1909","Colusa County",2018-04-01,5.46,71.71
-"1910","Del Norte County",2018-04-01,7.01,43.8
-"1911","El Dorado County",2018-04-01,9.4,56.6
-"1912","Fresno County",2018-04-01,24.5,39
-"1913","Glenn County",2018-04-01,49,46
-"1914","Humboldt County",2018-04-01,10.29,45.59
-"1915","Imperial County",2018-04-01,7,6
-"1916","Kern County",2018-04-01,16,58
-"1917","Lassen County",2018-04-01,6.7,67.78
-"1918","Los Angeles County",2018-04-01,5.2,62.46
-"1919","Madera County",2018-04-01,17,50
-"1920","Marin County",2018-04-01,14,47
-"1921","Mariposa County",2018-04-01,16.8,34.3
-"1922","Merced County",2018-04-01,25.6,41.1
-"1923","Monterey County",2018-04-01,21.3,41
-"1924","Napa County",2018-04-01,21,18
-"1925","Orange County",2018-04-01,1.4,41.7
-"1926","Plumas County",2018-04-01,14.1,21.8
-"1927","Sacramento County",2018-04-01,29,60
-"1928","San Benito County",2018-04-01,6,51
-"1929","San Bernardino County",2018-04-01,109.82,137.61
-"1930","San Diego County",2018-04-01,12.5,77.5
-"1931","San Diego County",2018-04-01,70.5,89.78
-"1932","San Francisco County",2018-04-01,9.9,94.48
-"1933","San Joaquin County",2018-04-01,4,30
-"1934","San Mateo County",2018-04-01,6,58
-"1935","Santa Clara County",2018-04-01,47,103
-"1936","Siskiyou County",2018-04-01,4,39
-"1937","Sonoma County",2018-04-01,8,54
-"1938","Stanislaus County",2018-04-01,8,84
-"1939","Tulare County",2018-04-01,17,85
-"1940","Alameda County",2018-07-01,17,61
-"1941","Amador County",2018-07-01,2.7,60.6
-"1942","Butte County",2018-07-01,5,29
-"1943","Colusa County",2018-07-01,12.29,56.14
-"1944","Del Norte County",2018-07-01,4.96,38.5
-"1945","El Dorado County",2018-07-01,8.4,57.9
-"1946","Fresno County",2018-07-01,25.3,30.9
-"1947","Glenn County",2018-07-01,37,42
-"1948","Humboldt County",2018-07-01,7,45
-"1949","Inyo County",2018-07-01,156,69
-"1950","Kern County",2018-07-01,12.01,36.93
-"1951","Lassen County",2018-07-01,4.92,55.67
-"1952","Los Angeles County",2018-07-01,6,61
-"1953","Madera County",2018-07-01,6,46
-"1954","Marin County",2018-07-01,12,43
-"1955","Mariposa County",2018-07-01,8.8,32
-"1956","Modoc County",2018-07-01,126,37
-"1957","Mono County",2018-07-01,118,40
-"1958","Monterey County",2018-07-01,21.6,36.8
-"1959","Napa County",2018-07-01,19,21
-"1960","Orange County",2018-07-01,1.3,44.5
-"1961","Plumas County",2018-07-01,12.1,9.7
-"1962","Sacramento County",2018-07-01,25,60
-"1963","San Benito County",2018-07-01,9.9,50.8
-"1964","San Bernardino County",2018-07-01,105,140
-"1965","San Diego County",2018-07-01,13,71.3
-"1966","San Diego County",2018-07-01,56,74.08
-"1967","San Francisco County",2018-07-01,11.75,96.03
-"1968","San Joaquin County",2018-07-01,4,48
-"1969","San Mateo County",2018-07-01,5,70
-"1970","Santa Barbara County",2018-07-01,20,46
-"1971","Santa Clara County",2018-07-01,39,99
-"1972","Siskiyou County",2018-07-01,4,36
-"1973","Solano County",2018-07-01,5,70.6
-"1974","Sonoma County",2018-07-01,7,54
-"1975","Stanislaus County",2018-07-01,7,76
-"1976","Tulare County",2018-07-01,14,86
-"1977","Alameda County",2018-10-01,20,58
-"1978","Amador County",2018-10-01,3.2,71.8
-"1979","Butte County",2018-10-01,5,30
-"1980","Colusa County",2018-10-01,8.28,61.8
-"1981","Del Norte County",2018-10-01,2.9,32.6
-"1982","El Dorado County",2018-10-01,10.6,65.6
-"1983","Fresno County",2018-10-01,19.9,28.5
-"1984","Humboldt County",2018-10-01,9.38,42.67
-"1985","Inyo County",2018-10-01,126,35
-"1986","Kern County",2018-10-01,15,39
-"1987","Kings County",2018-10-01,9,75
-"1988","Lassen County",2018-10-01,7.77,62.32
-"1989","Los Angeles County",2018-10-01,5,61
-"1990","Madera County",2018-10-01,5,69
-"1991","Marin County",2018-10-01,12,45
-"1992","Modoc County",2018-10-01,101,33
-"1993","Monterey County",2018-10-01,21.7,38.7
-"1994","Napa County",2018-10-01,25,26
-"1995","Orange County",2018-10-01,1.4,47.2
-"1996","Placer County",2018-10-01,16.29,69.75
-"1997","Plumas County",2018-10-01,11,19
-"1998","Sacramento County",2018-10-01,24,63
-"1999","San Benito County",2018-10-01,10.4,49.5
-"2000","San Bernardino County",2018-10-01,97,137
-"2001","San Diego County",2018-10-01,12.6,73.5
-"2002","San Diego County",2018-10-01,50.84,72.85
-"2003","San Francisco County",2018-10-01,10,79
-"2004","San Joaquin County",2018-10-01,5,40
-"2005","San Mateo County",2018-10-01,6,73
-"2006","Santa Barbara County",2018-10-01,20,53
-"2007","Santa Clara County",2018-10-01,47,104
-"2008","Siskiyou County",2018-10-01,5,35
-"2009","Solano County",2018-10-01,13.8,77.4
-"2010","Sonoma County",2018-10-01,7,55
-"2011","Stanislaus County",2018-10-01,8,79
-"2012","Tulare County",2018-10-01,25,80
-"2013","Alameda County",2019-01-01,23,60
-"2014","Amador County",2019-01-01,2.99,51.88
-"2015","Butte County",2019-01-01,4,29
-"2016","Colusa County",2019-01-01,10.21,45.7
-"2017","Del Norte County",2019-01-01,5.2,34.5
-"2018","El Dorado County",2019-01-01,14.5,67.7
-"2019","Fresno County",2019-01-01,27.7,29.4
-"2020","Glenn County",2019-01-01,51,35
-"2021","Humboldt County",2019-01-01,8.43,52.24
-"2022","Inyo County",2019-01-01,122,83
-"2023","Kern County",2019-01-01,13.27,38.17
-"2024","Kings County",2019-01-01,8,79
-"2025","Lassen County",2019-01-01,4.5,86.13
-"2026","Los Angeles County",2019-01-01,6,62
-"2027","Madera County",2019-01-01,4,76
-"2028","Marin County",2019-01-01,12,48
-"2029","Mariposa County",2019-01-01,9.6,51.1
-"2030","Merced County",2019-01-01,24.7,44.9
-"2031","Modoc County",2019-01-01,133,23
-"2032","Mono County",2019-01-01,102,9
-"2033","Monterey County",2019-01-01,19.4,36.9
-"2034","Napa County",2019-01-01,27,23
-"2035","Orange County",2019-01-01,1.4,47.7
-"2036","Placer County",2019-01-01,17.46,71.3
-"2037","Plumas County",2019-01-01,12,28
-"2038","Sacramento County",2019-01-01,29,66
-"2039","San Benito County",2019-01-01,5.6,54
-"2040","San Bernardino County",2019-01-01,97,127
-"2041","San Diego County",2019-01-01,13.2,78.7
-"2042","San Diego County",2019-01-01,42.67,71.96
-"2043","San Joaquin County",2019-01-01,5,44
-"2044","San Mateo County",2019-01-01,6,76
-"2045","Santa Barbara County",2019-01-01,19,51
-"2046","Santa Clara County",2019-01-01,46,102
-"2047","Siskiyou County",2019-01-01,5,40
-"2048","Solano County",2019-01-01,15.8,77.4
-"2049","Sonoma County",2019-01-01,10,49
-"2050","Stanislaus County",2019-01-01,10,67
-"2051","Tulare County",2019-01-01,19,86
-"2052","Alameda County",2019-04-01,21,62
-"2053","Amador County",2019-04-01,4.75,70.22
-"2054","Butte County",2019-04-01,4,27
-"2055","Colusa County",2019-04-01,8.03,45.98
-"2056","Del Norte County",2019-04-01,3,34
-"2057","El Dorado County",2019-04-01,8.4,63.7
-"2058","Fresno County",2019-04-01,22.7,31.3
-"2059","Glenn County",2019-04-01,34,40
-"2060","Humboldt County",2019-04-01,7.76,40.27
-"2061","Kern County",2019-04-01,16.18,36.35
-"2062","Kings County",2019-04-01,10,74
-"2063","Lassen County",2019-04-01,6,68
-"2064","Los Angeles County",2019-04-01,5,62
-"2065","Madera County",2019-04-01,4,96
-"2066","Marin County",2019-04-01,14,43
-"2067","Mariposa County",2019-04-01,8.5,33.1
-"2068","Merced County",2019-04-01,23.9,39.5
-"2069","Modoc County",2019-04-01,94,38
-"2070","Mono County",2019-04-01,92,31
-"2071","Monterey County",2019-04-01,21.3,31.6
-"2072","Napa County",2019-04-01,24,22
-"2073","Orange County",2019-04-01,1.3,50.7
-"2074","Placer County",2019-04-01,17.06,74.22
-"2075","Plumas County",2019-04-01,9.3,24.4
-"2076","Sacramento County",2019-04-01,27,63
-"2077","San Benito County",2019-04-01,8.4,44.1
-"2078","San Bernardino County",2019-04-01,107,118
-"2079","San Diego County",2019-04-01,12.3,74.1
-"2080","San Diego County",2019-04-01,41.47,77.5
-"2081","San Francisco County",2019-04-01,12,87
-"2082","San Joaquin County",2019-04-01,4,46
-"2083","San Mateo County",2019-04-01,7,70
-"2084","Santa Barbara County",2019-04-01,18,44
-"2085","Santa Clara County",2019-04-01,46,96
-"2086","Siskiyou County",2019-04-01,7,32
-"2087","Solano County",2019-04-01,5.6,77.2
-"2088","Sonoma County",2019-04-01,8,51
-"2089","Stanislaus County",2019-04-01,7,68
-"2090","Tulare County",2019-04-01,21,81
-"2091","Alameda County",2019-07-01,19,62
-"2092","Amador County",2019-07-01,3.58,53.84
-"2093","Butte County",2019-07-01,5,28
-"2094","Colusa County",2019-07-01,4.51,47.86
-"2095","Del Norte County",2019-07-01,4.6,37.6
-"2096","El Dorado County",2019-07-01,12.1,63
-"2097","Fresno County",2019-07-01,18.7,24.5
-"2098","Glenn County",2019-07-01,37,31
-"2099","Humboldt County",2019-07-01,8.7,41.9
-"2100","Kern County",2019-07-01,16.06,38.34
-"2101","Kings County",2019-07-01,6,83
-"2102","Lassen County",2019-07-01,6,85
-"2103","Los Angeles County",2019-07-01,6,64
-"2104","Madera County",2019-07-01,5,87
-"2105","Marin County",2019-07-01,12,44
-"2106","Mariposa County",2019-07-01,11.8,29.7
-"2107","Mendocino County",2019-07-01,2.4,54.42
-"2108","Merced County",2019-07-01,21.1,36.9
-"2109","Modoc County",2019-07-01,76,29
-"2110","Mono County",2019-07-01,115,31
-"2111","Monterey County",2019-07-01,17,32.2
-"2112","Napa County",2019-07-01,26,23
-"2113","Orange County",2019-07-01,1.4,42.7
-"2114","Placer County",2019-07-01,15.1,69.15
-"2115","Plumas County",2019-07-01,12.6,13
-"2116","Sacramento County",2019-07-01,29,66
-"2117","San Benito County",2019-07-01,13,38
-"2118","San Bernardino County",2019-07-01,122,114
-"2119","San Diego County",2019-07-01,12.6,72.8
-"2120","San Diego County",2019-07-01,73.7,81.4
-"2121","San Francisco County",2019-07-01,14,63
-"2122","San Joaquin County",2019-07-01,4,41
-"2123","San Mateo County",2019-07-01,6,63
-"2124","Santa Clara County",2019-07-01,39,100
-"2125","Solano County",2019-07-01,5.4,82.4
-"2126","Sonoma County",2019-07-01,10,52
-"2127","Stanislaus County",2019-07-01,6,66
-"2128","Tulare County",2019-07-01,17,70
-"2129","Alameda County",2019-10-01,21,67
-"2130","Amador County",2019-10-01,4.85,46.02
-"2131","Butte County",2019-10-01,5,30
-"2132","Colusa County",2019-10-01,13.54,54.41
-"2133","Del Norte County",2019-10-01,6.9,36.8
-"2134","El Dorado County",2019-10-01,11.3,62.1
-"2135","Fresno County",2019-10-01,22.8,25.1
-"2136","Glenn County",2019-10-01,40,41
-"2137","Humboldt County",2019-10-01,8.7,41.9
-"2138","Inyo County",2019-10-01,87,40
-"2139","Kern County",2019-10-01,14.08,39.56
-"2140","Kings County",2019-10-01,8,85
-"2141","Lassen County",2019-10-01,7,89
-"2142","Los Angeles County",2019-10-01,5,64
-"2143","Madera County",2019-10-01,6,93
-"2144","Marin County",2019-10-01,11,14
-"2145","Mendocino County",2019-10-01,3,65
-"2146","Merced County",2019-10-01,25.1,44.3
-"2147","Modoc County",2019-10-01,75,54
-"2148","Mono County",2019-10-01,93,38
-"2149","Monterey County",2019-10-01,24.7,39.2
-"2150","Napa County",2019-10-01,25,24
-"2151","Orange County",2019-10-01,1.3,42.8
-"2152","Placer County",2019-10-01,15.48,65.24
-"2153","Plumas County",2019-10-01,10,24
-"2154","Sacramento County",2019-10-01,30,57
-"2155","San Benito County",2019-10-01,10.6,46
-"2156","San Bernardino County",2019-10-01,121,126
-"2157","San Diego County",2019-10-01,15.3,72.9
-"2158","San Diego County",2019-10-01,42.4,69.7
-"2159","San Francisco County",2019-10-01,13.08,72.1
-"2160","San Joaquin County",2019-10-01,4,44
-"2161","San Mateo County",2019-10-01,8,63
-"2162","Santa Clara County",2019-10-01,45,105
-"2163","Siskiyou County",2019-10-01,7,33
-"2164","Solano County",2019-10-01,6,101.1
-"2165","Sonoma County",2019-10-01,11,55
-"2166","Stanislaus County",2019-10-01,8,77
-"2167","Tulare County",2019-10-01,21,75
-"2168","Alameda County",2020-01-01,20,55
-"2169","Amador County",2020-01-01,2.93,64.95
-"2170","Butte County",2020-01-01,5,30
-"2171","Colusa County",2020-01-01,6.25,49.91
-"2172","Del Norte County",2020-01-01,7.7,50.9
-"2173","El Dorado County",2020-01-01,14.5,67.3
-"2174","Fresno County",2020-01-01,21.6,20.1
-"2175","Glenn County",2020-01-01,42,26
-"2176","Humboldt County",2020-01-01,10.7,43.92
-"2177","Kern County",2020-01-01,17.44,35.26
-"2178","Kings County",2020-01-01,10,85
-"2179","Lassen County",2020-01-01,8.5,96.6
-"2180","Los Angeles County",2020-01-01,9,83
-"2181","Madera County",2020-01-01,6,107
-"2182","Marin County",2020-01-01,32,43
-"2183","Mariposa County",2020-01-01,7.1,50.7
-"2184","Mendocino County",2020-01-01,3,57
-"2185","Modoc County",2020-01-01,69,28
-"2186","Mono County",2020-01-01,81,44
-"2187","Monterey County",2020-01-01,24.7,31
-"2188","Napa County",2020-01-01,28,25
-"2189","Orange County",2020-01-01,1.3,43.4
-"2190","Placer County",2020-01-01,16.37,67.45
-"2191","Plumas County",2020-01-01,11,46
-"2192","Sacramento County",2020-01-01,27,57
-"2193","San Benito County",2020-01-01,11,39
-"2194","San Bernardino County",2020-01-01,124,132
-"2195","San Diego County",2020-01-01,15.2,74.9
-"2196","San Diego County",2020-01-01,47.42,63.38
-"2197","San Francisco County",2020-01-01,19.7,100.67
-"2198","San Joaquin County",2020-01-01,4,47
-"2199","San Mateo County",2020-01-01,9,71
-"2200","Santa Barbara County",2020-01-01,17.75,52
-"2201","Santa Clara County",2020-01-01,44,110
-"2202","Siskiyou County",2020-01-01,5,32
-"2203","Solano County",2020-01-01,7.1,80.4
-"2204","Sonoma County",2020-01-01,13,54
-"2205","Stanislaus County",2020-01-01,8,78
-"2206","Tehama County",2020-01-01,0,45
-"2207","Trinity County",2020-01-01,7,21
+"225","Del Norte County",2004-04-01,8,9
+"226","Del Norte County",2004-07-01,5.3,25.4
+"227","Del Norte County",2004-10-01,6.1,27
+"228","Del Norte County",2005-01-01,5.8,30
+"229","Del Norte County",2005-04-01,6.5,32
+"230","Del Norte County",2005-07-01,9,21
+"231","Del Norte County",2005-10-01,6.5,33
+"232","Del Norte County",2006-01-01,9.1,24.4
+"233","Del Norte County",2006-04-01,9.2,24.4
+"234","Del Norte County",2006-07-01,11.8,15.8
+"235","Del Norte County",2006-10-01,14,17
+"236","Del Norte County",2007-01-01,4.7,18.5
+"237","Del Norte County",2007-04-01,18,21
+"238","Del Norte County",2007-07-01,19,21
+"239","Del Norte County",2007-10-01,18,22
+"240","Del Norte County",2008-01-01,18,21
+"241","Del Norte County",2008-04-01,12,29
+"242","Del Norte County",2008-07-01,7,4
+"243","Del Norte County",2008-10-01,16,21
+"244","Del Norte County",2009-01-01,15,21
+"245","Del Norte County",2009-04-01,4,25
+"246","Del Norte County",2009-07-01,2,14
+"247","Del Norte County",2009-10-01,2,18
+"248","Del Norte County",2010-01-01,4,19
+"249","Del Norte County",2010-04-01,8,15
+"250","Del Norte County",2010-07-01,10,15
+"251","Del Norte County",2010-10-01,13,17
+"252","Del Norte County",2011-01-01,9,16
+"253","Del Norte County",2011-04-01,8,16
+"254","Del Norte County",2011-07-01,9,14
+"255","Del Norte County",2011-10-01,11,17
+"256","Del Norte County",2012-01-01,9,14
+"257","Del Norte County",2012-04-01,6,14
+"258","Del Norte County",2012-07-01,9,31
+"259","Del Norte County",2012-10-01,12,16
+"260","Del Norte County",2013-01-01,12,16
+"261","Del Norte County",2013-04-01,18,22
+"262","Del Norte County",2013-07-01,10,14
+"263","Del Norte County",2014-04-01,3.1,37.8
+"264","Del Norte County",2014-07-01,3.5,39.7
+"265","Del Norte County",2014-10-01,4.1,41.4
+"266","Del Norte County",2015-01-01,3.9,33.7
+"267","Del Norte County",2015-04-01,3.51,28.25
+"268","Del Norte County",2015-07-01,6.4,36.6
+"269","Del Norte County",2015-10-01,5.5,45
+"270","Del Norte County",2016-01-01,5.5,48.9
+"271","Del Norte County",2016-04-01,6.23,40.14
+"272","Del Norte County",2016-07-01,6.1,47.9
+"273","Del Norte County",2016-10-01,7.02,40.06
+"274","Del Norte County",2017-01-01,6.92,41.05
+"275","Del Norte County",2017-04-01,8.23,35.32
+"276","Del Norte County",2017-07-01,6.27,43.5
+"277","Del Norte County",2017-10-01,4.47,41.8
+"278","Del Norte County",2018-01-01,8,46.5
+"279","Del Norte County",2018-04-01,7.01,43.8
+"280","Del Norte County",2018-07-01,4.96,38.5
+"281","Del Norte County",2018-10-01,2.9,32.6
+"282","Del Norte County",2019-01-01,5.2,34.5
+"283","Del Norte County",2019-04-01,3,34
+"284","Del Norte County",2019-07-01,4.6,37.6
+"285","Del Norte County",2019-10-01,6.9,36.8
+"286","Del Norte County",2020-01-01,7.7,50.9
+"287","El Dorado County",2002-01-01,4,43
+"288","El Dorado County",2002-04-01,3,41
+"289","El Dorado County",2002-07-01,2.2,41.5
+"290","El Dorado County",2002-10-01,2,42
+"291","El Dorado County",2003-01-01,2,50
+"292","El Dorado County",2003-04-01,2,52
+"293","El Dorado County",2003-07-01,2,55
+"294","El Dorado County",2003-10-01,2,45
+"295","El Dorado County",2004-01-01,3,48
+"296","El Dorado County",2004-04-01,2,51
+"297","El Dorado County",2004-07-01,4,47
+"298","El Dorado County",2004-10-01,3.7,36.1
+"299","El Dorado County",2005-01-01,3,50
+"300","El Dorado County",2005-04-01,2,52
+"301","El Dorado County",2005-07-01,3,54
+"302","El Dorado County",2005-10-01,3.4,46.3
+"303","El Dorado County",2006-01-01,3.2,60.1
+"304","El Dorado County",2006-04-01,2.7,62.2
+"305","El Dorado County",2006-07-01,6.9,63.9
+"306","El Dorado County",2006-10-01,3.5,75
+"307","El Dorado County",2007-01-01,2.54,53.22
+"308","El Dorado County",2007-04-01,3.3,61.42
+"309","El Dorado County",2007-07-01,2.35,49
+"310","El Dorado County",2007-10-01,3.15,56.74
+"311","El Dorado County",2008-01-01,1.96,56
+"312","El Dorado County",2008-04-01,3.8,62.6
+"313","El Dorado County",2008-07-01,3.2,46.1
+"314","El Dorado County",2008-10-01,3.7,62.6
+"315","El Dorado County",2009-01-01,2.72,45.81
+"316","El Dorado County",2009-04-01,2.41,48.42
+"317","El Dorado County",2009-07-01,2.38,49.25
+"318","El Dorado County",2009-10-01,2.93,49.08
+"319","El Dorado County",2010-01-01,2.2,54.1
+"320","El Dorado County",2010-04-01,5.2,53.8
+"321","El Dorado County",2010-07-01,4.1,45.9
+"322","El Dorado County",2010-10-01,3.07,40.58
+"323","El Dorado County",2011-01-01,5.2,45.7
+"324","El Dorado County",2011-04-01,3.75,48.85
+"325","El Dorado County",2011-07-01,2.88,36.04
+"326","El Dorado County",2011-10-01,3.43,53.6
+"327","El Dorado County",2012-01-01,2.46,53.29
+"328","El Dorado County",2012-04-01,5.3,60.4
+"329","El Dorado County",2012-07-01,8.8,57.3
+"330","El Dorado County",2012-10-01,9.2,65.4
+"331","El Dorado County",2013-01-01,9.2,72.8
+"332","El Dorado County",2013-04-01,9.9,66.4
+"333","El Dorado County",2013-07-01,8.4,68.1
+"334","El Dorado County",2013-10-01,8.4,77.5
+"335","El Dorado County",2014-01-01,8.8,64.8
+"336","El Dorado County",2014-04-01,9.4,65.5
+"337","El Dorado County",2014-07-01,9.2,70.6
+"338","El Dorado County",2014-10-01,10.1,76.7
+"339","El Dorado County",2015-01-01,12.8,77.7
+"340","El Dorado County",2015-04-01,10.6,59.5
+"341","El Dorado County",2015-07-01,10.3,72.6
+"342","El Dorado County",2015-10-01,11.8,64.2
+"343","El Dorado County",2016-01-01,9.3,65.1
+"344","El Dorado County",2016-04-01,12.7,57
+"345","El Dorado County",2016-07-01,11,56.3
+"346","El Dorado County",2016-10-01,15.6,59.3
+"347","El Dorado County",2017-01-01,11.1,54.4
+"348","El Dorado County",2017-04-01,7.3,67.8
+"349","El Dorado County",2017-07-01,13.7,71.9
+"350","El Dorado County",2017-10-01,12.7,64
+"351","El Dorado County",2018-01-01,13,73
+"352","El Dorado County",2018-04-01,9.4,56.6
+"353","El Dorado County",2018-07-01,8.4,57.9
+"354","El Dorado County",2018-10-01,10.6,65.6
+"355","El Dorado County",2019-01-01,14.5,67.7
+"356","El Dorado County",2019-04-01,8.4,63.7
+"357","El Dorado County",2019-07-01,12.1,63
+"358","El Dorado County",2019-10-01,11.3,62.1
+"359","El Dorado County",2020-01-01,14.5,67.3
+"360","Fresno County",2002-01-01,21,67
+"361","Fresno County",2002-04-01,20,71
+"362","Fresno County",2002-07-01,15.86,75.94
+"363","Fresno County",2002-10-01,17.24,73.32
+"364","Fresno County",2003-01-01,24.3,70.27
+"365","Fresno County",2003-04-01,26.54,69.72
+"366","Fresno County",2003-07-01,23.59,75.44
+"367","Fresno County",2003-10-01,26.05,75.01
+"368","Fresno County",2004-01-01,26.53,81.68
+"369","Fresno County",2004-04-01,21.88,77.75
+"370","Fresno County",2004-07-01,22.87,88.73
+"371","Fresno County",2004-10-01,22.09,93.16
+"372","Fresno County",2005-01-01,22.39,87.63
+"373","Fresno County",2005-04-01,22.77,95.85
+"374","Fresno County",2005-07-01,20.17,81.24
+"375","Fresno County",2005-10-01,20.2,81.27
+"376","Fresno County",2006-01-01,23.34,75.21
+"377","Fresno County",2006-04-01,21.41,76.42
+"378","Fresno County",2006-07-01,23.11,73.09
+"379","Fresno County",2006-10-01,23.8,82.65
+"380","Fresno County",2007-01-01,25.08,83.27
+"381","Fresno County",2007-07-01,29.9,17.3
+"382","Fresno County",2007-10-01,29.9,17.3
+"383","Fresno County",2008-01-01,25.08,83.27
+"384","Fresno County",2008-04-01,25,28
+"385","Fresno County",2008-07-01,23.1,25.7
+"386","Fresno County",2008-10-01,19.5,26.1
+"387","Fresno County",2009-01-01,22.3,16.1
+"388","Fresno County",2009-04-01,19.9,17.1
+"389","Fresno County",2009-07-01,16.9,13.6
+"390","Fresno County",2009-10-01,23.4,7.2
+"391","Fresno County",2010-01-01,25.9,15.3
+"392","Fresno County",2010-04-01,16.1,15.3
+"393","Fresno County",2010-07-01,10.4,16
+"394","Fresno County",2010-10-01,10,13.8
+"395","Fresno County",2011-01-01,11.4,19.7
+"396","Fresno County",2011-04-01,14.9,7.7
+"397","Fresno County",2011-07-01,10.5,14.3
+"398","Fresno County",2011-10-01,13.9,14.3
+"399","Fresno County",2012-01-01,18,18
+"400","Fresno County",2012-04-01,11.7,14.2
+"401","Fresno County",2012-07-01,14.2,11.6
+"402","Fresno County",2012-10-01,12,29
+"403","Fresno County",2013-01-01,21,30
+"404","Fresno County",2013-04-01,14,18
+"405","Fresno County",2013-07-01,13,14
+"406","Fresno County",2013-10-01,8,11
+"407","Fresno County",2014-01-01,16.4,22.8
+"408","Fresno County",2014-04-01,14.6,19.7
+"409","Fresno County",2014-07-01,19.6,20.1
+"410","Fresno County",2014-10-01,19.5,18
+"411","Fresno County",2015-01-01,28,32.8
+"412","Fresno County",2015-04-01,23.2,25.7
+"413","Fresno County",2015-07-01,10.25,50.5
+"414","Fresno County",2015-10-01,26.9,42.3
+"415","Fresno County",2016-01-01,26.3,39
+"416","Fresno County",2016-04-01,27.7,46.8
+"417","Fresno County",2016-07-01,20.1,32.8
+"418","Fresno County",2016-10-01,28.8,28.1
+"419","Fresno County",2017-01-01,26.7,27.2
+"420","Fresno County",2017-04-01,26.6,33.8
+"421","Fresno County",2017-07-01,46.7,35.9
+"422","Fresno County",2017-10-01,28,37
+"423","Fresno County",2018-01-01,23.2,30.5
+"424","Fresno County",2018-04-01,24.5,39
+"425","Fresno County",2018-07-01,25.3,30.9
+"426","Fresno County",2018-10-01,19.9,28.5
+"427","Fresno County",2019-01-01,27.7,29.4
+"428","Fresno County",2019-04-01,22.7,31.3
+"429","Fresno County",2019-07-01,18.7,24.5
+"430","Fresno County",2019-10-01,22.8,25.1
+"431","Fresno County",2020-01-01,21.6,20.1
+"432","Glenn County",2002-01-01,13,36
+"433","Glenn County",2002-04-01,11.73,46
+"434","Glenn County",2002-07-01,6.99,17.61
+"435","Glenn County",2002-10-01,7.56,24.6
+"436","Glenn County",2003-01-01,9.23,21.84
+"437","Glenn County",2003-04-01,11.7,19.9
+"438","Glenn County",2003-07-01,9.85,22.03
+"439","Glenn County",2003-10-01,9.83,25.65
+"440","Glenn County",2004-01-01,6,20
+"441","Glenn County",2004-04-01,8,21
+"442","Glenn County",2004-07-01,9,28
+"443","Glenn County",2004-10-01,8,23
+"444","Glenn County",2005-01-01,9,20
+"445","Glenn County",2005-04-01,10,24
+"446","Glenn County",2005-07-01,8,25
+"447","Glenn County",2005-10-01,9,25
+"448","Glenn County",2006-01-01,9,25
+"449","Glenn County",2006-04-01,9,25
+"450","Glenn County",2006-07-01,8,24
+"451","Glenn County",2006-10-01,24,13
+"452","Glenn County",2007-01-01,9,20
+"453","Glenn County",2007-04-01,7,25
+"454","Glenn County",2007-07-01,9.5,22.66
+"455","Glenn County",2007-10-01,9.5,21.5
+"456","Glenn County",2008-01-01,7.4,24.77
+"457","Glenn County",2008-04-01,4.25,14.62
+"458","Glenn County",2008-07-01,5.7,32.7
+"459","Glenn County",2008-10-01,6,11
+"460","Glenn County",2011-10-01,37.2,61.8
+"461","Glenn County",2012-01-01,34.1,98.3
+"462","Glenn County",2012-04-01,18.1,72
+"463","Glenn County",2012-07-01,18.5,64.9
+"464","Glenn County",2012-10-01,19.4,69.5
+"465","Glenn County",2013-01-01,27.4,50.1
+"466","Glenn County",2013-04-01,12.7,55.3
+"467","Glenn County",2013-07-01,24.7,67.3
+"468","Glenn County",2013-10-01,18.6,68.5
+"469","Glenn County",2014-01-01,13.5,70.9
+"470","Glenn County",2014-04-01,15,45
+"471","Glenn County",2014-07-01,17,41
+"472","Glenn County",2014-10-01,15,48
+"473","Glenn County",2015-01-01,19,43
+"474","Glenn County",2015-04-01,23,26
+"475","Glenn County",2016-01-01,13,46
+"476","Glenn County",2016-04-01,15,42
+"477","Glenn County",2016-07-01,16,44
+"478","Glenn County",2016-10-01,19,36
+"479","Glenn County",2017-01-01,31,36
+"480","Glenn County",2017-04-01,45,41
+"481","Glenn County",2017-07-01,50,47
+"482","Glenn County",2017-10-01,42,48
+"483","Glenn County",2018-01-01,46,42
+"484","Glenn County",2018-04-01,49,46
+"485","Glenn County",2018-07-01,37,42
+"486","Glenn County",2019-01-01,51,35
+"487","Glenn County",2019-04-01,34,40
+"488","Glenn County",2019-07-01,37,31
+"489","Glenn County",2019-10-01,40,41
+"490","Glenn County",2020-01-01,42,26
+"491","Humboldt County",2002-01-01,8,66
+"492","Humboldt County",2002-04-01,13.69,59.58
+"493","Humboldt County",2002-07-01,12.94,38.78
+"494","Humboldt County",2002-10-01,12.22,53.14
+"495","Humboldt County",2003-01-01,15.15,40.7
+"496","Humboldt County",2003-04-01,13.74,36.47
+"497","Humboldt County",2003-07-01,13.74,36.47
+"498","Humboldt County",2003-10-01,13.86,40.25
+"499","Humboldt County",2004-01-01,17.17,32.71
+"500","Humboldt County",2004-04-01,14,35
+"501","Humboldt County",2004-07-01,11.85,39.51
+"502","Humboldt County",2004-10-01,11,35
+"503","Humboldt County",2005-01-01,12,39.85
+"504","Humboldt County",2005-04-01,13,44.7
+"505","Humboldt County",2005-07-01,12.74,44.01
+"506","Humboldt County",2005-10-01,12.92,41.54
+"507","Humboldt County",2006-01-01,12,43
+"508","Humboldt County",2006-04-01,12.46,44.79
+"509","Humboldt County",2006-07-01,11.7,45.06
+"510","Humboldt County",2006-10-01,14,51
+"511","Humboldt County",2007-01-01,9,46
+"512","Humboldt County",2007-04-01,9,43
+"513","Humboldt County",2007-07-01,8,49
+"514","Humboldt County",2007-10-01,7,42
+"515","Humboldt County",2008-01-01,8,52
+"516","Humboldt County",2008-04-01,8,43
+"517","Humboldt County",2008-07-01,8,40
+"518","Humboldt County",2008-10-01,7.81,40.77
+"519","Humboldt County",2009-01-01,7,43
+"520","Humboldt County",2009-04-01,7,41
+"521","Humboldt County",2009-07-01,7,48
+"522","Humboldt County",2009-10-01,7,70
+"523","Humboldt County",2010-01-01,9,47
+"524","Humboldt County",2010-04-01,8,45
+"525","Humboldt County",2010-07-01,8,47
+"526","Humboldt County",2010-10-01,9.8,41.1
+"527","Humboldt County",2011-01-01,8,48.2
+"528","Humboldt County",2011-04-01,8,49
+"529","Humboldt County",2011-07-01,9,52
+"530","Humboldt County",2011-10-01,8,54
+"531","Humboldt County",2012-01-01,8,42
+"532","Humboldt County",2012-04-01,7,44
+"533","Humboldt County",2012-07-01,7.18,47.74
+"534","Humboldt County",2012-10-01,5.89,47.45
+"535","Humboldt County",2013-01-01,6.2,45.9
+"536","Humboldt County",2013-04-01,5.48,46.03
+"537","Humboldt County",2013-07-01,11,52
+"538","Humboldt County",2013-10-01,6.9,52.7
+"539","Humboldt County",2014-01-01,7,42.7
+"540","Humboldt County",2014-04-01,5.8,48.9
+"541","Humboldt County",2014-07-01,4.4,53.7
+"542","Humboldt County",2014-10-01,6.9,50.1
+"543","Humboldt County",2015-01-01,6.2,37.5
+"544","Humboldt County",2015-04-01,7.1,37.1
+"545","Humboldt County",2015-07-01,6,38.1
+"546","Humboldt County",2015-10-01,6.3,42.5
+"547","Humboldt County",2016-01-01,6.9,38
+"548","Humboldt County",2016-04-01,7,39.9
+"549","Humboldt County",2016-07-01,7.6,40.8
+"550","Humboldt County",2016-10-01,7.2,43.2
+"551","Humboldt County",2017-01-01,8.34,42.9
+"552","Humboldt County",2017-04-01,8.19,43.97
+"553","Humboldt County",2017-07-01,7.28,44.39
+"554","Humboldt County",2017-10-01,8.93,45.84
+"555","Humboldt County",2018-01-01,8.35,46.76
+"556","Humboldt County",2018-04-01,10.29,45.59
+"557","Humboldt County",2018-07-01,7,45
+"558","Humboldt County",2018-10-01,9.38,42.67
+"559","Humboldt County",2019-01-01,8.43,52.24
+"560","Humboldt County",2019-04-01,7.76,40.27
+"561","Humboldt County",2019-07-01,8.7,41.9
+"562","Humboldt County",2019-10-01,8.7,41.9
+"563","Humboldt County",2020-01-01,10.7,43.92
+"564","Imperial County",2012-01-01,9,44
+"565","Imperial County",2012-04-01,10,58
+"566","Imperial County",2012-07-01,7,40
+"567","Imperial County",2012-10-01,10,59
+"568","Imperial County",2013-01-01,6,26
+"569","Imperial County",2013-04-01,10,42
+"570","Imperial County",2013-07-01,10,47
+"571","Imperial County",2013-10-01,7,32
+"572","Imperial County",2014-01-01,10,31
+"573","Imperial County",2014-04-01,10,30
+"574","Imperial County",2014-07-01,12,35
+"575","Imperial County",2014-10-01,13,43
+"576","Imperial County",2015-01-01,12,34
+"577","Imperial County",2015-04-01,10,22
+"578","Imperial County",2015-07-01,10,19
+"579","Imperial County",2015-10-01,7,36
+"580","Imperial County",2016-01-01,8,11
+"581","Imperial County",2016-04-01,9,12
+"582","Imperial County",2016-07-01,9,10
+"583","Imperial County",2016-10-01,8,9
+"584","Imperial County",2017-04-01,9,9
+"585","Imperial County",2017-07-01,9,9
+"586","Imperial County",2017-10-01,10,12
+"587","Imperial County",2018-01-01,10,10
+"588","Imperial County",2018-04-01,7,6
+"589","Inyo County",2005-04-01,15.2,69.3
+"590","Inyo County",2005-07-01,21,45
+"591","Inyo County",2005-10-01,31,45
+"592","Inyo County",2006-01-01,20,59
+"593","Inyo County",2006-04-01,18,50
+"594","Inyo County",2006-07-01,13,46
+"595","Inyo County",2006-10-01,14,52
+"596","Inyo County",2007-01-01,7,61
+"597","Inyo County",2007-04-01,4,41
+"598","Inyo County",2007-07-01,8,55
+"599","Inyo County",2007-10-01,13,49
+"600","Inyo County",2008-01-01,11.7,57.5
+"601","Inyo County",2008-04-01,6.44,80.14
+"602","Inyo County",2008-07-01,14.12,74.46
+"603","Inyo County",2008-10-01,13,57
+"604","Inyo County",2009-01-01,20,41
+"605","Inyo County",2009-04-01,7,53
+"606","Inyo County",2009-07-01,3,47
+"607","Inyo County",2009-10-01,23,54
+"608","Inyo County",2010-07-01,2.8,33.7
+"609","Inyo County",2010-10-01,4.2,46.7
+"610","Inyo County",2011-01-01,3.3,42.1
+"611","Inyo County",2011-04-01,9,42
+"612","Inyo County",2011-07-01,3,40
+"613","Inyo County",2011-10-01,5,53
+"614","Inyo County",2012-01-01,4,42
+"615","Inyo County",2012-04-01,7.3,46
+"616","Inyo County",2012-07-01,4,42
+"617","Inyo County",2012-10-01,10,41
+"618","Inyo County",2013-01-01,6,61
+"619","Inyo County",2013-04-01,5,46
+"620","Inyo County",2013-07-01,4,34
+"621","Inyo County",2013-10-01,5,63
+"622","Inyo County",2014-01-01,11,62
+"623","Inyo County",2014-04-01,5,57
+"624","Inyo County",2014-07-01,4,61
+"625","Inyo County",2014-10-01,3,53
+"626","Inyo County",2015-01-01,3,61
+"627","Inyo County",2015-04-01,4,92
+"628","Inyo County",2015-07-01,7,79
+"629","Inyo County",2015-10-01,4,54
+"630","Inyo County",2016-01-01,10,68
+"631","Inyo County",2016-04-01,3,57
+"632","Inyo County",2016-07-01,4,63
+"633","Inyo County",2016-10-01,4,41
+"634","Inyo County",2017-01-01,4,43
+"635","Inyo County",2018-07-01,156,69
+"636","Inyo County",2018-10-01,126,35
+"637","Inyo County",2019-01-01,122,83
+"638","Inyo County",2019-10-01,87,40
+"639","Kern County",2014-01-01,14,50
+"640","Kern County",2014-04-01,16,52
+"641","Kern County",2014-07-01,16,53
+"642","Kern County",2014-10-01,18,59
+"643","Kern County",2015-01-01,17,63
+"644","Kern County",2015-04-01,19,66
+"645","Kern County",2015-07-01,15,53
+"646","Kern County",2015-10-01,15,55
+"647","Kern County",2016-01-01,17,69
+"648","Kern County",2016-04-01,14.3,66
+"649","Kern County",2016-07-01,15.3,60.6
+"650","Kern County",2016-10-01,18,55
+"651","Kern County",2017-01-01,16,60
+"652","Kern County",2017-04-01,17,60
+"653","Kern County",2017-07-01,16.5,54.6
+"654","Kern County",2017-10-01,17.5,59.1
+"655","Kern County",2018-01-01,19.5,61.02
+"656","Kern County",2018-04-01,16,58
+"657","Kern County",2018-07-01,12.01,36.93
+"658","Kern County",2018-10-01,15,39
+"659","Kern County",2019-01-01,13.27,38.17
+"660","Kern County",2019-04-01,16.18,36.35
+"661","Kern County",2019-07-01,16.06,38.34
+"662","Kern County",2019-10-01,14.08,39.56
+"663","Kern County",2020-01-01,17.44,35.26
+"664","Kings County",2018-10-01,9,75
+"665","Kings County",2019-01-01,8,79
+"666","Kings County",2019-04-01,10,74
+"667","Kings County",2019-07-01,6,83
+"668","Kings County",2019-10-01,8,85
+"669","Kings County",2020-01-01,10,85
+"670","Lassen County",2018-01-01,3.3,76.07
+"671","Lassen County",2018-04-01,6.7,67.78
+"672","Lassen County",2018-07-01,4.92,55.67
+"673","Lassen County",2018-10-01,7.77,62.32
+"674","Lassen County",2019-01-01,4.5,86.13
+"675","Lassen County",2019-04-01,6,68
+"676","Lassen County",2019-07-01,6,85
+"677","Lassen County",2019-10-01,7,89
+"678","Lassen County",2020-01-01,8.5,96.6
+"679","Los Angeles County",2002-01-01,41.7,56.7
+"680","Los Angeles County",2002-04-01,44.7,57.3
+"681","Los Angeles County",2002-07-01,59.1,56.6
+"682","Los Angeles County",2002-10-01,49.74,41.9
+"683","Los Angeles County",2003-01-01,10.01,57.15
+"684","Los Angeles County",2003-04-01,7.62,40.14
+"685","Los Angeles County",2003-07-01,7.12,45.36
+"686","Los Angeles County",2003-10-01,9.3,38.64
+"687","Los Angeles County",2004-01-01,8.02,37.01
+"688","Los Angeles County",2004-04-01,9.37,36.88
+"689","Los Angeles County",2004-07-01,14.37,36.15
+"690","Los Angeles County",2004-10-01,9.92,38.39
+"691","Los Angeles County",2005-01-01,39.37,42.85
+"692","Los Angeles County",2005-04-01,30.84,41.82
+"693","Los Angeles County",2005-07-01,38.78,44.72
+"694","Los Angeles County",2005-10-01,52.36,45.42
+"695","Los Angeles County",2006-01-01,43.82,46.04
+"696","Los Angeles County",2006-04-01,27.66,53.97
+"697","Los Angeles County",2006-07-01,39.6,44.71
+"698","Los Angeles County",2006-10-01,47.3,47.53
+"699","Los Angeles County",2007-01-01,39.78,57.25
+"700","Los Angeles County",2007-04-01,26.43,51.55
+"701","Los Angeles County",2007-07-01,23.91,48.9
+"702","Los Angeles County",2007-10-01,23.49,58.01
+"703","Los Angeles County",2008-01-01,27.79,56
+"704","Los Angeles County",2008-04-01,25.04,56.31
+"705","Los Angeles County",2008-07-01,23.8,54
+"706","Los Angeles County",2008-10-01,28.8,56.6
+"707","Los Angeles County",2009-01-01,22.7,54.9
+"708","Los Angeles County",2009-04-01,30.3,54.3
+"709","Los Angeles County",2009-07-01,31.2,58.1
+"710","Los Angeles County",2009-10-01,36.7,59.5
+"711","Los Angeles County",2010-01-01,36.9,53.9
+"712","Los Angeles County",2010-04-01,20.5,53.8
+"713","Los Angeles County",2010-07-01,38.5,50.7
+"714","Los Angeles County",2010-10-01,33,48.9
+"715","Los Angeles County",2011-01-01,46.4,45.8
+"716","Los Angeles County",2011-04-01,20,45.5
+"717","Los Angeles County",2011-07-01,23.9,42.7
+"718","Los Angeles County",2011-10-01,37.4,45.2
+"719","Los Angeles County",2012-01-01,36.9,45.7
+"720","Los Angeles County",2012-04-01,28.2,48.9
+"721","Los Angeles County",2012-07-01,17.59,48.5
+"722","Los Angeles County",2012-10-01,11.671,54.899
+"723","Los Angeles County",2013-01-01,11.671,54.899
+"724","Los Angeles County",2013-04-01,11.28,56.02
+"725","Los Angeles County",2013-07-01,8.78,54.4
+"726","Los Angeles County",2013-10-01,9.16,61.06
+"727","Los Angeles County",2014-01-01,7.24,59.88
+"728","Los Angeles County",2014-04-01,9.68,62.55
+"729","Los Angeles County",2014-07-01,5.67,62.81
+"730","Los Angeles County",2014-10-01,8.6,68.08
+"731","Los Angeles County",2015-01-01,6.3,70.4
+"732","Los Angeles County",2015-04-01,8.7,66.9
+"733","Los Angeles County",2015-07-01,6.72,64.25
+"734","Los Angeles County",2015-10-01,22.11,64.11
+"735","Los Angeles County",2016-01-01,5.04,62.34
+"736","Los Angeles County",2016-04-01,5.39,62.33
+"737","Los Angeles County",2016-07-01,5.31,58.52
+"738","Los Angeles County",2016-10-01,6.69,64.14
+"739","Los Angeles County",2017-01-01,4.95,63
+"740","Los Angeles County",2017-04-01,5.28,63.45
+"741","Los Angeles County",2017-07-01,5.18,60.58
+"742","Los Angeles County",2017-10-01,5,61
+"743","Los Angeles County",2018-01-01,5.36,63.04
+"744","Los Angeles County",2018-04-01,5.2,62.46
+"745","Los Angeles County",2018-07-01,6,61
+"746","Los Angeles County",2018-10-01,5,61
+"747","Los Angeles County",2019-01-01,6,62
+"748","Los Angeles County",2019-04-01,5,62
+"749","Los Angeles County",2019-07-01,6,64
+"750","Los Angeles County",2019-10-01,5,64
+"751","Los Angeles County",2020-01-01,9,83
+"752","Madera County",2002-07-01,6,42
+"753","Madera County",2002-10-01,8,46
+"754","Madera County",2003-01-01,8.5,45.5
+"755","Madera County",2003-04-01,9,45
+"756","Madera County",2003-07-01,11,46
+"757","Madera County",2003-10-01,8,46
+"758","Madera County",2004-01-01,8,41
+"759","Madera County",2004-04-01,9,39
+"760","Madera County",2004-07-01,7,41
+"761","Madera County",2004-10-01,11,47
+"762","Madera County",2005-01-01,10.5,48
+"763","Madera County",2005-04-01,10,49
+"764","Madera County",2005-07-01,7,55
+"765","Madera County",2005-10-01,6,54
+"766","Madera County",2006-01-01,6,50
+"767","Madera County",2006-04-01,5,54
+"768","Madera County",2006-07-01,6,45
+"769","Madera County",2006-10-01,6,56
+"770","Madera County",2007-01-01,5,53
+"771","Madera County",2007-04-01,7,50
+"772","Madera County",2007-07-01,7,56
+"773","Madera County",2007-10-01,7,56
+"774","Madera County",2008-04-01,8,46
+"775","Madera County",2008-10-01,8,59
+"776","Madera County",2009-01-01,7,52
+"777","Madera County",2009-04-01,7,65
+"778","Madera County",2009-07-01,6,57
+"779","Madera County",2009-10-01,6,57
+"780","Madera County",2010-01-01,4,53
+"781","Madera County",2010-04-01,6,43
+"782","Madera County",2010-07-01,4,56
+"783","Madera County",2010-10-01,7,50
+"784","Madera County",2011-01-01,4,57
+"785","Madera County",2011-04-01,4,59
+"786","Madera County",2011-07-01,4,55
+"787","Madera County",2011-10-01,6,68
+"788","Madera County",2012-01-01,4,73
+"789","Madera County",2012-04-01,3,29
+"790","Madera County",2012-07-01,3,30
+"791","Madera County",2012-10-01,4,63
+"792","Madera County",2013-01-01,4,65
+"793","Madera County",2013-04-01,4,96
+"794","Madera County",2013-07-01,5,96
+"795","Madera County",2013-10-01,4,79
+"796","Madera County",2014-01-01,9,139
+"797","Madera County",2014-04-01,4,42
+"798","Madera County",2014-07-01,7,88
+"799","Madera County",2014-10-01,5,83
+"800","Madera County",2015-01-01,7,96
+"801","Madera County",2015-04-01,8,104
+"802","Madera County",2015-07-01,7,71
+"803","Madera County",2015-10-01,6,87
+"804","Madera County",2016-01-01,7,96
+"805","Madera County",2016-04-01,7,82
+"806","Madera County",2016-07-01,7,58
+"807","Madera County",2016-10-01,14,49
+"808","Madera County",2017-01-01,7,44
+"809","Madera County",2017-04-01,10,47
+"810","Madera County",2017-07-01,7,44
+"811","Madera County",2017-10-01,10,52
+"812","Madera County",2018-01-01,4,55
+"813","Madera County",2018-04-01,17,50
+"814","Madera County",2018-07-01,6,46
+"815","Madera County",2018-10-01,5,69
+"816","Madera County",2019-01-01,4,76
+"817","Madera County",2019-04-01,4,96
+"818","Madera County",2019-07-01,5,87
+"819","Madera County",2019-10-01,6,93
+"820","Madera County",2020-01-01,6,107
+"821","Marin County",2002-01-01,9.2,46
+"822","Marin County",2002-04-01,7.3,46.2
+"823","Marin County",2002-07-01,6.8,44.5
+"824","Marin County",2002-10-01,7.8,53.1
+"825","Marin County",2003-01-01,8.4,37.6
+"826","Marin County",2003-04-01,10.5,40.9
+"827","Marin County",2003-07-01,8.2,42.3
+"828","Marin County",2003-10-01,7.9,44.7
+"829","Marin County",2004-01-01,7.3,42.1
+"830","Marin County",2004-04-01,8.2,42.5
+"831","Marin County",2004-07-01,7.4,46.7
+"832","Marin County",2004-10-01,7.1,43.2
+"833","Marin County",2005-01-01,8,38
+"834","Marin County",2005-04-01,8,42.9
+"835","Marin County",2005-07-01,8,44.3
+"836","Marin County",2005-10-01,11.75,45.6
+"837","Marin County",2006-01-01,15.5,46.9
+"838","Marin County",2006-04-01,13.2,47.4
+"839","Marin County",2006-07-01,12.6,50.2
+"840","Marin County",2006-10-01,12.6,45.5
+"841","Marin County",2007-01-01,14,53.3
+"842","Marin County",2007-04-01,14.5,55.5
+"843","Marin County",2007-07-01,14.1,46.6
+"844","Marin County",2007-10-01,12,44.3
+"845","Marin County",2008-01-01,13.8,36.8
+"846","Marin County",2008-04-01,13.5,40.3
+"847","Marin County",2008-07-01,17.5,44.7
+"848","Marin County",2008-10-01,14.4,39.5
+"849","Marin County",2009-01-01,10.2,35.6
+"850","Marin County",2009-04-01,12.7,31.7
+"851","Marin County",2009-07-01,11.2,37.8
+"852","Marin County",2009-10-01,14.6,38.3
+"853","Marin County",2010-01-01,13.6,35.6
+"854","Marin County",2010-04-01,10.6,26.6
+"855","Marin County",2010-07-01,21.7,31.7
+"856","Marin County",2010-10-01,15.4,30.8
+"857","Marin County",2011-01-01,12.6,16.9
+"858","Marin County",2011-04-01,13,35
+"859","Marin County",2011-07-01,13,36
+"860","Marin County",2011-10-01,12.2,40.8
+"861","Marin County",2012-01-01,12.8,36
+"862","Marin County",2012-04-01,10.9,29.1
+"863","Marin County",2012-07-01,12,34
+"864","Marin County",2012-10-01,15,37
+"865","Marin County",2013-01-01,11.3,38.3
+"866","Marin County",2013-07-01,16.9,38.3
+"867","Marin County",2013-10-01,10,40
+"868","Marin County",2014-01-01,13,37
+"869","Marin County",2014-04-01,11,40
+"870","Marin County",2014-07-01,14,39
+"871","Marin County",2014-10-01,11,41
+"872","Marin County",2015-01-01,12.9,33.3
+"873","Marin County",2015-04-01,11,30
+"874","Marin County",2015-07-01,12,35
+"875","Marin County",2015-10-01,12,39
+"876","Marin County",2016-01-01,15,42
+"877","Marin County",2016-04-01,14,42
+"878","Marin County",2016-07-01,13,44
+"879","Marin County",2016-10-01,17,48
+"880","Marin County",2017-01-01,16,50
+"881","Marin County",2017-04-01,18,53
+"882","Marin County",2017-07-01,14,47
+"883","Marin County",2017-10-01,12,47
+"884","Marin County",2018-01-01,15,51
+"885","Marin County",2018-04-01,14,47
+"886","Marin County",2018-07-01,12,43
+"887","Marin County",2018-10-01,12,45
+"888","Marin County",2019-01-01,12,48
+"889","Marin County",2019-04-01,14,43
+"890","Marin County",2019-07-01,12,44
+"891","Marin County",2019-10-01,11,14
+"892","Marin County",2020-01-01,32,43
+"893","Mariposa County",2002-01-01,8.8,17.7
+"894","Mariposa County",2002-04-01,13,16.7
+"895","Mariposa County",2002-07-01,12,18
+"896","Mariposa County",2002-10-01,11,17
+"897","Mariposa County",2003-01-01,16,13
+"898","Mariposa County",2003-04-01,11,16
+"899","Mariposa County",2003-07-01,8,16
+"900","Mariposa County",2003-10-01,11,16
+"901","Mariposa County",2004-01-01,13,17
+"902","Mariposa County",2004-04-01,12,16
+"903","Mariposa County",2004-07-01,13,15
+"904","Mariposa County",2004-10-01,15,13
+"905","Mariposa County",2005-01-01,14,13
+"906","Mariposa County",2005-04-01,13,15
+"907","Mariposa County",2005-07-01,14,14
+"908","Mariposa County",2005-10-01,14,18
+"909","Mariposa County",2006-01-01,16,16
+"910","Mariposa County",2006-04-01,12,16
+"911","Mariposa County",2006-07-01,12,16
+"912","Mariposa County",2006-10-01,14,14
+"913","Mariposa County",2007-01-01,14,12
+"914","Mariposa County",2007-04-01,15,13
+"915","Mariposa County",2007-07-01,17,15
+"916","Mariposa County",2007-10-01,17,19
+"917","Mariposa County",2008-01-01,15,15
+"918","Mariposa County",2008-04-01,17,16
+"919","Mariposa County",2008-07-01,13,14
+"920","Mariposa County",2008-10-01,13,15
+"921","Mariposa County",2009-01-01,15,15
+"922","Mariposa County",2009-04-01,18,16
+"923","Mariposa County",2009-07-01,7.1,26.1
+"924","Mariposa County",2009-10-01,8.6,45.7
+"925","Mariposa County",2010-01-01,9,45
+"926","Mariposa County",2010-04-01,7,49
+"927","Mariposa County",2010-07-01,10,47
+"928","Mariposa County",2010-10-01,9,36
+"929","Mariposa County",2011-01-01,8,41
+"930","Mariposa County",2011-04-01,7.7,38.2
+"931","Mariposa County",2011-07-01,9,30.2
+"932","Mariposa County",2011-10-01,4.8,50
+"933","Mariposa County",2012-01-01,7.8,35.1
+"934","Mariposa County",2012-04-01,4.8,40
+"935","Mariposa County",2012-07-01,5.8,39.3
+"936","Mariposa County",2012-10-01,7.4,39.8
+"937","Mariposa County",2013-01-01,7,50
+"938","Mariposa County",2013-04-01,7.2,46.9
+"939","Mariposa County",2013-07-01,5.9,46.8
+"940","Mariposa County",2013-10-01,14.1,47.5
+"941","Mariposa County",2014-01-01,14,52.3
+"942","Mariposa County",2014-04-01,9.1,55.3
+"943","Mariposa County",2014-07-01,9.8,43.8
+"944","Mariposa County",2014-10-01,9,58.9
+"945","Mariposa County",2015-01-01,12.1,36
+"946","Mariposa County",2015-04-01,10.1,28.5
+"947","Mariposa County",2015-07-01,5.8,32.7
+"948","Mariposa County",2015-10-01,11.3,24.5
+"949","Mariposa County",2016-01-01,8.1,34.5
+"950","Mariposa County",2016-04-01,16.5,23.9
+"951","Mariposa County",2016-07-01,17.3,45.1
+"952","Mariposa County",2016-10-01,9.9,48.4
+"953","Mariposa County",2017-01-01,9.7,35.6
+"954","Mariposa County",2018-04-01,16.8,34.3
+"955","Mariposa County",2018-07-01,8.8,32
+"956","Mariposa County",2019-01-01,9.6,51.1
+"957","Mariposa County",2019-04-01,8.5,33.1
+"958","Mariposa County",2019-07-01,11.8,29.7
+"959","Mariposa County",2020-01-01,7.1,50.7
+"960","Mendocino County",2002-01-01,13,32
+"961","Mendocino County",2002-04-01,13,37
+"962","Mendocino County",2002-07-01,12,32
+"963","Mendocino County",2002-10-01,12,49
+"964","Mendocino County",2003-01-01,13,25
+"965","Mendocino County",2003-04-01,11,33
+"966","Mendocino County",2003-07-01,10,28
+"967","Mendocino County",2003-10-01,8,53
+"968","Mendocino County",2004-01-01,13,26
+"969","Mendocino County",2004-04-01,13,24
+"970","Mendocino County",2004-07-01,13,28
+"971","Mendocino County",2004-10-01,11,47
+"972","Mendocino County",2005-01-01,13,29
+"973","Mendocino County",2005-04-01,8,31
+"974","Mendocino County",2005-07-01,12,34
+"975","Mendocino County",2005-10-01,10,51
+"976","Mendocino County",2006-01-01,17.3,14
+"977","Mendocino County",2019-07-01,2.4,54.42
+"978","Mendocino County",2019-10-01,3,65
+"979","Mendocino County",2020-01-01,3,57
+"980","Merced County",2012-10-01,32,30
+"981","Merced County",2013-01-01,41,34
+"982","Merced County",2013-04-01,22,38
+"983","Merced County",2013-07-01,18,37
+"984","Merced County",2013-10-01,42,35
+"985","Merced County",2014-01-01,45,37
+"986","Merced County",2014-04-01,21,50
+"987","Merced County",2014-07-01,19,43.9
+"988","Merced County",2014-10-01,22.4,54.4
+"989","Merced County",2015-01-01,18.6,48.9
+"990","Merced County",2015-04-01,12.9,51.1
+"991","Merced County",2015-07-01,14.8,38
+"992","Merced County",2015-10-01,27.3,45.1
+"993","Merced County",2016-01-01,39.8,44.9
+"994","Merced County",2016-04-01,19.8,47.9
+"995","Merced County",2016-07-01,16.9,42.4
+"996","Merced County",2016-10-01,22.2,48.2
+"997","Merced County",2017-01-01,28.6,38.4
+"998","Merced County",2017-04-01,28.6,41.3
+"999","Merced County",2017-07-01,31.8,41.9
+"1000","Merced County",2017-10-01,23.6,38.8
+"1001","Merced County",2018-01-01,36.9,40.3
+"1002","Merced County",2018-04-01,25.6,41.1
+"1003","Merced County",2019-01-01,24.7,44.9
+"1004","Merced County",2019-04-01,23.9,39.5
+"1005","Merced County",2019-07-01,21.1,36.9
+"1006","Merced County",2019-10-01,25.1,44.3
+"1007","Modoc County",2002-04-01,2.3,12.2
+"1008","Modoc County",2003-07-01,5.3,12.8
+"1009","Modoc County",2003-10-01,3.8,12.8
+"1010","Modoc County",2004-01-01,3.8,12.8
+"1011","Modoc County",2004-04-01,2.3,13.4
+"1012","Modoc County",2004-07-01,3.5,26.1
+"1013","Modoc County",2004-10-01,3.1,22.5
+"1014","Modoc County",2005-01-01,5.5,24
+"1015","Modoc County",2005-04-01,7.1,32
+"1016","Modoc County",2005-07-01,6.5,35
+"1017","Modoc County",2005-10-01,1.6,8.2
+"1018","Modoc County",2006-01-01,2,16.9
+"1019","Modoc County",2006-04-01,1.97,25.55
+"1020","Modoc County",2006-07-01,2.5,29.3
+"1021","Modoc County",2006-10-01,3.88,24.42
+"1022","Modoc County",2007-01-01,2.5,29.3
+"1023","Modoc County",2007-04-01,10,30.5
+"1024","Modoc County",2018-07-01,126,37
+"1025","Modoc County",2018-10-01,101,33
+"1026","Modoc County",2019-01-01,133,23
+"1027","Modoc County",2019-04-01,94,38
+"1028","Modoc County",2019-07-01,76,29
+"1029","Modoc County",2019-10-01,75,54
+"1030","Modoc County",2020-01-01,69,28
+"1031","Mono County",2018-07-01,118,40
+"1032","Mono County",2019-01-01,102,9
+"1033","Mono County",2019-04-01,92,31
+"1034","Mono County",2019-07-01,115,31
+"1035","Mono County",2019-10-01,93,38
+"1036","Mono County",2020-01-01,81,44
+"1037","Monterey County",2015-07-01,12.1,28.5
+"1038","Monterey County",2015-10-01,15.3,30.1
+"1039","Monterey County",2016-01-01,18.4,30.6
+"1040","Monterey County",2016-04-01,15,31.5
+"1041","Monterey County",2016-07-01,14,33
+"1042","Monterey County",2016-10-01,17.5,37
+"1043","Monterey County",2017-01-01,22.5,34
+"1044","Monterey County",2017-04-01,20.9,31.6
+"1045","Monterey County",2017-07-01,17.6,35.4
+"1046","Monterey County",2017-10-01,24.3,39.9
+"1047","Monterey County",2018-01-01,23.3,36.6
+"1048","Monterey County",2018-04-01,21.3,41
+"1049","Monterey County",2018-07-01,21.6,36.8
+"1050","Monterey County",2018-10-01,21.7,38.7
+"1051","Monterey County",2019-01-01,19.4,36.9
+"1052","Monterey County",2019-04-01,21.3,31.6
+"1053","Monterey County",2019-07-01,17,32.2
+"1054","Monterey County",2019-10-01,24.7,39.2
+"1055","Monterey County",2020-01-01,24.7,31
+"1056","Napa County",2002-01-01,13,68
+"1057","Napa County",2002-04-01,12,65
+"1058","Napa County",2002-07-01,12,66
+"1059","Napa County",2002-10-01,12,67
+"1060","Napa County",2003-01-01,13,70
+"1061","Napa County",2003-04-01,15,67
+"1062","Napa County",2003-07-01,14,68
+"1063","Napa County",2003-10-01,13,69
+"1064","Napa County",2004-01-01,13,69
+"1065","Napa County",2004-04-01,16,72
+"1066","Napa County",2004-07-01,11,69
+"1067","Napa County",2004-10-01,11,67
+"1068","Napa County",2005-01-01,19,92
+"1069","Napa County",2005-04-01,7,88
+"1070","Napa County",2005-07-01,26,41
+"1071","Napa County",2005-10-01,6.87,13
+"1072","Napa County",2006-01-01,3.5,11.5
+"1073","Napa County",2006-07-01,12,45
+"1074","Napa County",2007-04-01,14.5,22.7
+"1075","Napa County",2007-07-01,10.5,59.3
+"1076","Napa County",2007-10-01,9,40
+"1077","Napa County",2008-01-01,17,11
+"1078","Napa County",2008-04-01,14,17
+"1079","Napa County",2008-07-01,15,20
+"1080","Napa County",2014-07-01,11,37
+"1081","Napa County",2014-10-01,12,36
+"1082","Napa County",2015-01-01,10,33
+"1083","Napa County",2015-04-01,13,27
+"1084","Napa County",2015-07-01,19,38
+"1085","Napa County",2015-10-01,13,37
+"1086","Napa County",2016-01-01,15,43
+"1087","Napa County",2016-04-01,13,35
+"1088","Napa County",2016-07-01,11,55
+"1089","Napa County",2016-10-01,23,23
+"1090","Napa County",2017-01-01,24,21
+"1091","Napa County",2017-04-01,19,18
+"1092","Napa County",2017-07-01,21,19
+"1093","Napa County",2017-10-01,20,21
+"1094","Napa County",2018-01-01,21,19
+"1095","Napa County",2018-04-01,21,18
+"1096","Napa County",2018-07-01,19,21
+"1097","Napa County",2018-10-01,25,26
+"1098","Napa County",2019-01-01,27,23
+"1099","Napa County",2019-04-01,24,22
+"1100","Napa County",2019-07-01,26,23
+"1101","Napa County",2019-10-01,25,24
+"1102","Napa County",2020-01-01,28,25
+"1103","Orange County",2002-01-01,5.65,13
+"1104","Orange County",2002-04-01,1.2,34.3
+"1105","Orange County",2002-04-01,5.57,13
+"1106","Orange County",2002-07-01,1.3,33.9
+"1107","Orange County",2002-07-01,5.59,13
+"1108","Orange County",2002-10-01,3.1,34.7
+"1109","Orange County",2002-10-01,5.9,16
+"1110","Orange County",2003-01-01,2.3,34.7
+"1111","Orange County",2003-01-01,10.1,20
+"1112","Orange County",2003-04-01,1.3,36.9
+"1113","Orange County",2003-04-01,10.2,20
+"1114","Orange County",2003-07-01,1.2,35.7
+"1115","Orange County",2003-07-01,12.2,21
+"1116","Orange County",2003-10-01,1.2,33.9
+"1117","Orange County",2003-10-01,10.1,23.3
+"1118","Orange County",2004-01-01,1.2,36.5
+"1119","Orange County",2004-01-01,11.1,20.5
+"1120","Orange County",2004-04-01,3.3,34.4
+"1121","Orange County",2004-04-01,12,22
+"1122","Orange County",2004-07-01,1.2,38.9
+"1123","Orange County",2004-07-01,12.5,25
+"1124","Orange County",2004-10-01,1.3,39.8
+"1125","Orange County",2004-10-01,13,28
+"1126","Orange County",2005-01-01,1.35,38.85
+"1127","Orange County",2005-01-01,14.5,30
+"1128","Orange County",2005-04-01,1.4,37.9
+"1129","Orange County",2005-04-01,16,32
+"1130","Orange County",2005-07-01,1.2,40.9
+"1131","Orange County",2005-07-01,10,30
+"1132","Orange County",2005-10-01,1.3,36.1
+"1133","Orange County",2005-10-01,17,31
+"1134","Orange County",2006-01-01,1.2,39.7
+"1135","Orange County",2006-01-01,15,32
+"1136","Orange County",2006-04-01,1.3,40.2
+"1137","Orange County",2006-04-01,15,32
+"1138","Orange County",2006-07-01,1.2,35.2
+"1139","Orange County",2006-07-01,2,96
+"1140","Orange County",2006-10-01,1.2,36
+"1141","Orange County",2006-10-01,2,92
+"1142","Orange County",2007-01-01,1.2,35.1
+"1143","Orange County",2007-01-01,2,94
+"1144","Orange County",2007-04-01,1.2,41.5
+"1145","Orange County",2007-04-01,2,91
+"1146","Orange County",2007-07-01,1.2,36
+"1147","Orange County",2007-07-01,2,88
+"1148","Orange County",2007-10-01,1.2,36.3
+"1149","Orange County",2007-10-01,2,90
+"1150","Orange County",2008-01-01,1.7,42
+"1151","Orange County",2008-01-01,2,92
+"1152","Orange County",2008-04-01,1.2,41.5
+"1153","Orange County",2008-04-01,17,90
+"1154","Orange County",2008-07-01,1.2,39.6
+"1155","Orange County",2008-07-01,19.6,90
+"1156","Orange County",2008-10-01,1.2,41.7
+"1157","Orange County",2009-01-01,1.2,41.7
+"1158","Orange County",2009-04-01,1.2,42.1
+"1159","Orange County",2009-07-01,1.2,43.6
+"1160","Orange County",2009-10-01,1.2,36.7
+"1161","Orange County",2010-01-01,1.2,35.9
+"1162","Orange County",2010-04-01,1.2,36.3
+"1163","Orange County",2010-07-01,1.2,30.9
+"1164","Orange County",2010-10-01,1.2,35.3
+"1165","Orange County",2011-01-01,1.3,39
+"1166","Orange County",2011-04-01,1.2,40.4
+"1167","Orange County",2011-07-01,1.3,36.8
+"1168","Orange County",2011-10-01,1.3,42
+"1169","Orange County",2012-01-01,1.3,41.7
+"1170","Orange County",2012-04-01,1.3,37.3
+"1171","Orange County",2012-07-01,1.3,38.2
+"1172","Orange County",2012-10-01,1.3,47.7
+"1173","Orange County",2013-01-01,1.3,47.1
+"1174","Orange County",2013-04-01,1.3,47.7
+"1175","Orange County",2013-07-01,1.3,44.7
+"1176","Orange County",2013-10-01,1.3,48.6
+"1177","Orange County",2014-01-01,1.3,49.4
+"1178","Orange County",2014-04-01,1.3,52.3
+"1179","Orange County",2014-07-01,1.2,51.3
+"1180","Orange County",2014-10-01,1.2,53
+"1181","Orange County",2015-01-01,1.3,50
+"1182","Orange County",2015-04-01,1.3,45.3
+"1183","Orange County",2015-07-01,1.4,46.7
+"1184","Orange County",2015-10-01,1.3,42.6
+"1185","Orange County",2016-01-01,1.3,48
+"1186","Orange County",2016-04-01,1.4,44.9
+"1187","Orange County",2016-07-01,1.3,47.5
+"1188","Orange County",2016-10-01,1.3,49.2
+"1189","Orange County",2017-01-01,1.3,50
+"1190","Orange County",2017-04-01,1.4,46.6
+"1191","Orange County",2017-07-01,1.3,46.6
+"1192","Orange County",2017-10-01,1.4,42.7
+"1193","Orange County",2018-01-01,1.4,47.7
+"1194","Orange County",2018-04-01,1.4,41.7
+"1195","Orange County",2018-07-01,1.3,44.5
+"1196","Orange County",2018-10-01,1.4,47.2
+"1197","Orange County",2019-01-01,1.4,47.7
+"1198","Orange County",2019-04-01,1.3,50.7
+"1199","Orange County",2019-07-01,1.4,42.7
+"1200","Orange County",2019-10-01,1.3,42.8
+"1201","Orange County",2020-01-01,1.3,43.4
+"1202","Placer County",2002-07-01,16.8,44.8
+"1203","Placer County",2002-10-01,13.3,54.7
+"1204","Placer County",2003-01-01,24.7,59.1
+"1205","Placer County",2003-04-01,11.4,63.5
+"1206","Placer County",2018-10-01,16.29,69.75
+"1207","Placer County",2019-01-01,17.46,71.3
+"1208","Placer County",2019-04-01,17.06,74.22
+"1209","Placer County",2019-07-01,15.1,69.15
+"1210","Placer County",2019-10-01,15.48,65.24
+"1211","Placer County",2020-01-01,16.37,67.45
+"1212","Plumas County",2002-01-01,3.54,12.54
+"1213","Plumas County",2002-04-01,3.69,18.61
+"1214","Plumas County",2002-07-01,3.39,15.01
+"1215","Plumas County",2002-10-01,4,13
+"1216","Plumas County",2003-01-01,4.17,26.27
+"1217","Plumas County",2003-04-01,3.78,27.24
+"1218","Plumas County",2003-07-01,3.2,29.32
+"1219","Plumas County",2003-10-01,4.86,17.71
+"1220","Plumas County",2004-01-01,5.16,19.42
+"1221","Plumas County",2004-04-01,3.09,25.37
+"1222","Plumas County",2004-07-01,2.6,18.4
+"1223","Plumas County",2004-10-01,4.08,40.88
+"1224","Plumas County",2005-01-01,5,22
+"1225","Plumas County",2005-04-01,4.35,22
+"1226","Plumas County",2005-07-01,2.39,20.21
+"1227","Plumas County",2005-10-01,3.39,19.44
+"1228","Plumas County",2006-01-01,4,24
+"1229","Plumas County",2006-04-01,3.16,28.06
+"1230","Plumas County",2006-07-01,3.66,21
+"1231","Plumas County",2006-10-01,2.97,29.27
+"1232","Plumas County",2007-01-01,7.7,14.1
+"1233","Plumas County",2007-04-01,5.6,9.8
+"1234","Plumas County",2007-07-01,5.1,10.6
+"1235","Plumas County",2007-10-01,5.6,15.7
+"1236","Plumas County",2008-01-01,8.8,13.4
+"1237","Plumas County",2008-04-01,3.5,12.8
+"1238","Plumas County",2008-07-01,3,10.3
+"1239","Plumas County",2008-10-01,4.1,12.8
+"1240","Plumas County",2009-01-01,2.4,18.7
+"1241","Plumas County",2009-04-01,4.1,17.3
+"1242","Plumas County",2009-07-01,5.6,14.5
+"1243","Plumas County",2009-10-01,4.9,18.4
+"1244","Plumas County",2010-01-01,4.3,20.1
+"1245","Plumas County",2010-04-01,5,16.3
+"1246","Plumas County",2010-07-01,3,17.5
+"1247","Plumas County",2010-10-01,5,11.9
+"1248","Plumas County",2011-01-01,7.6,14
+"1249","Plumas County",2011-04-01,4.2,10.1
+"1250","Plumas County",2011-07-01,3.7,13.1
+"1251","Plumas County",2011-10-01,4.1,15.2
+"1252","Plumas County",2012-01-01,3.4,18
+"1253","Plumas County",2012-04-01,3.3,17.6
+"1254","Plumas County",2012-07-01,3,14.7
+"1255","Plumas County",2012-10-01,2.8,36.4
+"1256","Plumas County",2013-01-01,6.3,13.8
+"1257","Plumas County",2013-04-01,6.1,13.9
+"1258","Plumas County",2013-07-01,2.4,26.2
+"1259","Plumas County",2013-10-01,8,35
+"1260","Plumas County",2014-01-01,7.3,21.9
+"1261","Plumas County",2014-04-01,13.8,38.3
+"1262","Plumas County",2014-07-01,9.5,19.9
+"1263","Plumas County",2015-01-01,14.9,12.4
+"1264","Plumas County",2015-04-01,12.8,23.7
+"1265","Plumas County",2015-07-01,8.9,14.1
+"1266","Plumas County",2015-10-01,14.8,9.9
+"1267","Plumas County",2016-01-01,15.2,21.9
+"1268","Plumas County",2016-04-01,20.3,25.7
+"1269","Plumas County",2016-07-01,17.2,5
+"1270","Plumas County",2016-10-01,12.6,6.7
+"1271","Plumas County",2017-01-01,17.9,8.3
+"1272","Plumas County",2017-04-01,7.4,32.8
+"1273","Plumas County",2017-07-01,12.3,15.4
+"1274","Plumas County",2017-10-01,15.3,23.3
+"1275","Plumas County",2018-01-01,10.3,21.6
+"1276","Plumas County",2018-04-01,14.1,21.8
+"1277","Plumas County",2018-07-01,12.1,9.7
+"1278","Plumas County",2018-10-01,11,19
+"1279","Plumas County",2019-01-01,12,28
+"1280","Plumas County",2019-04-01,9.3,24.4
+"1281","Plumas County",2019-07-01,12.6,13
+"1282","Plumas County",2019-10-01,10,24
+"1283","Plumas County",2020-01-01,11,46
+"1284","Riverside County",2006-04-01,7.73,44.19
+"1285","Riverside County",2006-07-01,6.05,54.66
+"1286","Riverside County",2006-10-01,9.29,58.1
+"1287","Riverside County",2007-01-01,13.32,45.45
+"1288","Riverside County",2007-04-01,10.67,57.8
+"1289","Riverside County",2008-01-01,1.8,83.99
+"1290","Riverside County",2008-04-01,5.72,73.54
+"1291","Riverside County",2008-07-01,9.64,63.09
+"1292","Riverside County",2008-10-01,14.99,74.05
+"1293","Riverside County",2009-01-01,17.38,73.26
+"1294","Riverside County",2009-04-01,17,97
+"1295","Riverside County",2009-07-01,17.18,84.01
+"1296","Riverside County",2009-10-01,13.14,95.55
+"1297","Riverside County",2010-01-01,7.24,104.25
+"1298","Riverside County",2010-04-01,13.44,73.49
+"1299","Riverside County",2010-07-01,11.6,48.71
+"1300","Riverside County",2010-10-01,10.23,34.74
+"1301","Riverside County",2011-01-01,16.83,49.85
+"1302","Riverside County",2011-04-01,16.94,67.61
+"1303","Riverside County",2011-07-01,21.34,100.65
+"1304","Riverside County",2011-10-01,16.27,84.9
+"1305","Riverside County",2012-01-01,16.93,63.29
+"1306","Riverside County",2012-04-01,12.34,53.77
+"1307","Riverside County",2012-07-01,12.5,64.26
+"1308","Riverside County",2012-10-01,16.72,37.4
+"1309","Riverside County",2013-01-01,23.95,35.52
+"1310","Riverside County",2013-04-01,23.32,90.89
+"1311","Riverside County",2013-07-01,21.92,57.06
+"1312","Riverside County",2013-10-01,22.1,56.8
+"1313","Riverside County",2014-01-01,20.67,67.61
+"1314","Riverside County",2014-04-01,21.24,64.27
+"1315","Riverside County",2014-07-01,23.42,62.58
+"1316","Riverside County",2014-10-01,25.6,58.6
+"1317","Riverside County",2015-01-01,25.02,77.93
+"1318","Riverside County",2015-04-01,29.08,76.64
+"1319","Riverside County",2015-07-01,29.83,66.76
+"1320","Riverside County",2015-10-01,28.9,63.3
+"1321","Riverside County",2016-01-01,33.6,55.2
+"1322","Riverside County",2016-04-01,28,54.5
+"1323","Riverside County",2016-07-01,25.7,45.1
+"1324","Riverside County",2017-01-01,4,66
+"1325","Sacramento County",2013-10-01,54,34
+"1326","Sacramento County",2014-01-01,27,61
+"1327","Sacramento County",2014-04-01,54,34
+"1328","Sacramento County",2014-07-01,60,34
+"1329","Sacramento County",2014-10-01,27,59
+"1330","Sacramento County",2015-01-01,19.1,72.2
+"1331","Sacramento County",2015-04-01,30,60
+"1332","Sacramento County",2015-07-01,26,59
+"1333","Sacramento County",2015-10-01,29,63
+"1334","Sacramento County",2016-01-01,36,62
+"1335","Sacramento County",2016-04-01,29,60
+"1336","Sacramento County",2016-07-01,26,57
+"1337","Sacramento County",2016-10-01,28,61
+"1338","Sacramento County",2017-01-01,27,60
+"1339","Sacramento County",2017-04-01,25,66
+"1340","Sacramento County",2017-07-01,25,64
+"1341","Sacramento County",2017-10-01,25,64
+"1342","Sacramento County",2018-01-01,26,62
+"1343","Sacramento County",2018-04-01,29,60
+"1344","Sacramento County",2018-07-01,25,60
+"1345","Sacramento County",2018-10-01,24,63
+"1346","Sacramento County",2019-01-01,29,66
+"1347","Sacramento County",2019-04-01,27,63
+"1348","Sacramento County",2019-07-01,29,66
+"1349","Sacramento County",2019-10-01,30,57
+"1350","Sacramento County",2020-01-01,27,57
+"1351","San Benito County",2002-01-01,17,57
+"1352","San Benito County",2002-04-01,11,48
+"1353","San Benito County",2002-07-01,8,50
+"1354","San Benito County",2002-10-01,20,48
+"1355","San Benito County",2003-01-01,5,63
+"1356","San Benito County",2004-01-01,5,56
+"1357","San Benito County",2005-04-01,18,93
+"1358","San Benito County",2005-07-01,23,85
+"1359","San Benito County",2005-10-01,26,90
+"1360","San Benito County",2006-01-01,6,51
+"1361","San Benito County",2006-04-01,20,99
+"1362","San Benito County",2006-07-01,20.9,33.6
+"1363","San Benito County",2006-10-01,33,95
+"1364","San Benito County",2007-01-01,23,86
+"1365","San Benito County",2007-10-01,5,48
+"1366","San Benito County",2008-01-01,4,52
+"1367","San Benito County",2008-04-01,4,44
+"1368","San Benito County",2008-07-01,6,47
+"1369","San Benito County",2008-10-01,4,45
+"1370","San Benito County",2009-01-01,5,51
+"1371","San Benito County",2009-04-01,5,52
+"1372","San Benito County",2009-07-01,6,45
+"1373","San Benito County",2009-10-01,8,63
+"1374","San Benito County",2010-01-01,8,70
+"1375","San Benito County",2010-04-01,5,50
+"1376","San Benito County",2010-07-01,11,57
+"1377","San Benito County",2010-10-01,11,60
+"1378","San Benito County",2011-01-01,8,78
+"1379","San Benito County",2011-04-01,9,60
+"1380","San Benito County",2011-07-01,9,49
+"1381","San Benito County",2011-10-01,15,58
+"1382","San Benito County",2012-01-01,11,87
+"1383","San Benito County",2012-04-01,6,76
+"1384","San Benito County",2012-07-01,7,76
+"1385","San Benito County",2012-10-01,11,51
+"1386","San Benito County",2013-01-01,11,64
+"1387","San Benito County",2013-04-01,8,59
+"1388","San Benito County",2013-07-01,11,57
+"1389","San Benito County",2013-10-01,8,64
+"1390","San Benito County",2014-01-01,7,71
+"1391","San Benito County",2014-04-01,7,62
+"1392","San Benito County",2014-07-01,7,49
+"1393","San Benito County",2014-10-01,12,74
+"1394","San Benito County",2015-01-01,6,76
+"1395","San Benito County",2015-04-01,7,77
+"1396","San Benito County",2015-07-01,6,60
+"1397","San Benito County",2015-10-01,9,58
+"1398","San Benito County",2016-01-01,9,56
+"1399","San Benito County",2016-04-01,9,60
+"1400","San Benito County",2016-07-01,6,49
+"1401","San Benito County",2016-10-01,7,58
+"1402","San Benito County",2017-01-01,5,22
+"1403","San Benito County",2017-04-01,8,35
+"1404","San Benito County",2017-07-01,7,40.9
+"1405","San Benito County",2017-10-01,10,49
+"1406","San Benito County",2018-01-01,14,53
+"1407","San Benito County",2018-04-01,6,51
+"1408","San Benito County",2018-07-01,9.9,50.8
+"1409","San Benito County",2018-10-01,10.4,49.5
+"1410","San Benito County",2019-01-01,5.6,54
+"1411","San Benito County",2019-04-01,8.4,44.1
+"1412","San Benito County",2019-07-01,13,38
+"1413","San Benito County",2019-10-01,10.6,46
+"1414","San Benito County",2020-01-01,11,39
+"1415","San Bernardino County",2002-01-01,25,81
+"1416","San Bernardino County",2018-04-01,109.82,137.61
+"1417","San Bernardino County",2018-07-01,105,140
+"1418","San Bernardino County",2018-10-01,97,137
+"1419","San Bernardino County",2019-01-01,97,127
+"1420","San Bernardino County",2019-04-01,107,118
+"1421","San Bernardino County",2019-07-01,122,114
+"1422","San Bernardino County",2019-10-01,121,126
+"1423","San Bernardino County",2020-01-01,124,132
+"1424","San Diego County",2002-01-01,14,84
+"1425","San Diego County",2002-04-01,14,84
+"1426","San Diego County",2002-07-01,14,84
+"1427","San Diego County",2002-10-01,14,84
+"1428","San Diego County",2003-01-01,14,84
+"1429","San Diego County",2003-04-01,6.3,80.1
+"1430","San Diego County",2003-07-01,5.9,77.7
+"1431","San Diego County",2003-10-01,6.1,81
+"1432","San Diego County",2004-01-01,7.7,76.9
+"1433","San Diego County",2004-04-01,11.4,68.2
+"1434","San Diego County",2004-07-01,12.6,73.9
+"1435","San Diego County",2004-10-01,6.4,77.1
+"1436","San Diego County",2005-01-01,8.1,70.9
+"1437","San Diego County",2005-04-01,11.3,67.7
+"1438","San Diego County",2005-07-01,11,69.3
+"1439","San Diego County",2005-10-01,6,76
+"1440","San Diego County",2006-01-01,5.5,73.4
+"1441","San Diego County",2006-04-01,5.6,73.4
+"1442","San Diego County",2006-07-01,4.7,71.7
+"1443","San Diego County",2006-10-01,5.6,75.1
+"1444","San Diego County",2007-01-01,5.8,73.5
+"1445","San Diego County",2007-04-01,5.7,73.4
+"1446","San Diego County",2007-07-01,5.3,71.2
+"1447","San Diego County",2007-10-01,5.9,80.7
+"1448","San Diego County",2008-01-01,5.5,81.5
+"1449","San Diego County",2008-04-01,5.4,79.1
+"1450","San Diego County",2008-07-01,5.2,75.3
+"1451","San Diego County",2008-10-01,5.9,74.9
+"1452","San Diego County",2009-01-01,5.2,77
+"1453","San Diego County",2009-04-01,5.2,69.1
+"1454","San Diego County",2009-07-01,5.5,72.9
+"1455","San Diego County",2009-10-01,5.3,74.9
+"1456","San Diego County",2010-01-01,5.4,71.4
+"1457","San Diego County",2010-04-01,5.1,63.6
+"1458","San Diego County",2010-07-01,4.9,65.2
+"1459","San Diego County",2010-10-01,5.6,74.1
+"1460","San Diego County",2011-01-01,5.6,72.4
+"1461","San Diego County",2011-04-01,5.5,72.6
+"1462","San Diego County",2011-07-01,5.2,77.6
+"1463","San Diego County",2011-10-01,5.7,73.7
+"1464","San Diego County",2012-01-01,5.8,69.7
+"1465","San Diego County",2012-04-01,6.8,64.6
+"1466","San Diego County",2012-07-01,7,59.6
+"1467","San Diego County",2012-10-01,8.3,61.8
+"1468","San Diego County",2013-01-01,9.1,63.7
+"1469","San Diego County",2013-04-01,8.9,66.3
+"1470","San Diego County",2013-07-01,10,68.1
+"1471","San Diego County",2013-10-01,10.3,64.3
+"1472","San Diego County",2014-01-01,11.4,67
+"1473","San Diego County",2014-04-01,11.7,67.9
+"1474","San Diego County",2014-07-01,12.2,68.1
+"1475","San Diego County",2014-10-01,13.6,71.2
+"1476","San Diego County",2015-01-01,11,76.5
+"1477","San Diego County",2015-04-01,10.3,72.9
+"1478","San Diego County",2015-07-01,10,71.1
+"1479","San Diego County",2015-10-01,10.5,72.2
+"1480","San Diego County",2016-01-01,11,74.8
+"1481","San Diego County",2016-01-01,2.74,72.1
+"1482","San Diego County",2016-04-01,11.5,68.2
+"1483","San Diego County",2016-04-01,2.85,76.11
+"1484","San Diego County",2016-07-01,11.6,67.9
+"1485","San Diego County",2016-07-01,76.71,68.25
+"1486","San Diego County",2016-10-01,11.8,72.9
+"1487","San Diego County",2016-10-01,67.5,84.26
+"1488","San Diego County",2017-01-01,12.2,74.2
+"1489","San Diego County",2017-01-01,60.71,79.11
+"1490","San Diego County",2017-04-01,12,79
+"1491","San Diego County",2017-07-01,11.9,77.6
+"1492","San Diego County",2017-10-01,12.1,78.5
+"1493","San Diego County",2018-01-01,11.8,78.6
+"1494","San Diego County",2018-01-01,40.78,75.92
+"1495","San Diego County",2018-04-01,12.5,77.5
+"1496","San Diego County",2018-04-01,70.5,89.78
+"1497","San Diego County",2018-07-01,13,71.3
+"1498","San Diego County",2018-07-01,56,74.08
+"1499","San Diego County",2018-10-01,12.6,73.5
+"1500","San Diego County",2018-10-01,50.84,72.85
+"1501","San Diego County",2019-01-01,13.2,78.7
+"1502","San Diego County",2019-01-01,42.67,71.96
+"1503","San Diego County",2019-04-01,12.3,74.1
+"1504","San Diego County",2019-04-01,41.47,77.5
+"1505","San Diego County",2019-07-01,12.6,72.8
+"1506","San Diego County",2019-07-01,73.7,81.4
+"1507","San Diego County",2019-10-01,15.3,72.9
+"1508","San Diego County",2019-10-01,42.4,69.7
+"1509","San Diego County",2020-01-01,15.2,74.9
+"1510","San Diego County",2020-01-01,47.42,63.38
+"1511","San Francisco County",2013-04-01,36,56
+"1512","San Francisco County",2013-10-01,13,61
+"1513","San Francisco County",2014-01-01,10.21,70.75
+"1514","San Francisco County",2014-04-01,14,61
+"1515","San Francisco County",2014-07-01,12,54
+"1516","San Francisco County",2014-10-01,11.4,76
+"1517","San Francisco County",2015-01-01,12,101.2
+"1518","San Francisco County",2015-04-01,11.3,79.1
+"1519","San Francisco County",2015-07-01,12,80
+"1520","San Francisco County",2015-10-01,12.47,67.98
+"1521","San Francisco County",2016-01-01,12.26,71.62
+"1522","San Francisco County",2016-04-01,10.1,88.1
+"1523","San Francisco County",2016-07-01,12,78
+"1524","San Francisco County",2016-10-01,11,75
+"1525","San Francisco County",2017-01-01,13,82
+"1526","San Francisco County",2017-04-01,14.41,81.62
+"1527","San Francisco County",2017-07-01,11.43,75.88
+"1528","San Francisco County",2017-10-01,12,89
+"1529","San Francisco County",2018-01-01,14.1,107.3
+"1530","San Francisco County",2018-04-01,9.9,94.48
+"1531","San Francisco County",2018-07-01,11.75,96.03
+"1532","San Francisco County",2018-10-01,10,79
+"1533","San Francisco County",2019-04-01,12,87
+"1534","San Francisco County",2019-07-01,14,63
+"1535","San Francisco County",2019-10-01,13.08,72.1
+"1536","San Francisco County",2020-01-01,19.7,100.67
+"1537","San Joaquin County",2002-01-01,39,13
+"1538","San Joaquin County",2002-04-01,39,13
+"1539","San Joaquin County",2005-07-01,113,62
+"1540","San Joaquin County",2005-10-01,60,16
+"1541","San Joaquin County",2006-01-01,60,16
+"1542","San Joaquin County",2006-04-01,55,15
+"1543","San Joaquin County",2006-07-01,50,16
+"1544","San Joaquin County",2006-10-01,51,17
+"1545","San Joaquin County",2007-01-01,38,18
+"1546","San Joaquin County",2007-04-01,46,19
+"1547","San Joaquin County",2007-07-01,38,19
+"1548","San Joaquin County",2007-10-01,45,20
+"1549","San Joaquin County",2008-01-01,52,20
+"1550","San Joaquin County",2008-04-01,48,18
+"1551","San Joaquin County",2008-07-01,46,19
+"1552","San Joaquin County",2008-10-01,19,34
+"1553","San Joaquin County",2009-01-01,5,19
+"1554","San Joaquin County",2009-04-01,22,18
+"1555","San Joaquin County",2009-07-01,36,18
+"1556","San Joaquin County",2009-10-01,20,15
+"1557","San Joaquin County",2010-01-01,70,19
+"1558","San Joaquin County",2010-04-01,49,20
+"1559","San Joaquin County",2010-07-01,4,18
+"1560","San Joaquin County",2010-10-01,11,19
+"1561","San Joaquin County",2011-01-01,59,19
+"1562","San Joaquin County",2011-04-01,4,27
+"1563","San Joaquin County",2011-10-01,4,10
+"1564","San Joaquin County",2012-01-01,8,64
+"1565","San Joaquin County",2012-04-01,7,36
+"1566","San Joaquin County",2012-07-01,17,40
+"1567","San Joaquin County",2012-10-01,4,35
+"1568","San Joaquin County",2013-01-01,6,49
+"1569","San Joaquin County",2013-04-01,4,63
+"1570","San Joaquin County",2013-07-01,5,60
+"1571","San Joaquin County",2013-10-01,6,66
+"1572","San Joaquin County",2014-01-01,7,68
+"1573","San Joaquin County",2014-04-01,5,71
+"1574","San Joaquin County",2014-07-01,7,45
+"1575","San Joaquin County",2014-10-01,6,65
+"1576","San Joaquin County",2015-01-01,5,63
+"1577","San Joaquin County",2015-04-01,5,60
+"1578","San Joaquin County",2015-07-01,5,59
+"1579","San Joaquin County",2015-10-01,6,47
+"1580","San Joaquin County",2016-01-01,7,56
+"1581","San Joaquin County",2016-04-01,7,57
+"1582","San Joaquin County",2016-07-01,6.5,42.8
+"1583","San Joaquin County",2016-10-01,6,40
+"1584","San Joaquin County",2017-01-01,7,53
+"1585","San Joaquin County",2017-04-01,6,49
+"1586","San Joaquin County",2017-07-01,8,52
+"1587","San Joaquin County",2017-10-01,6,56
+"1588","San Joaquin County",2018-01-01,6,66
+"1589","San Joaquin County",2018-04-01,4,30
+"1590","San Joaquin County",2018-07-01,4,48
+"1591","San Joaquin County",2018-10-01,5,40
+"1592","San Joaquin County",2019-01-01,5,44
+"1593","San Joaquin County",2019-04-01,4,46
+"1594","San Joaquin County",2019-07-01,4,41
+"1595","San Joaquin County",2019-10-01,4,44
+"1596","San Joaquin County",2020-01-01,4,47
+"1597","San Mateo County",2002-10-01,5.55,9.94
+"1598","San Mateo County",2003-01-01,9.9,34.5
+"1599","San Mateo County",2003-04-01,11.06,18.25
+"1600","San Mateo County",2003-07-01,13,20
+"1601","San Mateo County",2003-10-01,12,19
+"1602","San Mateo County",2004-01-01,10,28
+"1603","San Mateo County",2004-04-01,18,24
+"1604","San Mateo County",2004-07-01,19,24
+"1605","San Mateo County",2004-10-01,17,22
+"1606","San Mateo County",2005-01-01,14,20
+"1607","San Mateo County",2005-04-01,14,20
+"1608","San Mateo County",2005-07-01,13,22
+"1609","San Mateo County",2005-10-01,8,21
+"1610","San Mateo County",2006-01-01,11,21
+"1611","San Mateo County",2006-04-01,14,21
+"1612","San Mateo County",2006-07-01,12,22
+"1613","San Mateo County",2006-10-01,12,20.5
+"1614","San Mateo County",2007-01-01,15,22
+"1615","San Mateo County",2007-04-01,16,23
+"1616","San Mateo County",2007-07-01,16,23
+"1617","San Mateo County",2007-10-01,14,23
+"1618","San Mateo County",2008-01-01,16,23
+"1619","San Mateo County",2008-04-01,15,23
+"1620","San Mateo County",2008-07-01,11.6,45.2
+"1621","San Mateo County",2008-10-01,14.2,30.4
+"1622","San Mateo County",2011-07-01,15,56.9
+"1623","San Mateo County",2011-10-01,20.7,61.9
+"1624","San Mateo County",2013-01-01,12,60
+"1625","San Mateo County",2013-04-01,12,57
+"1626","San Mateo County",2013-07-01,9,66
+"1627","San Mateo County",2013-10-01,9,71
+"1628","San Mateo County",2014-01-01,15,74
+"1629","San Mateo County",2014-04-01,8,68
+"1630","San Mateo County",2014-07-01,15,71
+"1631","San Mateo County",2014-10-01,19,81
+"1632","San Mateo County",2015-01-01,22,72
+"1633","San Mateo County",2015-04-01,25,65
+"1634","San Mateo County",2015-07-01,6,68
+"1635","San Mateo County",2015-10-01,6,67
+"1636","San Mateo County",2016-01-01,6,71
+"1637","San Mateo County",2016-04-01,5,64
+"1638","San Mateo County",2016-07-01,5,69
+"1639","San Mateo County",2016-10-01,7,76
+"1640","San Mateo County",2017-01-01,6,71
+"1641","San Mateo County",2017-04-01,6,76
+"1642","San Mateo County",2017-07-01,7,69
+"1643","San Mateo County",2017-10-01,7,69
+"1644","San Mateo County",2018-01-01,7,68
+"1645","San Mateo County",2018-04-01,6,58
+"1646","San Mateo County",2018-07-01,5,70
+"1647","San Mateo County",2018-10-01,6,73
+"1648","San Mateo County",2019-01-01,6,76
+"1649","San Mateo County",2019-04-01,7,70
+"1650","San Mateo County",2019-07-01,6,63
+"1651","San Mateo County",2019-10-01,8,63
+"1652","San Mateo County",2020-01-01,9,71
+"1653","Santa Barbara County",2002-01-01,7,43
+"1654","Santa Barbara County",2002-04-01,9,40
+"1655","Santa Barbara County",2002-07-01,7,47
+"1656","Santa Barbara County",2002-10-01,8,52
+"1657","Santa Barbara County",2003-01-01,8,52
+"1658","Santa Barbara County",2003-04-01,8,48
+"1659","Santa Barbara County",2003-07-01,8,49
+"1660","Santa Barbara County",2003-10-01,8,46
+"1661","Santa Barbara County",2004-01-01,8,41
+"1662","Santa Barbara County",2004-04-01,6,40
+"1663","Santa Barbara County",2004-07-01,6,44
+"1664","Santa Barbara County",2004-10-01,7,46
+"1665","Santa Barbara County",2005-01-01,9,41
+"1666","Santa Barbara County",2005-04-01,8,53
+"1667","Santa Barbara County",2005-07-01,11,60
+"1668","Santa Barbara County",2005-10-01,11,53
+"1669","Santa Barbara County",2006-01-01,9,54
+"1670","Santa Barbara County",2006-04-01,8,50
+"1671","Santa Barbara County",2006-07-01,7,51
+"1672","Santa Barbara County",2006-10-01,8,48
+"1673","Santa Barbara County",2007-01-01,9,55
+"1674","Santa Barbara County",2007-04-01,9,50
+"1675","Santa Barbara County",2007-07-01,8,52
+"1676","Santa Barbara County",2007-10-01,8,51
+"1677","Santa Barbara County",2008-01-01,9,62
+"1678","Santa Barbara County",2008-04-01,9,54
+"1679","Santa Barbara County",2008-07-01,12,20
+"1680","Santa Barbara County",2008-10-01,12,22
+"1681","Santa Barbara County",2009-01-01,12,20
+"1682","Santa Barbara County",2009-04-01,12,20
+"1683","Santa Barbara County",2009-07-01,12,21
+"1684","Santa Barbara County",2009-10-01,12,23
+"1685","Santa Barbara County",2010-01-01,13,19
+"1686","Santa Barbara County",2010-04-01,13,18
+"1687","Santa Barbara County",2010-07-01,12,18
+"1688","Santa Barbara County",2010-10-01,12,18
+"1689","Santa Barbara County",2011-01-01,10,15
+"1690","Santa Barbara County",2011-04-01,13,23
+"1691","Santa Barbara County",2011-07-01,13,21
+"1692","Santa Barbara County",2011-10-01,13,22
+"1693","Santa Barbara County",2012-01-01,14,24
+"1694","Santa Barbara County",2012-04-01,13,24
+"1695","Santa Barbara County",2012-07-01,13,23
+"1696","Santa Barbara County",2012-10-01,13,24
+"1697","Santa Barbara County",2013-01-01,13,23
+"1698","Santa Barbara County",2013-04-01,13,21
+"1699","Santa Barbara County",2013-07-01,14,22
+"1700","Santa Barbara County",2013-10-01,14,23
+"1701","Santa Barbara County",2014-01-01,15,22
+"1702","Santa Barbara County",2014-04-01,14,22
+"1703","Santa Barbara County",2014-07-01,13,22
+"1704","Santa Barbara County",2014-10-01,13,21
+"1705","Santa Barbara County",2015-01-01,13,20
+"1706","Santa Barbara County",2015-04-01,13,21
+"1707","Santa Barbara County",2015-07-01,12,21
+"1708","Santa Barbara County",2015-10-01,14,21
+"1709","Santa Barbara County",2016-01-01,14,21
+"1710","Santa Barbara County",2016-04-01,14,22
+"1711","Santa Barbara County",2016-07-01,14,20
+"1712","Santa Barbara County",2016-10-01,15,21
+"1713","Santa Barbara County",2017-01-01,14,20
+"1714","Santa Barbara County",2017-04-01,15,20
+"1715","Santa Barbara County",2017-07-01,15,20
+"1716","Santa Barbara County",2017-10-01,16,21
+"1717","Santa Barbara County",2018-01-01,17,48
+"1718","Santa Barbara County",2018-07-01,20,46
+"1719","Santa Barbara County",2018-10-01,20,53
+"1720","Santa Barbara County",2019-01-01,19,51
+"1721","Santa Barbara County",2019-04-01,18,44
+"1722","Santa Barbara County",2020-01-01,17.75,52
+"1723","Santa Clara County",2002-01-01,117,65
+"1724","Santa Clara County",2002-04-01,118,67
+"1725","Santa Clara County",2002-07-01,123,69
+"1726","Santa Clara County",2002-10-01,128,71
+"1727","Santa Clara County",2003-01-01,132,70
+"1728","Santa Clara County",2003-04-01,129,71
+"1729","Santa Clara County",2003-07-01,123,70
+"1730","Santa Clara County",2003-10-01,131,69
+"1731","Santa Clara County",2004-01-01,127,95
+"1732","Santa Clara County",2004-04-01,130,83
+"1733","Santa Clara County",2004-07-01,130,83
+"1734","Santa Clara County",2004-10-01,133,71
+"1735","Santa Clara County",2005-01-01,127,95
+"1736","Santa Clara County",2005-04-01,122,120
+"1737","Santa Clara County",2005-07-01,125,122
+"1738","Santa Clara County",2005-10-01,135,123
+"1739","Santa Clara County",2006-01-01,135,124
+"1740","Santa Clara County",2006-04-01,140,114
+"1741","Santa Clara County",2006-07-01,134,117
+"1742","Santa Clara County",2006-10-01,132,121
+"1743","Santa Clara County",2007-01-01,133,119
+"1744","Santa Clara County",2007-04-01,135,117
+"1745","Santa Clara County",2007-07-01,132,123
+"1746","Santa Clara County",2007-10-01,138,126
+"1747","Santa Clara County",2008-01-01,134,132
+"1748","Santa Clara County",2008-04-01,132,129
+"1749","Santa Clara County",2008-07-01,132,124
+"1750","Santa Clara County",2008-10-01,137,131
+"1751","Santa Clara County",2009-01-01,147,135
+"1752","Santa Clara County",2009-04-01,151,129
+"1753","Santa Clara County",2009-07-01,159,128
+"1754","Santa Clara County",2009-10-01,159,130
+"1755","Santa Clara County",2010-01-01,35,104
+"1756","Santa Clara County",2010-04-01,36,99
+"1757","Santa Clara County",2010-07-01,34,92
+"1758","Santa Clara County",2010-10-01,36,98
+"1759","Santa Clara County",2011-01-01,39,101
+"1760","Santa Clara County",2011-04-01,38,92
+"1761","Santa Clara County",2011-07-01,42,109
+"1762","Santa Clara County",2011-10-01,39,116
+"1763","Santa Clara County",2012-01-01,37,90
+"1764","Santa Clara County",2012-04-01,38,80
+"1765","Santa Clara County",2012-07-01,36,85
+"1766","Santa Clara County",2012-10-01,39,95
+"1767","Santa Clara County",2013-01-01,40,93
+"1768","Santa Clara County",2013-04-01,34,96
+"1769","Santa Clara County",2013-07-01,37,96
+"1770","Santa Clara County",2013-10-01,42,99
+"1771","Santa Clara County",2014-01-01,44,99
+"1772","Santa Clara County",2014-04-01,39,106
+"1773","Santa Clara County",2014-07-01,36,103
+"1774","Santa Clara County",2014-10-01,41,112
+"1775","Santa Clara County",2015-01-01,46,121
+"1776","Santa Clara County",2015-04-01,47,101
+"1777","Santa Clara County",2015-07-01,44,110
+"1778","Santa Clara County",2015-10-01,47,118
+"1779","Santa Clara County",2016-01-01,45,112
+"1780","Santa Clara County",2016-04-01,45,112
+"1781","Santa Clara County",2016-07-01,45,112
+"1782","Santa Clara County",2016-10-01,50,99
+"1783","Santa Clara County",2017-01-01,59,97
+"1784","Santa Clara County",2017-07-01,48,105
+"1785","Santa Clara County",2017-10-01,46,108
+"1786","Santa Clara County",2018-01-01,51,114
+"1787","Santa Clara County",2018-04-01,47,103
+"1788","Santa Clara County",2018-07-01,39,99
+"1789","Santa Clara County",2018-10-01,47,104
+"1790","Santa Clara County",2019-01-01,46,102
+"1791","Santa Clara County",2019-04-01,46,96
+"1792","Santa Clara County",2019-07-01,39,100
+"1793","Santa Clara County",2019-10-01,45,105
+"1794","Santa Clara County",2020-01-01,44,110
+"1795","Shasta County",2002-04-01,56,35
+"1796","Shasta County",2002-07-01,3.3,42.1
+"1797","Shasta County",2002-10-01,6.1,45.7
+"1798","Shasta County",2003-01-01,11.7,51.8
+"1799","Shasta County",2003-04-01,12,86
+"1800","Shasta County",2003-07-01,19.6,21.9
+"1801","Shasta County",2003-10-01,1,101
+"1802","Shasta County",2004-01-01,1.7,17.7
+"1803","Shasta County",2004-04-01,1.6,12.9
+"1804","Shasta County",2004-07-01,3.2,40.8
+"1805","Shasta County",2004-10-01,2,27
+"1806","Shasta County",2005-01-01,8.4,54.7
+"1807","Shasta County",2005-04-01,13.6,102.2
+"1808","Shasta County",2005-07-01,13.5,217.8
+"1809","Shasta County",2005-10-01,24.8,244.9
+"1810","Shasta County",2006-01-01,5.6,82.3
+"1811","Shasta County",2006-04-01,10.1,47.3
+"1812","Shasta County",2006-07-01,14.6,12.4
+"1813","Shasta County",2006-10-01,18.4,189.5
+"1814","Shasta County",2007-01-01,28,19.7
+"1815","Shasta County",2007-04-01,27.3,18.3
+"1816","Shasta County",2007-07-01,29,22.8
+"1817","Shasta County",2007-10-01,31.9,21.5
+"1818","Sierra County",2002-01-01,2,1
+"1819","Sierra County",2002-07-01,1,4
+"1820","Sierra County",2002-10-01,1,2
+"1821","Sierra County",2003-01-01,2,2
+"1822","Sierra County",2003-04-01,1,1
+"1823","Sierra County",2003-07-01,3,5
+"1824","Sierra County",2003-10-01,6,7
+"1825","Sierra County",2004-01-01,6,90
+"1826","Sierra County",2007-10-01,4,2
+"1827","Sierra County",2008-01-01,3,4
+"1828","Sierra County",2008-04-01,1,1
+"1829","Sierra County",2008-07-01,2,3
+"1830","Sierra County",2008-10-01,2,1
+"1831","Sierra County",2009-01-01,2,3
+"1832","Sierra County",2009-04-01,1,1
+"1833","Sierra County",2009-07-01,1,2
+"1834","Sierra County",2009-10-01,3,4
+"1835","Sierra County",2010-01-01,2,3
+"1836","Sierra County",2010-04-01,8,3
+"1837","Sierra County",2010-07-01,33,4
+"1838","Sierra County",2010-10-01,4,2
+"1839","Sierra County",2011-01-01,8,3
+"1840","Sierra County",2011-04-01,6,2
+"1841","Sierra County",2011-07-01,7,3
+"1842","Sierra County",2011-10-01,3,12
+"1843","Sierra County",2012-01-01,2,31
+"1844","Sierra County",2012-04-01,6,2
+"1845","Sierra County",2012-07-01,5,3
+"1846","Sierra County",2012-10-01,7,2
+"1847","Sierra County",2013-01-01,3,6
+"1848","Sierra County",2013-04-01,11,6
+"1849","Sierra County",2013-07-01,9,3
+"1850","Sierra County",2013-10-01,4,1
+"1851","Sierra County",2014-01-01,1,1
+"1852","Sierra County",2014-04-01,4,1
+"1853","Sierra County",2014-07-01,10,8
+"1854","Sierra County",2014-10-01,2,6
+"1855","Sierra County",2015-01-01,1,1
+"1856","Siskiyou County",2002-04-01,15,37
+"1857","Siskiyou County",2002-07-01,12,21
+"1858","Siskiyou County",2002-10-01,15,19
+"1859","Siskiyou County",2003-01-01,14,17
+"1860","Siskiyou County",2003-04-01,21,15
+"1861","Siskiyou County",2003-07-01,27,16
+"1862","Siskiyou County",2003-10-01,26,13
+"1863","Siskiyou County",2004-01-01,31,17
+"1864","Siskiyou County",2004-04-01,29,21
+"1865","Siskiyou County",2004-07-01,31,18
+"1866","Siskiyou County",2004-10-01,34,17
+"1867","Siskiyou County",2005-01-01,31,19
+"1868","Siskiyou County",2005-04-01,29,21
+"1869","Siskiyou County",2005-07-01,19,22
+"1870","Siskiyou County",2005-10-01,11,19
+"1871","Siskiyou County",2006-01-01,13,21
+"1872","Siskiyou County",2006-04-01,17,29
+"1873","Siskiyou County",2006-07-01,12,24
+"1874","Siskiyou County",2006-10-01,9,17
+"1875","Siskiyou County",2007-01-01,10,19
+"1876","Siskiyou County",2007-04-01,15,21
+"1877","Siskiyou County",2007-07-01,10,19
+"1878","Siskiyou County",2007-10-01,13,18
+"1879","Siskiyou County",2008-01-01,11,21
+"1880","Siskiyou County",2008-04-01,9,20
+"1881","Siskiyou County",2008-07-01,9,23
+"1882","Siskiyou County",2008-10-01,7,25
+"1883","Siskiyou County",2009-01-01,8,27
+"1884","Siskiyou County",2009-04-01,6,23
+"1885","Siskiyou County",2009-07-01,7,20
+"1886","Siskiyou County",2009-10-01,6,24
+"1887","Siskiyou County",2010-01-01,4,29
+"1888","Siskiyou County",2010-04-01,3,22
+"1889","Siskiyou County",2010-07-01,5,19
+"1890","Siskiyou County",2010-10-01,6,18
+"1891","Siskiyou County",2011-01-01,5,24
+"1892","Siskiyou County",2011-04-01,4,21
+"1893","Siskiyou County",2011-07-01,6,22
+"1894","Siskiyou County",2011-10-01,5,28
+"1895","Siskiyou County",2012-01-01,4,17
+"1896","Siskiyou County",2012-04-01,6,19
+"1897","Siskiyou County",2012-07-01,8,17
+"1898","Siskiyou County",2012-10-01,7,23
+"1899","Siskiyou County",2013-01-01,6,29
+"1900","Siskiyou County",2013-04-01,8,25
+"1901","Siskiyou County",2013-07-01,6,31
+"1902","Siskiyou County",2013-10-01,9,23
+"1903","Siskiyou County",2014-01-01,11,26
+"1904","Siskiyou County",2014-04-01,6,31
+"1905","Siskiyou County",2014-07-01,5,25
+"1906","Siskiyou County",2014-10-01,4,33
+"1907","Siskiyou County",2015-01-01,6,24
+"1908","Siskiyou County",2015-04-01,4,24
+"1909","Siskiyou County",2015-07-01,5,23
+"1910","Siskiyou County",2015-10-01,5,30
+"1911","Siskiyou County",2016-01-01,5,21
+"1912","Siskiyou County",2016-04-01,4,26
+"1913","Siskiyou County",2016-07-01,7,32
+"1914","Siskiyou County",2016-10-01,5,33
+"1915","Siskiyou County",2017-01-01,5,33
+"1916","Siskiyou County",2017-04-01,4,33
+"1917","Siskiyou County",2017-07-01,5,22
+"1918","Siskiyou County",2017-10-01,4,28
+"1919","Siskiyou County",2018-01-01,5,28
+"1920","Siskiyou County",2018-04-01,4,39
+"1921","Siskiyou County",2018-07-01,4,36
+"1922","Siskiyou County",2018-10-01,5,35
+"1923","Siskiyou County",2019-01-01,5,40
+"1924","Siskiyou County",2019-04-01,7,32
+"1925","Siskiyou County",2019-10-01,7,33
+"1926","Siskiyou County",2020-01-01,5,32
+"1927","Solano County",2018-07-01,5,70.6
+"1928","Solano County",2018-10-01,13.8,77.4
+"1929","Solano County",2019-01-01,15.8,77.4
+"1930","Solano County",2019-04-01,5.6,77.2
+"1931","Solano County",2019-07-01,5.4,82.4
+"1932","Solano County",2019-10-01,6,101.1
+"1933","Solano County",2020-01-01,7.1,80.4
+"1934","Sonoma County",2002-01-01,7.4,76.2
+"1935","Sonoma County",2002-04-01,6.5,67.3
+"1936","Sonoma County",2002-07-01,10.8,49
+"1937","Sonoma County",2002-10-01,16.4,46.5
+"1938","Sonoma County",2003-01-01,14.1,47.9
+"1939","Sonoma County",2003-04-01,7,72.8
+"1940","Sonoma County",2003-07-01,7,72.8
+"1941","Sonoma County",2003-10-01,8.7,70.6
+"1942","Sonoma County",2004-01-01,6.5,63.3
+"1943","Sonoma County",2004-04-01,5.3,56.4
+"1944","Sonoma County",2004-07-01,5.7,56.7
+"1945","Sonoma County",2004-10-01,7.5,63.1
+"1946","Sonoma County",2005-01-01,7.1,57.5
+"1947","Sonoma County",2005-04-01,7.2,58.5
+"1948","Sonoma County",2005-07-01,5.8,55.3
+"1949","Sonoma County",2005-10-01,7.7,53.5
+"1950","Sonoma County",2006-01-01,4.9,56.8
+"1951","Sonoma County",2006-04-01,5.7,62.3
+"1952","Sonoma County",2006-07-01,5.8,50.6
+"1953","Sonoma County",2006-10-01,5.1,58.9
+"1954","Sonoma County",2007-01-01,4.8,56.1
+"1955","Sonoma County",2007-04-01,4.8,52.8
+"1956","Sonoma County",2007-07-01,5.4,55.7
+"1957","Sonoma County",2007-10-01,4.1,58.7
+"1958","Sonoma County",2008-01-01,4,53.7
+"1959","Sonoma County",2008-04-01,4.3,52
+"1960","Sonoma County",2008-07-01,4.2,50.9
+"1961","Sonoma County",2008-10-01,3.5,53.9
+"1962","Sonoma County",2009-01-01,4.4,52.4
+"1963","Sonoma County",2009-04-01,4.4,22.9
+"1964","Sonoma County",2009-07-01,5.9,57.6
+"1965","Sonoma County",2009-10-01,4.1,55.7
+"1966","Sonoma County",2010-01-01,5.8,52.5
+"1967","Sonoma County",2010-04-01,4.7,53.2
+"1968","Sonoma County",2010-07-01,4.6,49.3
+"1969","Sonoma County",2010-10-01,5,49.4
+"1970","Sonoma County",2011-01-01,5.3,49.9
+"1971","Sonoma County",2011-04-01,5.7,54.8
+"1972","Sonoma County",2011-07-01,3.8,49
+"1973","Sonoma County",2011-10-01,5,53.1
+"1974","Sonoma County",2012-01-01,6.1,56.2
+"1975","Sonoma County",2012-04-01,5.3,48
+"1976","Sonoma County",2012-07-01,6.9,54.2
+"1977","Sonoma County",2012-10-01,4.8,52.9
+"1978","Sonoma County",2013-01-01,5.2,53.3
+"1979","Sonoma County",2013-04-01,5.7,54.6
+"1980","Sonoma County",2013-07-01,4.9,55.8
+"1981","Sonoma County",2013-10-01,4.9,62
+"1982","Sonoma County",2014-01-01,4.3,68
+"1983","Sonoma County",2014-04-01,5.9,58.5
+"1984","Sonoma County",2014-07-01,7,54.9
+"1985","Sonoma County",2014-10-01,5.3,58.2
+"1986","Sonoma County",2015-01-01,4.6,57.4
+"1987","Sonoma County",2015-04-01,9.2,49.2
+"1988","Sonoma County",2015-07-01,8.6,55.9
+"1989","Sonoma County",2015-10-01,7.7,51.6
+"1990","Sonoma County",2016-01-01,15.9,48.7
+"1991","Sonoma County",2016-04-01,25,47
+"1992","Sonoma County",2016-07-01,32.5,47.6
+"1993","Sonoma County",2016-10-01,15,56
+"1994","Sonoma County",2017-01-01,46,56
+"1995","Sonoma County",2017-04-01,13.7,56.9
+"1996","Sonoma County",2017-07-01,11,52
+"1997","Sonoma County",2017-10-01,12,57
+"1998","Sonoma County",2018-01-01,9,57
+"1999","Sonoma County",2018-04-01,8,54
+"2000","Sonoma County",2018-07-01,7,54
+"2001","Sonoma County",2018-10-01,7,55
+"2002","Sonoma County",2019-01-01,10,49
+"2003","Sonoma County",2019-04-01,8,51
+"2004","Sonoma County",2019-07-01,10,52
+"2005","Sonoma County",2019-10-01,11,55
+"2006","Sonoma County",2020-01-01,13,54
+"2007","Stanislaus County",2002-01-01,6,46
+"2008","Stanislaus County",2002-04-01,6,51
+"2009","Stanislaus County",2002-07-01,7,52
+"2010","Stanislaus County",2002-10-01,6,53
+"2011","Stanislaus County",2003-01-01,10,52
+"2012","Stanislaus County",2003-04-01,10,52
+"2013","Stanislaus County",2003-07-01,10,52
+"2014","Stanislaus County",2003-10-01,10,52
+"2015","Stanislaus County",2004-01-01,14,51
+"2016","Stanislaus County",2004-04-01,14,51
+"2017","Stanislaus County",2004-07-01,14,51
+"2018","Stanislaus County",2004-10-01,14,52
+"2019","Stanislaus County",2005-01-01,9,48
+"2020","Stanislaus County",2005-04-01,4,44
+"2021","Stanislaus County",2005-07-01,4,45
+"2022","Stanislaus County",2005-10-01,6,80
+"2023","Stanislaus County",2006-01-01,7,73
+"2024","Stanislaus County",2006-04-01,6,80
+"2025","Stanislaus County",2006-07-01,7,64
+"2026","Stanislaus County",2006-10-01,8,64
+"2027","Stanislaus County",2007-01-01,6,80
+"2028","Stanislaus County",2007-04-01,7,70
+"2029","Stanislaus County",2007-07-01,8,73
+"2030","Stanislaus County",2007-10-01,9,67
+"2031","Stanislaus County",2008-01-01,7,68
+"2032","Stanislaus County",2008-04-01,8,72
+"2033","Stanislaus County",2008-07-01,7,67
+"2034","Stanislaus County",2008-10-01,7,71
+"2035","Stanislaus County",2009-01-01,7,65
+"2036","Stanislaus County",2009-04-01,7,77
+"2037","Stanislaus County",2009-07-01,8,77
+"2038","Stanislaus County",2009-10-01,9,73
+"2039","Stanislaus County",2010-01-01,9,76
+"2040","Stanislaus County",2010-04-01,8,67
+"2041","Stanislaus County",2010-07-01,9,75
+"2042","Stanislaus County",2010-10-01,8,64
+"2043","Stanislaus County",2011-01-01,9,63
+"2044","Stanislaus County",2011-04-01,7,72
+"2045","Stanislaus County",2011-07-01,9,60
+"2046","Stanislaus County",2011-10-01,10,67
+"2047","Stanislaus County",2012-01-01,9,65
+"2048","Stanislaus County",2012-04-01,9,57
+"2049","Stanislaus County",2012-07-01,8,59
+"2050","Stanislaus County",2012-10-01,8,47
+"2051","Stanislaus County",2013-01-01,9,58
+"2052","Stanislaus County",2013-04-01,9,45
+"2053","Stanislaus County",2013-07-01,7,56
+"2054","Stanislaus County",2013-10-01,8,45
+"2055","Stanislaus County",2014-01-01,8,61
+"2056","Stanislaus County",2014-04-01,10,47
+"2057","Stanislaus County",2014-07-01,9,49
+"2058","Stanislaus County",2014-10-01,13,46
+"2059","Stanislaus County",2015-01-01,11,84
+"2060","Stanislaus County",2015-04-01,11,72
+"2061","Stanislaus County",2015-07-01,8,71
+"2062","Stanislaus County",2015-10-01,8,74
+"2063","Stanislaus County",2016-01-01,8,73
+"2064","Stanislaus County",2016-04-01,7,77
+"2065","Stanislaus County",2016-07-01,8,78
+"2066","Stanislaus County",2016-10-01,9,64
+"2067","Stanislaus County",2017-01-01,9,75
+"2068","Stanislaus County",2017-04-01,6,81
+"2069","Stanislaus County",2017-07-01,7,76
+"2070","Stanislaus County",2017-10-01,7,88
+"2071","Stanislaus County",2018-01-01,9,81
+"2072","Stanislaus County",2018-04-01,8,84
+"2073","Stanislaus County",2018-07-01,7,76
+"2074","Stanislaus County",2018-10-01,8,79
+"2075","Stanislaus County",2019-01-01,10,67
+"2076","Stanislaus County",2019-04-01,7,68
+"2077","Stanislaus County",2019-07-01,6,66
+"2078","Stanislaus County",2019-10-01,8,77
+"2079","Stanislaus County",2020-01-01,8,78
+"2080","Tehama County",2020-01-01,0,45
+"2081","Trinity County",2004-04-01,8,28
+"2082","Trinity County",2004-07-01,4,45
+"2083","Trinity County",2004-10-01,3,25
+"2084","Trinity County",2005-01-01,3,61
+"2085","Trinity County",2005-04-01,4,63
+"2086","Trinity County",2005-07-01,3,50
+"2087","Trinity County",2005-10-01,3,46
+"2088","Trinity County",2006-01-01,7,43
+"2089","Trinity County",2006-04-01,7,90
+"2090","Trinity County",2006-07-01,5,47
+"2091","Trinity County",2006-10-01,12,60
+"2092","Trinity County",2007-01-01,3,73
+"2093","Trinity County",2007-04-01,5,51
+"2094","Trinity County",2007-07-01,4,40
+"2095","Trinity County",2007-10-01,6,44
+"2096","Trinity County",2008-01-01,5,55
+"2097","Trinity County",2008-04-01,4,56
+"2098","Trinity County",2008-07-01,4,59
+"2099","Trinity County",2008-10-01,6,39
+"2100","Trinity County",2009-01-01,6,51
+"2101","Trinity County",2009-04-01,6,62
+"2102","Trinity County",2009-07-01,4,47
+"2103","Trinity County",2009-10-01,7,36
+"2104","Trinity County",2010-01-01,4,49
+"2105","Trinity County",2010-04-01,6,38
+"2106","Trinity County",2010-07-01,6,45
+"2107","Trinity County",2010-10-01,5,41
+"2108","Trinity County",2011-01-01,8,19
+"2109","Trinity County",2011-04-01,4,62
+"2110","Trinity County",2011-07-01,5,67
+"2111","Trinity County",2011-10-01,4,54
+"2112","Trinity County",2012-01-01,9,58
+"2113","Trinity County",2012-04-01,7,58
+"2114","Trinity County",2012-07-01,7,57
+"2115","Trinity County",2012-10-01,15,108
+"2116","Trinity County",2013-01-01,7,29
+"2117","Trinity County",2013-04-01,7,55
+"2118","Trinity County",2013-07-01,8,82
+"2119","Trinity County",2013-10-01,4,101
+"2120","Trinity County",2014-01-01,17,76
+"2121","Trinity County",2014-04-01,6,72
+"2122","Trinity County",2014-07-01,30,37
+"2123","Trinity County",2014-10-01,11,90
+"2124","Trinity County",2015-01-01,14,21
+"2125","Trinity County",2015-04-01,9,19
+"2126","Trinity County",2015-07-01,7,78
+"2127","Trinity County",2015-10-01,12,191
+"2128","Trinity County",2016-01-01,7,23
+"2129","Trinity County",2016-04-01,10,59
+"2130","Trinity County",2016-07-01,10,56
+"2131","Trinity County",2016-10-01,11,41
+"2132","Trinity County",2017-01-01,7,20
+"2133","Trinity County",2017-04-01,9,33
+"2134","Trinity County",2017-07-01,5,45
+"2135","Trinity County",2020-01-01,7,21
+"2136","Tulare County",2002-01-01,11,60.44
+"2137","Tulare County",2002-04-01,12.3,59.36
+"2138","Tulare County",2002-07-01,11.97,66.87
+"2139","Tulare County",2002-10-01,15.12,70.64
+"2140","Tulare County",2003-01-01,19.06,65.35
+"2141","Tulare County",2003-04-01,25.79,59.43
+"2142","Tulare County",2003-07-01,24.92,55.65
+"2143","Tulare County",2003-10-01,27.11,56.28
+"2144","Tulare County",2004-01-01,29.33,64.6
+"2145","Tulare County",2004-04-01,30.72,58.41
+"2146","Tulare County",2004-07-01,27.33,70.01
+"2147","Tulare County",2004-10-01,27.81,77.88
+"2148","Tulare County",2005-01-01,32.64,69.7
+"2149","Tulare County",2005-04-01,23.62,60.43
+"2150","Tulare County",2005-07-01,24.1,63.88
+"2151","Tulare County",2005-10-01,25.01,52.28
+"2152","Tulare County",2006-01-01,26.03,51.79
+"2153","Tulare County",2006-04-01,29.39,54.84
+"2154","Tulare County",2006-07-01,35.55,73.38
+"2155","Tulare County",2006-10-01,16.39,64.23
+"2156","Tulare County",2007-01-01,15.83,59.88
+"2157","Tulare County",2007-04-01,7.82,59.52
+"2158","Tulare County",2007-07-01,24.35,39.79
+"2159","Tulare County",2007-10-01,28.75,57.84
+"2160","Tulare County",2008-01-01,24.78,66.35
+"2161","Tulare County",2008-04-01,21.9,67.79
+"2162","Tulare County",2008-07-01,27.65,69.89
+"2163","Tulare County",2008-10-01,35.34,66.03
+"2164","Tulare County",2009-01-01,14.79,53.98
+"2165","Tulare County",2009-04-01,23.11,67.25
+"2166","Tulare County",2009-07-01,21.24,58.59
+"2167","Tulare County",2009-10-01,22.77,66.88
+"2168","Tulare County",2010-01-01,29.29,71.16
+"2169","Tulare County",2010-04-01,22.48,60.12
+"2170","Tulare County",2010-07-01,22.8,58.73
+"2171","Tulare County",2010-10-01,23.3,57.92
+"2172","Tulare County",2011-01-01,22.57,56.86
+"2173","Tulare County",2011-04-01,19.31,44.36
+"2174","Tulare County",2011-07-01,20.69,55.87
+"2175","Tulare County",2011-10-01,28.44,64.48
+"2176","Tulare County",2012-01-01,25.67,63.52
+"2177","Tulare County",2012-04-01,20.22,73.84
+"2178","Tulare County",2012-07-01,17.51,74.81
+"2179","Tulare County",2012-10-01,25.32,85.69
+"2180","Tulare County",2013-01-01,28.33,81.6
+"2181","Tulare County",2013-04-01,25.91,85.16
+"2182","Tulare County",2013-07-01,20.12,86.5
+"2183","Tulare County",2013-10-01,33.33,95.95
+"2184","Tulare County",2014-01-01,26.63,91.45
+"2185","Tulare County",2014-04-01,38.88,95.83
+"2186","Tulare County",2014-07-01,32.8,100.03
+"2187","Tulare County",2014-10-01,37.63,81.94
+"2188","Tulare County",2015-01-01,42.69,95.49
+"2189","Tulare County",2015-04-01,33.1,77.97
+"2190","Tulare County",2015-07-01,30.99,74.72
+"2191","Tulare County",2015-10-01,36.04,76.84
+"2192","Tulare County",2016-01-01,29,85.57
+"2193","Tulare County",2016-04-01,30.35,72.6
+"2194","Tulare County",2016-07-01,35.69,67.01
+"2195","Tulare County",2016-10-01,30.35,72.6
+"2196","Tulare County",2017-01-01,28.48,83.28
+"2197","Tulare County",2017-04-01,26.34,74.02
+"2198","Tulare County",2017-07-01,13,85
+"2199","Tulare County",2017-10-01,32,76
+"2200","Tulare County",2018-01-01,15.9,76.3
+"2201","Tulare County",2018-04-01,17,85
+"2202","Tulare County",2018-07-01,14,86
+"2203","Tulare County",2018-10-01,25,80
+"2204","Tulare County",2019-01-01,19,86
+"2205","Tulare County",2019-04-01,21,81
+"2206","Tulare County",2019-07-01,17,70
+"2207","Tulare County",2019-10-01,21,75
 "2208","Tulare County",2020-01-01,19,82
+"2209","State Wide",2002-07-01,14.56,41.6953571428571
+"2210","State Wide",2002-10-01,15.2031034482759,43.1193103448276
+"2211","State Wide",2003-01-01,15.1813793103448,44.2220689655172
+"2212","State Wide",2003-04-01,15.0557142857143,44.4517857142857
+"2213","State Wide",2003-07-01,14.4203571428571,40.6603571428571
+"2214","State Wide",2003-10-01,14.3842857142857,43.8164285714286
+"2215","State Wide",2004-01-01,14.4675862068966,44.4351724137931
+"2216","State Wide",2004-04-01,15.2228571428571,40.5253571428571
+"2217","State Wide",2004-07-01,15.0510714285714,42.8035714285714
+"2218","State Wide",2004-10-01,15.0810714285714,44.9789285714286
+"2219","State Wide",2005-01-01,16.6007142857143,47.4742857142857
+"2220","State Wide",2005-04-01,15.5853333333333,53.4783333333333
+"2221","State Wide",2005-07-01,19.5235483870968,53.9893548387097
+"2222","State Wide",2005-10-01,18.5025806451613,53.0345161290323
+"2223","State Wide",2006-01-01,17.2848387096774,45.4912903225806
+"2224","State Wide",2006-04-01,17.3706666666667,50.7436666666667
+"2225","State Wide",2006-07-01,17.1048387096774,47.2029032258065
+"2226","State Wide",2006-10-01,18.5776666666667,56.4933333333333
+"2227","State Wide",2007-01-01,16.3513333333333,49.715
+"2228","State Wide",2007-04-01,15.8389655172414,43.5827586206897
+"2229","State Wide",2007-07-01,16.6439285714286,42.8503571428571
+"2230","State Wide",2007-10-01,16.7416666666667,42.2756666666667
+"2231","State Wide",2008-01-01,16.298275862069,47.3672413793103
+"2232","State Wide",2008-04-01,15.26,45.2423333333333
+"2233","State Wide",2008-07-01,17.5737931034483,42.1110344827586
+"2234","State Wide",2008-10-01,15.5110714285714,43.4357142857143
+"2235","State Wide",2009-01-01,15.2188461538462,43.0353846153846
+"2236","State Wide",2009-04-01,15.5142307692308,45.5934615384615
+"2237","State Wide",2009-07-01,16.0972,45.2872
+"2238","State Wide",2009-10-01,16.7273076923077,46.1969230769231
+"2239","State Wide",2010-01-01,14.6664,46.2812
+"2240","State Wide",2010-04-01,12.0252,40.578
+"2241","State Wide",2010-07-01,11.9280769230769,39.8223076923077
+"2242","State Wide",2010-10-01,11.2884615384615,39.65
+"2243","State Wide",2011-01-01,13.4426923076923,39.2480769230769
+"2244","State Wide",2011-04-01,10.1138461538462,41.9803846153846
+"2245","State Wide",2011-07-01,12.2161538461538,44.9692307692308
+"2246","State Wide",2011-10-01,12.6560714285714,46.7560714285714
+"2247","State Wide",2012-01-01,12.2098928571429,49.9029642857143
+"2248","State Wide",2017-04-01,13.528064516129,47.8874193548387
+"2249","State Wide",2017-07-01,14.8284375,50.365625
+"2250","State Wide",2017-10-01,14.76,52.1106451612903
+"2251","State Wide",2018-01-01,15.7678787878788,55.0554545454545
+"2252","State Wide",2018-04-01,19.02,56.4767647058824
+"2253","State Wide",2018-07-01,25.6494594594595,54.9040540540541
+"2254","State Wide",2018-10-01,21.585,57.8386111111111
+"2255","State Wide",2019-01-01,25.2982051282051,56.4789743589744
+"2256","State Wide",2019-04-01,20.3064102564103,55.5702564102564
+"2257","State Wide",2019-07-01,21.4302631578947,54.2555263157895
+"2258","State Wide",2019-10-01,22.7469230769231,56.9802564102564
+"2259","State Wide",2020-01-01,20.3234146341463,58.2887804878049
+"2260","State Wide",2002-01-01,16.7279166666667,45.3304166666667
+"2261","State Wide",2002-04-01,17.3723076923077,42.9673076923077
+"2262","State Wide",2012-04-01,9.8737037037037,43.8307407407407
+"2263","State Wide",2012-07-01,10.041037037037,43.9757037037037
+"2264","State Wide",2012-10-01,11.8661071428571,48.3519642857143
+"2265","State Wide",2013-01-01,12.3639655172414,45.6014827586207
+"2266","State Wide",2013-04-01,11.9665172413793,50.3916551724138
+"2267","State Wide",2013-07-01,10.9143793103448,50.2924137931034
+"2268","State Wide",2013-10-01,13.2217666666667,53.4880333333333
+"2269","State Wide",2014-01-01,13.4795161290323,56.2203548387097
+"2270","State Wide",2014-04-01,12.75596875,50.65303125
+"2271","State Wide",2014-07-01,13.8516666666667,48.9970909090909
+"2272","State Wide",2014-10-01,12.88509375,56.44659375
+"2273","State Wide",2015-01-01,13.2450606060606,54.9169090909091
+"2274","State Wide",2015-04-01,13.3242424242424,51.3232424242424
+"2275","State Wide",2015-07-01,11.64,52.8215625
+"2276","State Wide",2015-10-01,13.7748484848485,56.3457575757576
+"2277","State Wide",2016-01-01,13.9554285714286,53.3102857142857
+"2278","State Wide",2016-04-01,13.2894285714286,52.1897142857143
+"2279","State Wide",2016-07-01,15.4308571428571,50.9568571428571
+"2280","State Wide",2016-10-01,15.5638235294118,49.4058823529412
+"2281","State Wide",2017-01-01,16.5985294117647,50.3926470588235
