@@ -3,6 +3,7 @@ library(shiny)
 library(rsconnect)
 library(tidyverse)
 library(lubridate)
+library(highcharter)
 
 #load data
 population <- read.csv("https://raw.githubusercontent.com/kalleyhuang/harnessing-data-from-nc-jails/master/app/population.csv")
@@ -25,20 +26,24 @@ ui <- fluidPage(
             p("These data were collected from 57 counties from October 1995 to March 2020. Note that 
               California has 58 counties, but its least populous county, Alpine County, does not have 
               a jail and contracts with Calaveras County and El Dorado County."), #background
+            p("Select county and years of interest:"),
             selectInput(inputId = "county_chosen", label = "County:", choices = county_list,
                         selected = county_list[0]), #select county
             sliderInput(inputId = "range", label = "Range:", 
                         min = as.Date("1995-01-01", "%Y-%m-%d"), max = as.Date("2020-03-01"), 
                         value = c(as.Date("1995-01-01", "%Y-%m-%d"), as.Date("2020-03-01"))), #select years
-            p("Hover for values:"),
-            verbatimTextOutput("pop_info"), #hover for population at time
-            verbatimTextOutput("length_info"), #hover for length of stay at time
-            verbatimTextOutput("ratio_info") #hover for ratio at time
+            #p("Hover for values:"),
+            #verbatimTextOutput("pop_info"), #hover for population at time
+            #verbatimTextOutput("length_info"), #hover for length of stay at time
+            #verbatimTextOutput("ratio_info") #hover for ratio at time
         ),
         mainPanel(
-           plotOutput("popPlot", hover = hoverOpts(id = "pop_hover", nullOutside = F)),
-           plotOutput("lengthPlot", hover = hoverOpts(id = "length_hover", nullOutside = F)),
-           plotOutput("ratioPlot", hover = hoverOpts(id = "ratio_hover", nullOutside = F)),
+           #plotOutput("popPlot", hover = hoverOpts(id = "pop_hover", nullOutside = F)),
+           #plotOutput("lengthPlot", hover = hoverOpts(id = "length_hover", nullOutside = F)),
+           #plotOutput("ratioPlot", hover = hoverOpts(id = "ratio_hover", nullOutside = F)),
+            highchartOutput("popHighchart"),
+            highchartOutput("lengthHighchart"),
+            highchartOutput("ratioHighchart")
         )
     )
 )
@@ -51,22 +56,42 @@ server <- function(input, output) {
             filter(county == input$county_chosen) %>%
             filter(date >= min(input$range) & date <= max(input$range)) %>% 
             ggplot(data = ., mapping = aes(x = date, group = 1)) +
-            geom_line(mapping = aes(y = sen_male, color = "male", linetype = "solid")) +
-            geom_line(mapping = aes(y = sen_female, color = "female", linetype = "solid")) +
-            geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "dotted")) +
-            geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "dotted")) +
+            geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "unsentenced")) +
+            geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "unsentenced")) +
+            geom_line(mapping = aes(y = sen_male, color = "male", linetype = "sentenced")) +
+            geom_line(mapping = aes(y = sen_female, color = "female", linetype = "sentenced")) +
             labs(title = "Average Daily Populations Over Time", 
                  x = "Year", y = "Population") +
             scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
             scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
-            scale_linetype_manual(name = "Sentence Type",
-                                  values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+            scale_linetype(name = "Sentence Type", breaks = c("unsentenced", "sentenced"), 
+                           labels = c("Unsentenced", "Sentenced")) +
             theme_classic()
     })
     
     output$pop_info <- renderText({
         paste0("Date: ", as.Date(input$pop_hover$x, origin = origin), 
                "\nPopulation: ", input$pop_hover$y)
+    })
+    
+    output$popHighchart <- renderHighchart({
+        pop <- population %>% 
+            filter(county == input$county_chosen) %>%
+            filter(date >= min(input$range) & date <= max(input$range))
+        
+        highchart() %>% 
+            hc_chart(type = "line") %>% 
+            hc_title(text = "Average Daily Populations Over Time") %>% 
+            hc_series(list(name = "Unsentenced males", data = pop$unsen_male, color = "blue", dashStyle = "shortDot"),
+                      list(name = "Unsentenced females", data = pop$unsen_female, color = "red", dashStyle = "shortDot"),
+                      list(name = "Sentenced males", data = pop$sen_male, color = "blue"),
+                      list(name = "Sentenced females", data = pop$sen_female, color = "red")) %>% 
+            hc_xAxis(title = list(text = "Year"), categories = year(pop$date)) %>% 
+            hc_yAxis(title = list(text = "Population"), labels = list(format = "{value}")) %>% 
+            hc_tooltip(table = T, sort = T, 
+                       pointFormat = paste0("<br><span style='color:{point.color}'>\u25CF</span>",
+                                            " {series.name}: {point.y}")) %>% 
+            hc_plotOptions(series = list(marker = list(enabled = F)))
     })
     
     output$lengthPlot <- renderPlot({
@@ -89,6 +114,26 @@ server <- function(input, output) {
                "\nLength of Stay: ", input$length_hover$y)
     })
     
+    output$lengthHighchart <- renderHighchart({
+        length <- length_of_stay %>% 
+            filter(county == input$county_chosen) %>%
+            filter(date >= min(input$range) & date <= max(input$range))
+        
+        highchart() %>% 
+            hc_chart(type = "line") %>% 
+            hc_title(text = "Average Quarterly Lengths of Stay Over Time") %>% 
+            hc_series(list(name = "Sentenced", data = length$sentenced_release, 
+                           color = "black"),
+                      list(name = "Pretrial", data = length$pretrial_release, 
+                           color = "black", dashStyle = "shortDot")) %>% 
+            hc_xAxis(title = list(text = "Year"), categories = year(length$date)) %>% 
+            hc_yAxis(title = list(text = "Length of Stay (in days)"), labels = list(format = "{value}")) %>% 
+            hc_tooltip(table = T, sort = T, 
+                       pointFormat = paste0("<br><span style='color:{point.color}'>\u25CF</span>",
+                                            " {series.name}: {point.y}")) %>% 
+            hc_plotOptions(series = list(marker = list(enabled = F)))
+    })
+    
     output$ratioPlot <- renderPlot({
         ratio %>%
             filter(county == input$county_chosen) %>%
@@ -103,6 +148,19 @@ server <- function(input, output) {
     output$ratio_info <- renderText({
         paste0("Date: ", as.Date(input$ratio_hover$x, origin = origin), 
                "\nRatio: ", input$ratio_hover$y)
+    })
+    
+    output$ratioHighchart <- renderHighchart({
+        ratio %>% 
+            filter(county == input$county_chosen) %>%
+            filter(date >= min(input$range) & date <= max(input$range)) %>% 
+            hchart(., type = "line", hcaes(x = date, y = ratio), color = "black") %>% 
+            hc_title(text = "Unsentenced to Sentenced Ratio Over Time") %>% 
+            hc_xAxis(title = list(text = "Year")) %>% 
+            hc_yAxis(title = list(text = "Ratio"), labels = list(format = "{value}")) %>% 
+            hc_tooltip(table = T, sort = T, 
+                       pointFormat = paste0("<br><span style='color:{point.color}'>\u25CF</span>",
+                                            " {series.name}: {point.y}"))
     })
     
 }
