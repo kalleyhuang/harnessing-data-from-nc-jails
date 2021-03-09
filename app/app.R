@@ -30,6 +30,7 @@ ui <- fluidPage(
             sliderInput(inputId = "range", label = "Range:", 
                         min = as.Date("1995-01-01", "%Y-%m-%d"), max = as.Date("2020-03-01"), 
                         value = c(as.Date("1995-01-01", "%Y-%m-%d"), as.Date("2020-03-01"))), #select years
+            p("Hover for values:"),
             verbatimTextOutput("pop_info"), #hover for population at time
             verbatimTextOutput("length_info"), #hover for length of stay at time
             verbatimTextOutput("ratio_info") #hover for ratio at time
