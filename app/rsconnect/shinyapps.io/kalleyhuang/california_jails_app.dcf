@@ -1,0 +1,12 @@
+name: california_jails_app
+title: california_jails_app
+username:
+account: kalleyhuang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3758823
+bundleId: 4319065
+url: https://kalleyhuang.shinyapps.io/california_jails_app/
+when: 1615259760.69951
+asMultiple: FALSE
+asStatic: FALSE
