@@ -151,16 +151,21 @@ server <- function(input, output) {
     })
     
     output$ratioHighchart <- renderHighchart({
-        ratio %>% 
+        rat <- ratio %>% 
             filter(county == input$county_chosen) %>%
-            filter(date >= min(input$range) & date <= max(input$range)) %>% 
-            hchart(., type = "line", hcaes(x = date, y = ratio), color = "black") %>% 
+            filter(date >= min(input$range) & date <= max(input$range))
+        
+        highchart() %>% 
+            hc_chart(type = "line") %>% 
             hc_title(text = "Unsentenced to Sentenced Ratio Over Time") %>% 
-            hc_xAxis(title = list(text = "Year")) %>% 
+            hc_series(list(data = rat$ratio, color = "black")) %>% 
+            hc_xAxis(title = list(text = "Year"), categories = year(rat$date)) %>% 
             hc_yAxis(title = list(text = "Ratio"), labels = list(format = "{value}")) %>% 
             hc_tooltip(table = T, sort = T, 
                        pointFormat = paste0("<br><span style='color:{point.color}'>\u25CF</span>",
-                                            " {series.name}: {point.y}"))
+                                            " {point.y}")) %>% 
+            hc_plotOptions(series = list(marker = list(enabled = F))) %>% 
+            hc_legend(enabled = F)
     })
     
 }
