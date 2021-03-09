@@ -134,19 +134,19 @@ county_m %>%
          sen_male = sum(sen_male), sen_female = sum(sen_female), total = sum(total)) %>% 
   unique() %>% 
   arrange(date) %>% 
-  ggplot(data = ., mapping = aes(x = date, group = 1)) +
-  geom_line(mapping = aes(y = sen_male, color = "male", linetype = "solid")) +
-  geom_line(mapping = aes(y = sen_female, color = "female", linetype = "solid")) +
-  geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "dotted")) +
-  geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "dotted")) +
+  ggplot(data = ., mapping = aes(x = date)) +
+  geom_line(mapping = aes(y = unsen_male, color = "male", linetype = "unsentenced")) +
+  geom_line(mapping = aes(y = unsen_female, color = "female", linetype = "unsentenced")) +
+  geom_line(mapping = aes(y = sen_male, color = "male", linetype = "sentenced")) +
+  geom_line(mapping = aes(y = sen_female, color = "female", linetype = "sentenced")) +
   geom_vline(xintercept = as.Date("2011-01-01"), linetype = "dotted") +
   geom_vline(xintercept = as.Date("2012-01-01"), linetype = "dotted") +
   geom_vline(xintercept = as.Date("2014-01-01"), linetype = "dotted") +
   geom_vline(xintercept = as.Date("2016-01-01"), linetype = "dotted") +
   labs(x = "Year", y = "Population Count") +
   scale_color_discrete(name = "Gender", breaks = c("male", "female"), labels = c("Male", "Female")) +
-  scale_linetype_manual(name = "Sentence Type",
-                        values = c("solid", "dotted"), labels = c("Sentenced", "Unsentenced")) +
+  scale_linetype(name = "Sentence Type", breaks = c("unsentenced", "sentenced"), 
+                 labels = c("Unsentenced", "Sentenced")) +
   theme_classic() +
   theme(text = element_text(size = 9))
 ```
